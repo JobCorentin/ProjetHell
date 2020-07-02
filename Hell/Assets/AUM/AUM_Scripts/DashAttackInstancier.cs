@@ -15,6 +15,8 @@ public class DashAttackInstancier : MonoBehaviour
 
     public float duration;
 
+    public float momentumMultiplier;
+
     bool canDash = true;
 
     void Start()
@@ -68,7 +70,7 @@ public class DashAttackInstancier : MonoBehaviour
 
         slash.transform.rotation = Quaternion.Euler(0, 0, attackDirectionAngle);
 
-        for (float i = duration; i >= 0; i -= Time.fixedDeltaTime)
+        for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         {
             MovementController.mC.rb.velocity = attackDirection * movementForce * i * Time.fixedDeltaTime;
 

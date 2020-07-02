@@ -438,6 +438,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7360886271804577904, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.051
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360886271804577904, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.6935518
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360886271804577904, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.831
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360886271804577904, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7612903
+      objectReference: {fileID: 0}
     - target: {fileID: 7360886272903129553, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -496,12 +516,12 @@ PrefabInstance:
     - target: {fileID: 7360886272903129554, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
         type: 3}
       propertyPath: speed
-      value: 3000
+      value: 4500
       objectReference: {fileID: 0}
     - target: {fileID: 7360886272903129554, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
         type: 3}
       propertyPath: jumpForce
-      value: 1100
+      value: 1250
       objectReference: {fileID: 0}
     - target: {fileID: 7360886272903129555, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
         type: 3}
@@ -513,10 +533,30 @@ PrefabInstance:
       propertyPath: lowJumpMultiplier
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 7360886272903129557, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
+        type: 3}
+      propertyPath: movementForce
+      value: 6000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360886272903129557, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
+        type: 3}
+      propertyPath: momentumMultiplier
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360886272903129557, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
+        type: 3}
+      propertyPath: duration
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7360886272903129558, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
         type: 3}
       propertyPath: movementForce
-      value: 30000
+      value: 60000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360886272903129558, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
+        type: 3}
+      propertyPath: coolDown
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7360886272903129565, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
         type: 3}
@@ -526,12 +566,12 @@ PrefabInstance:
     - target: {fileID: 7360886272903129566, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
         type: 3}
       propertyPath: m_LinearDrag
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7360886272903129566, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
         type: 3}
       propertyPath: m_GravityScale
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ea0db4209b9c9c4bb271a5e19adc70b, type: 3}

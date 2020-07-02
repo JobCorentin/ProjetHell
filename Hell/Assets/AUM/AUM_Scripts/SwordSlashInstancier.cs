@@ -64,13 +64,13 @@ public class SwordSlashInstancier : MonoBehaviour
         }
         else
         {
-            if (attackDirectionAngle < 45 && -45 < attackDirectionAngle)
+            if (attackDirectionAngle < 70 && -70 < attackDirectionAngle)
                 currentAttackDirection = Vector2.right;
-            else if (45 <= attackDirectionAngle && attackDirectionAngle <= 135)
+            else if (70 <= attackDirectionAngle && attackDirectionAngle <= 110)
                 currentAttackDirection = Vector2.up;
-            else if (attackDirectionAngle > 135 || -135 > attackDirectionAngle)
+            else if (attackDirectionAngle > 110 || -110 > attackDirectionAngle)
                 currentAttackDirection = Vector2.left;
-            else if (-135 <= attackDirectionAngle && attackDirectionAngle <= -45)
+            else if (-110 <= attackDirectionAngle && attackDirectionAngle <= -70)
                 currentAttackDirection = Vector2.down;
         }
 
@@ -109,12 +109,16 @@ public class SwordSlashInstancier : MonoBehaviour
 
         slash.transform.rotation = Quaternion.Euler(0, 0, attackDirectionAngle);
 
+        BetterJump.bj.fallMultiplier /= 4;
+
         for (float i = duration; i >= 0; i -= Time.fixedDeltaTime)
         {
             //MovementController.mC.rb.velocity = currentAttackDirection * movementForce * i * Time.fixedDeltaTime;
 
             yield return new WaitForFixedUpdate();
         }
+
+        BetterJump.bj.fallMultiplier *= 4;
 
         slash.transform.localScale = new Vector2(1, 1);
 
