@@ -21,6 +21,8 @@ public class MovementController : MonoBehaviour
     Vector2 directionInput;
 
     bool canJump;
+    bool canDoubleJump;
+
     [HideInInspector] public bool isGrounded;
 
     public bool stuned = false;
@@ -50,6 +52,7 @@ public class MovementController : MonoBehaviour
         if(isGrounded)
         {
             canJump = true;
+            canDoubleJump = true;
         }
         else
         {
@@ -58,15 +61,23 @@ public class MovementController : MonoBehaviour
 
         if(stuned == false)
         {
+            
+            
             if(projected == false)
                 rb.AddForce( new Vector2(InputListener.iL.horizontalInput * speed * Time.fixedDeltaTime, 0));
             else
                 rb.AddForce(new Vector2(InputListener.iL.horizontalInput * speed * Time.fixedDeltaTime * antiProjectedMultiplier * timeBeforeProjectedStop, 0), ForceMode2D.Force);
 
-            if (InputListener.iL.jumpInput && canJump == true)
+            if (InputListener.iL.jumpInput && (canJump == true || canDoubleJump == true))
             {
+                rb.velocity = new Vector2(rb.velocity.x, 0);
+
                 rb.AddForce(Vector2.up * jumpForce * Time.fixedDeltaTime,ForceMode2D.Impulse);
-                canJump = false;
+
+                if (isGrounded)
+                    canJump = false;
+                else
+                    canDoubleJump = false;
             }
 
         }
