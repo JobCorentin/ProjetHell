@@ -15,6 +15,8 @@ public class SwordSlashInstancier : MonoBehaviour
 
     public float duration;
 
+    public float momentumMultiplier;
+
     Coroutine lastSlash;
     Coroutine lastStarting;
 
@@ -111,9 +113,9 @@ public class SwordSlashInstancier : MonoBehaviour
 
         BetterJump.bj.fallMultiplier /= 4;
 
-        for (float i = duration; i >= 0; i -= Time.fixedDeltaTime)
+        for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         {
-            //MovementController.mC.rb.velocity = currentAttackDirection * movementForce * i * Time.fixedDeltaTime;
+            MovementController.mC.rb.velocity = currentInputDirection * movementForce * i * Time.fixedDeltaTime;
 
             yield return new WaitForFixedUpdate();
         }
