@@ -99,8 +99,8 @@ public class SwordSlashInstancier : MonoBehaviour
         MovementController.mC.projected = false;
         slash.SetActive(true);
 
-        MovementController.mC.rb.velocity = Vector2.zero;
-        MovementController.mC.rb.AddForce(currentInputDirection * movementForce * Time.fixedDeltaTime);
+        //MovementController.mC.rb.velocity = Vector2.zero;
+        //MovementController.mC.rb.AddForce(currentInputDirection * movementForce * Time.fixedDeltaTime);
 
         float attackDirectionAngle = Vector2.Angle(transform.right, currentAttackDirection);
 
@@ -115,7 +115,7 @@ public class SwordSlashInstancier : MonoBehaviour
 
         for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         {
-            MovementController.mC.rb.velocity = currentInputDirection * movementForce * i * Time.fixedDeltaTime;
+            //MovementController.mC.rb.velocity = currentInputDirection * movementForce * i * Time.fixedDeltaTime;
 
             yield return new WaitForFixedUpdate();
         }
