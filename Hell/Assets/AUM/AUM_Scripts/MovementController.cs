@@ -11,6 +11,8 @@ public class MovementController : MonoBehaviour
     public float speed;
     public float jumpForce;
 
+    float originalSpeed;
+
     public float antiProjectedMultiplier;
 
     public LayerMask groundLayers;
@@ -26,8 +28,12 @@ public class MovementController : MonoBehaviour
 
     float timeBeforeProjectedStop;
 
+    public Coroutine lastChangeSpeed;
+
     void Start()
     {
+        originalSpeed = speed;
+
         mC = this;
     }
 
@@ -66,6 +72,28 @@ public class MovementController : MonoBehaviour
         }
 
         InputListener.iL.jumpInput = false;
+    }
+
+    public IEnumerator ChangeSpeed(float duration, float newValue)
+    {
+        speed = newValue;
+
+        for (float i = duration; i >= 0; i -= Time.fixedDeltaTime)
+        {
+            yield return new WaitForFixedUpdate();
+        }
+
+        speed = originalSpeed;
+    }
+
+    public void StopLastChangeSpeed()
+    {
+        if (lastChangeSpeed != null)
+        {
+            StopCoroutine(lastChangeSpeed);
+
+            speed = originalSpeed;
+        }
     }
 
     public IEnumerator ProjectedFor(float time)

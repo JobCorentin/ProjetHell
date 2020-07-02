@@ -9,8 +9,15 @@ public class BetterJump : MonoBehaviour
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
 
+    float originalFallMultiplier;
+
+    public Coroutine lastChangeFall;
+
+
     private void Start()
     {
+        originalFallMultiplier = fallMultiplier;
+
         bj = this;
     }
 
@@ -29,6 +36,28 @@ public class BetterJump : MonoBehaviour
             }
         }
         
+    }
+
+    public IEnumerator ChangeFallMultiplier(float duration, float newValue)
+    {
+        fallMultiplier = newValue;
+
+        for (float i = duration; i >= 0; i -= Time.fixedDeltaTime)
+        {
+            yield return new WaitForFixedUpdate();
+        }
+
+        fallMultiplier = originalFallMultiplier;
+    }
+
+    public void StopLastChangeFall()
+    {
+        if(lastChangeFall != null)
+        {
+            StopCoroutine(lastChangeFall);
+
+            fallMultiplier = originalFallMultiplier;
+        }
     }
 
 }

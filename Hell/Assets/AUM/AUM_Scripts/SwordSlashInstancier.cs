@@ -95,12 +95,7 @@ public class SwordSlashInstancier : MonoBehaviour
 
     IEnumerator Slash(Vector2 currentAttackDirection, Vector2 currentInputDirection)
     {
-        //MovementController.mC.stuned = true;
-        MovementController.mC.projected = false;
         slash.SetActive(true);
-
-        //MovementController.mC.rb.velocity = Vector2.zero;
-        //MovementController.mC.rb.AddForce(currentInputDirection * movementForce * Time.fixedDeltaTime);
 
         float attackDirectionAngle = Vector2.Angle(transform.right, currentAttackDirection);
 
@@ -111,8 +106,6 @@ public class SwordSlashInstancier : MonoBehaviour
 
         slash.transform.rotation = Quaternion.Euler(0, 0, attackDirectionAngle);
 
-        BetterJump.bj.fallMultiplier /= 4;
-
         for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         {
             //MovementController.mC.rb.velocity = currentInputDirection * movementForce * i * Time.fixedDeltaTime;
@@ -120,12 +113,7 @@ public class SwordSlashInstancier : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
-        BetterJump.bj.fallMultiplier *= 4;
-
-        slash.transform.localScale = new Vector2(1, 1);
-
         slash.SetActive(false);
-        MovementController.mC.stuned = false;
 
         coolDownTimer = 0;
         lastSlash = null;

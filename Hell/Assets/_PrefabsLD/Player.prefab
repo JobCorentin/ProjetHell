@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7360886271804577919}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.95, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1.5, z: 1}
+  m_LocalPosition: {x: 0.831, y: 0.051, z: 0}
+  m_LocalScale: {x: 1.7612903, y: 2.6935518, z: 1}
   m_Children: []
   m_Father: {fileID: 7360886272987733146}
   m_RootOrder: 0
@@ -96,7 +96,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 410629d224df381478e6354eba018e96, type: 3}
   m_Color: {r: 1, g: 0.42769682, b: 0, a: 0.49803922}
   m_FlipX: 0
@@ -261,8 +261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7360886272903129566}
-  speed: 500
-  jumpForce: 700
+  speed: 4500
+  jumpForce: 1250
   antiProjectedMultiplier: 0
   groundLayers:
     serializedVersion: 2
@@ -282,8 +282,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c569c52359a944cb9358a464b1d9ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiplier: 2.5
-  lowJumpMultiplier: 2
+  fallMultiplier: 10
+  lowJumpMultiplier: 20
 --- !u!114 &7360886272903129558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,9 +297,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slash: {fileID: 7360886272987733145}
-  movementForce: 2500
+  movementForce: 8000
   coolDown: 0.2
-  duration: 0.15
+  duration: 0.1
+  momentumMultiplier: 0.1
 --- !u!114 &7360886272903129557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,9 +314,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slash: {fileID: 7360886272987733145}
-  movementForce: 12000
-  coolDown: 1
-  duration: 0.2
+  movementForce: 8000
+  coolDown: 0.2
+  duration: 0.15
+  momentumMultiplier: 0.1
 --- !u!61 &7360886272903129567
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -355,9 +357,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
