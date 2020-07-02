@@ -44,6 +44,7 @@ public class SwordSlashInstancier : MonoBehaviour
     void AttackDirectionDecision()
     {
         Vector2 currentAttackDirection = InputListener.iL.directionVector.normalized;
+        Vector2 currentInputDirection = InputListener.iL.directionVector.normalized;
 
         float attackDirectionAngle = Vector2.Angle(transform.right, currentAttackDirection);
 
@@ -75,28 +76,29 @@ public class SwordSlashInstancier : MonoBehaviour
 
 
         if (lastStarting == null)
-            lastStarting = StartCoroutine(StartSlash(currentAttackDirection));
+            lastStarting = StartCoroutine(StartSlash(currentAttackDirection, currentInputDirection));
     }
 
-    IEnumerator StartSlash(Vector2 currentAttackDirection)
+    IEnumerator StartSlash(Vector2 currentAttackDirection, Vector2 currentInputDirection)
     {
         while (lastSlash != null || coolDownTimer < coolDown)
         {
             yield return null;
         }
 
-        lastSlash = StartCoroutine(Slash(currentAttackDirection));
+        lastSlash = StartCoroutine(Slash(currentAttackDirection, currentInputDirection));
 
         lastStarting = null;
     }
 
-    IEnumerator Slash(Vector2 currentAttackDirection)
+    IEnumerator Slash(Vector2 currentAttackDirection, Vector2 currentInputDirection)
     {
-        MovementController.mC.stuned = true;
+        //MovementController.mC.stuned = true;
         MovementController.mC.projected = false;
         slash.SetActive(true);
 
         MovementController.mC.rb.velocity = Vector2.zero;
+        MovementController.mC.rb.AddForce(currentInputDirection * movementForce * Time.fixedDeltaTime);
 
         float attackDirectionAngle = Vector2.Angle(transform.right, currentAttackDirection);
 
@@ -109,7 +111,7 @@ public class SwordSlashInstancier : MonoBehaviour
 
         for (float i = duration; i >= 0; i -= Time.fixedDeltaTime)
         {
-            MovementController.mC.rb.velocity = currentAttackDirection * movementForce * i * Time.fixedDeltaTime;
+            //MovementController.mC.rb.velocity = currentAttackDirection * movementForce * i * Time.fixedDeltaTime;
 
             yield return new WaitForFixedUpdate();
         }

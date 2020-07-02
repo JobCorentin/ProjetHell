@@ -40,7 +40,7 @@ public class InputListener : MonoBehaviour
         }
 
         if (!jumpInput)
-            jumpInput = Input.GetButton("Jump");
+            jumpInput = Input.GetButtonDown("Jump");
 
         if (!attackInput)
             attackInput = Input.GetButtonDown("Attack");

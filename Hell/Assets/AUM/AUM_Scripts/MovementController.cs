@@ -18,7 +18,7 @@ public class MovementController : MonoBehaviour
     float horizontalInput;
     Vector2 directionInput;
 
-    int jumpNumb = 1;
+    bool canJump;
     [HideInInspector] public bool isGrounded;
 
     public bool stuned = false;
@@ -43,24 +43,24 @@ public class MovementController : MonoBehaviour
 
         if(isGrounded)
         {
-            jumpNumb = 1;
+            canJump = true;
         }
         else
         {
-            jumpNumb = 0;
+            canJump = false;
         }
 
         if(stuned == false)
         {
             if(projected == false)
-                rb.velocity = new Vector2(InputListener.iL.horizontalInput * speed * Time.fixedDeltaTime, rb.velocity.y);
+                rb.AddForce( new Vector2(InputListener.iL.horizontalInput * speed * Time.fixedDeltaTime, 0));
             else
                 rb.AddForce(new Vector2(InputListener.iL.horizontalInput * speed * Time.fixedDeltaTime * antiProjectedMultiplier * timeBeforeProjectedStop, 0), ForceMode2D.Force);
 
-            if (InputListener.iL.jumpInput && jumpNumb > 0)
+            if (InputListener.iL.jumpInput && canJump == true)
             {
-                rb.velocity = Vector2.up * jumpForce * Time.fixedDeltaTime;
-                jumpNumb -= 1;
+                rb.AddForce(Vector2.up * jumpForce * Time.fixedDeltaTime,ForceMode2D.Impulse);
+                canJump = false;
             }
 
         }
