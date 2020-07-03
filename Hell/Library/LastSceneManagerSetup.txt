@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/AUM/AUM_Scenes/WorkSceneAUM.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
