@@ -121,12 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &62470455 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2715657956450840114, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
-    type: 3}
-  m_PrefabInstance: {fileID: 7360886272259008360}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &473120215
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,12 +621,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1889521165 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 7360886272903129552, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
-    type: 3}
-  m_PrefabInstance: {fileID: 7360886272259008360}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1952390091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -712,28 +700,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fd654979bf71984cb8c1b0e6ca9a8f4, type: 3}
---- !u!1 &2009741938 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 399325738981558391, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
-    type: 3}
-  m_PrefabInstance: {fileID: 7360886272259008360}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2009741942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2009741938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7ddb294e2a9c2b40a420e547732829e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pushForce: 0
-  duration: 0.1
-  movementForce: 20000
-  momentumMultiplier: 0
 --- !u!4 &2057775457 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7360886272903129553, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
@@ -989,61 +955,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7360886272903129558, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
-        type: 3}
-      propertyPath: bloodCoolDown
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7360886272903129558, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
-        type: 3}
-      propertyPath: bloodDuration
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7360886272903129558, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
-        type: 3}
-      propertyPath: sr
-      value: 
-      objectReference: {fileID: 1889521165}
-    - target: {fileID: 7360886272903129558, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
-        type: 3}
-      propertyPath: bloodSlash
-      value: 
-      objectReference: {fileID: 62470455}
-    - target: {fileID: 7360886272903129558, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
-        type: 3}
-      propertyPath: currentAutoAimAngle
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 7360886272903129558, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
-        type: 3}
-      propertyPath: currentNumberOfRaycast
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 7360886272903129558, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
-        type: 3}
-      propertyPath: movementForce
-      value: 10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 7360886272903129558, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
-        type: 3}
-      propertyPath: momentumMultiplier
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7360886272903129565, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
         type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8666899243404893525, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.691
-      objectReference: {fileID: 0}
-    - target: {fileID: 8666899243404893525, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 7.482199
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7360886272903129557, guid: 7ea0db4209b9c9c4bb271a5e19adc70b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ea0db4209b9c9c4bb271a5e19adc70b, type: 3}

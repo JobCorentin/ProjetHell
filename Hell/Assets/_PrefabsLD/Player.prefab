@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8666899243404893525}
   - component: {fileID: 261076875696619837}
   - component: {fileID: 4820992453792140452}
+  - component: {fileID: 2009741942}
   m_Layer: 9
   m_Name: BloodSlash
   m_TagString: Untagged
@@ -26,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399325738981558391}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6155, y: 0, z: 0}
-  m_LocalScale: {x: 5.3303175, y: 0.8346944, z: 1}
+  m_LocalPosition: {x: 3.691, y: 0, z: 0}
+  m_LocalScale: {x: 7.482199, y: 0.8346944, z: 1}
   m_Children: []
   m_Father: {fileID: 3263186606488905066}
   m_RootOrder: 0
@@ -108,6 +109,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2009741942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399325738981558391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7ddb294e2a9c2b40a420e547732829e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushForce: 0
+  duration: 0.1
+  movementForce: 20000
+  momentumMultiplier: 0
 --- !u!1 &2715657956450840114
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +327,6 @@ GameObject:
   - component: {fileID: 7360886272903129554}
   - component: {fileID: 7360886272903129555}
   - component: {fileID: 7360886272903129558}
-  - component: {fileID: 7360886272903129557}
   - component: {fileID: 7360886272903129567}
   - component: {fileID: 7360886272903129566}
   m_Layer: 0
@@ -403,8 +419,8 @@ MonoBehaviour:
   directionVector: {x: 0, y: 0}
   jumpInput: 0
   attackInput: 0
-  dashAttackInput: 0
   parryInput: 0
+  bloodModeInput: 0
 --- !u!114 &7360886272903129554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,27 +469,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slash: {fileID: 7360886272987733145}
-  movementForce: 8000
+  bloodSlash: {fileID: 2715657956450840114}
+  movementForce: 10000
+  sr: {fileID: 7360886272903129552}
   coolDown: 0.2
+  bloodCoolDown: 0.2
   duration: 0.1
-  momentumMultiplier: 0.1
---- !u!114 &7360886272903129557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7360886272903129565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716e976acd6267b418777d8659e4a984, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slash: {fileID: 7360886272987733145}
-  movementForce: 8000
-  coolDown: 0.2
-  duration: 0.15
-  momentumMultiplier: 0.1
+  momentumMultiplier: 0
+  bloodDuration: 0.1
+  currentAutoAimAngle: 90
+  currentNumberOfRaycast: 90
 --- !u!61 &7360886272903129567
 BoxCollider2D:
   m_ObjectHideFlags: 0
