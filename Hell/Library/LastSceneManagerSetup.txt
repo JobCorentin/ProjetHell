@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/YAH/YAH_Scenes/Test_Scene_YAH.unity
+- path: Assets/AUM/AUM_Scenes/WorkSceneAUM.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
