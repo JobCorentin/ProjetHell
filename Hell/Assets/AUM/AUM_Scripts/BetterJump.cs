@@ -23,19 +23,15 @@ public class BetterJump : MonoBehaviour
 
     void Update()
     {
-        if(MovementController.mC.projected == false)
+        if (MovementController.mC.rb.velocity.y < 0)
         {
-
-            if (MovementController.mC.rb.velocity.y < 0)
-            {
-                MovementController.mC.rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-            }
-            else if (MovementController.mC.rb.velocity.y > 0 && !Input.GetButton("Jump"))
-            {
-                MovementController.mC.rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-            }
+            MovementController.mC.rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-        
+        else if (MovementController.mC.rb.velocity.y > 0 && !Input.GetButton("Jump"))
+        {
+            MovementController.mC.rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
+
     }
 
     public IEnumerator ChangeFallMultiplier(float duration, float newValue)

@@ -37,7 +37,7 @@ public class DashAttackInstancier : MonoBehaviour
             coolDownTimer += Time.fixedDeltaTime;
         }
 
-        if (InputListener.iL.dashAttackInput == true && coolDownTimer >= coolDown && canDash == true)
+        if (InputListener.iL.parryInput == true && coolDownTimer >= coolDown && canDash == true)
         {
             //slash.SetActive(true);
 
@@ -48,13 +48,12 @@ public class DashAttackInstancier : MonoBehaviour
             canDash = false;
         }
 
-        InputListener.iL.dashAttackInput = false;
+        InputListener.iL.parryInput = false;
     }
 
     IEnumerator DashSlash()
     {
         MovementController.mC.stuned = true;
-        MovementController.mC.projected = false;
         slash.SetActive(true);
 
         MovementController.mC.rb.velocity = Vector2.zero;

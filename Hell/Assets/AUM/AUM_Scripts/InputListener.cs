@@ -16,9 +16,9 @@ public class InputListener : MonoBehaviour
 
     [HideInInspector] public bool attackInput;
 
-    [HideInInspector] public bool dashAttackInput;
-
     [HideInInspector] public bool parryInput;
+
+    [HideInInspector] public bool bloodModeInput;
 
     // Start is called before the first frame update
     void Start()
@@ -45,11 +45,11 @@ public class InputListener : MonoBehaviour
         if (!attackInput)
             attackInput = Input.GetButtonDown("Attack");
 
-        if (!dashAttackInput)
-            dashAttackInput = Input.GetButton("Dash");
-
         if (!parryInput)
             parryInput = Input.GetButton("Parry");
+
+        if (!bloodModeInput)
+            bloodModeInput = Input.GetButtonDown("BloodMode");
     }
 
     void FixedUpdate()

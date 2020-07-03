@@ -26,7 +26,6 @@ public class MovementController : MonoBehaviour
     [HideInInspector] public bool isGrounded;
 
     public bool stuned = false;
-    public bool projected = false;
 
     float timeBeforeProjectedStop;
 
@@ -42,10 +41,6 @@ public class MovementController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(rb.velocity.magnitude <= 2f)
-        {
-            projected = false;
-        }
 
         isGrounded = Physics2D.OverlapArea(new Vector2(transform.position.x - 0.5f, transform.position.y - 0.5f), new Vector2(transform.position.x + 0.5f, transform.position.y - 0.51f), groundLayers);
 
@@ -61,12 +56,7 @@ public class MovementController : MonoBehaviour
 
         if(stuned == false)
         {
-            
-            
-            if(projected == false)
-                rb.AddForce( new Vector2(InputListener.iL.horizontalInput * speed * Time.fixedDeltaTime, 0));
-            else
-                rb.AddForce(new Vector2(InputListener.iL.horizontalInput * speed * Time.fixedDeltaTime * antiProjectedMultiplier * timeBeforeProjectedStop, 0), ForceMode2D.Force);
+            rb.AddForce( new Vector2(InputListener.iL.horizontalInput * speed * Time.fixedDeltaTime, 0), ForceMode2D.Force);
 
             if (InputListener.iL.jumpInput && (canJump == true || canDoubleJump == true))
             {
@@ -107,7 +97,7 @@ public class MovementController : MonoBehaviour
         }
     }
 
-    public IEnumerator ProjectedFor(float time)
+    /*public IEnumerator ProjectedFor(float time)
     {
         projected = true;
 
@@ -119,5 +109,20 @@ public class MovementController : MonoBehaviour
         }
 
         projected = false;
+    }*/
+
+    public IEnumerator MiniDash(Vector2 dashDirection, Rigidbody2D rigidbody2D, float duration, float movementForce, float momentumMultiplier)
+    {
+        stuned = true;
+
+        for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
+        {
+            rigidbody2D.velocity = dashDirection * movementForce * 1.3f * i * Time.fixedDeltaTime;
+
+            yield return new WaitForFixedUpdate();
+        }
+
+        stuned = false;
     }
+
 }
