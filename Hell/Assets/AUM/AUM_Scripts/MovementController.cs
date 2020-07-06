@@ -42,7 +42,7 @@ public class MovementController : MonoBehaviour
     void FixedUpdate()
     {
 
-        isGrounded = Physics2D.OverlapArea(new Vector2(transform.position.x - 0.5f, transform.position.y - 0.5f), new Vector2(transform.position.x + 0.5f, transform.position.y - 0.51f), groundLayers);
+        isGrounded = Physics2D.OverlapArea(new Vector2(transform.position.x - 0.5f, transform.position.y - 0.5f), new Vector2(transform.position.x + 0.5f, transform.position.y - 0.76f), groundLayers);
 
         if(isGrounded)
         {

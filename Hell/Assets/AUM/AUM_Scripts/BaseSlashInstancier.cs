@@ -46,7 +46,7 @@ public class BaseSlashInstancier : MonoBehaviour
     {
         if(bloodMode == true)
         {
-            sr.color = Color.red;
+            sr.color = new Color(Color.red.r, Color.red.g, Color.red.b, sr.color.a);
 
             if (coolDownTimer < bloodCoolDown)
             {
@@ -60,7 +60,7 @@ public class BaseSlashInstancier : MonoBehaviour
         }
         else
         {
-            sr.color = Color.white;
+            sr.color = new Color(Color.white.r, Color.white.g, Color.white.b, sr.color.a);
 
             if (coolDownTimer < coolDown)
             {
