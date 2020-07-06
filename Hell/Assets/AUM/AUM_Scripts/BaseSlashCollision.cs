@@ -21,7 +21,14 @@ public class BaseSlashCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        MovementController.mC.StartCoroutine(AttackMiniDash((InputListener.iL.directionVector).normalized, collision.attachedRigidbody));
+        if (collision.transform.tag == "Ennemi")
+        {
+            EnnemiController ec = collision.GetComponent<EnnemiController>();
+
+            MovementController.mC.StartCoroutine(AttackMiniDash((InputListener.iL.directionVector).normalized, ec));
+
+            ec.StartCoroutine(ec.TakeDamage(1));
+        }
 
         //EnemyController ec = collision.GetComponent<EnemyController>();
 
@@ -32,13 +39,33 @@ public class BaseSlashCollision : MonoBehaviour
         }*/
     }
 
-    IEnumerator AttackMiniDash(Vector2 dashDirection, Rigidbody2D ennemiRigidbody2D)
+    IEnumerator AttackMiniDash(Vector2 dashDirection, EnnemiController ennemiController)
     {
+        ennemiController.stunned = true;
+
         MovementController.mC.stuned = true;
+
+        Vector2 currentAttackDirection = dashDirection.normalized;
+
+        float attackDirectionAngle = Vector2.Angle(Vector2.right, currentAttackDirection);
+
+        if (currentAttackDirection.y < 0)
+        {
+            attackDirectionAngle = -attackDirectionAngle;
+        }
+
+        if (attackDirectionAngle < 70 && -70 < attackDirectionAngle)
+            currentAttackDirection = Vector2.right;
+        else if (70 <= attackDirectionAngle && attackDirectionAngle <= 110)
+            currentAttackDirection = Vector2.up;
+        else if (attackDirectionAngle > 110 || -110 > attackDirectionAngle)
+            currentAttackDirection = Vector2.left;
+        else if (-110 <= attackDirectionAngle && attackDirectionAngle <= -70)
+            currentAttackDirection = Vector2.down;
 
         for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         { 
-            ennemiRigidbody2D.velocity = dashDirection * movementForce * 1.3f * i * Time.fixedDeltaTime;
+            ennemiController.rb.velocity = (currentAttackDirection.normalized * 1.5f + dashDirection.normalized).normalized * movementForce * 1.3f * i * Time.fixedDeltaTime;
 
             MovementController.mC.rb.velocity = dashDirection * movementForce * i * Time.fixedDeltaTime;
 
@@ -55,5 +82,7 @@ public class BaseSlashCollision : MonoBehaviour
         MovementController.mC.StopLastChangeSpeed();
 
         MovementController.mC.lastChangeSpeed =  MovementController.mC.StartCoroutine(MovementController.mC.ChangeSpeed(0.3f, MovementController.mC.speed/5f));
+
+        ennemiController.stunned = false;
     }
 }

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 9061584625763710337}
   - component: {fileID: 9061584625763710338}
   - component: {fileID: 9061584625763710339}
+  - component: {fileID: 2070220066}
+  - component: {fileID: 2070220071}
   m_Layer: 10
   m_Name: Ennemi
   m_TagString: Ennemi
@@ -130,3 +132,57 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2070220066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9061584625763710348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cac3140247449c4480ad43a251a9e89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 9061584625763710339}
+  seeker: {fileID: 2070220071}
+  direction: {x: 0, y: 0}
+  tough: 0
+  health: 0
+  speed: 1500
+  type: 0
+  sr: {fileID: 9061584625763710337}
+  stunned: 0
+  pTransform: {fileID: 0}
+  target: {x: 0, y: 0}
+  range: 7
+  nextWayPointDistance: 3
+  coolDown: 2
+--- !u!114 &2070220071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9061584625763710348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1

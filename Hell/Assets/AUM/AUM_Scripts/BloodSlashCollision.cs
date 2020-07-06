@@ -21,7 +21,15 @@ public class BloodSlashCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        MovementController.mC.StartCoroutine(AttackMiniDash((InputListener.iL.directionVector).normalized, collision.attachedRigidbody));
+        if(collision.transform.tag == "Ennemi")
+        {
+            EnnemiController ec = collision.GetComponent<EnnemiController>();
+
+            MovementController.mC.StartCoroutine(AttackMiniDash((InputListener.iL.directionVector).normalized, ec ));
+
+            ec.StartCoroutine(ec.TakeDamage(2));
+        }
+        
 
         //EnemyController ec = collision.GetComponent<EnemyController>();
 
@@ -32,13 +40,17 @@ public class BloodSlashCollision : MonoBehaviour
         }*/
     }
 
-    IEnumerator AttackMiniDash(Vector2 dashDirection, Rigidbody2D ennemiRigidbody2D)
+    IEnumerator AttackMiniDash(Vector2 dashDirection, EnnemiController ennemiController)
     {
+        ennemiController.stunned = true;
+
         for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         {
-            ennemiRigidbody2D.velocity = dashDirection * movementForce * 1.3f * i * Time.fixedDeltaTime;
+            ennemiController.rb.velocity = dashDirection * movementForce * 1.3f * i * Time.fixedDeltaTime;
 
             yield return new WaitForFixedUpdate();
         }
+
+        ennemiController.stunned = false;
     }
 }

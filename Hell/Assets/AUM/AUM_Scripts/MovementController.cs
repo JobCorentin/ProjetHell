@@ -21,7 +21,7 @@ public class MovementController : MonoBehaviour
     Vector2 directionInput;
 
     bool canJump;
-    bool canDoubleJump;
+    [HideInInspector] public bool canDoubleJump;
 
     [HideInInspector] public bool isGrounded;
 
@@ -52,6 +52,15 @@ public class MovementController : MonoBehaviour
         else
         {
             canJump = false;
+        }
+
+        if(canDoubleJump)
+        {
+            BaseSlashInstancier.bsi.sr.color = new Color(BaseSlashInstancier.bsi.sr.color.r, BaseSlashInstancier.bsi.sr.color.g, BaseSlashInstancier.bsi.sr.color.b, 1f);
+        }
+        else
+        {
+            BaseSlashInstancier.bsi.sr.color = new Color(BaseSlashInstancier.bsi.sr.color.r, BaseSlashInstancier.bsi.sr.color.g, BaseSlashInstancier.bsi.sr.color.b, 0.5f);
         }
 
         if(stuned == false)
