@@ -7,10 +7,21 @@ public class EnnemiOneController : EnnemiController
     public float coolDown;
     float coolDownTimer = 0;
 
+    public GameObject bulletPrefab;
+
+    public GameObject arrow;
+
+    public float bulletForce;
+
+    public float preparationDuration;
+    
+
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
+
+        arrow.SetActive(false);
     }
 
     // Update is called once per frame
@@ -36,7 +47,7 @@ public class EnnemiOneController : EnnemiController
             }
             else
             {
-                Debug.Log("Attaque");
+                StartCoroutine(LaunchBullet());
                 coolDownTimer = 0;
             }
                 
@@ -46,5 +57,41 @@ public class EnnemiOneController : EnnemiController
 
         //if(Vector2.Distance(transform.position, pTransform.position))
         //rb.AddForce(pTransform)
+    }
+
+    IEnumerator LaunchBullet()
+    {
+        Vector2 baseDirectionAttack = pTransform.position - transform.position;
+
+        Vector2 finalDirectionAttack = baseDirectionAttack;
+
+        arrow.SetActive(true);
+
+        for (float i = preparationDuration; i > 0; i -= Time.deltaTime)
+        {
+            finalDirectionAttack = ( baseDirectionAttack + (Vector2)(pTransform.position - transform.position) ).normalized;
+
+            float finalDirectionAttackAngle = Vector2.Angle(transform.right, finalDirectionAttack);
+
+            if(finalDirectionAttack.y < 0)
+            {
+                finalDirectionAttackAngle = -finalDirectionAttackAngle;
+            }
+
+            arrow.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle);
+
+            yield return null;
+        }
+
+        E1Bullet currentBullet = Instantiate(bulletPrefab).GetComponent<E1Bullet>();
+
+        currentBullet.ennemiLauncheFrom = this;
+        currentBullet.transform.position = transform.position;
+
+        currentBullet.rb.velocity = finalDirectionAttack * bulletForce;
+
+        arrow.SetActive(false);
+
+        yield break;
     }
 }

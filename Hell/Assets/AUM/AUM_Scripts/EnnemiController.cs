@@ -8,7 +8,7 @@ public class EnnemiController : MonoBehaviour
     public Rigidbody2D rb;
     public Seeker seeker;
 
-    public Vector2 direction;
+    [HideInInspector] public Vector2 direction;
 
     public bool tough;
     public int health;
