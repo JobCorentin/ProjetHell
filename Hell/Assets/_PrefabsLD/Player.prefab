@@ -486,6 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18392187e14a3041b1c24c71d61ce32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 25406834}
   rb: {fileID: 7360886272903129566}
   speed: 4500
   jumpForce: 1250

@@ -1065,6 +1065,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: LifeText
       objectReference: {fileID: 0}
+    - target: {fileID: 453302910127241005, guid: ab559afc00aac454c8392e3a0828149f,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.49019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 453302910127241005, guid: ab559afc00aac454c8392e3a0828149f,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.14509808
+      objectReference: {fileID: 0}
+    - target: {fileID: 453302910127241005, guid: ab559afc00aac454c8392e3a0828149f,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.14509808
+      objectReference: {fileID: 0}
     - target: {fileID: 1818332846873625268, guid: ab559afc00aac454c8392e3a0828149f,
         type: 3}
       propertyPath: m_Name
@@ -1074,7 +1089,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2057775457}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab559afc00aac454c8392e3a0828149f, type: 3}
 --- !u!1001 &815674960281496432

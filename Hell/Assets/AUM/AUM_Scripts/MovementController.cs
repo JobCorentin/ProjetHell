@@ -6,6 +6,8 @@ public class MovementController : MonoBehaviour
 {
     public static MovementController mC;
 
+    public Animator animator;
+
     public Rigidbody2D rb;
 
     public float speed;
@@ -41,6 +43,7 @@ public class MovementController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
 
         isGrounded = Physics2D.OverlapArea(new Vector2(transform.position.x - 0.5f, transform.position.y - 0.5f), new Vector2(transform.position.x + 0.5f, transform.position.y - 0.76f), groundLayers);
 
@@ -80,8 +83,14 @@ public class MovementController : MonoBehaviour
             }
 
         }
+        animator.SetFloat("HorizontalInput", Mathf.Abs(InputListener.iL.horizontalInput));
+
+        animator.SetBool("IsGrounded", isGrounded);
+
+        animator.SetBool("JumpInput", InputListener.iL.jumpInput);
 
         InputListener.iL.jumpInput = false;
+       
     }
 
     public IEnumerator ChangeSpeed(float duration, float newValue)
