@@ -26,13 +26,13 @@ public class CameraShake : MonoBehaviour
         shaking = false;
     }
 
-    public IEnumerator CameraShakeFor(float time, float secondTime, float force)
+    public IEnumerator CameraShakeFor(float time, float secondTime, float force,float gamePadForce)
     {
         shaking = true;
 
         cmVcamNoise.m_AmplitudeGain = force;
 
-        GamePad.SetVibration(0, force / 10, force / 10);
+        GamePad.SetVibration(0, gamePadForce / 10, gamePadForce / 10);
 
         yield return new WaitForSeconds(time);
 
