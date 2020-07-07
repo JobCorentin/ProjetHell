@@ -126,7 +126,7 @@ public class MovementController : MonoBehaviour
 
         for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         {
-            rigidbody2D.velocity = dashDirection * movementForce * 1.3f * i * Time.fixedDeltaTime;
+            rigidbody2D.velocity = dashDirection.normalized * movementForce * i * Time.fixedDeltaTime;
 
             yield return new WaitForFixedUpdate();
         }

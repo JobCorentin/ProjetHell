@@ -14,7 +14,8 @@ public class EnnemiOneController : EnnemiController
     public float bulletForce;
 
     public float preparationDuration;
-    
+
+    public EnnemiDetection ennemiDetection;
 
     // Start is called before the first frame update
     public override void Start()
@@ -33,6 +34,11 @@ public class EnnemiOneController : EnnemiController
         }
 
         target = pTransform.position + ((transform.position - pTransform.position).normalized * range);
+
+        for (int i = 0; i < ennemiDetection.ennemiControllers.Count; i++)
+        {
+            target += (Vector2)(transform.position - ennemiDetection.ennemiControllers[i].transform.position).normalized * 3f;
+        }
 
         if (Vector2.Distance(target, transform.position) >= 0.5f)
         {
@@ -69,7 +75,7 @@ public class EnnemiOneController : EnnemiController
 
         for (float i = preparationDuration; i > 0; i -= Time.deltaTime)
         {
-            finalDirectionAttack = ( baseDirectionAttack + (Vector2)(pTransform.position - transform.position) ).normalized;
+            finalDirectionAttack = ( baseDirectionAttack + ((Vector2)(pTransform.position - transform.position) * 3) ).normalized;
 
             float finalDirectionAttackAngle = Vector2.Angle(transform.right, finalDirectionAttack);
 
