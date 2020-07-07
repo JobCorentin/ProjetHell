@@ -112,16 +112,64 @@ public class EnnemiController : MonoBehaviour
 
     public IEnumerator Execute()
     {
-        Time.timeScale = 0.6f;
+        Time.timeScale = 1f;
 
-        for(float i = 0.5f; i >= 0; i -= 0.02f)
+        while (Time.timeScale > 0.5f)
         {
-            rb.velocity = Vector2.zero;
+            if (Time.timeScale - 100f * Time.unscaledDeltaTime >= 0.5f)
+            {
+                Time.timeScale = Time.timeScale - 100f * Time.unscaledDeltaTime;
+            }
+            else
+            {
+                Time.timeScale = 0.5f;
+            }
+
+            yield return null;
+        }
+
+        Time.timeScale = 0.5f;
+
+        yield return new WaitForSecondsRealtime(1f);
+
+        while (Time.timeScale < 1f)
+        {
+            if (Time.timeScale - 100f * Time.unscaledDeltaTime <= 1f)
+            {
+                Time.timeScale = Time.timeScale + 100f * Time.unscaledDeltaTime;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+            }
+            yield return null;
+        }
+
+        Time.timeScale = 1f;
+
+        /*
+        for (float i = 1f; i >= 0f; i -= (0.02f * 4f))
+        {
+            Time.timeScale = i;
+
+            sr.color = Color.red;
+            yield return new WaitForSecondsRealtime(0.02f);
+            sr.color = Color.red;
+        }
+
+        yield return new WaitForSecondsRealtime(0.25f);
+
+        for (float i = 0f; i <= 1f; i += (0.02f * 4f))
+        {
+            Time.timeScale = i;
+
+            sr.color = Color.red;
             yield return new WaitForSecondsRealtime(0.02f);
             sr.color = Color.red;
         }
 
         Time.timeScale = 1f;
+        */
 
         Die();
 
