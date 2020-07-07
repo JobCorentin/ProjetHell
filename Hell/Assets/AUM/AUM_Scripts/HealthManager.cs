@@ -20,6 +20,8 @@ public class HealthManager : MonoBehaviour
     {
         hm = this;
 
+        text = GameObject.Find("LifeText").GetComponent<TMPro.TextMeshProUGUI>();
+
         initialLife = life;
     }
 
