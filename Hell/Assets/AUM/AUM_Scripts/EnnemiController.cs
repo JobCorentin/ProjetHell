@@ -93,6 +93,15 @@ public class EnnemiController : MonoBehaviour
             else
             {
                 health -= amount;
+                if (amount == 1)
+                {
+                    CameraShake.cs.WeakShake();
+                }
+                else if (amount == 2)
+                {
+                    CameraShake.cs.StrongShake();
+                }
+                
             }
         }
         

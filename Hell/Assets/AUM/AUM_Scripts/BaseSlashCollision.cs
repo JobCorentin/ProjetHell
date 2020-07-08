@@ -24,7 +24,7 @@ public class BaseSlashCollision : MonoBehaviour
         if (collision.transform.tag == "Ennemi")
         {
             EnnemiController ec = collision.GetComponent<EnnemiController>();
-            CameraShake.cs.StartCoroutine(CameraShake.cs.CameraShakeFor(0.2f, 0.2f,20f,10f));
+            CameraShake.cs.WeakShake();
 
             MovementController.mC.StartCoroutine(AttackMiniDash((InputListener.iL.directionVector).normalized, ec));
 
@@ -34,7 +34,6 @@ public class BaseSlashCollision : MonoBehaviour
         if (collision.transform.tag == "Props")
         {
             PropsBehaviour pb = collision.GetComponent<PropsBehaviour>();
-            CameraShake.cs.StartCoroutine(CameraShake.cs.CameraShakeFor(0.2f, 0.2f, 3f, 2f));
 
             pb.StartCoroutine(pb.TakeDamage(1));
         }
