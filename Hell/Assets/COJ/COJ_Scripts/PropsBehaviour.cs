@@ -15,17 +15,6 @@ public class PropsBehaviour : MonoBehaviour
     {
         animator = gameObject.GetComponent<Animator>();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public IEnumerator TakeDamage(int amount)
     {
