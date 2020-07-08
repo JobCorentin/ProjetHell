@@ -199,9 +199,9 @@ public class BaseSlashInstancier : MonoBehaviour
             autoAimDirection = selectedElement.transform.position - transform.position;
         }
 
-        float attackDirectionAngle = Vector2.Angle(transform.right, autoAimDirection);
+        float attackDirectionAngle = Vector2.Angle(transform.right, currentAttackDirection);
 
-        if (autoAimDirection.y < 0)
+        if (currentAttackDirection.y < 0)
         {
             attackDirectionAngle = -attackDirectionAngle;
         }

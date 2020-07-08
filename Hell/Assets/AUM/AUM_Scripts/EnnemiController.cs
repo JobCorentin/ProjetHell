@@ -112,7 +112,7 @@ public class EnnemiController : MonoBehaviour
 
     public IEnumerator Execute()
     {
-        Time.timeScale = 1f;
+        /*Time.timeScale = 1f;
 
         while (Time.timeScale > 0.5f)
         {
@@ -145,7 +145,7 @@ public class EnnemiController : MonoBehaviour
             yield return null;
         }
 
-        Time.timeScale = 1f;
+        Time.timeScale = 1f;*/
 
         /*
         for (float i = 1f; i >= 0f; i -= (0.02f * 4f))
