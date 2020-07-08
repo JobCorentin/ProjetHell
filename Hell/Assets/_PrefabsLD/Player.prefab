@@ -143,7 +143,7 @@ Transform:
   m_GameObject: {fileID: 399325738981558391}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.691, y: 0, z: 0}
-  m_LocalScale: {x: 7.482199, y: 0.8346944, z: 1}
+  m_LocalScale: {x: 7.482199, y: 1.8, z: 1}
   m_Children: []
   m_Father: {fileID: 3263186606488905066}
   m_RootOrder: 0
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e05d4613394ae2449ec708345ef9cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 25406834}
   slash: {fileID: 7360886272987733145}
   bloodSlash: {fileID: 2715657956450840114}
   movementForce: 10000
@@ -587,7 +587,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 5
+  m_LinearDrag: 6
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
