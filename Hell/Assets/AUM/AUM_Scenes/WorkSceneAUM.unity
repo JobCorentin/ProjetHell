@@ -279,6 +279,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3186736162452674424, guid: 9fd654979bf71984cb8c1b0e6ca9a8f4,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3186736162452674425, guid: 9fd654979bf71984cb8c1b0e6ca9a8f4,
         type: 3}
       propertyPath: m_Name
@@ -768,6 +773,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.2303414
       objectReference: {fileID: 0}
+    - target: {fileID: 3186736162452674424, guid: 9fd654979bf71984cb8c1b0e6ca9a8f4,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3186736162452674425, guid: 9fd654979bf71984cb8c1b0e6ca9a8f4,
         type: 3}
       propertyPath: m_Name
@@ -1166,26 +1176,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 453302909486942499, guid: ab559afc00aac454c8392e3a0828149f,
-        type: 3}
-      propertyPath: m_Name
-      value: LifeText
-      objectReference: {fileID: 0}
-    - target: {fileID: 453302910127241005, guid: ab559afc00aac454c8392e3a0828149f,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0.49019608
-      objectReference: {fileID: 0}
-    - target: {fileID: 453302910127241005, guid: ab559afc00aac454c8392e3a0828149f,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0.14509808
-      objectReference: {fileID: 0}
-    - target: {fileID: 453302910127241005, guid: ab559afc00aac454c8392e3a0828149f,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0.14509808
-      objectReference: {fileID: 0}
     - target: {fileID: 1818332846873625268, guid: ab559afc00aac454c8392e3a0828149f,
         type: 3}
       propertyPath: m_Name
@@ -1338,6 +1328,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 8.187833
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186736162452674424, guid: 9fd654979bf71984cb8c1b0e6ca9a8f4,
+        type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3186736162452674425, guid: 9fd654979bf71984cb8c1b0e6ca9a8f4,
         type: 3}

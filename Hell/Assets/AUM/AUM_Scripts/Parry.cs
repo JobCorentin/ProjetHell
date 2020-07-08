@@ -21,7 +21,7 @@ public class Parry : MonoBehaviour
     {
         if(InputListener.iL.parryInput == true)
         {
-
+            //ActivateParry()
         }
 
         InputListener.iL.parryInput = false;

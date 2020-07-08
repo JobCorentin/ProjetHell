@@ -75,21 +75,21 @@ public class BaseSlashCollision : MonoBehaviour
         { 
             ennemiController.rb.velocity = (currentAttackDirection.normalized * 1.5f + dashDirection.normalized).normalized * movementForce * 1.3f * i * Time.fixedDeltaTime;
 
-            MovementController.mC.rb.velocity = dashDirection * movementForce * i * Time.fixedDeltaTime;
+            //MovementController.mC.rb.velocity = dashDirection * movementForce * i * Time.fixedDeltaTime;
 
             yield return new WaitForFixedUpdate();
         }
 
         MovementController.mC.stuned = false;
 
-        BetterJump.bj.StopLastChangeFall();
+        //BetterJump.bj.StopLastChangeFall();
 
-        BetterJump.bj.lastChangeFall = BetterJump.bj.StartCoroutine( BetterJump.bj.ChangeFallMultiplier(0.3f, BetterJump.bj.fallMultiplier/10f) );
+        //BetterJump.bj.lastChangeFall = BetterJump.bj.StartCoroutine( BetterJump.bj.ChangeFallMultiplier(0.3f, BetterJump.bj.fallMultiplier/10f) );
 
 
-        MovementController.mC.StopLastChangeSpeed();
+        //MovementController.mC.StopLastChangeSpeed();
 
-        MovementController.mC.lastChangeSpeed =  MovementController.mC.StartCoroutine(MovementController.mC.ChangeSpeed(0.3f, MovementController.mC.speed/5f));
+        //MovementController.mC.lastChangeSpeed =  MovementController.mC.StartCoroutine(MovementController.mC.ChangeSpeed(0.3f, MovementController.mC.speed/5f));
 
         ennemiController.stunned = false;
     }

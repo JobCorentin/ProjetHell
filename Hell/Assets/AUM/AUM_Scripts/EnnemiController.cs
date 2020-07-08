@@ -35,6 +35,8 @@ public class EnnemiController : MonoBehaviour
     // Start is called before the first frame update
     public virtual void Start()
     {
+        pTransform = MovementController.mC.transform;
+
         InvokeRepeating("UpdatePath", 0f, 0.1f);
     }
 

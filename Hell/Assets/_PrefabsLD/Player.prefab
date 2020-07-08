@@ -394,8 +394,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushForce: 0
   duration: 0.1
-  movementForce: 10000
-  momentumMultiplier: 0
+  movementForce: 1000
+  momentumMultiplier: 1
 --- !u!1 &7360886272248513687
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,12 +539,12 @@ MonoBehaviour:
   animator: {fileID: 25406834}
   slash: {fileID: 7360886272987733145}
   bloodSlash: {fileID: 2715657956450840114}
-  movementForce: 10000
+  movementForce: 1000
   sr: {fileID: 25406835}
   coolDown: 0.2
   bloodCoolDown: 0.2
   duration: 0.1
-  momentumMultiplier: 0
+  momentumMultiplier: 1
   bloodDuration: 0.1
   currentAutoAimAngle: 90
   currentNumberOfRaycast: 90

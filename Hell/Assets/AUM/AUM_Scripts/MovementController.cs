@@ -35,11 +35,14 @@ public class MovementController : MonoBehaviour
 
     public Coroutine lastChangeSpeed;
 
+    private void Awake()
+    {
+        mC = this;
+    }
+
     void Start()
     {
         originalSpeed = speed;
-
-        mC = this;
     }
 
     // Update is called once per frame
@@ -87,6 +90,8 @@ public class MovementController : MonoBehaviour
 
         }
         animator.SetFloat("HorizontalInput", Mathf.Abs(InputListener.iL.horizontalInput));
+
+        animator.SetBool("IsGrounded", isGrounded);
 
         if (wasGrounded != isGrounded)
         {

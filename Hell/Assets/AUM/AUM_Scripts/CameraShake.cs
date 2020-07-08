@@ -21,6 +21,8 @@ public class CameraShake : MonoBehaviour
     {
         cs = this;
 
+        cmVcam.Follow = MovementController.mC.transform;
+
         cmVcamNoise = cmVcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 
         shaking = false;

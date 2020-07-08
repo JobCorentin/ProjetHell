@@ -156,12 +156,34 @@ public class BaseSlashInstancier : MonoBehaviour
 
         slash.transform.rotation = Quaternion.Euler(0, 0, attackDirectionAngle);
 
+        MovementController.mC.stuned = true;
+
         for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
+        {
+            //ennemiController.rb.velocity = (currentAttackDirection.normalized * 1.5f + currentInputDirection.normalized).normalized * movementForce * 1.3f * i * Time.fixedDeltaTime;
+
+            MovementController.mC.rb.velocity = (currentAttackDirection.normalized + currentInputDirection.normalized).normalized * movementForce * i * Time.fixedDeltaTime;
+
+            yield return new WaitForFixedUpdate();
+        }
+
+        MovementController.mC.stuned = false;
+
+        BetterJump.bj.StopLastChangeFall();
+
+        BetterJump.bj.lastChangeFall = BetterJump.bj.StartCoroutine(BetterJump.bj.ChangeFallMultiplier(0.2f, BetterJump.bj.fallMultiplier / 10f));
+
+
+        MovementController.mC.StopLastChangeSpeed();
+
+        MovementController.mC.lastChangeSpeed = MovementController.mC.StartCoroutine(MovementController.mC.ChangeSpeed(0.2f, MovementController.mC.speed / 5f));
+
+        /*for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         {
             //MovementController.mC.rb.velocity = currentInputDirection * movementForce * i * Time.fixedDeltaTime;
 
             yield return new WaitForFixedUpdate();
-        }
+        }*/
 
         slash.SetActive(false);
 
