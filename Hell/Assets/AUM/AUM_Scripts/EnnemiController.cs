@@ -121,6 +121,38 @@ public class EnnemiController : MonoBehaviour
 
     }
 
+    public IEnumerator DamageDash(Vector2 dashDirection, float duration, float movementForce, float momentumMultiplier)
+    {
+        stunned = true;
+
+        Vector2 currentAttackDirection = dashDirection.normalized;
+
+        float attackDirectionAngle = Vector2.Angle(Vector2.right, currentAttackDirection);
+
+        if (currentAttackDirection.y < 0)
+        {
+            attackDirectionAngle = -attackDirectionAngle;
+        }
+
+        if (attackDirectionAngle < 70 && -70 < attackDirectionAngle)
+            currentAttackDirection = Vector2.right;
+        else if (70 <= attackDirectionAngle && attackDirectionAngle <= 110)
+            currentAttackDirection = Vector2.up;
+        else if (attackDirectionAngle > 110 || -110 > attackDirectionAngle)
+            currentAttackDirection = Vector2.left;
+        else if (-110 <= attackDirectionAngle && attackDirectionAngle <= -70)
+            currentAttackDirection = Vector2.down;
+
+        for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
+        {
+            rb.velocity = (currentAttackDirection.normalized * 1.5f + dashDirection.normalized).normalized * movementForce * 1.3f * i * Time.fixedDeltaTime;
+
+            yield return new WaitForFixedUpdate();
+        }
+
+        stunned = false;
+    }
+
     public IEnumerator Execute()
     {
         /*Time.timeScale = 1f;

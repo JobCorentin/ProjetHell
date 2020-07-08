@@ -45,7 +45,7 @@ public class EnnemiOneController : EnnemiController
             base.FixedUpdate();
         }
         
-        if(Vector2.Distance(transform.position, pTransform.position) <= range + 1f)
+        if(Vector2.Distance(transform.position, pTransform.position) <= range * 2f)
         {
             if(coolDownTimer < coolDown)
             {
@@ -75,7 +75,7 @@ public class EnnemiOneController : EnnemiController
 
         for (float i = preparationDuration; i > 0; i -= Time.deltaTime)
         {
-            finalDirectionAttack = ( baseDirectionAttack + ((Vector2)(pTransform.position - transform.position) * 3) ).normalized;
+            finalDirectionAttack = ( baseDirectionAttack + ((Vector2)(pTransform.position - transform.position) * 10) ).normalized;
 
             float finalDirectionAttackAngle = Vector2.Angle(transform.right, finalDirectionAttack);
 

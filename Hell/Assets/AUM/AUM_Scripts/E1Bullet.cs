@@ -10,6 +10,8 @@ public class E1Bullet : MonoBehaviour
     public float existenceTime;
     float existenceTimer;
 
+    bool reflected = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,9 +47,27 @@ public class E1Bullet : MonoBehaviour
         }
 
         //Collision avec le layer Parry
-        if(collision.gameObject.layer == 12)
+        if(collision.gameObject.layer == 13)
         {
             Parry.p.StopParry();
+
+            reflected = true;
+
+            rb.velocity = (ennemiLauncheFrom.transform.position - transform.position).normalized * 40f;
+        }
+
+        if (reflected == true)
+        {
+            if(collision.gameObject.layer == 10)
+            {
+                EnnemiController ec = collision.GetComponent<EnnemiController>();
+
+                ec.StartCoroutine(ec.DamageDash((ennemiLauncheFrom.transform.position - transform.position).normalized, 0.1f, 500f, 1));
+
+                ec.StartCoroutine(ec.TakeDamage(1));
+
+                Destroy(gameObject);
+            }
         }
     }
 }

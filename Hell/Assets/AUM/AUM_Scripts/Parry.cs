@@ -6,8 +6,7 @@ public class Parry : MonoBehaviour
 {
     public static Parry p;
 
-    public Collider2D normalCol;
-    public Collider2D protectionCol;
+    public Transform protectionCol;
 
     public float protectionDuration;
     public float recoveryDuration;
@@ -28,7 +27,12 @@ public class Parry : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(InputListener.iL.parryInput == true)
+        if(cooldownTimer < cooldown)
+        {
+            cooldownTimer += Time.fixedDeltaTime;
+        }
+
+        if(InputListener.iL.parryInput == true && parrying == false && cooldownTimer >= cooldown)
         {
             lastParry = StartCoroutine(ActivateParry());
         }
@@ -40,8 +44,39 @@ public class Parry : MonoBehaviour
     {
         parrying = true;
 
-        normalCol.enabled = false;
         protectionCol.gameObject.SetActive(true);
+
+        Vector2 currentParryDirection = InputListener.iL.directionVector.normalized;
+
+        float parryDirectionAngle = Vector2.Angle(transform.right, currentParryDirection);
+
+        if (currentParryDirection.y < 0)
+        {
+            parryDirectionAngle = -parryDirectionAngle;
+        }
+
+        if (MovementController.mC.isGrounded == true)
+        {
+            if (parryDirectionAngle < 45 && -90 < parryDirectionAngle)
+                parryDirectionAngle = 0;
+            else if (45 <= parryDirectionAngle && parryDirectionAngle <= 135)
+                parryDirectionAngle = 90;
+            else if (parryDirectionAngle < 135 || -90 < parryDirectionAngle)
+                parryDirectionAngle = 180;
+        }
+        else
+        {
+            if (parryDirectionAngle < 45 && -45 < parryDirectionAngle)
+                parryDirectionAngle = 0;
+            else if (45 <= parryDirectionAngle && parryDirectionAngle <= 135)
+                parryDirectionAngle = 90;
+            else if (parryDirectionAngle > 135 || -135 > parryDirectionAngle)
+                parryDirectionAngle = 180;
+            else if (-135 <= parryDirectionAngle && parryDirectionAngle <= -45)
+                parryDirectionAngle = -90;
+        }
+
+        protectionCol.transform.rotation = Quaternion.Euler(0, 0, parryDirectionAngle);
 
         BetterJump.bj.StopLastChangeFall();
 
@@ -57,7 +92,6 @@ public class Parry : MonoBehaviour
             yield return null;
         }
 
-        normalCol.enabled = true;
         protectionCol.gameObject.SetActive(false);
 
         for (float i = recoveryDuration; i > 0; i -= Time.deltaTime)
@@ -79,12 +113,13 @@ public class Parry : MonoBehaviour
 
         MovementController.mC.StopLastChangeSpeed();
 
-        normalCol.enabled = true;
-        protectionCol.gameObject.SetActive(false);
+        //protectionCol.gameObject.SetActive(false);
 
-        cooldownTimer = 0;
+        //cooldownTimer = 0;
 
-        parrying = false;
-        StopCoroutine(lastParry);
+        //parrying = false;
+
+        /*if(lastParry != null)
+            StopCoroutine(lastParry);*/
     }
 }
