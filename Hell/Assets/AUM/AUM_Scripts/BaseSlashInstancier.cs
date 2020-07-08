@@ -12,6 +12,8 @@ public class BaseSlashInstancier : MonoBehaviour
 
     public GameObject bloodSlash;
 
+    public bool bloodEveryDirection = false;
+
     public float movementForce;
 
     public SpriteRenderer sr;
@@ -227,6 +229,15 @@ public class BaseSlashInstancier : MonoBehaviour
 
         float attackDirectionAngle = Vector2.Angle(transform.right, currentAttackDirection);
 
+        if (bloodEveryDirection)
+        {
+            attackDirectionAngle = Vector2.Angle(transform.right, autoAimDirection);
+        }
+        else if (!bloodEveryDirection)
+        {
+            attackDirectionAngle = Vector2.Angle(transform.right, currentAttackDirection);
+        }
+
         if (currentAttackDirection.y < 0)
         {
             attackDirectionAngle = -attackDirectionAngle;
@@ -238,7 +249,7 @@ public class BaseSlashInstancier : MonoBehaviour
         {
             //MovementController.mC.rb.velocity = currentInputDirection * movementForce * i * Time.fixedDeltaTime;
 
-            MovementController.mC.rb.velocity = autoAimDirection.normalized * movementForce * i * Time.fixedDeltaTime;
+            MovementController.mC.rb.velocity = (currentAttackDirection.normalized + currentInputDirection.normalized).normalized * movementForce * i * Time.fixedDeltaTime;
 
             yield return new WaitForFixedUpdate();
         }
