@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BaseSlashInstancier : MonoBehaviour
 {
+    public Animator animator;
+
     public static BaseSlashInstancier bsi;
 
     public GameObject slash;
@@ -141,6 +143,8 @@ public class BaseSlashInstancier : MonoBehaviour
 
     IEnumerator Slash(Vector2 currentAttackDirection, Vector2 currentInputDirection)
     {
+        animator.SetTrigger("Attacking");
+
         slash.SetActive(true);
 
         float attackDirectionAngle = Vector2.Angle(transform.right, currentAttackDirection);

@@ -25,6 +25,8 @@ public class MovementController : MonoBehaviour
     bool canJump;
     [HideInInspector] public bool canDoubleJump;
 
+    bool wasGrounded;
+
     [HideInInspector] public bool isGrounded;
 
     public bool stuned = false;
@@ -44,6 +46,7 @@ public class MovementController : MonoBehaviour
     void FixedUpdate()
     {
 
+        wasGrounded = isGrounded;
 
         isGrounded = Physics2D.OverlapArea(new Vector2(transform.position.x - 0.5f, transform.position.y - 0.5f), new Vector2(transform.position.x + 0.5f, transform.position.y - 0.76f), groundLayers);
 
@@ -85,7 +88,20 @@ public class MovementController : MonoBehaviour
         }
         animator.SetFloat("HorizontalInput", Mathf.Abs(InputListener.iL.horizontalInput));
 
-        animator.SetBool("IsGrounded", isGrounded);
+        if (wasGrounded != isGrounded)
+        {
+            if(isGrounded == true)
+            {
+                animator.SetTrigger("AirToGround");
+            }
+          
+            else
+            {
+                animator.SetTrigger("GroundToAir");
+            }
+                
+        
+        }
 
         animator.SetBool("JumpInput", InputListener.iL.jumpInput);
 
