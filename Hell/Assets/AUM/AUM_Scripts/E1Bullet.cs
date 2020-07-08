@@ -47,7 +47,7 @@ public class E1Bullet : MonoBehaviour
         //Collision avec le layer Parry
         if(collision.gameObject.layer == 12)
         {
-
+            Parry.p.StopParry();
         }
     }
 }

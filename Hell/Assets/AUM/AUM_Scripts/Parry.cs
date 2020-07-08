@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Parry : MonoBehaviour
 {
+    public static Parry p;
+
     public Collider2D normalCol;
     public Collider2D protectionCol;
 
@@ -13,12 +15,14 @@ public class Parry : MonoBehaviour
     public float cooldown;
     float cooldownTimer = 0;
 
+    Coroutine lastParry;
+
     public bool parrying;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        p = this;
     }
 
     // Update is called once per frame
@@ -26,7 +30,7 @@ public class Parry : MonoBehaviour
     {
         if(InputListener.iL.parryInput == true)
         {
-            StartCoroutine(ActivateParry());
+            lastParry = StartCoroutine(ActivateParry());
         }
 
         InputListener.iL.parryInput = false;
@@ -34,6 +38,8 @@ public class Parry : MonoBehaviour
 
     IEnumerator ActivateParry()
     {
+        parrying = true;
+
         normalCol.enabled = false;
         protectionCol.gameObject.SetActive(true);
 
@@ -61,14 +67,24 @@ public class Parry : MonoBehaviour
 
         cooldownTimer = 0;
 
+        parrying = false;
+
         yield break;
 
     }
 
-    void StopParry()
+    public void StopParry()
     {
         BetterJump.bj.StopLastChangeFall();
 
         MovementController.mC.StopLastChangeSpeed();
+
+        normalCol.enabled = true;
+        protectionCol.gameObject.SetActive(false);
+
+        cooldownTimer = 0;
+
+        parrying = false;
+        StopCoroutine(lastParry);
     }
 }
