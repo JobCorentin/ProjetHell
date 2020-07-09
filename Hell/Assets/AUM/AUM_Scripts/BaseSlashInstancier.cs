@@ -39,6 +39,8 @@ public class BaseSlashInstancier : MonoBehaviour
 
     [HideInInspector] public bool canGainHeight;
 
+
+
     void Start()
     {
         bsi = this;
@@ -189,12 +191,12 @@ public class BaseSlashInstancier : MonoBehaviour
 
         BetterJump.bj.StopLastChangeFall();
 
-        BetterJump.bj.lastChangeFall = BetterJump.bj.StartCoroutine(BetterJump.bj.ChangeFallMultiplier(0.05f, BetterJump.bj.fallMultiplier / 10f));
+        BetterJump.bj.lastChangeFall = BetterJump.bj.StartCoroutine(BetterJump.bj.ChangeFallMultiplier(0.1f, BetterJump.bj.fallMultiplier / 10f));
 
 
         MovementController.mC.StopLastChangeSpeed();
 
-        MovementController.mC.lastChangeSpeed = MovementController.mC.StartCoroutine(MovementController.mC.ChangeSpeed(0.05f, MovementController.mC.speed / 5f));
+        MovementController.mC.lastChangeSpeed = MovementController.mC.StartCoroutine(MovementController.mC.ChangeSpeed(0.1f, MovementController.mC.speed / 5f));
 
         /*for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         {
