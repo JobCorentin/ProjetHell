@@ -160,6 +160,8 @@ public class MovementController : MonoBehaviour
 
         animator.SetBool("JumpInput", InputListener.iL.jumpInput);
 
+        animator.SetBool("IsOnWall", isWalled);
+
         InputListener.iL.jumpInput = false;
        
     }
