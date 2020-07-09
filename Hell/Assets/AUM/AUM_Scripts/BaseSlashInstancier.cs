@@ -39,11 +39,15 @@ public class BaseSlashInstancier : MonoBehaviour
 
     [HideInInspector] public bool canGainHeight;
 
+    public int slashNumb;
+    [HideInInspector] public int slashNumbMax;
 
 
     void Start()
     {
         bsi = this;
+
+        slashNumbMax = slashNumb;
 
         slash.SetActive(false);
         bloodSlash.SetActive(false);
@@ -61,7 +65,7 @@ public class BaseSlashInstancier : MonoBehaviour
                 coolDownTimer += Time.fixedDeltaTime;
             }
 
-            if (InputListener.iL.attackInput == true && coolDownTimer > bloodCoolDown / 2f)
+            if (InputListener.iL.attackInput == true && coolDownTimer > bloodCoolDown / 2f && slashNumb > 0)
             {
                 AttackDirectionDecision();
             }
@@ -75,7 +79,7 @@ public class BaseSlashInstancier : MonoBehaviour
                 coolDownTimer += Time.fixedDeltaTime;
             }
 
-            if (InputListener.iL.attackInput == true && coolDownTimer > coolDown / 2f)
+            if (InputListener.iL.attackInput == true && coolDownTimer > coolDown / 2f && slashNumb > 0)
             {
                 AttackDirectionDecision();
             }
@@ -172,7 +176,7 @@ public class BaseSlashInstancier : MonoBehaviour
                 if (canGainHeight == true || currentInputDirection.y < 0)
                     MovementController.mC.rb.velocity = (currentAttackDirection.normalized + currentInputDirection.normalized).normalized * movementForce * i * Time.fixedDeltaTime;
                 else
-                    MovementController.mC.rb.velocity = new Vector2((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.x * movementForce * i * Time.fixedDeltaTime, ((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.y * movementForce * i * Time.fixedDeltaTime) / 2);
+                    MovementController.mC.rb.velocity = new Vector2(((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.x * movementForce * i * Time.fixedDeltaTime) * 3f/4f, ((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.y * movementForce * i * Time.fixedDeltaTime) / 2);
             //}
             //else
             //{
@@ -184,7 +188,8 @@ public class BaseSlashInstancier : MonoBehaviour
 
         //if (currentAttackDirection == Vector2.up)
         //{
-            canGainHeight = false;
+        canGainHeight = false;
+        slashNumb--;
         //}
 
         MovementController.mC.stuned = false;
@@ -283,7 +288,8 @@ public class BaseSlashInstancier : MonoBehaviour
 
         //if (currentAttackDirection == Vector2.up)
         //{
-            canGainHeight = false;
+        canGainHeight = false;
+        slashNumb--;
         //}
 
         BetterJump.bj.StopLastChangeFall();

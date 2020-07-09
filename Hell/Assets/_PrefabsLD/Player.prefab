@@ -611,7 +611,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 3
   invicibiltyTime: 0.5
-  text: {fileID: 0}
 --- !u!114 &7360886272903129554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,6 +673,9 @@ MonoBehaviour:
   bloodDuration: 0.1
   currentAutoAimAngle: 90
   currentNumberOfRaycast: 90
+  canGainHeight: 0
+  slashNumb: 7
+  slashNumbMax: 0
 --- !u!114 &3210968349215444155
 MonoBehaviour:
   m_ObjectHideFlags: 0
