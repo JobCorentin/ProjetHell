@@ -57,6 +57,7 @@ public class MovementController : MonoBehaviour
         {
             canJump = true;
             canDoubleJump = true;
+            BaseSlashInstancier.bsi.canGainHeight = true;
         }
         else
         {

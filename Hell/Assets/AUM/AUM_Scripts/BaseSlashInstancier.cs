@@ -37,6 +37,8 @@ public class BaseSlashInstancier : MonoBehaviour
     public float currentAutoAimAngle;
     public int currentNumberOfRaycast;
 
+    [HideInInspector] public bool canGainHeight;
+
     void Start()
     {
         bsi = this;
@@ -163,10 +165,24 @@ public class BaseSlashInstancier : MonoBehaviour
         for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         {
             //ennemiController.rb.velocity = (currentAttackDirection.normalized * 1.5f + currentInputDirection.normalized).normalized * movementForce * 1.3f * i * Time.fixedDeltaTime;
-
-            MovementController.mC.rb.velocity = (currentAttackDirection.normalized + currentInputDirection.normalized).normalized * movementForce * i * Time.fixedDeltaTime;
+            //if(currentAttackDirection == Vector2.up)
+            //{
+                if (canGainHeight == true)
+                    MovementController.mC.rb.velocity = (currentAttackDirection.normalized + currentInputDirection.normalized).normalized * movementForce * i * Time.fixedDeltaTime;
+                else
+                    MovementController.mC.rb.velocity = new Vector2((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.x * movementForce * i * Time.fixedDeltaTime, ((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.y * movementForce * i * Time.fixedDeltaTime) / 4);
+            //}
+            //else
+            //{
+            //    MovementController.mC.rb.velocity = (currentAttackDirection.normalized + currentInputDirection.normalized).normalized * movementForce * i * Time.fixedDeltaTime;
+            //}
 
             yield return new WaitForFixedUpdate();
+        }
+
+        if (currentAttackDirection == Vector2.up)
+        {
+            canGainHeight = false;
         }
 
         MovementController.mC.stuned = false;
@@ -245,14 +261,28 @@ public class BaseSlashInstancier : MonoBehaviour
 
         bloodSlash.transform.rotation = Quaternion.Euler(0, 0, attackDirectionAngle);
 
-        for (float i = bloodDuration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
+        for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         {
-            //MovementController.mC.rb.velocity = currentInputDirection * movementForce * i * Time.fixedDeltaTime;
-
-            MovementController.mC.rb.velocity = (currentAttackDirection.normalized + currentInputDirection.normalized).normalized * movementForce * i * Time.fixedDeltaTime;
+            //ennemiController.rb.velocity = (currentAttackDirection.normalized * 1.5f + currentInputDirection.normalized).normalized * movementForce * 1.3f * i * Time.fixedDeltaTime;
+            //if (currentAttackDirection == Vector2.up)
+            //{
+                if (canGainHeight == true)
+                    MovementController.mC.rb.velocity = (currentAttackDirection.normalized + currentInputDirection.normalized).normalized * movementForce * i * Time.fixedDeltaTime;
+                else
+                    MovementController.mC.rb.velocity = new Vector2((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.x * movementForce * i * Time.fixedDeltaTime, ((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.y * movementForce * i * Time.fixedDeltaTime) / 4);
+            //}
+            //else
+            //{
+                //MovementController.mC.rb.velocity = (currentAttackDirection.normalized + currentInputDirection.normalized).normalized * movementForce * i * Time.fixedDeltaTime;
+            //}
 
             yield return new WaitForFixedUpdate();
         }
+
+        //if (currentAttackDirection == Vector2.up)
+        //{
+            canGainHeight = false;
+        //}
 
         BetterJump.bj.StopLastChangeFall();
 
