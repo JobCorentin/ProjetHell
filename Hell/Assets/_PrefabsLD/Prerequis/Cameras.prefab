@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 453302909486942496}
   - component: {fileID: 453302909486942497}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LifeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,7 +200,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.49056602, g: 0.21813095, b: 0.14578141, a: 0}
+  m_BackGroundColor: {r: 0.49019608, g: 0.14509808, b: 0.14509808, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

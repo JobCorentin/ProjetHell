@@ -13,7 +13,7 @@ public class HealthManager : MonoBehaviour
     public float invicibiltyTime;
     float invicibilityTimer;
 
-    public TMPro.TextMeshProUGUI text;
+    TMPro.TextMeshProUGUI text;
 
     // Start is called before the first frame update
     void Start()

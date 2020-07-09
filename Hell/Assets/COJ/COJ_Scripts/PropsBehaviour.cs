@@ -6,6 +6,7 @@ public class PropsBehaviour : MonoBehaviour
 {
     public int health;
     Animator animator;
+    bool isDestroyed;
 
     float timeBtweenDamage = 0.3f;
 
@@ -14,28 +15,19 @@ public class PropsBehaviour : MonoBehaviour
     {
         animator = gameObject.GetComponent<Animator>();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public IEnumerator TakeDamage(int amount)
     {
         health -= amount;
-        if (health <= 0)
+        if (health <= 0 && isDestroyed == false)
         {
+            CameraShake.cs.PropShake();
             Destroyed();
         }
         else if (health > 0)
         {       
             animator.SetTrigger("isHit");
+            CameraShake.cs.PropShake();
             Debug.Log(health + "Hp remaining");
         }
 
@@ -44,6 +36,7 @@ public class PropsBehaviour : MonoBehaviour
 
     void Destroyed()
     {
+        isDestroyed = true;
         Debug.Log(health + "Game over");
         animator.SetBool("isDestroyed", true);
     }

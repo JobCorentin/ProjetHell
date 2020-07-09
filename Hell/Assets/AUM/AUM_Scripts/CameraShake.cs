@@ -21,6 +21,8 @@ public class CameraShake : MonoBehaviour
     {
         cs = this;
 
+        cmVcam.Follow = MovementController.mC.transform;
+
         cmVcamNoise = cmVcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 
         shaking = false;
@@ -53,5 +55,20 @@ public class CameraShake : MonoBehaviour
 
         if(lastCameraShake != null)
         StopCoroutine(lastCameraShake);
+    }
+
+    public void WeakShake()
+    {
+        StartCoroutine(CameraShakeFor(0.2f, 0.1f, 1, 2));
+    }
+
+    public void StrongShake()
+    {
+        StartCoroutine(CameraShakeFor(0.2f, 0.2f, 2, 5));
+    }
+
+    public void PropShake()
+    {
+        StartCoroutine(CameraShakeFor(0.1f, 0.1f, 0.75f, 1));
     }
 }

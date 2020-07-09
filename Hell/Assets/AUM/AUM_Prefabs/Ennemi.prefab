@@ -324,7 +324,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   tough: 0
   health: 0
-  speed: 1500
+  speed: 2250
   type: 0
   sr: {fileID: 9061584625763710337}
   stunned: 0
@@ -332,12 +332,12 @@ MonoBehaviour:
   target: {x: 0, y: 0}
   range: 6
   nextWayPointDistance: 3
-  coolDown: 2
+  coolDown: 1.2
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 3972673011885713921}
-  bulletForce: 10
-  preparationDuration: 1
+  bulletForce: 25
+  preparationDuration: 0.8
   ennemiDetection: {fileID: 1311175769}
 --- !u!114 &2070220071
 MonoBehaviour:
