@@ -3833,6 +3833,7 @@ Transform:
   - {fileID: 1654113677}
   - {fileID: 1171066772}
   - {fileID: 237821086}
+  - {fileID: 814390715}
   - {fileID: 1807398445}
   m_Father: {fileID: 532580230}
   m_RootOrder: 1
@@ -4534,6 +4535,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00bc1a1df473d1f4ca8b879b1ceab688, type: 3}
+--- !u!4 &814390715 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5865853581549575977, guid: 00bc1a1df473d1f4ca8b879b1ceab688,
+    type: 3}
+  m_PrefabInstance: {fileID: 814390714}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &829469654
 PrefabInstance:
   m_ObjectHideFlags: 0
