@@ -28,10 +28,14 @@ public class MovementController : MonoBehaviour
     bool canWallJump;
 
     bool wasGrounded;
+    bool wasWalled;
+    bool wasWallSliding;
 
     [HideInInspector] public bool isGrounded;
     [HideInInspector] public bool isWalled;
     [HideInInspector] public bool isWallSliding;
+
+    float horizontalInputWallSliding;
 
     public Transform groundCheck;
     public Transform leftWallCheck;
@@ -57,6 +61,9 @@ public class MovementController : MonoBehaviour
 
     void Start()
     {
+        wasGrounded = false;
+        isGrounded = false;
+
         originalSpeed = speed;
     }
 
@@ -66,6 +73,8 @@ public class MovementController : MonoBehaviour
 
         wasGrounded = isGrounded;
 
+        wasWalled = isWalled;
+
         isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(0.5f, 0.2f), 0, groundLayers);
 
         isWalled = Physics2D.OverlapBox(leftWallCheck.position, new Vector2(0.2f, 0.75f), 0, wallLayers);
@@ -73,10 +82,6 @@ public class MovementController : MonoBehaviour
         if(isWalled == false)
         {
             isWalled = Physics2D.OverlapBox(rightWallCheck.position, new Vector2(0.2f, 0.75f), 0, wallLayers);
-        }
-        else
-        {
-            Debug.Log("oui");
         }
 
         if (isGrounded)
@@ -91,12 +96,21 @@ public class MovementController : MonoBehaviour
             canJump = false;
         }
 
-        isWallSliding = false;
+
+
+        wasWallSliding = isWallSliding;
 
         if (isWalled && isGrounded == false && Mathf.Abs( InputListener.iL.horizontalInput ) > 0) 
         {
             isWallSliding = true;
             canDoubleJump = true;
+
+            //if(was)
+
+        }
+        else
+        {
+            isWallSliding = false;
         }
 
         if( isWallSliding )
@@ -120,13 +134,32 @@ public class MovementController : MonoBehaviour
             if(isWallSliding)
             {
                 if (InputListener.iL.jumpInput)
+                {
                     rb.AddForce(new Vector2(xWallJump * -InputListener.iL.horizontalInput, yWallJump).normalized * wallJumpForce * Time.fixedDeltaTime, ForceMode2D.Impulse);
+
+                    wasWalled = false;
+                    isWalled = false;
+
+                    animator.SetTrigger("Jumping");
+
+                    // animator.GetCurrentAnimatorClipInfo(0).Length;
+                }
+                    
                 //StartCoroutine(MiniDash(new Vector2(xWallJumpForce * -InputListener.iL.horizontalInput, yWallJumpForce).normalized, rb, wallJumpTime, new Vector2(xWallJumpForce, yWallJumpForce).magnitude, 1)) ;
             }
             else
             {
                 if (InputListener.iL.jumpInput && (canJump == true || canDoubleJump == true))
                 {
+                    if(canJump == true)
+                    {
+                        animator.SetTrigger("Jumping");
+                    }
+                    else if(canDoubleJump == true)
+                    {
+                        animator.SetTrigger("DoubleJumping");
+                    }
+
                     rb.velocity = new Vector2(rb.velocity.x, 0);
 
                     rb.AddForce(Vector2.up * jumpForce * Time.fixedDeltaTime, ForceMode2D.Impulse);
@@ -149,18 +182,23 @@ public class MovementController : MonoBehaviour
             {
                 animator.SetTrigger("AirToGround");
             }
-          
             else
             {
                 animator.SetTrigger("GroundToAir");
             }
-                
-        
         }
 
-        animator.SetBool("JumpInput", InputListener.iL.jumpInput);
-
-        animator.SetBool("IsOnWall", isWalled);
+        if (wasWalled != isWalled)
+        {
+            if (isWalled == true)
+            {
+                animator.SetTrigger("AirToWall");
+            }
+            else
+            {
+                animator.SetTrigger("WallToAir");
+            }
+        }
 
         InputListener.iL.jumpInput = false;
        
