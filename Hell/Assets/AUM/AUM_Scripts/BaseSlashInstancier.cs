@@ -270,7 +270,7 @@ public class BaseSlashInstancier : MonoBehaviour
             attackDirectionAngle = Vector2.Angle(transform.right, currentAttackDirection);
         }
 
-        if (currentAttackDirection.y < 0)
+        if (autoAimDirection.y < 0)
         {
             attackDirectionAngle = -attackDirectionAngle;
         }

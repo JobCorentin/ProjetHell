@@ -112,28 +112,18 @@ public class EnnemiController : MonoBehaviour
 
     public IEnumerator TakeDamage(int amount)
     {
-        animator.SetTrigger("IsTakingDamage"); 
-        if(tough == true)
+        animator.SetTrigger("IsTakingDamage");
+
+        health -= amount;
+        if (amount == 1)
         {
-            if (health <= 0)
-            {
-                StartCoroutine( Execute() );
-            }
-            else
-            {
-                health -= amount;
-                if (amount == 1)
-                {
-                    CameraShake.cs.WeakShake();
-                }
-                else if (amount == 2)
-                {
-                    CameraShake.cs.StrongShake();
-                }
-                
-            }
+            CameraShake.cs.WeakShake();
         }
-        
+        else if (amount == 2)
+        {
+            CameraShake.cs.StrongShake();
+        }
+
 
         //sr.color = Color.red;
 
@@ -142,6 +132,11 @@ public class EnnemiController : MonoBehaviour
         sr.color = Color.white;
 
         if(tough == false)
+        {
+            Die();
+        }
+
+        if (health <= 0)
         {
             Die();
         }
