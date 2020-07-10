@@ -26,7 +26,8 @@ public class BaseSlashCollision : MonoBehaviour
             EnnemiController ec = collision.GetComponent<EnnemiController>();
             CameraShake.cs.WeakShake();
 
-            BloodManager.bm.bloodNumb += 1;
+            if(BloodManager.bm.bloodNumb < BloodManager.bm.bloodNumbMax)
+                BloodManager.bm.bloodNumb += 1;
 
             MovementController.mC.StartCoroutine(AttackMiniDash((InputListener.iL.directionVector).normalized, ec));
 
