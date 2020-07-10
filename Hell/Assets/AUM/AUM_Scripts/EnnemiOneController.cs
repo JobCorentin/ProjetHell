@@ -33,36 +33,46 @@ public class EnnemiOneController : EnnemiController
             return;
         }
 
-        target = pTransform.position + ((transform.position - pTransform.position).normalized * range);
-
-        for (int i = 0; i < ennemiDetection.ennemiControllers.Count; i++)
+        if(playerDetected == false)
         {
-            target += (Vector2)(transform.position - ennemiDetection.ennemiControllers[i].transform.position).normalized * 3f;
+            Detection();
         }
+        else
+        {
+            target = pTransform.position + ((transform.position - pTransform.position).normalized * range);
 
-        if (Vector2.Distance(target, transform.position) >= 0.5f)
-        {
-            base.FixedUpdate();
-        }
-        
-        if(Vector2.Distance(transform.position, pTransform.position) <= range * 2f)
-        {
-            if(coolDownTimer < coolDown)
+            for (int i = 0; i < ennemiDetection.ennemiControllers.Count; i++)
             {
-                coolDownTimer += Time.fixedDeltaTime;
+                target += (Vector2)(transform.position - ennemiDetection.ennemiControllers[i].transform.position).normalized * 3f;
             }
-            else
+
+            if (Vector2.Distance(target, transform.position) >= 0.5f)
             {
-                StartCoroutine(LaunchBullet());
-                coolDownTimer = 0;
+                base.FixedUpdate();
             }
-                
+
+            if (Vector2.Distance(transform.position, pTransform.position) <= range * 2f)
+            {
+                if (coolDownTimer < coolDown)
+                {
+                    coolDownTimer += Time.fixedDeltaTime;
+                }
+                else
+                {
+                    StartCoroutine(LaunchBullet());
+                    coolDownTimer = 0;
+                }
 
 
+
+            }
+
+            //if(Vector2.Distance(transform.position, pTransform.position))
+            //rb.AddForce(pTransform)
         }
 
-        //if(Vector2.Distance(transform.position, pTransform.position))
-        //rb.AddForce(pTransform)
+
+
     }
 
     IEnumerator LaunchBullet()

@@ -9,6 +9,11 @@ public class EnnemiController : MonoBehaviour
     public Seeker seeker;
     public Animator animator;
 
+    public bool playerDetected;
+
+    public float detectionDistance;
+    public LayerMask detectionLayers;
+
     [HideInInspector] public Vector2 direction;
 
     public bool tough;
@@ -59,6 +64,7 @@ public class EnnemiController : MonoBehaviour
     // Update is called once per frame
     public virtual void FixedUpdate()
     {
+
         if(path!= null)
         {
             if(currentWayPoint >= path.vectorPath.Count)
@@ -82,6 +88,26 @@ public class EnnemiController : MonoBehaviour
                 currentWayPoint++;
             }
         }
+    }
+
+    public void Detection()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, pTransform.position - transform.position, detectionDistance, detectionLayers);
+
+        if(hit == true)
+            if(hit.collider.tag == "Player")
+            {
+                EnnemiController[] ennemy_Controllers = transform.parent.GetComponentsInChildren<EnnemiController>();
+
+                foreach (EnnemiController ennemy_Controller in ennemy_Controllers)
+                {
+                    ennemy_Controller.playerDetected = true;
+                }
+
+                playerDetected = true;
+            }
+
+
     }
 
     public IEnumerator TakeDamage(int amount)

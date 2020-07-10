@@ -204,7 +204,7 @@ Transform:
   m_GameObject: {fileID: 9061584625763710348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.16, y: -0.35, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_Children:
   - {fileID: 2157935248353033697}
   - {fileID: 1311175768}
@@ -324,9 +324,14 @@ MonoBehaviour:
   rb: {fileID: 9061584625763710339}
   seeker: {fileID: 2070220071}
   animator: {fileID: 1377145106}
+  playerDetected: 0
+  detectionDistance: 8
+  detectionLayers:
+    serializedVersion: 2
+    m_Bits: 18688
   direction: {x: 0, y: 0}
-  tough: 0
-  health: 0
+  tough: 1
+  health: 3
   speed: 2250
   type: 0
   sr: {fileID: 9061584625763710337}
@@ -335,7 +340,7 @@ MonoBehaviour:
   target: {x: 0, y: 0}
   range: 6
   nextWayPointDistance: 3
-  coolDown: 1.2
+  coolDown: 2
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 3972673011885713921}
