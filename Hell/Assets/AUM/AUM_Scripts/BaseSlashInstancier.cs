@@ -18,7 +18,7 @@ public class BaseSlashInstancier : MonoBehaviour
 
     public SpriteRenderer sr;
 
-    bool bloodMode;
+    [HideInInspector] public bool bloodMode;
 
     public float coolDown;
     public float bloodCoolDown;
@@ -67,7 +67,8 @@ public class BaseSlashInstancier : MonoBehaviour
 
             if (InputListener.iL.attackInput == true && coolDownTimer > bloodCoolDown / 2f && slashNumb > 0)
             {
-                AttackDirectionDecision();
+                if (BloodManager.bm.bloodNumb >= 3)
+                    AttackDirectionDecision();
             }
         }
         else
@@ -141,7 +142,8 @@ public class BaseSlashInstancier : MonoBehaviour
 
         if (bloodMode == true)
         {
-            lastSlash = StartCoroutine(BloodSlash(currentAttackDirection, currentInputDirection));
+            
+                lastSlash = StartCoroutine(BloodSlash(currentAttackDirection, currentInputDirection));
         }
         else
         {
@@ -219,6 +221,8 @@ public class BaseSlashInstancier : MonoBehaviour
     IEnumerator BloodSlash(Vector2 currentAttackDirection, Vector2 currentInputDirection)
     {
         bloodSlash.SetActive(true);
+
+        BloodManager.bm.bloodNumb -= 3;
 
         GameObject element = null;
         Transform selectedElement = null;

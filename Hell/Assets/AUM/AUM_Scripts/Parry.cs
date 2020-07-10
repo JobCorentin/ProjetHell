@@ -34,7 +34,11 @@ public class Parry : MonoBehaviour
 
         if(InputListener.iL.parryInput == true && parrying == false && cooldownTimer >= cooldown)
         {
-            lastParry = StartCoroutine(ActivateParry());
+            if(BaseSlashInstancier.bsi.bloodMode == false)
+                lastParry = StartCoroutine(ActivateParry());
+            else
+                if (BloodManager.bm.bloodNumb >= 6)
+                    StartCoroutine(ActivateBloodParry());
         }
 
         InputListener.iL.parryInput = false;
@@ -121,5 +125,45 @@ public class Parry : MonoBehaviour
 
         /*if(lastParry != null)
             StopCoroutine(lastParry);*/
+    }
+
+    IEnumerator ActivateBloodParry()
+    {
+        BloodManager.bm.bloodNumb -= 6;
+
+        MovementController.mC.stuned = true;
+
+        parrying = true;
+
+        BetterJump.bj.StopLastChangeFall();
+
+        BetterJump.bj.lastChangeFall = BetterJump.bj.StartCoroutine(BetterJump.bj.ChangeFallMultiplier(protectionDuration + recoveryDuration, BetterJump.bj.fallMultiplier / 10f));
+
+
+        MovementController.mC.StopLastChangeSpeed();
+
+        MovementController.mC.lastChangeSpeed = MovementController.mC.StartCoroutine(MovementController.mC.ChangeSpeed(protectionDuration + recoveryDuration, MovementController.mC.speed / 5f));
+
+        for (float i = protectionDuration; i > 0; i -= Time.deltaTime)
+        {
+            yield return null;
+        }
+
+        if(HealthManager.hm.life < HealthManager.hm.initialLife)
+            HealthManager.hm.life += 1;
+
+        for (float i = recoveryDuration; i > 0; i -= Time.deltaTime)
+        {
+            yield return null;
+        }
+
+        MovementController.mC.stuned = false;
+
+        parrying = false;
+
+        cooldownTimer = 0;
+
+        yield break;
+
     }
 }

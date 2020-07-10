@@ -643,6 +643,7 @@ GameObject:
   - component: {fileID: 3210968349215444155}
   - component: {fileID: 1308424749}
   - component: {fileID: 7360886272903129566}
+  - component: {fileID: 1080339161}
   m_Layer: 11
   m_Name: Player
   m_TagString: Untagged
@@ -703,6 +704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
+  initialLife: 0
   invicibiltyTime: 0.5
 --- !u!114 &7360886272903129554
 MonoBehaviour:
@@ -726,7 +728,7 @@ MonoBehaviour:
     m_Bits: 256
   wallLayers:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 16640
   canDoubleJump: 0
   isGrounded: 0
   isWalled: 0
@@ -768,9 +770,10 @@ MonoBehaviour:
   animator: {fileID: 25406834}
   slash: {fileID: 7360886272987733145}
   bloodSlash: {fileID: 2715657956450840114}
-  bloodEveryDirection: 0
+  bloodEveryDirection: 1
   movementForce: 1000
   sr: {fileID: 25406835}
+  bloodMode: 0
   coolDown: 0.2
   bloodCoolDown: 0.2
   duration: 0.1
@@ -845,6 +848,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1080339161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7360886272903129565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8481bcfc86535ab4a8db68a31714aeaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodNumbMax: 12
+  bloodNumb: 0
+  text: {fileID: 0}
 --- !u!1 &7360886272987733145
 GameObject:
   m_ObjectHideFlags: 0

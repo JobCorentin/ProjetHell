@@ -8,7 +8,7 @@ public class HealthManager : MonoBehaviour
     public static HealthManager hm;
 
     public int life;
-    int initialLife;
+    [HideInInspector] public int initialLife;
 
     public float invicibiltyTime;
     float invicibilityTimer;

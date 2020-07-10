@@ -118,15 +118,6 @@ public class MovementController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -speedWallSlide, float.MaxValue));
         }
 
-        if(canDoubleJump)
-        {
-            BaseSlashInstancier.bsi.sr.color = new Color(BaseSlashInstancier.bsi.sr.color.r, BaseSlashInstancier.bsi.sr.color.g, BaseSlashInstancier.bsi.sr.color.b, 1f);
-        }
-        else
-        {
-            BaseSlashInstancier.bsi.sr.color = new Color(BaseSlashInstancier.bsi.sr.color.r, BaseSlashInstancier.bsi.sr.color.g, BaseSlashInstancier.bsi.sr.color.b, 0.5f);
-        }
-
         if(stuned == false)
         {
             rb.AddForce( new Vector2(InputListener.iL.horizontalInput * speed * Time.fixedDeltaTime, 0), ForceMode2D.Force);

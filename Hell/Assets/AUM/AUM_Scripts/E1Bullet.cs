@@ -37,6 +37,12 @@ public class E1Bullet : MonoBehaviour
             Destroy(gameObject);
         }
 
+        //Collision avec le layer Wall
+        if (collision.gameObject.layer == 14)
+        {
+            Destroy(gameObject);
+        }
+
         //Collision avec le layer Player
         if (collision.gameObject.layer == 11)
         {
