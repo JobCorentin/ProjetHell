@@ -18,7 +18,7 @@ public class BaseSlashInstancier : MonoBehaviour
 
     public SpriteRenderer sr;
 
-    bool bloodMode;
+    [HideInInspector] public bool bloodMode;
 
     public float coolDown;
     public float bloodCoolDown;
@@ -65,9 +65,10 @@ public class BaseSlashInstancier : MonoBehaviour
                 coolDownTimer += Time.fixedDeltaTime;
             }
 
-            if (InputListener.iL.attackInput == true && coolDownTimer > bloodCoolDown / 2f && slashNumb > 0)
+            if (InputListener.iL.bloodModeInput == true && coolDownTimer > bloodCoolDown / 2f && slashNumb > 0)
             {
-                AttackDirectionDecision();
+                //if (BloodManager.bm.bloodNumb >= 3)
+                    //AttackDirectionDecision();
             }
         }
         else
@@ -81,21 +82,27 @@ public class BaseSlashInstancier : MonoBehaviour
 
             if (InputListener.iL.attackInput == true && coolDownTimer > coolDown / 2f && slashNumb > 0)
             {
-                AttackDirectionDecision();
+                AttackDirectionDecision(false);
+            }
+
+            if (InputListener.iL.bloodModeInput == true && coolDownTimer > bloodCoolDown / 2f && slashNumb > 0)
+            {
+                if (BloodManager.bm.bloodNumb >= 3)
+                    AttackDirectionDecision(true);
             }
 
         }
 
-        if(InputListener.iL.bloodModeInput == true)
+        /*if(InputListener.iL.bloodModeInput == true)
         {
             bloodMode = !bloodMode;
-        }
+        }*/
 
         InputListener.iL.bloodModeInput = false;
         InputListener.iL.attackInput = false;
     }
 
-    void AttackDirectionDecision()
+    void AttackDirectionDecision(bool bloodAttack)
     {
         Vector2 currentAttackDirection = InputListener.iL.directionVector.normalized;
         Vector2 currentInputDirection = InputListener.iL.directionVector.normalized;
@@ -129,17 +136,17 @@ public class BaseSlashInstancier : MonoBehaviour
         }
 
         if (lastStarting == null)
-            lastStarting = StartCoroutine(StartSlash(currentAttackDirection, currentInputDirection));
+            lastStarting = StartCoroutine(StartSlash(bloodAttack ,currentAttackDirection, currentInputDirection));
     }
 
-    IEnumerator StartSlash(Vector2 currentAttackDirection, Vector2 currentInputDirection)
+    IEnumerator StartSlash(bool bloodAttack, Vector2 currentAttackDirection, Vector2 currentInputDirection)
     {
         while (lastSlash != null || coolDownTimer < coolDown)
         {
             yield return null;
         }
 
-        if (bloodMode == true)
+        if (bloodAttack == true)
         {
             lastSlash = StartCoroutine(BloodSlash(currentAttackDirection, currentInputDirection));
         }
@@ -219,6 +226,8 @@ public class BaseSlashInstancier : MonoBehaviour
     IEnumerator BloodSlash(Vector2 currentAttackDirection, Vector2 currentInputDirection)
     {
         bloodSlash.SetActive(true);
+
+        BloodManager.bm.bloodNumb -= 3;
 
         GameObject element = null;
         Transform selectedElement = null;

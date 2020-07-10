@@ -70,6 +70,8 @@ public class EnnemiOneController : EnnemiController
         Vector2 baseDirectionAttack = pTransform.position - transform.position;
 
         Vector2 finalDirectionAttack = baseDirectionAttack;
+        animator.SetBool("IsPreparing",true);
+        animator.SetTrigger("StartPreparing");
 
         arrow.SetActive(true);
 
@@ -88,6 +90,8 @@ public class EnnemiOneController : EnnemiController
 
             yield return null;
         }
+        animator.SetBool("IsPreparing", false);
+        animator.SetTrigger("IsAttacking");
 
         E1Bullet currentBullet = Instantiate(bulletPrefab).GetComponent<E1Bullet>();
 
