@@ -137,10 +137,9 @@ public class MovementController : MonoBehaviour
                 {
                     rb.AddForce(new Vector2(xWallJump * -InputListener.iL.horizontalInput, yWallJump).normalized * wallJumpForce * Time.fixedDeltaTime, ForceMode2D.Impulse);
 
-                    wasWalled = false;
-                    isWalled = false;
-
                     animator.SetTrigger("Jumping");
+
+                    StartCoroutine(IsJumpingFor());
 
                     // animator.GetCurrentAnimatorClipInfo(0).Length;
                 }
@@ -154,6 +153,8 @@ public class MovementController : MonoBehaviour
                     if(canJump == true)
                     {
                         animator.SetTrigger("Jumping");
+
+                        StartCoroutine(IsJumpingFor());
                     }
                     else if(canDoubleJump == true)
                     {
@@ -254,6 +255,15 @@ public class MovementController : MonoBehaviour
         }
 
         stuned = false;
+    }
+
+    IEnumerator IsJumpingFor()
+    {
+        animator.SetBool("IsJumping", true);
+
+        yield return new WaitForSeconds(0.5f);
+
+        animator.SetBool("IsJumping", false);
     }
 
 }
