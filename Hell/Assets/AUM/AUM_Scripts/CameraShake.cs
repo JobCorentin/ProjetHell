@@ -28,12 +28,12 @@ public class CameraShake : MonoBehaviour
         shaking = false;
     }
 
-    public IEnumerator CameraShakeFor(float time, float secondTime, float force,float gamePadForce)
+    public IEnumerator CameraShakeFor(float time, float secondTime, float force,float frequency,float gamePadForce)
     {
         shaking = true;
 
         cmVcamNoise.m_AmplitudeGain = force;
-        cmVcamNoise.m_FrequencyGain = force;
+        cmVcamNoise.m_FrequencyGain = frequency;
 
         GamePad.SetVibration(0, gamePadForce / 10, gamePadForce / 10);
 
@@ -61,16 +61,16 @@ public class CameraShake : MonoBehaviour
 
     public void WeakShake()
     {
-        StartCoroutine(CameraShakeFor(0.2f, 0.1f, 3, 2));
+        StartCoroutine(CameraShakeFor(0.2f, 0.1f, 3, 2, 2));
     }
 
     public void StrongShake()
     {
-        StartCoroutine(CameraShakeFor(0.2f, 0.2f, 5, 3));
+        StartCoroutine(CameraShakeFor(0.2f, 0.2f, 5, 3, 3));
     }
 
     public void PropShake()
     {
-        StartCoroutine(CameraShakeFor(0.1f, 0.1f, 0.75f, 1));
+        StartCoroutine(CameraShakeFor(0.1f, 0.1f, 0.75f, 1, 1));
     }
 }
