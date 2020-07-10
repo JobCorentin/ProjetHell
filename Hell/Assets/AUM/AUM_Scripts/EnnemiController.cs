@@ -7,6 +7,7 @@ public class EnnemiController : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Seeker seeker;
+    public Animator animator;
 
     [HideInInspector] public Vector2 direction;
 
@@ -85,7 +86,7 @@ public class EnnemiController : MonoBehaviour
 
     public IEnumerator TakeDamage(int amount)
     {
-
+        animator.SetTrigger("IsTakingDamage"); 
         if(tough == true)
         {
             if (health <= 0)
@@ -108,7 +109,7 @@ public class EnnemiController : MonoBehaviour
         }
         
 
-        sr.color = Color.red;
+        //sr.color = Color.red;
 
         yield return new WaitForSeconds(0.3f * amount);
 
