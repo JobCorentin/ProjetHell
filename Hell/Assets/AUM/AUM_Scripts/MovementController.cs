@@ -54,6 +54,9 @@ public class MovementController : MonoBehaviour
 
     public Coroutine lastChangeSpeed;
 
+    public GameObject dustJump;
+    public GameObject dustLand;
+
     private void Awake()
     {
         mC = this;
@@ -144,6 +147,7 @@ public class MovementController : MonoBehaviour
                     if(canJump == true)
                     {
                         animator.SetTrigger("Jumping");
+                        DustInstancier(dustJump, 0);
 
                         StartCoroutine(IsJumpingFor());
                     }
@@ -169,11 +173,13 @@ public class MovementController : MonoBehaviour
 
         animator.SetBool("IsGrounded", isGrounded);
 
+
         if (wasGrounded != isGrounded)
         {
             if(isGrounded == true)
             {
                 animator.SetTrigger("AirToGround");
+                DustInstancier(dustLand, 1);
             }
             else
             {
@@ -258,4 +264,20 @@ public class MovementController : MonoBehaviour
         animator.SetBool("IsJumping", false);
     }
 
+    public void DustInstancier(GameObject dust,int i)
+    {
+        //Dust Jump
+        if(i == 0)
+        {
+            if(canDoubleJump == true)
+            {
+                Instantiate(dust, groundCheck.transform.position, Quaternion.identity);
+            }
+        }
+        //Dust Land
+        if (i == 1)
+        {
+            Instantiate(dust, groundCheck.transform.position, Quaternion.identity);
+        }
+    }
 }

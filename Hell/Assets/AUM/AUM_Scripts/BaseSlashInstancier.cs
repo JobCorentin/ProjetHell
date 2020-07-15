@@ -226,6 +226,7 @@ public class BaseSlashInstancier : MonoBehaviour
     IEnumerator BloodSlash(Vector2 currentAttackDirection, Vector2 currentInputDirection)
     {
         bloodSlash.SetActive(true);
+        bloodSlash.transform.GetChild(0).GetComponent<Animator>().SetTrigger("bloodAttack");
 
         BloodManager.bm.bloodNumb -= 3;
 
@@ -309,7 +310,8 @@ public class BaseSlashInstancier : MonoBehaviour
         MovementController.mC.StopLastChangeSpeed();
 
         MovementController.mC.lastChangeSpeed = MovementController.mC.StartCoroutine(MovementController.mC.ChangeSpeed(0.3f, MovementController.mC.speed / 5f));
-
+        bloodSlash.transform.GetChild(1).gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.3f);
         bloodSlash.SetActive(false);
 
         coolDownTimer = 0;
