@@ -742,6 +742,10 @@ MonoBehaviour:
   yWallJump: 1
   wallJumpForce: 2000
   stuned: 0
+  dustJump: {fileID: 6921910132267186978, guid: 4637bdc9efa329d4db8dc44f4e2da1b6,
+    type: 3}
+  dustLand: {fileID: 5295353434200141556, guid: c2bd96ec283c87b4992aba2f0d58941f,
+    type: 3}
 --- !u!114 &7360886272903129555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -936,7 +940,7 @@ PrefabInstance:
     - target: {fileID: 5309341277389494196, guid: 28b04089b98d661479626b67db5ec284,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.691
       objectReference: {fileID: 0}
     - target: {fileID: 5309341277389494196, guid: 28b04089b98d661479626b67db5ec284,
         type: 3}
@@ -992,6 +996,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BloodSlash_graph
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309341277389494198, guid: 28b04089b98d661479626b67db5ec284,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 8.267852
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309341277389494198, guid: 28b04089b98d661479626b67db5ec284,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.6333334
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28b04089b98d661479626b67db5ec284, type: 3}
