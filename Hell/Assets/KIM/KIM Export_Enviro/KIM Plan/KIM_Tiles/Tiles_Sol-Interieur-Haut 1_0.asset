@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Tiles_Sol-Interieur-Haut_1
+  m_Name: Tiles_Sol-Interieur-Haut 1_0
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 6909472904416851700, guid: 5951f1ce33fafa048845f92438fcfa5d,
+  m_Sprite: {fileID: 7645230109078212728, guid: fad2b8cf5acd6b24cbd5958022b3861f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
