@@ -6433,12 +6433,12 @@ PrefabInstance:
     - target: {fileID: 453302910127241004, guid: ab559afc00aac454c8392e3a0828149f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.1269674
+      value: -3.123479
       objectReference: {fileID: 0}
     - target: {fileID: 453302910127241004, guid: ab559afc00aac454c8392e3a0828149f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5859163
+      value: -2.5859182
       objectReference: {fileID: 0}
     - target: {fileID: 1818332846873625268, guid: ab559afc00aac454c8392e3a0828149f,
         type: 3}
@@ -15719,6 +15719,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 177958986, guid: 7ea0db4209b9c9c4bb271a5e19adc70b, type: 3}
+      propertyPath: TrailModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 177958986, guid: 7ea0db4209b9c9c4bb271a5e19adc70b, type: 3}
+      propertyPath: LightsModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 177958986, guid: 7ea0db4209b9c9c4bb271a5e19adc70b, type: 3}
+      propertyPath: LightsModule.ratio
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 7360886272903129553, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
         type: 3}
       propertyPath: m_LocalPosition.x
