@@ -34,13 +34,13 @@ public class E1Bullet : MonoBehaviour
         //Collision avec le layer Sol
         if(collision.gameObject.layer == 8)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 
         //Collision avec le layer Wall
         if (collision.gameObject.layer == 14)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 
         //Collision avec le layer Player
