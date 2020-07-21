@@ -122,6 +122,12 @@ public class MovementController : MonoBehaviour
         {
             rb.AddForce( new Vector2(InputListener.iL.horizontalInput * speed * Time.fixedDeltaTime, 0), ForceMode2D.Force);
 
+            //Empêche le PJ de glisser
+            if(InputListener.iL.horizontalInput == 0)
+            {
+                rb.velocity = new Vector2(0,rb.velocity.y);
+            }
+
             if(isWallSliding)
             {
                 if (InputListener.iL.jumpInput)
