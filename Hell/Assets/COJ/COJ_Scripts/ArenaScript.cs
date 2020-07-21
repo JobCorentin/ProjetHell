@@ -14,6 +14,7 @@ namespace Cinemachine
 
         private void Start()
         {
+            arenaCamera.Follow = GameObject.Find("Player").transform;
             arena.SetActive(false);
         }
 
