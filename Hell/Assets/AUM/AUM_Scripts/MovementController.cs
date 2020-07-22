@@ -174,6 +174,7 @@ public class MovementController : MonoBehaviour
             }
 
         }
+
         animator.SetFloat("HorizontalInput", Mathf.Abs(InputListener.iL.horizontalInput));
         animator.SetFloat("VerticalInput", InputListener.iL.verticalInput);
 

@@ -1908,6 +1908,26 @@ PrefabInstance:
       propertyPath: speed
       value: 4000
       objectReference: {fileID: 0}
+    - target: {fileID: 7360886272903129554, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
+        type: 3}
+      propertyPath: airspeed
+      value: 3500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360886272903129558, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
+        type: 3}
+      propertyPath: movementForce
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360886272903129558, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
+        type: 3}
+      propertyPath: airMovementForce
+      value: 750
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360886272903129558, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
+        type: 3}
+      propertyPath: airSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7360886272903129565, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
         type: 3}
       propertyPath: m_Name
