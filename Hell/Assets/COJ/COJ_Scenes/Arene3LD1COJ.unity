@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6730,12 +6730,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &890317532 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7371677823931716721, guid: be293fae3863218478de9af2e9a236e8,
-    type: 3}
-  m_PrefabInstance: {fileID: 7371677824685588141}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &939513672 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3186736162452670599, guid: 9fd654979bf71984cb8c1b0e6ca9a8f4,
@@ -20887,8 +20881,8 @@ Transform:
   - {fileID: 1871768532}
   - {fileID: 1330236281}
   - {fileID: 161355316}
-  - {fileID: 890317532}
   - {fileID: 1523025340}
+  - {fileID: 7371677824685588142}
   - {fileID: 728106534}
   - {fileID: 2084877793}
   - {fileID: 840330853}
@@ -21630,18 +21624,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 177958986, guid: 7ea0db4209b9c9c4bb271a5e19adc70b, type: 3}
-      propertyPath: TrailModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 177958986, guid: 7ea0db4209b9c9c4bb271a5e19adc70b, type: 3}
-      propertyPath: LightsModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 177958986, guid: 7ea0db4209b9c9c4bb271a5e19adc70b, type: 3}
-      propertyPath: LightsModule.ratio
-      value: 0.03
-      objectReference: {fileID: 0}
     - target: {fileID: 7360886272903129553, guid: 7ea0db4209b9c9c4bb271a5e19adc70b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21788,6 +21770,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be293fae3863218478de9af2e9a236e8, type: 3}
+--- !u!4 &7371677824685588142 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 7371677824685588141}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9033725415260191087
 PrefabInstance:
   m_ObjectHideFlags: 0

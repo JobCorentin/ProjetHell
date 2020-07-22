@@ -14,15 +14,17 @@ public class BaseSlashCollision : MonoBehaviour
 
     public float momentumMultiplier;
 
+    public bool ennemiTouched = false;
+
     private void Start()
     {
         bsc = this;
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.tag == "Ennemi")
         {
+            ennemiTouched = true;
             EnnemiController ec = collision.GetComponent<EnnemiController>();
             CameraShake.cs.WeakShake();
 

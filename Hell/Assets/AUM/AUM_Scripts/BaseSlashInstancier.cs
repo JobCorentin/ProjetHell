@@ -164,6 +164,7 @@ public class BaseSlashInstancier : MonoBehaviour
         animator.SetTrigger("Attacking");
 
         slash.SetActive(true);
+        BaseSlashCollision.bsc.ennemiTouched = false;
 
         float attackDirectionAngle = Vector2.Angle(transform.right, currentAttackDirection);
 
@@ -206,8 +207,11 @@ public class BaseSlashInstancier : MonoBehaviour
 
         //if (currentAttackDirection == Vector2.up)
         //{
-        canGainHeight = false;
-        slashNumb--;
+        if(BaseSlashCollision.bsc.ennemiTouched == false)
+        {
+            canGainHeight = false;
+            slashNumb--;
+        }
         //}
 
         MovementController.mC.stuned = false;

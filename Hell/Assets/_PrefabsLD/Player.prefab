@@ -771,7 +771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 25406834}
   rb: {fileID: 7360886272903129566}
-  speed: 4500
+  speed: 4000
   jumpForce: 1250
   antiProjectedMultiplier: 0
   groundLayers:
@@ -823,6 +823,7 @@ MonoBehaviour:
   bloodSlash: {fileID: 2715657956450840114}
   bloodEveryDirection: 1
   movementForce: 1000
+  airMovementForce: 750
   sr: {fileID: 25406835}
   bloodMode: 0
   coolDown: 0.2
@@ -1063,6 +1064,11 @@ PrefabInstance:
       propertyPath: LightsModule.enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4619860556173495084, guid: 4f41164bb0d34f642afc8c0cb93e0fd4,
+        type: 3}
+      propertyPath: LightsModule.ratio
+      value: 0.03
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f41164bb0d34f642afc8c0cb93e0fd4, type: 3}
 --- !u!4 &177958988 stripped
@@ -1137,6 +1143,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dust_Particuls
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054717706241532202, guid: eb94b473daa8ef0488c0e6f970381a1f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb94b473daa8ef0488c0e6f970381a1f, type: 3}
