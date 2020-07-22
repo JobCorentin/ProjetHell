@@ -59,6 +59,8 @@ public class E1Bullet : MonoBehaviour
 
             reflected = true;
 
+            StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.2f, 0.5f));
+
             rb.velocity = (ennemiLauncheFrom.transform.position - transform.position).normalized * 40f;
         }
 
