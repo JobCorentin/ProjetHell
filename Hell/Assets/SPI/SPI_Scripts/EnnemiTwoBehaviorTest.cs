@@ -85,7 +85,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
         E1Bullet currentBullet = Instantiate(bulletPrefab).GetComponent<E1Bullet>();
 
-        currentBullet.ennemiLauncheFrom = this;
+        //currentBullet.ennemiLauncheFrom = this;
         currentBullet.transform.position = transform.position;
 
         currentBullet.rb.velocity = finalDirectionAttack * bulletForce;
