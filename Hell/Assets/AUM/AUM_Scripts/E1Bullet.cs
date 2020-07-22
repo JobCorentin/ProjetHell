@@ -53,9 +53,9 @@ public class E1Bullet : MonoBehaviour
         }
 
         //Collision avec le layer Parry
-        if(collision.gameObject.layer == 13)
+        if(collision.gameObject.layer == 13 || collision.gameObject.layer == 9)
         {
-            Parry.p.StopParry();
+            //Parry.p.StopParry();
 
             reflected = true;
 
