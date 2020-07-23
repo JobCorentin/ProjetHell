@@ -1505,7 +1505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070220066, guid: 8e379070c098f1d4486e56de39cccf07, type: 3}
       propertyPath: health
-      value: 10
+      value: 96
       objectReference: {fileID: 0}
     - target: {fileID: 2070220066, guid: 8e379070c098f1d4486e56de39cccf07, type: 3}
       propertyPath: coolDown
