@@ -15,14 +15,16 @@ public class Flip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (MovementController.mC.rb.velocity.x < 0)
+        if (InputListener.iL.horizontalInput < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+           transform.localScale = new Vector3(-1, 1, 1);
+            //gameObject.transform.GetComponent<SpriteRenderer>().flipX = true;
         }
 
-        if (MovementController.mC.rb.velocity.x > 0)
+        if (InputListener.iL.horizontalInput > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
+            //gameObject.transform.GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 }

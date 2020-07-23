@@ -34,13 +34,13 @@ public class E1Bullet : MonoBehaviour
         //Collision avec le layer Sol
         if(collision.gameObject.layer == 8)
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
 
         //Collision avec le layer Wall
         if (collision.gameObject.layer == 14)
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
 
         //Collision avec le layer Player
@@ -59,7 +59,7 @@ public class E1Bullet : MonoBehaviour
 
             reflected = true;
 
-            StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.2f, 0.5f));
+            FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.2f, 0.5f));
 
             rb.velocity = (ennemiLauncheFrom.transform.position - transform.position).normalized * 40f;
         }

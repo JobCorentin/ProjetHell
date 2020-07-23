@@ -34,7 +34,7 @@ public class BaseSlashCollision : MonoBehaviour
             MovementController.mC.StartCoroutine(AttackMiniDash((InputListener.iL.directionVector).normalized, ec));
 
             ec.StartCoroutine(ec.TakeDamage(1));
-            StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.045f,0f));
+            FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.045f,0f));
         }
 
         if (collision.transform.tag == "Props")
