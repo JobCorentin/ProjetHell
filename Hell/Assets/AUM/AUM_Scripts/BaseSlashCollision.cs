@@ -24,6 +24,8 @@ public class BaseSlashCollision : MonoBehaviour
     {
         if (collision.transform.tag == "Ennemi")
         {
+            FXManager.fxm.fxInstancier(2, collision.transform);
+
             ennemiTouched = true;
             EnnemiController ec = collision.GetComponent<EnnemiController>();
             CameraShake.cs.WeakShake();
