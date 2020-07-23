@@ -51,8 +51,8 @@ namespace Cinemachine
         public void NextWave()
         {
 
-            arenaWave[waveCount].SetActive(false);
-            waveCount += 1;
+            arenaWave.Remove(arenaWave[waveCount]);
+            //waveCount += 1;
             if (waveCount < arenaWave.Count)
             {
                 arenaWave[waveCount].SetActive(true);
