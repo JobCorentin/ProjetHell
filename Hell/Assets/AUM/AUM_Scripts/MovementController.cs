@@ -89,7 +89,7 @@ public class MovementController : MonoBehaviour
             canJump = true;
             canDoubleJump = true;
             BaseSlashInstancier.bsi.canGainHeight = true;
-            BaseSlashInstancier.bsi.slashNumb = BaseSlashInstancier.bsi.slashNumbMax;
+            BaseSlashInstancier.bsi.ResetSlashNumb();
         }
         else
         {
@@ -104,6 +104,7 @@ public class MovementController : MonoBehaviour
         {
             isWallSliding = true;
             canDoubleJump = true;
+            BaseSlashInstancier.bsi.ResetSlashNumb();
 
             //if(was)
 
@@ -152,7 +153,7 @@ public class MovementController : MonoBehaviour
                         animator.SetTrigger("Jumping");
                         if(canDoubleJump == true)
                         {
-                            FXManager.fxm.fxInstancier(0, groundCheck);
+                            FXManager.fxm.fxInstancier(0, groundCheck,0);
                         }
 
                         StartCoroutine(IsJumpingFor());
@@ -186,7 +187,7 @@ public class MovementController : MonoBehaviour
             if(isGrounded == true)
             {
                 animator.SetTrigger("AirToGround");
-                FXManager.fxm.fxInstancier(1, groundCheck);
+                FXManager.fxm.fxInstancier(1, groundCheck,0);
             }
             else
             {

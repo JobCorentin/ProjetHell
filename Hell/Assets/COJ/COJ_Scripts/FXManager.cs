@@ -13,9 +13,11 @@ public class FXManager : MonoBehaviour
         fxm = this;
     }
 
-    public void fxInstancier(int fxIndex, Transform pos)
+    public void fxInstancier(int fxIndex, Transform pos,float zRotation)
     {
         GameObject fx = fxList[fxIndex].gameObject;
-        Instantiate(fx, pos.position, Quaternion.identity);
+        GameObject instantiatedFX = Instantiate(fx, pos.position, Quaternion.identity);
+        instantiatedFX.transform.rotation = Quaternion.Euler(0,0,zRotation);
+
     }
 }

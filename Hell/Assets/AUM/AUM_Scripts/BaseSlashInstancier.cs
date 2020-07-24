@@ -43,6 +43,8 @@ public class BaseSlashInstancier : MonoBehaviour
     public int slashNumb;
     [HideInInspector] public int slashNumbMax;
 
+    [HideInInspector]public float attackDirectionAngle;
+
 
     void Start()
     {
@@ -166,7 +168,7 @@ public class BaseSlashInstancier : MonoBehaviour
         slash.SetActive(true);
         BaseSlashCollision.bsc.ennemiTouched = false;
 
-        float attackDirectionAngle = Vector2.Angle(transform.right, currentAttackDirection);
+        attackDirectionAngle = Vector2.Angle(transform.right, currentAttackDirection);
 
         if (currentAttackDirection.y < 0)
         {
@@ -331,5 +333,10 @@ public class BaseSlashInstancier : MonoBehaviour
 
         coolDownTimer = 0;
         lastSlash = null;
+    }
+
+    public void ResetSlashNumb()
+    {
+        slashNumb = slashNumbMax;
     }
 }
