@@ -13,7 +13,7 @@ public class FreezTimeManager : MonoBehaviour
         ftm = this;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if(isFrozen == false)
         {
@@ -26,12 +26,9 @@ public class FreezTimeManager : MonoBehaviour
         if(isFrozen == false)
         {
             isFrozen = true;
-            var originalTime = Time.timeScale;
             Time.timeScale = newScale;
-
             yield return new WaitForSecondsRealtime(duration);
-
-            Time.timeScale = originalTime;
+            Time.timeScale = 1;
             isFrozen = false;
         }
     }

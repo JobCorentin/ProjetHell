@@ -8,7 +8,8 @@ namespace Cinemachine
     {
         public CinemachineVirtualCamera arenaCamera;
         public GameObject arena;
-        public List<GameObject> arenaEnemi;
+        public List<GameObject> arenaWave;
+        int waveCount;
 
         bool hasActivated = false;
 
@@ -16,6 +17,10 @@ namespace Cinemachine
         {
             arenaCamera.Follow = GameObject.Find("Player").transform;
             arena.SetActive(false);
+            foreach(GameObject wave in arenaWave)
+            {
+                wave.SetActive(false);
+            }
         }
 
         public void OnTriggerEnter2D(Collider2D collision)
@@ -23,16 +28,36 @@ namespace Cinemachine
             if(collision.tag == "Player" && hasActivated == false)
             {
                 arena.SetActive(true);
+                StartWave();
                 hasActivated = true;
             }
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
-            if(arenaEnemi.Count <= 0)
+            if(arenaWave.Count <= 0)
             {
                 arena.SetActive(false);
             }
+        }
+
+        public void StartWave()
+        {
+            waveCount = 0;
+            arenaWave[waveCount].SetActive(true);
+
+        }
+
+        public void NextWave()
+        {
+
+            arenaWave.Remove(arenaWave[waveCount]);
+            //waveCount += 1;
+            if (waveCount < arenaWave.Count)
+            {
+                arenaWave[waveCount].SetActive(true);
+            }
+
         }
     }
 }

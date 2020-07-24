@@ -42,7 +42,7 @@ public class HealthManager : MonoBehaviour
             yield break;
 
         life -= amount;
-        StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.1f, 0));
+        FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.1f, 0));
         invicibilityTimer = 0;
 
         for(float i = 0.2f * amount; i > 0; i -= Time.deltaTime)

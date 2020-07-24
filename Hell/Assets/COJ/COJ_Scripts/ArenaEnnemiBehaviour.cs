@@ -6,19 +6,20 @@ namespace Cinemachine
 {
     public class ArenaEnnemiBehaviour : MonoBehaviour
     {
-        public ArenaScript arena;
+        public EnnemiWave wave;
         public EnnemiController enemiStat;
 
         private void Start()
         {
             enemiStat = gameObject.GetComponent<EnnemiController>();
+            wave = gameObject.GetComponentInParent<EnnemiWave>();
         }
 
         void Update()
         {
             if(enemiStat.health <= 0)
             {
-                arena.arenaEnemi.Remove(gameObject);
+                wave.waveEnnemi.Remove(gameObject);
             }
         }
     }

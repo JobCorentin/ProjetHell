@@ -234,6 +234,7 @@ MonoBehaviour:
   fxList:
   - {fileID: 6921910132267186978, guid: 4637bdc9efa329d4db8dc44f4e2da1b6, type: 3}
   - {fileID: 5295353434200141556, guid: c2bd96ec283c87b4992aba2f0d58941f, type: 3}
+  - {fileID: 1763825600030723455, guid: 6a4807414826a744a930736950f23a51, type: 3}
 --- !u!1 &1659303173
 GameObject:
   m_ObjectHideFlags: 0
