@@ -15,7 +15,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
     public float preparationDuration;
 
-    public EnnemiDetection ennemiDetection;
+    //public EnnemiDetection ennemiDetection;
 
     public override void FixedUpdate()
     {
@@ -28,10 +28,10 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         {
             target = pTransform.position + ((transform.position - pTransform.position).normalized * range);
 
-            for (int i = 0; i < ennemiDetection.ennemiControllers.Count; i++)
+            /*for (int i = 0; i < ennemiDetection.ennemiControllers.Count; i++)
             {
                 target += (Vector2)(transform.position - ennemiDetection.ennemiControllers[i].transform.position).normalized * 3f;
-            }
+            }*/
 
             if (Vector2.Distance(target, transform.position) >= 0.5f)
             {
@@ -60,8 +60,6 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         Vector2 baseDirectionAttack = pTransform.position - transform.position;
 
         Vector2 finalDirectionAttack = baseDirectionAttack;
-        animator.SetBool("IsPreparing", true);
-        animator.SetTrigger("StartPreparing");
 
         arrow.SetActive(true);
 
@@ -80,12 +78,10 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
             yield return null;
         }
-        animator.SetBool("IsPreparing", false);
-        animator.SetTrigger("IsAttacking");
 
-        E1Bullet currentBullet = Instantiate(bulletPrefab).GetComponent<E1Bullet>();
+        E2Bullet currentBullet = Instantiate(bulletPrefab).GetComponent<E2Bullet>();
 
-        //currentBullet.ennemiLauncheFrom = this;
+        currentBullet.ennemiLauncheFrom = this;
         currentBullet.transform.position = transform.position;
 
         currentBullet.rb.velocity = finalDirectionAttack * bulletForce;
