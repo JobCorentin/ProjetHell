@@ -24,7 +24,7 @@ public class BaseSlashCollision : MonoBehaviour
     {
         if (collision.transform.tag == "Ennemi")
         {
-            FXManager.fxm.fxInstancier(2, collision.transform);
+            FXManager.fxm.fxInstancier(2, collision.transform, BaseSlashInstancier.bsi.attackDirectionAngle + Random.Range(-10,10));
 
             ennemiTouched = true;
             EnnemiController ec = collision.GetComponent<EnnemiController>();

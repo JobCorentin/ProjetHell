@@ -7,7 +7,7 @@ public class FXAnimator : MonoBehaviour
 
     public void instantiateFX(int index,Transform pos)
     {
-        FXManager.fxm.fxInstancier(index, pos);
+        FXManager.fxm.fxInstancier(index, pos,0);
     }
 
 }
