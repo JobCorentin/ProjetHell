@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &451461771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 451461772}
+  m_Layer: 10
+  m_Name: Musket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &451461772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451461771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1, y: -0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1938930115665686328}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1938930114815364572
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,6 +145,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1938930115673723874}
+  - {fileID: 451461772}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -131,7 +162,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.012178421, y: -0.70325935}
+  m_Offset: {x: -0.017375931, y: -0.67961097}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -142,7 +173,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7807903, y: 1.6756608}
+  m_Size: {x: 0.83989906, y: 1.7229576}
   m_EdgeRadius: 0
 --- !u!114 &1938930115665686330
 MonoBehaviour:
@@ -160,7 +191,7 @@ MonoBehaviour:
   seeker: {fileID: 1938930115665686308}
   animator: {fileID: 1938930115665686310}
   playerDetected: 0
-  detectionDistance: 20
+  detectionDistance: 15
   detectionLayers:
     serializedVersion: 2
     m_Bits: 18688
@@ -173,14 +204,15 @@ MonoBehaviour:
   stunned: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
-  range: 15
+  range: 10
   nextWayPointDistance: 0
-  coolDown: 2.5
+  coolDown: 3
   bulletPrefab: {fileID: 2632547540658908434, guid: 9bffa467356781c41b1ab218b1e6974c,
     type: 3}
   arrow: {fileID: 1938930115673723877}
-  bulletForce: 30
+  bulletForce: 35
   preparationDuration: 1.5
+  musket: {fileID: 451461771}
 --- !u!50 &1938930115665686329
 Rigidbody2D:
   serializedVersion: 4
@@ -315,7 +347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1938930115673723874
 Transform:
   m_ObjectHideFlags: 0
@@ -324,8 +356,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938930115673723877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
+  m_LocalPosition: {x: 0, y: -0.49, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1938930114815364573}
   m_Father: {fileID: 1938930115665686328}
