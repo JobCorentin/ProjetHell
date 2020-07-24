@@ -14,12 +14,17 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     public float bulletForce;
 
     public float preparationDuration;
+    public GameObject musket;
 
     //public EnnemiDetection ennemiDetection;
 
     public override void FixedUpdate()
     {
-        base.FixedUpdate();
+
+        if (stunned == true)
+        {
+            return;
+        }
         if (playerDetected == false)
         {
             Detection();
@@ -38,6 +43,16 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                 base.FixedUpdate();
             }
 
+            if (pTransform.position.x - transform.position.x < 0)
+            {
+                transform.localScale = new Vector3(1f,1f,1f);
+            }
+            else
+            {
+
+                transform.localScale = new Vector3(-1f, 1f, 1f);
+            }
+
             if (Vector2.Distance(transform.position, pTransform.position) <= range * 2f)
             {
                 if (coolDownTimer < coolDown)
@@ -46,11 +61,10 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                 }
                 else
                 {
+                    animator.SetBool("HasShot", false);
                     StartCoroutine(LaunchBullet());
                     coolDownTimer = 0;
                 }
-
-
 
             }
         }
@@ -61,7 +75,10 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
         Vector2 finalDirectionAttack = baseDirectionAttack;
 
-        arrow.SetActive(true);
+
+        animator.SetBool("IsAiming", true);
+        Debug.Log("aim");
+        //arrow.SetActive(true);
 
         for (float i = preparationDuration; i > 0; i -= Time.deltaTime)
         {
@@ -79,10 +96,13 @@ public class EnnemiTwoBehaviorTest : EnnemiController
             yield return null;
         }
 
+        animator.SetBool("IsAiming", false);
+        animator.SetBool("HasShot", true);
+
         E2Bullet currentBullet = Instantiate(bulletPrefab).GetComponent<E2Bullet>();
 
         currentBullet.ennemiLauncheFrom = this;
-        currentBullet.transform.position = transform.position;
+        currentBullet.transform.position = musket.transform.position;
 
         currentBullet.rb.velocity = finalDirectionAttack * bulletForce;
 

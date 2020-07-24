@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938930114815364572}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.41, y: -0.24, z: 0}
-  m_LocalScale: {x: 1.6, y: 0.15, z: 1}
+  m_LocalPosition: {x: 1.17, y: -0.31, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.15, z: 1}
   m_Children: []
   m_Father: {fileID: 1938930115673723874}
   m_RootOrder: 0
@@ -110,7 +110,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938930115665686333}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.25, y: 4.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -131,7 +131,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.012178421, y: -0.4994192}
+  m_Offset: {x: 0.012178421, y: -0.70325935}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -142,7 +142,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7807903, y: 1.2679806}
+  m_Size: {x: 0.7807903, y: 1.6756608}
   m_EdgeRadius: 0
 --- !u!114 &1938930115665686330
 MonoBehaviour:
@@ -160,10 +160,10 @@ MonoBehaviour:
   seeker: {fileID: 1938930115665686308}
   animator: {fileID: 1938930115665686310}
   playerDetected: 0
-  detectionDistance: 10
+  detectionDistance: 20
   detectionLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 18688
   direction: {x: 0, y: 0}
   tough: 0
   health: 1
@@ -173,14 +173,14 @@ MonoBehaviour:
   stunned: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
-  range: 10
+  range: 15
   nextWayPointDistance: 0
-  coolDown: 2
-  bulletPrefab: {fileID: 0}
-  arrow: {fileID: 0}
-  bulletForce: 0
-  preparationDuration: 0
-  ennemiDetection: {fileID: 0}
+  coolDown: 2.5
+  bulletPrefab: {fileID: 2632547540658908434, guid: 9bffa467356781c41b1ab218b1e6974c,
+    type: 3}
+  arrow: {fileID: 1938930115673723877}
+  bulletForce: 30
+  preparationDuration: 1.5
 --- !u!50 &1938930115665686329
 Rigidbody2D:
   serializedVersion: 4
