@@ -12,6 +12,7 @@ public class MovementController : MonoBehaviour
 
     public float speed;
     public float jumpForce;
+    public float secondJumpForce;
 
     float originalSpeed;
 
@@ -165,7 +166,11 @@ public class MovementController : MonoBehaviour
 
                     rb.velocity = new Vector2(rb.velocity.x, 0);
 
-                    rb.AddForce(Vector2.up * jumpForce * Time.fixedDeltaTime, ForceMode2D.Impulse);
+                    if(canJump ==true)
+                        rb.AddForce(Vector2.up * jumpForce * Time.fixedDeltaTime, ForceMode2D.Impulse);
+                    else if (canJump ==false)
+                        rb.AddForce(Vector2.up * secondJumpForce * Time.fixedDeltaTime, ForceMode2D.Impulse);
+
 
                     if (isGrounded)
                         canJump = false;

@@ -800,7 +800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefcd67732c455e4aade74d0f91681a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 3
+  life: 5
   initialLife: 0
   invicibiltyTime: 0.5
 --- !u!114 &7360886272903129554
@@ -819,6 +819,7 @@ MonoBehaviour:
   rb: {fileID: 7360886272903129566}
   speed: 4000
   jumpForce: 1250
+  secondJumpForce: 1500
   antiProjectedMultiplier: 0
   groundLayers:
     serializedVersion: 2
@@ -882,6 +883,7 @@ MonoBehaviour:
   canGainHeight: 0
   slashNumb: 7
   slashNumbMax: 0
+  attackDirectionAngle: 0
 --- !u!114 &3210968349215444155
 MonoBehaviour:
   m_ObjectHideFlags: 0

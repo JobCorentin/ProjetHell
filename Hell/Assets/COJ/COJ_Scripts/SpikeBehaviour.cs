@@ -12,27 +12,14 @@ public class SpikeBehaviour : MonoBehaviour
         if(collision.gameObject.layer == 11)
         {
             HealthManager.hm.StartCoroutine(HealthManager.hm.TakeDamage(1));
-
-            //Up
-            if(spikeDir == 0)
-            {
-             MovementController.mC.StartCoroutine(MovementController.mC.MiniDash(Vector2.up, MovementController.mC.rb, 0.3f, 2000, 0.1f));
-            }
-            //Down
-            if (spikeDir == 1)
-            {
-                MovementController.mC.StartCoroutine(MovementController.mC.MiniDash(Vector2.down, MovementController.mC.rb, 0.3f, 2000, 0.1f));
-            }
-            //Left
-            if (spikeDir == 2)
-            {
-                MovementController.mC.StartCoroutine(MovementController.mC.MiniDash(Vector2.left, MovementController.mC.rb, 0.3f, 2000, 0.1f));
-            }
-            //Right
-            if (spikeDir == 3)
-            {
-                MovementController.mC.StartCoroutine(MovementController.mC.MiniDash(Vector2.right, MovementController.mC.rb, 0.3f, 2000, 0.1f));
-            }
+            Vector2 diagonaleDroite = new Vector2(1, 1);
+            Vector2 diagonaleGauche = new Vector2(-1, 1);
+            //Renvoyer vers la droite
+            if(collision.transform.position.x - transform.position.x >= 0) 
+                MovementController.mC.StartCoroutine(MovementController.mC.MiniDash(diagonaleDroite, MovementController.mC.rb, 0.3f, 3300, 0.1f));
+            //Renvoyer vers la gauche
+            else if(collision.transform.position.x - transform.position.x < 0)
+                MovementController.mC.StartCoroutine(MovementController.mC.MiniDash(diagonaleGauche, MovementController.mC.rb, 0.3f, 3300, 0.1f));
 
         }
     }
