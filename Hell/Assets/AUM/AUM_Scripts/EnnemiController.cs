@@ -136,7 +136,7 @@ public class EnnemiController : MonoBehaviour
 
         gameObject.GetComponent<SpriteRenderer>().material = shaderMaterial2;
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.05f);
 
         gameObject.GetComponent<SpriteRenderer>().material = defautlMaterial;
 
