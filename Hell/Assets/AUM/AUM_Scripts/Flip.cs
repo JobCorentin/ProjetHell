@@ -17,14 +17,14 @@ public class Flip : MonoBehaviour
     {
         if (InputListener.iL.horizontalInput < 0)
         {
-           transform.localScale = new Vector3(-1, 1, 1);
-            //gameObject.transform.GetComponent<SpriteRenderer>().flipX = true;
+           //transform.localScale = new Vector3(-1, 1, 1);
+            gameObject.transform.GetComponent<SpriteRenderer>().flipX = true;
         }
 
         if (InputListener.iL.horizontalInput > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
-            //gameObject.transform.GetComponent<SpriteRenderer>().flipX = false;
+            //transform.localScale = new Vector3(1, 1, 1);
+            gameObject.transform.GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 }
