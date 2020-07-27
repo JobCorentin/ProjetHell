@@ -157,7 +157,7 @@ public class MovementController : MonoBehaviour
                             FXManager.fxm.fxInstancier(0, groundCheck,0);
                         }
 
-                        StartCoroutine(IsJumpingFor());
+                        //StartCoroutine(IsJumpingFor());
                     }
                     else if(canDoubleJump == true)
                     {

@@ -335,6 +335,8 @@ MonoBehaviour:
   speed: 2250
   type: 0
   sr: {fileID: 9061584625763710337}
+  shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
+  shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
   stunned: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}

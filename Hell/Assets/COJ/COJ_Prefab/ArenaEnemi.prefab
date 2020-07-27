@@ -163,6 +163,8 @@ MonoBehaviour:
   speed: 2250
   type: 0
   sr: {fileID: 2436330051584460618}
+  shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
+  shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
   stunned: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
@@ -215,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2007b521ddb46d3478e7196687b2e064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arena: {fileID: 0}
+  wave: {fileID: 0}
   enemiStat: {fileID: 0}
 --- !u!95 &6633417914669196249
 Animator:

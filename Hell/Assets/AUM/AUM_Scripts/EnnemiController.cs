@@ -25,6 +25,10 @@ public class EnnemiController : MonoBehaviour
 
     public SpriteRenderer sr;
 
+    Material defautlMaterial;
+    public Material shaderMaterial1;
+    public Material shaderMaterial2;
+
     [HideInInspector] public bool stunned;
 
     public Transform pTransform;
@@ -42,6 +46,7 @@ public class EnnemiController : MonoBehaviour
     public virtual void Start()
     {
         pTransform = MovementController.mC.transform;
+        defautlMaterial = gameObject.GetComponent<SpriteRenderer>().material;
 
         InvokeRepeating("UpdatePath", 0f, 0.1f);
     }
@@ -125,15 +130,18 @@ public class EnnemiController : MonoBehaviour
         }
 
 
-        //sr.color = Color.red;
+        gameObject.GetComponent<SpriteRenderer>().material = shaderMaterial1; 
 
-        yield return new WaitForSeconds(0.3f * amount);
+        yield return new WaitForSeconds(0.1f);
 
-        sr.color = Color.white;
+        gameObject.GetComponent<SpriteRenderer>().material = shaderMaterial2;
+
+        yield return new WaitForSeconds(0.1f);
+
+        gameObject.GetComponent<SpriteRenderer>().material = defautlMaterial;
 
         if(tough == false)
         {
-
             Die();
         }
 
@@ -244,8 +252,6 @@ public class EnnemiController : MonoBehaviour
 
     public void Die()
     {
-
-        animator.SetTrigger("Dying");
         MovementController.mC.canDoubleJump = true;
 
         gameObject.SetActive(false);
