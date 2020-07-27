@@ -77,7 +77,7 @@ public class E1Bullet : MonoBehaviour
             {
                 EnnemiController ec = collision.GetComponent<EnnemiController>();
 
-                ec.StartCoroutine(ec.DamageDash((ennemiLauncheFrom.transform.position - transform.position).normalized, 0.1f, 500f, 1));
+                ec.StartCoroutine(ec.DamageDash((ennemiLauncheFrom.transform.position - transform.position).normalized, 0.1f, 500f, 1f));
 
                 ec.StartCoroutine(ec.TakeDamage(1));
 

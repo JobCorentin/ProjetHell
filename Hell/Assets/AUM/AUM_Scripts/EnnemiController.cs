@@ -133,6 +133,7 @@ public class EnnemiController : MonoBehaviour
 
         if(tough == false)
         {
+
             Die();
         }
 
@@ -243,6 +244,8 @@ public class EnnemiController : MonoBehaviour
 
     public void Die()
     {
+
+        animator.SetTrigger("Dying");
         MovementController.mC.canDoubleJump = true;
 
         gameObject.SetActive(false);
