@@ -113,7 +113,7 @@ public class EnnemiController : MonoBehaviour
     public IEnumerator TakeDamage(int amount)
     {
         animator.SetTrigger("IsTakingDamage");
-
+        MovementController.mC.canDoubleJump = true;
         health -= amount;
         if (amount == 1)
         {
@@ -246,7 +246,6 @@ public class EnnemiController : MonoBehaviour
     {
 
         animator.SetTrigger("Dying");
-        MovementController.mC.canDoubleJump = true;
 
         gameObject.SetActive(false);
     }

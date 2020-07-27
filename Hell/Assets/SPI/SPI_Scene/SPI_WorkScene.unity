@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -621,7 +621,7 @@ PrefabInstance:
     - target: {fileID: 9061584625763710348, guid: 8e379070c098f1d4486e56de39cccf07,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e379070c098f1d4486e56de39cccf07, type: 3}
@@ -2067,41 +2067,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1559395529}
     m_Modifications:
-    - target: {fileID: 1938930114815364570, guid: b827457e2de1bc0489d9334229ce75c9,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0.8235294
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938930114815364570, guid: b827457e2de1bc0489d9334229ce75c9,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938930114815364570, guid: b827457e2de1bc0489d9334229ce75c9,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.16834341
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938930114815364570, guid: b827457e2de1bc0489d9334229ce75c9,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938930114815364573, guid: b827457e2de1bc0489d9334229ce75c9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.8837
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938930114815364573, guid: b827457e2de1bc0489d9334229ce75c9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 6.027391
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938930114815364573, guid: b827457e2de1bc0489d9334229ce75c9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.03
-      objectReference: {fileID: 0}
     - target: {fileID: 1938930115665686328, guid: b827457e2de1bc0489d9334229ce75c9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2157,25 +2122,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1938930115665686330, guid: b827457e2de1bc0489d9334229ce75c9,
-        type: 3}
-      propertyPath: preparationDuration
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1938930115665686333, guid: b827457e2de1bc0489d9334229ce75c9,
         type: 3}
       propertyPath: m_Name
       value: Musket
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938930115673723874, guid: b827457e2de1bc0489d9334229ce75c9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938930115673723877, guid: b827457e2de1bc0489d9334229ce75c9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b827457e2de1bc0489d9334229ce75c9, type: 3}
@@ -2510,7 +2460,7 @@ PrefabInstance:
     - target: {fileID: 1938930115665686333, guid: b827457e2de1bc0489d9334229ce75c9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1938930115673723877, guid: b827457e2de1bc0489d9334229ce75c9,
         type: 3}
@@ -2595,7 +2545,7 @@ PrefabInstance:
     - target: {fileID: 1938930115665686333, guid: b827457e2de1bc0489d9334229ce75c9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b827457e2de1bc0489d9334229ce75c9, type: 3}
