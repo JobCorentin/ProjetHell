@@ -6,6 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class ButtonScript : MonoBehaviour
 {
+
+    public static ButtonScript bs;
+
+    private void Awake()
+    {
+        bs = this;
+    }
+
     private void Update()
     {
         if (Input.GetKey("b"))

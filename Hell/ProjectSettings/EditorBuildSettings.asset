@@ -9,12 +9,15 @@ EditorBuildSettings:
     path: Assets/__FinalScenes/Menu.unity
     guid: 529ba56c9c35f0646849938033e8a2c4
   - enabled: 1
-    path: Assets/AUM/AUM_Scenes/WorkSceneAUM.unity
-    guid: 2ed08ed90255b7e40b3d3d0bad7b465d
+    path: Assets/COJ/COJ_Scenes/ArenaTest/TestLevel1.unity
+    guid: 553bf47da1d835c48999969fde411894
   - enabled: 1
-    path: Assets/COJ/COJ_Scenes/Arene3LD1COJ.unity
-    guid: 04fd79c4a403c9f409bb0e48cf274319
+    path: Assets/COJ/COJ_Scenes/ArenaTest/TestArena2.unity
+    guid: 69d355aa8271bac43b89d67b464c23e0
   - enabled: 1
-    path: Assets/SPI/SPI_Scene/SPI_Scene.unity
-    guid: 85f4a52c204c5eb4fb3b61fd2911b014
+    path: Assets/COJ/COJ_Scenes/ArenaTest/TestArena3.unity
+    guid: dae7781a81b8f634b982050e1eea3d28
+  - enabled: 1
+    path: Assets/COJ/COJ_Scenes/ArenaTest/TestArena4.unity
+    guid: 77f5b35ec4796cf499eee2f1ec42b207
   m_configObjects: {}
