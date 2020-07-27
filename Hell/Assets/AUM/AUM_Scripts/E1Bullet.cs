@@ -47,7 +47,7 @@ public class E1Bullet : MonoBehaviour
         if (collision.gameObject.layer == 11)
         {
             HealthManager.hm.StartCoroutine(HealthManager.hm.TakeDamage(1));
-            MovementController.mC.StartCoroutine(MovementController.mC.MiniDash(collision.transform.position - gameObject.transform.position ,MovementController.mC.rb, 0.3f, 5000, 0.1f));
+            MovementController.mC.StartCoroutine(MovementController.mC.MiniDash(collision.transform.position - gameObject.transform.position ,MovementController.mC.rb, 0.3f, 3000, 0.2f));
 
             Destroy(gameObject);
         }
@@ -70,7 +70,7 @@ public class E1Bullet : MonoBehaviour
             {
                 EnnemiController ec = collision.GetComponent<EnnemiController>();
 
-                ec.StartCoroutine(ec.DamageDash((ennemiLauncheFrom.transform.position - transform.position).normalized, 0.1f, 500f, 1));
+                ec.StartCoroutine(ec.DamageDash((ennemiLauncheFrom.transform.position - transform.position).normalized, 0.1f, 500f, 1f));
 
                 ec.StartCoroutine(ec.TakeDamage(1));
 

@@ -11,6 +11,7 @@ public class E2Bullet : MonoBehaviour
     float existenceTimer;
 
     bool reflected = false;
+    Vector2 v;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +48,15 @@ public class E2Bullet : MonoBehaviour
         if (collision.gameObject.layer == 11)
         {
             HealthManager.hm.StartCoroutine(HealthManager.hm.TakeDamage(1));
-            MovementController.mC.StartCoroutine(MovementController.mC.MiniDash(collision.transform.position - gameObject.transform.position, MovementController.mC.rb, 0.3f, 5000, 0.1f));
+            if (collision.transform.position.x - gameObject.transform.position.x <= 0)
+            {
+                v = new Vector2(-1f, 1f);
+            }
+            if (collision.transform.position.x - gameObject.transform.position.x > 0)
+            {
+                v = new Vector2(1f, 1f);
+            }
+            MovementController.mC.StartCoroutine(MovementController.mC.MiniDash(v.normalized, MovementController.mC.rb, 0.3f, 3300, 0.1f));
 
             Destroy(gameObject);
         }

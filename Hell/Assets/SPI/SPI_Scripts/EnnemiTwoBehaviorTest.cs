@@ -74,7 +74,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     }
     IEnumerator LaunchBullet()
     {
-        Vector2 baseDirectionAttack = pTransform.position - transform.position;
+        Vector2 baseDirectionAttack = pTransform.position - musket.transform.position;
 
         Vector2 finalDirectionAttack = baseDirectionAttack;
 
@@ -83,7 +83,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
         for (float i = preparationDuration; i > 0; i -= Time.deltaTime)
         {
-            finalDirectionAttack = (baseDirectionAttack + ((Vector2)(pTransform.position - transform.position) * 10)).normalized;
+            finalDirectionAttack = (baseDirectionAttack + ((Vector2)(pTransform.position - musket.transform.position) * 10)).normalized;
 
             float finalDirectionAttackAngle = Vector2.Angle(transform.right, finalDirectionAttack);
 
