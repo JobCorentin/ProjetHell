@@ -46,11 +46,14 @@ public class EnnemiTwoBehaviorTest : EnnemiController
             if (pTransform.position.x - transform.position.x < 0)
             {
                 transform.localScale = new Vector3(1f,1f,1f);
+                arrow.transform.localScale = new Vector3(1f, 1f, 1f);
             }
             else
             {
 
                 transform.localScale = new Vector3(-1f, 1f, 1f);
+
+                arrow.transform.localScale = new Vector3(-1f, -1f, 1f);
             }
 
             if (Vector2.Distance(transform.position, pTransform.position) <= range * 2f)
@@ -77,8 +80,6 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
 
         animator.SetBool("IsAiming", true);
-        Debug.Log("aim");
-        //arrow.SetActive(true);
 
         for (float i = preparationDuration; i > 0; i -= Time.deltaTime)
         {
@@ -109,5 +110,10 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         arrow.SetActive(false);
 
         yield break;
+    }
+
+    public void ActivateAimArrow()
+    {
+        arrow.SetActive(true);
     }
 }
