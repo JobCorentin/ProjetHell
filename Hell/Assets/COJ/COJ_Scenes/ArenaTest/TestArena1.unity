@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -312,6 +312,8 @@ MonoBehaviour:
   speed: 0
   type: 0
   sr: {fileID: 84836067}
+  shaderMaterial1: {fileID: 0}
+  shaderMaterial2: {fileID: 0}
   stunned: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
@@ -548,6 +550,8 @@ MonoBehaviour:
   speed: 0
   type: 0
   sr: {fileID: 153197743}
+  shaderMaterial1: {fileID: 0}
+  shaderMaterial2: {fileID: 0}
   stunned: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
@@ -1438,6 +1442,8 @@ MonoBehaviour:
   speed: 0
   type: 0
   sr: {fileID: 550515289}
+  shaderMaterial1: {fileID: 0}
+  shaderMaterial2: {fileID: 0}
   stunned: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
@@ -1735,6 +1741,8 @@ MonoBehaviour:
   speed: 1200
   type: 0
   sr: {fileID: 610442287}
+  shaderMaterial1: {fileID: 0}
+  shaderMaterial2: {fileID: 0}
   stunned: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
@@ -13238,6 +13246,8 @@ MonoBehaviour:
   speed: 1200
   type: 0
   sr: {fileID: 949483571}
+  shaderMaterial1: {fileID: 0}
+  shaderMaterial2: {fileID: 0}
   stunned: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
@@ -13555,6 +13565,8 @@ MonoBehaviour:
   speed: 0
   type: 0
   sr: {fileID: 982264561}
+  shaderMaterial1: {fileID: 0}
+  shaderMaterial2: {fileID: 0}
   stunned: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
@@ -13905,6 +13917,8 @@ MonoBehaviour:
   speed: 0
   type: 0
   sr: {fileID: 1057454389}
+  shaderMaterial1: {fileID: 0}
+  shaderMaterial2: {fileID: 0}
   stunned: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
@@ -14471,6 +14485,8 @@ MonoBehaviour:
   speed: 1200
   type: 0
   sr: {fileID: 1157912683}
+  shaderMaterial1: {fileID: 0}
+  shaderMaterial2: {fileID: 0}
   stunned: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
@@ -14902,6 +14918,8 @@ MonoBehaviour:
   speed: 0
   type: 0
   sr: {fileID: 1326194657}
+  shaderMaterial1: {fileID: 0}
+  shaderMaterial2: {fileID: 0}
   stunned: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
@@ -15525,6 +15543,8 @@ MonoBehaviour:
   speed: 1200
   type: 0
   sr: {fileID: 1488518648}
+  shaderMaterial1: {fileID: 0}
+  shaderMaterial2: {fileID: 0}
   stunned: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
@@ -16197,6 +16217,8 @@ MonoBehaviour:
   speed: 0
   type: 0
   sr: {fileID: 1771315593}
+  shaderMaterial1: {fileID: 0}
+  shaderMaterial2: {fileID: 0}
   stunned: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
@@ -17076,6 +17098,8 @@ MonoBehaviour:
   speed: 0
   type: 0
   sr: {fileID: 2127415122}
+  shaderMaterial1: {fileID: 0}
+  shaderMaterial2: {fileID: 0}
   stunned: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
