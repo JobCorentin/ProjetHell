@@ -36,6 +36,8 @@ public class MovementController : MonoBehaviour
     [HideInInspector] public bool isWalled;
     [HideInInspector] public bool isWallSliding;
 
+    Vector2 wallSlideBaseInputDir;
+
     float horizontalInputWallSliding;
 
     public Transform groundCheck;
@@ -101,8 +103,16 @@ public class MovementController : MonoBehaviour
 
         wasWallSliding = isWallSliding;
 
-        if (isWalled && isGrounded == false && Mathf.Abs( InputListener.iL.horizontalInput ) > 0) 
+        if (isWalled && isGrounded == false) 
         {
+            if(isWallSliding == false)
+            {
+                if (InputListener.iL.horizontalInput <= 0)
+                    wallSlideBaseInputDir = Vector2.left;
+                else if (InputListener.iL.horizontalInput > 0)
+                    wallSlideBaseInputDir = Vector2.right;
+            }
+
             isWallSliding = true;
             canDoubleJump = true;
             BaseSlashInstancier.bsi.ResetSlashNumb();
@@ -125,7 +135,7 @@ public class MovementController : MonoBehaviour
             rb.AddForce( new Vector2(InputListener.iL.horizontalInput * speed * Time.fixedDeltaTime, 0), ForceMode2D.Force);
 
             //Empêche le PJ de glisser
-            if(InputListener.iL.horizontalInput == 0)
+            if(InputListener.iL.horizontalInput == 0 && isGrounded)
             {
                 rb.velocity = new Vector2(0,rb.velocity.y);
             }
@@ -134,7 +144,7 @@ public class MovementController : MonoBehaviour
             {
                 if (InputListener.iL.jumpInput)
                 {
-                    rb.AddForce(new Vector2(xWallJump * -InputListener.iL.horizontalInput, yWallJump).normalized * wallJumpForce * Time.fixedDeltaTime, ForceMode2D.Impulse);
+                    rb.AddForce(new Vector2(xWallJump * -wallSlideBaseInputDir.x, yWallJump).normalized * wallJumpForce * Time.fixedDeltaTime, ForceMode2D.Impulse);
 
                     animator.SetTrigger("Jumping");
 
