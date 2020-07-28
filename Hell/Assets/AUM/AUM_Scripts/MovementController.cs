@@ -107,9 +107,9 @@ public class MovementController : MonoBehaviour
         {
             if(isWallSliding == false)
             {
-                if (InputListener.iL.horizontalInput <= 0)
+                if (Physics2D.OverlapBox(leftWallCheck.position, new Vector2(0.2f, 0.75f), 0, wallLayers))
                     wallSlideBaseInputDir = Vector2.left;
-                else if (InputListener.iL.horizontalInput > 0)
+                else if (Physics2D.OverlapBox(rightWallCheck.position, new Vector2(0.2f, 0.75f), 0, wallLayers))
                     wallSlideBaseInputDir = Vector2.right;
             }
 
