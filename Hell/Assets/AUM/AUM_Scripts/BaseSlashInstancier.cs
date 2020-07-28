@@ -155,7 +155,16 @@ public class BaseSlashInstancier : MonoBehaviour
         }
         else
         {
-            lastSlash = StartCoroutine(Slash(currentAttackDirection, currentInputDirection));
+            if(MovementController.mC.isWallSliding == true)
+            {
+                lastSlash = StartCoroutine(Slash(-currentAttackDirection, -currentInputDirection));
+            }
+            else
+            {
+                lastSlash = StartCoroutine(Slash(currentAttackDirection, currentInputDirection));
+            }
+
+            
         }
 
         lastStarting = null;
@@ -175,7 +184,7 @@ public class BaseSlashInstancier : MonoBehaviour
             attackDirectionAngle = -attackDirectionAngle;
         }
 
-        slash.transform.rotation = Quaternion.Euler(0, 0, attackDirectionAngle);
+        //slash.transform.rotation = Quaternion.Euler(0, 0, attackDirectionAngle);
 
         MovementController.mC.stuned = true;
 
@@ -183,20 +192,21 @@ public class BaseSlashInstancier : MonoBehaviour
         {
             //ennemiController.rb.velocity = (currentAttackDirection.normalized * 1.5f + currentInputDirection.normalized).normalized * movementForce * 1.3f * i * Time.fixedDeltaTime;
             //if(currentAttackDirection == Vector2.up)
-            if(MovementController.mC.isGrounded == true)
-            {
-                if (canGainHeight == true || currentInputDirection.y < 0)
-                    MovementController.mC.rb.velocity = (currentAttackDirection.normalized + currentInputDirection.normalized).normalized * movementForce * i * Time.fixedDeltaTime;
-                else
-                    MovementController.mC.rb.velocity = new Vector2(((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.x * movementForce * i * Time.fixedDeltaTime) * 3f / 4f, ((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.y * movementForce * i * Time.fixedDeltaTime) / 2);
-            }
-            else if (MovementController.mC.isGrounded == false)
-            {
-                if (canGainHeight == true || currentInputDirection.y < 0)
-                    MovementController.mC.rb.velocity = (currentAttackDirection.normalized + currentInputDirection.normalized).normalized * airMovementForce * i * Time.fixedDeltaTime;
-                else
-                    MovementController.mC.rb.velocity = new Vector2(((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.x * airMovementForce * i * Time.fixedDeltaTime) * 3f / 4f, ((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.y * airMovementForce * i * Time.fixedDeltaTime) / 2);
-            }
+                if (MovementController.mC.isGrounded == true)
+                {
+                    if (canGainHeight == true || currentInputDirection.y < 0)
+                        MovementController.mC.rb.velocity = (currentAttackDirection.normalized + currentInputDirection.normalized).normalized * movementForce * i * Time.fixedDeltaTime;
+                    else
+                        MovementController.mC.rb.velocity = new Vector2(((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.x * movementForce * i * Time.fixedDeltaTime) * 3f / 4f, ((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.y * movementForce * i * Time.fixedDeltaTime) / 2);
+                }
+                else if (MovementController.mC.isGrounded == false)
+                {
+                    if (canGainHeight == true || currentInputDirection.y < 0)
+                        MovementController.mC.rb.velocity = (currentAttackDirection.normalized + currentInputDirection.normalized).normalized * airMovementForce * i * Time.fixedDeltaTime;
+                    else
+                        MovementController.mC.rb.velocity = new Vector2(((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.x * airMovementForce * i * Time.fixedDeltaTime) * 3f / 4f, ((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.y * airMovementForce * i * Time.fixedDeltaTime) / 2);
+                }
+            
 
             //}
             //else
