@@ -15,6 +15,10 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
     public float preparationDuration;
     public GameObject musket;
+    [HideInInspector] public Vector2 sens;
+    [HideInInspector] public float stade;
+    public bool lookUp;
+    [HideInInspector] public bool canShoot;
 
     //public EnnemiDetection ennemiDetection;
 
@@ -47,13 +51,14 @@ public class EnnemiTwoBehaviorTest : EnnemiController
             {
                 transform.localScale = new Vector3(1f,1f,1f);
                 arrow.transform.localScale = new Vector3(1f, 1f, 1f);
+                sens = Vector2.left;
             }
             else
             {
 
                 transform.localScale = new Vector3(-1f, 1f, 1f);
-
                 arrow.transform.localScale = new Vector3(-1f, -1f, 1f);
+                sens = Vector2.right;
             }
 
             if (Vector2.Distance(transform.position, pTransform.position) <= range * 2f)
@@ -65,11 +70,37 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                 else
                 {
                     animator.SetBool("HasShot", false);
+                    stade = 0;
                     StartCoroutine(LaunchBullet());
-                    coolDownTimer = 0;
                 }
 
             }
+        }
+        if (animator.GetBool("IsAiming") == true)
+        {
+
+            animator.SetBool("CanDown", false);
+            animator.SetBool("CanUp", false);
+            stade = Mathf.Round(Vector2.Angle(sens, pTransform.position - musket.transform.position)/30);
+            if (lookUp == true)
+                stade = -stade;
+            Debug.Log(Vector2.Angle(sens, pTransform.position - musket.transform.position));
+            if (Vector2.Angle(sens, pTransform.position-musket.transform.position) > 15* stade)
+            {
+
+                if (lookUp)
+                    animator.SetBool("CanUp", true);
+                else
+                    animator.SetBool("CanDown", true);
+            }
+            if (Vector2.Angle(sens, pTransform.position - musket.transform.position) < 15 * stade)
+            {
+                if (lookUp)
+                    animator.SetBool("CanDown", true);
+                else
+                    animator.SetBool("CanUp", true);
+            }
+
         }
     }
     IEnumerator LaunchBullet()
@@ -85,15 +116,26 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         {
             finalDirectionAttack = (baseDirectionAttack + ((Vector2)(pTransform.position - musket.transform.position) * 10)).normalized;
 
-            float finalDirectionAttackAngle = Vector2.Angle(transform.right, finalDirectionAttack);
+            float finalDirectionAttackAngle = Vector2.Angle(musket.transform.right, finalDirectionAttack);
 
             if (finalDirectionAttack.y < 0)
             {
                 finalDirectionAttackAngle = -finalDirectionAttackAngle;
+                lookUp = false;
+
+            }
+            if (finalDirectionAttack.y > 0)
+            {
+                lookUp = true;
+
             }
 
+            /*if (finalDirectionAttackAngle > 120)
+            {
+                 finalDirectionAttackAngle = 60;
+                 i = preparationDuration;
+            }*/
             arrow.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle);
-
             yield return null;
         }
 
@@ -109,6 +151,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
         arrow.SetActive(false);
 
+        coolDownTimer = 0;
         yield break;
     }
 
