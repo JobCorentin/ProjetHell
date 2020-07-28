@@ -144,7 +144,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
             {
                 finalDirectionAttack = (baseDirectionAttack + ((Vector2)(pTransform.position - musket.transform.position) * 10)).normalized;
                 finalDirectionAttackAngle = Vector2.Angle(musket.transform.right, finalDirectionAttack);
-                //yield return null;
+                yield return null;
             }
             arrow.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle);
             yield return null;
