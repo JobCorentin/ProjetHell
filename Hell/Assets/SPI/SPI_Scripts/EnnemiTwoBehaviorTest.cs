@@ -18,7 +18,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     [HideInInspector] public Vector2 sens;
     [HideInInspector] public float stade;
     public bool lookUp;
-    [HideInInspector] public bool canShoot;
+    public bool canShoot;
 
     //public EnnemiDetection ennemiDetection;
 
@@ -63,17 +63,22 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
             if (Vector2.Distance(transform.position, pTransform.position) <= range * 2f)
             {
-                if (coolDownTimer < coolDown)
+                if ( canShoot)
                 {
-                    coolDownTimer += Time.fixedDeltaTime;
-                }
-                else
-                {
-                    animator.SetBool("HasShot", false);
-                    stade = 0;
-                    StartCoroutine(LaunchBullet());
-                }
 
+                    if (coolDownTimer < coolDown)
+                    {
+                        coolDownTimer += Time.fixedDeltaTime;
+                    }
+                    else
+                    {
+                        animator.SetBool("HasShot", false);
+                        stade = 0;
+                        StartCoroutine(LaunchBullet());
+                        coolDownTimer = 0;
+                        canShoot = false;
+                    }
+                }
             }
         }
         if (animator.GetBool("IsAiming") == true)
@@ -130,11 +135,17 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
             }
 
-            /*if (finalDirectionAttackAngle > 120)
+            /*if (finalDirectionAttackAngle > 45)
             {
                  finalDirectionAttackAngle = 60;
                  i = preparationDuration;
             }*/
+            while (finalDirectionAttackAngle > 45)
+            {
+                finalDirectionAttack = (baseDirectionAttack + ((Vector2)(pTransform.position - musket.transform.position) * 10)).normalized;
+                finalDirectionAttackAngle = Vector2.Angle(musket.transform.right, finalDirectionAttack);
+                //yield return null;
+            }
             arrow.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle);
             yield return null;
         }
@@ -150,8 +161,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         currentBullet.rb.velocity = finalDirectionAttack * bulletForce;
 
         arrow.SetActive(false);
-
-        coolDownTimer = 0;
+        canShoot = true;
         yield break;
     }
 
