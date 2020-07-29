@@ -89,7 +89,6 @@ public class EnnemiTwoBehaviorTest : EnnemiController
             stade = Mathf.Round(Vector2.Angle(sens, pTransform.position - musket.transform.position)/30);
             if (lookUp == true)
                 stade = -stade;
-            Debug.Log(Vector2.Angle(sens, pTransform.position - musket.transform.position));
             if (Vector2.Angle(sens, pTransform.position-musket.transform.position) > 15* stade)
             {
 
@@ -134,7 +133,6 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                 lookUp = true;
 
             }
-            Debug.Log(finalDirectionAttackAngle);
             while ((finalDirectionAttackAngle < 100 && finalDirectionAttackAngle > 80) || (finalDirectionAttackAngle < -80 && finalDirectionAttackAngle > -100))
             {
                 finalDirectionAttack = (baseDirectionAttack + ((Vector2)(pTransform.position - musket.transform.position) * 10)).normalized;
