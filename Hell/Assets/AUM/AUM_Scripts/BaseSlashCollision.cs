@@ -16,6 +16,10 @@ public class BaseSlashCollision : MonoBehaviour
 
     public bool ennemiTouched = false;
 
+    [HideInInspector] public bool bouncing;
+
+    Coroutine lastBounce;
+
     private void Awake()
     {
         bsc = this;
@@ -37,6 +41,16 @@ public class BaseSlashCollision : MonoBehaviour
 
             ec.StartCoroutine(ec.TakeDamage(1));
             FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.045f,0f));
+
+            if(BaseSlashInstancier.bsi.canBounce)
+            {
+                if(lastBounce != null)
+                {
+                    StopCoroutine(lastBounce);
+                }
+
+                lastBounce = MovementController.mC.StartCoroutine(Bounce());
+            }
         }
 
         if (collision.transform.tag == "Props")
@@ -53,6 +67,28 @@ public class BaseSlashCollision : MonoBehaviour
             ec.TakeDamage(1);
             ec.TakeForce(SwordSlashInstancier.ssi.attackDirection, pushForce);
         }*/
+    }
+
+    IEnumerator Bounce()
+    {
+        BetterJump.bj.lowJumpMultiplier = 1;
+
+        bouncing = true;
+
+        MovementController.mC.rb.velocity = Vector2.zero;
+
+        MovementController.mC.rb.AddForce(Vector2.up * (MovementController.mC.jumpForce) * Time.fixedDeltaTime, ForceMode2D.Impulse);
+
+        //yield return new WaitForSeconds(BaseSlashInstancier.bsi.duration * 2f);
+
+        for (float i = BaseSlashInstancier.bsi.duration * 2f; i > 0; i -= Time.fixedDeltaTime)
+        {
+            yield return new WaitForFixedUpdate();
+        }
+
+        BetterJump.bj.lowJumpMultiplier = BetterJump.bj.baseLowJumpMultiplier;
+
+        bouncing = false;
     }
 
     IEnumerator AttackMiniDash(Vector2 dashDirection, EnnemiController ennemiController)

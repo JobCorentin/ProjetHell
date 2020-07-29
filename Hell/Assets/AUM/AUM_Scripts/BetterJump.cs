@@ -8,6 +8,7 @@ public class BetterJump : MonoBehaviour
 
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
+    [HideInInspector] public float baseLowJumpMultiplier;
 
     float originalFallMultiplier;
 
@@ -17,6 +18,8 @@ public class BetterJump : MonoBehaviour
     private void Start()
     {
         originalFallMultiplier = fallMultiplier;
+
+        baseLowJumpMultiplier = lowJumpMultiplier;
 
         bj = this;
     }
