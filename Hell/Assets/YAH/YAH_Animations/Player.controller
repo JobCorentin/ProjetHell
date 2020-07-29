@@ -311,6 +311,20 @@ BlendTree:
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 1
+--- !u!1109 &-7002009852412017656
+AnimatorTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 3836295545134320027}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 1
 --- !u!1101 &-6431576806966305317
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -600,13 +614,13 @@ AnimatorStateMachine:
     m_Position: {x: 960, y: 130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1660017582738377168}
-    m_Position: {x: 1180, y: 270, z: 0}
+    m_Position: {x: 1190, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5688292087386200029}
-    m_Position: {x: -320, y: 150, z: 0}
+    m_Position: {x: -700, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4097344332704255356}
-    m_Position: {x: -320, y: 210, z: 0}
+    m_Position: {x: -700, y: 230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8887046995039017939}
     m_Position: {x: 1320, y: 20, z: 0}
@@ -618,10 +632,10 @@ AnimatorStateMachine:
     m_Position: {x: 940, y: 530, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1783995799109276424}
-    m_Position: {x: -330, y: 270, z: 0}
+    m_Position: {x: -700, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7829821752314997718}
-    m_Position: {x: -330, y: 330, z: 0}
+    m_Position: {x: -700, y: 350, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8181483672514921117}
     m_Position: {x: 450, y: 130, z: 0}
@@ -630,7 +644,7 @@ AnimatorStateMachine:
     m_Position: {x: 220, y: 130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3611460757292358239}
-    m_Position: {x: -330, y: 80, z: 0}
+    m_Position: {x: -700, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3836295545134320027}
     m_Position: {x: 50, y: 330, z: 0}
