@@ -75,7 +75,7 @@ public class BaseSlashCollision : MonoBehaviour
 
         bouncing = true;
 
-        MovementController.mC.rb.velocity = Vector2.zero;
+        MovementController.mC.rb.velocity = new Vector2(MovementController.mC.rb.velocity.x, 0);
 
         MovementController.mC.rb.AddForce(Vector2.up * (MovementController.mC.jumpForce) * Time.fixedDeltaTime, ForceMode2D.Impulse);
 
