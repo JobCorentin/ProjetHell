@@ -89,7 +89,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
             stade = Mathf.Round(Vector2.Angle(sens, pTransform.position - musket.transform.position)/30);
             if (lookUp == true)
                 stade = -stade;
-            //Debug.Log(Vector2.Angle(sens, pTransform.position - musket.transform.position));
+            Debug.Log(Vector2.Angle(sens, pTransform.position - musket.transform.position));
             if (Vector2.Angle(sens, pTransform.position-musket.transform.position) > 15* stade)
             {
 
@@ -134,20 +134,32 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                 lookUp = true;
 
             }
-
-            /*if (finalDirectionAttackAngle > 45)
+            Debug.Log(finalDirectionAttackAngle);
+            /*if ((finalDirectionAttackAngle > 120 && finalDirectionAttackAngle < 60) || (finalDirectionAttackAngle > -620 && finalDirectionAttackAngle < -120))
             {
-                 finalDirectionAttackAngle = 60;
-                 i = preparationDuration;
+                 finalDirectionAttackAngle = 120;
+                 i += Time.deltaTime;
             }*/
-            /*while (finalDirectionAttackAngle > 120)
+            while ((finalDirectionAttackAngle < 120 && finalDirectionAttackAngle > 60) || (finalDirectionAttackAngle < -60 && finalDirectionAttackAngle > -120))
             {
                 finalDirectionAttack = (baseDirectionAttack + ((Vector2)(pTransform.position - musket.transform.position) * 10)).normalized;
                 finalDirectionAttackAngle = Vector2.Angle(musket.transform.right, finalDirectionAttack);
-                arrow.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle);
-                Debug.Log(finalDirectionAttackAngle);
+
+                arrow.SetActive(false);
+                if (finalDirectionAttack.y < 0)
+                {
+                    finalDirectionAttackAngle = -finalDirectionAttackAngle;
+                    lookUp = false;
+
+                }
+                if (finalDirectionAttack.y > 0)
+                {
+                    lookUp = true;
+
+                }
                 yield return null;
-            }*/
+            }
+            arrow.SetActive(true);
             arrow.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle);
             yield return null;
         }
