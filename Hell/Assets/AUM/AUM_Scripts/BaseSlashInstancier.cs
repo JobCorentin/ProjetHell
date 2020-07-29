@@ -39,6 +39,7 @@ public class BaseSlashInstancier : MonoBehaviour
     public int currentNumberOfRaycast;
 
     [HideInInspector] public bool canGainHeight;
+    [HideInInspector] public bool canBounce = false;
 
     public int slashNumb;
     [HideInInspector] public int slashNumbMax;
@@ -177,6 +178,10 @@ public class BaseSlashInstancier : MonoBehaviour
         slash.SetActive(true);
         BaseSlashCollision.bsc.ennemiTouched = false;
 
+        if (currentAttackDirection == Vector2.down)
+            canBounce = true;
+
+
         attackDirectionAngle = Vector2.Angle(transform.right, currentAttackDirection);
 
         if (currentAttackDirection.y < 0)
@@ -190,7 +195,7 @@ public class BaseSlashInstancier : MonoBehaviour
 
         for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         {
-            if(slashNumb > 0)
+            if(slashNumb > 0 && BaseSlashCollision.bsc.bouncing == false)
             {
                 //ennemiController.rb.velocity = (currentAttackDirection.normalized * 1.5f + currentInputDirection.normalized).normalized * movementForce * 1.3f * i * Time.fixedDeltaTime;
                 //if(currentAttackDirection == Vector2.up)
@@ -249,6 +254,8 @@ public class BaseSlashInstancier : MonoBehaviour
 
             yield return new WaitForFixedUpdate();
         }*/
+
+            canBounce = false;
 
         slash.SetActive(false);
 
