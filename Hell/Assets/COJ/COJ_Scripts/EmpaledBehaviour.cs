@@ -19,6 +19,17 @@ public class EmpaledBehaviour : MonoBehaviour
             MovementController.mC.canDoubleJump = true;
             BaseSlashInstancier.bsi.slashNumb = BaseSlashInstancier.bsi.slashNumbMax;
             BaseSlashInstancier.bsi.canGainHeight = true;
+
+            if (BaseSlashInstancier.bsi.canBounce)
+            {
+                if (BaseSlashCollision.bsc.lastBounce != null)
+                {
+                    StopCoroutine(BaseSlashCollision.bsc.lastBounce);
+                }
+
+                BaseSlashCollision.bsc.lastBounce = MovementController.mC.StartCoroutine(BaseSlashCollision.bsc.Bounce());
+            }
+
             animator.SetTrigger("hit");
         }
     }

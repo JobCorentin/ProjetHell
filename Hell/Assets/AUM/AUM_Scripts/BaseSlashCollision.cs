@@ -18,7 +18,7 @@ public class BaseSlashCollision : MonoBehaviour
 
     [HideInInspector] public bool bouncing;
 
-    Coroutine lastBounce;
+    [HideInInspector] public Coroutine lastBounce;
 
     private void Awake()
     {
@@ -69,7 +69,7 @@ public class BaseSlashCollision : MonoBehaviour
         }*/
     }
 
-    IEnumerator Bounce()
+    public IEnumerator Bounce()
     {
         BetterJump.bj.lowJumpMultiplier = 1;
 
