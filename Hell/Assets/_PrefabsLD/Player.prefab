@@ -31,6 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7360886272248513384}
+  - {fileID: 177958988}
   m_Father: {fileID: 7360886272903129553}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -146,7 +147,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7360886272903129553}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &354030382
 MonoBehaviour:
@@ -921,8 +922,8 @@ Transform:
   - {fileID: 1659303174}
   - {fileID: 1703286391}
   - {fileID: 1256069589}
-  - {fileID: 784676896}
   - {fileID: 354030381}
+  - {fileID: 784676896}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1072,7 +1073,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.08603954, y: -0.14339852}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1083,7 +1084,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.5}
+  m_Size: {x: 0.7132015, y: 1.213203}
   m_EdgeRadius: 0
 --- !u!50 &7360886272903129566
 Rigidbody2D:
@@ -1238,7 +1239,7 @@ PrefabInstance:
     - target: {fileID: 4619860556173495082, guid: 4f41164bb0d34f642afc8c0cb93e0fd4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4619860556173495082, guid: 4f41164bb0d34f642afc8c0cb93e0fd4,
         type: 3}
