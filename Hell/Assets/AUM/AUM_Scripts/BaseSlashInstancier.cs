@@ -129,13 +129,13 @@ public class BaseSlashInstancier : MonoBehaviour
         }
         else
         {
-            if (attackDirectionAngle < 70 && -70 < attackDirectionAngle)
+            if (attackDirectionAngle < 45 && -45 < attackDirectionAngle)
                 currentAttackDirection = Vector2.right;
-            else if (70 <= attackDirectionAngle && attackDirectionAngle <= 110)
+            else if (45 <= attackDirectionAngle && attackDirectionAngle <= 135)
                 currentAttackDirection = Vector2.up;
-            else if (attackDirectionAngle > 110 || -110 > attackDirectionAngle)
+            else if (attackDirectionAngle > 135 || -135 > attackDirectionAngle)
                 currentAttackDirection = Vector2.left;
-            else if (-110 <= attackDirectionAngle && attackDirectionAngle <= -70)
+            else if (-135 <= attackDirectionAngle && attackDirectionAngle <= -45)
                 currentAttackDirection = Vector2.down;
         }
 

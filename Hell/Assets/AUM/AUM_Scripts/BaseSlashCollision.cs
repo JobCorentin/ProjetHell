@@ -18,7 +18,7 @@ public class BaseSlashCollision : MonoBehaviour
 
     [HideInInspector] public bool bouncing;
 
-    Coroutine lastBounce;
+    [HideInInspector] public Coroutine lastBounce;
 
     private void Awake()
     {
@@ -69,13 +69,13 @@ public class BaseSlashCollision : MonoBehaviour
         }*/
     }
 
-    IEnumerator Bounce()
+    public IEnumerator Bounce()
     {
         BetterJump.bj.lowJumpMultiplier = 1;
 
         bouncing = true;
 
-        MovementController.mC.rb.velocity = Vector2.zero;
+        MovementController.mC.rb.velocity = new Vector2(MovementController.mC.rb.velocity.x, 0);
 
         MovementController.mC.rb.AddForce(Vector2.up * (MovementController.mC.jumpForce) * Time.fixedDeltaTime, ForceMode2D.Impulse);
 
