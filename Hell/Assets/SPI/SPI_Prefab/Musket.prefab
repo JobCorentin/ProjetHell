@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 1938930115665686311}
   - component: {fileID: 1938930115665686310}
   - component: {fileID: 1938930115665686308}
+  - component: {fileID: 497940412}
   m_Layer: 10
   m_Name: Musket
   m_TagString: Ennemi
@@ -239,7 +240,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!212 &1938930115665686311
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -338,6 +339,20 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!114 &497940412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938930115665686333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2007b521ddb46d3478e7196687b2e064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wave: {fileID: 0}
+  enemiStat: {fileID: 1938930115665686330}
 --- !u!1 &1938930115673723877
 GameObject:
   m_ObjectHideFlags: 0

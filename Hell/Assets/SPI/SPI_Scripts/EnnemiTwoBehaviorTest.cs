@@ -135,12 +135,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
             }
             Debug.Log(finalDirectionAttackAngle);
-            /*if ((finalDirectionAttackAngle > 120 && finalDirectionAttackAngle < 60) || (finalDirectionAttackAngle > -620 && finalDirectionAttackAngle < -120))
-            {
-                 finalDirectionAttackAngle = 120;
-                 i += Time.deltaTime;
-            }*/
-            while ((finalDirectionAttackAngle < 120 && finalDirectionAttackAngle > 60) || (finalDirectionAttackAngle < -60 && finalDirectionAttackAngle > -120))
+            while ((finalDirectionAttackAngle < 100 && finalDirectionAttackAngle > 80) || (finalDirectionAttackAngle < -80 && finalDirectionAttackAngle > -100))
             {
                 finalDirectionAttack = (baseDirectionAttack + ((Vector2)(pTransform.position - musket.transform.position) * 10)).normalized;
                 finalDirectionAttackAngle = Vector2.Angle(musket.transform.right, finalDirectionAttack);
