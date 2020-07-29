@@ -65,7 +65,7 @@ public class E2Bullet : MonoBehaviour
 
             reflected = true;
 
-            StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.2f, 0.5f));
+            FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.2f, 0.5f));
 
             rb.velocity = (ennemiLauncheFrom.transform.position - transform.position).normalized * 40f;
         }
@@ -76,7 +76,7 @@ public class E2Bullet : MonoBehaviour
             {
                 EnnemiController ec = collision.GetComponent<EnnemiController>();
 
-                ec.StartCoroutine(ec.DamageDash((ennemiLauncheFrom.transform.position - transform.position).normalized, 0.1f, 500f, 1));
+                ec.StartCoroutine(ec.DamageDash((ennemiLauncheFrom.transform.position - transform.position).normalized, 0.1f, 500f, 1f));
 
                 ec.StartCoroutine(ec.TakeDamage(1));
 
