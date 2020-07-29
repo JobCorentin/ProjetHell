@@ -175,6 +175,10 @@ public class BaseSlashInstancier : MonoBehaviour
     {
         animator.SetTrigger("Attacking");
 
+        
+
+        StartCoroutine(IsAttackingFor());
+
         slash.SetActive(true);
         BaseSlashCollision.bsc.ennemiTouched = false;
 
@@ -265,6 +269,16 @@ public class BaseSlashInstancier : MonoBehaviour
         lastSlash = null;
     }
 
+    IEnumerator IsAttackingFor()
+    {
+        animator.SetBool("IsAttacking", true);
+
+        yield return new WaitForSeconds(duration);
+
+        animator.ResetTrigger("GroundToAir");
+
+        animator.SetBool("IsAttacking", false);
+    }
     IEnumerator BloodSlash(Vector2 currentAttackDirection, Vector2 currentInputDirection)
     {
         bloodSlash.SetActive(true);
