@@ -6,10 +6,11 @@ public class PropsBehaviour : MonoBehaviour
 {
     public int health;
     Animator animator;
-    bool isDestroyed;
+    public bool isDestroyed;
 
     float timeBtweenDamage = 0.3f;
 
+    bool IsHeal;
 
     private void Awake()
     {
@@ -37,7 +38,6 @@ public class PropsBehaviour : MonoBehaviour
     void Destroyed()
     {
         isDestroyed = true;
-        Debug.Log(health + "Game over");
         animator.SetBool("isDestroyed", true);
     }
 }
