@@ -15,7 +15,7 @@ public class Flip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity.magnitude < 0.1f)
+        if (Mathf.Abs(rb.velocity.x) < 0.1f)
             return;
 
         if (rb.velocity.x < 0)

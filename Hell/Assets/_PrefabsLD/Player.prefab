@@ -1040,7 +1040,7 @@ MonoBehaviour:
   currentAutoAimAngle: 90
   currentNumberOfRaycast: 90
   canGainHeight: 0
-  slashNumb: 7
+  slashNumb: 1
   slashNumbMax: 0
   attackDirectionAngle: 0
 --- !u!114 &3210968349215444155

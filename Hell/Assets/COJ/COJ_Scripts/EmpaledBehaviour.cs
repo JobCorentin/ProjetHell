@@ -17,6 +17,8 @@ public class EmpaledBehaviour : MonoBehaviour
         if(collision.gameObject.layer == 9)
         {
             MovementController.mC.canDoubleJump = true;
+            BaseSlashInstancier.bsi.slashNumb = BaseSlashInstancier.bsi.slashNumbMax;
+            BaseSlashInstancier.bsi.canGainHeight = true;
             animator.SetTrigger("hit");
         }
     }

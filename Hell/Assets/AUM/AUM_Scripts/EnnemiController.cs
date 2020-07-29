@@ -119,6 +119,8 @@ public class EnnemiController : MonoBehaviour
     {
         animator.SetTrigger("IsTakingDamage");
         MovementController.mC.canDoubleJump = true;
+        BaseSlashInstancier.bsi.slashNumb = BaseSlashInstancier.bsi.slashNumbMax;
+        BaseSlashInstancier.bsi.canGainHeight = true;
         health -= amount;
         if (amount == 1)
         {

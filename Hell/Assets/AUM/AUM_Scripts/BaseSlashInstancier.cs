@@ -83,7 +83,7 @@ public class BaseSlashInstancier : MonoBehaviour
                 coolDownTimer += Time.fixedDeltaTime;
             }
 
-            if (InputListener.iL.attackInput == true && coolDownTimer > coolDown / 2f && slashNumb > 0)
+            if (InputListener.iL.attackInput == true && coolDownTimer > coolDown / 2f /*&& slashNumb > 0*/)
             {
                 AttackDirectionDecision(false);
             }
@@ -190,8 +190,10 @@ public class BaseSlashInstancier : MonoBehaviour
 
         for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         {
-            //ennemiController.rb.velocity = (currentAttackDirection.normalized * 1.5f + currentInputDirection.normalized).normalized * movementForce * 1.3f * i * Time.fixedDeltaTime;
-            //if(currentAttackDirection == Vector2.up)
+            if(slashNumb > 0)
+            {
+                //ennemiController.rb.velocity = (currentAttackDirection.normalized * 1.5f + currentInputDirection.normalized).normalized * movementForce * 1.3f * i * Time.fixedDeltaTime;
+                //if(currentAttackDirection == Vector2.up)
                 if (MovementController.mC.isGrounded == true)
                 {
                     if (canGainHeight == true || currentInputDirection.y < 0)
@@ -206,13 +208,14 @@ public class BaseSlashInstancier : MonoBehaviour
                     else
                         MovementController.mC.rb.velocity = new Vector2(((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.x * airMovementForce * i * Time.fixedDeltaTime) * 3f / 4f, ((currentAttackDirection.normalized + currentInputDirection.normalized).normalized.y * airMovementForce * i * Time.fixedDeltaTime) / 2);
                 }
-            
 
-            //}
-            //else
-            //{
-            //    MovementController.mC.rb.velocity = (currentAttackDirection.normalized + currentInputDirection.normalized).normalized * movementForce * i * Time.fixedDeltaTime;
-            //}
+
+                //}
+                //else
+                //{
+                //    MovementController.mC.rb.velocity = (currentAttackDirection.normalized + currentInputDirection.normalized).normalized * movementForce * i * Time.fixedDeltaTime;
+                //}
+            }
 
             yield return new WaitForFixedUpdate();
         }
@@ -228,14 +231,17 @@ public class BaseSlashInstancier : MonoBehaviour
 
         MovementController.mC.stuned = false;
 
-        BetterJump.bj.StopLastChangeFall();
+        if (slashNumb > 0)
+        {
+            BetterJump.bj.StopLastChangeFall();
 
-        BetterJump.bj.lastChangeFall = BetterJump.bj.StartCoroutine(BetterJump.bj.ChangeFallMultiplier(0.1f, BetterJump.bj.fallMultiplier / 10f));
+            BetterJump.bj.lastChangeFall = BetterJump.bj.StartCoroutine(BetterJump.bj.ChangeFallMultiplier(0.1f, BetterJump.bj.fallMultiplier / 10f));
 
 
-        MovementController.mC.StopLastChangeSpeed();
+            MovementController.mC.StopLastChangeSpeed();
 
-        MovementController.mC.lastChangeSpeed = MovementController.mC.StartCoroutine(MovementController.mC.ChangeSpeed(0.1f, MovementController.mC.speed / 5f));
+            MovementController.mC.lastChangeSpeed = MovementController.mC.StartCoroutine(MovementController.mC.ChangeSpeed(0.1f, MovementController.mC.speed / 5f));
+        }
 
         /*for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         {
