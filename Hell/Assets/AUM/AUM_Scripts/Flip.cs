@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Flip : MonoBehaviour
 {
-
+    public Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
@@ -15,16 +15,16 @@ public class Flip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (InputListener.iL.horizontalInput < 0)
+        if (rb.velocity.x < 0)
         {
-           //transform.localScale = new Vector3(-1, 1, 1);
-            gameObject.transform.GetComponent<SpriteRenderer>().flipX = true;
+            transform.localScale = new Vector3(-1, 1, 1);
+            //gameObject.transform.GetComponent<SpriteRenderer>().flipX = true;
         }
 
-        if (InputListener.iL.horizontalInput > 0)
+        if (rb.velocity.x > 0)
         {
-            //transform.localScale = new Vector3(1, 1, 1);
-            gameObject.transform.GetComponent<SpriteRenderer>().flipX = false;
+            transform.localScale = new Vector3(1, 1, 1);
+            //gameObject.transform.GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 }
