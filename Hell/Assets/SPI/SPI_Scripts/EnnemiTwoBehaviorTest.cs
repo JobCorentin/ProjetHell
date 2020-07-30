@@ -75,8 +75,6 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                     {
                         animator.SetBool("HasShot", false);
                         currentstade = 0;
-                        animator.SetBool("Impair", false);
-                        animator.SetBool("Pair", false);
                         StartCoroutine(LaunchBullet());
                         coolDownTimer = 0;
                         canShoot = false;
@@ -92,43 +90,10 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                 stade = 3;
             if (lookUp == false)
                 stade = -stade;
-            /*Debug.Log(stade);
+            Debug.Log(stade);
             Debug.Log(currentstade);
-            Debug.Log(lookUp);*/
+            Debug.Log(lookUp);
 
-
-            switch (currentstade)
-            {
-                case 0:
-                    animator.SetBool("Pair", true);
-                    animator.SetBool("Impair", false);
-                    break;
-                case 1:
-                    animator.SetBool("Impair", true);
-                    animator.SetBool("Pair", false);
-                    break;
-                case 2:
-                    animator.SetBool("Pair", true);
-                    animator.SetBool("Impair", false);
-                    break;
-                case 3:
-                    animator.SetBool("Impair", true);
-                    animator.SetBool("Pair", false);
-                    break;
-                case -1:
-                    animator.SetBool("Impair", true);
-                    animator.SetBool("Pair", false);
-                    break;
-                case -2:
-                    animator.SetBool("Pair", true);
-                    animator.SetBool("Impair", false);
-                    break;
-                case -3:
-                    animator.SetBool("Impair", true);
-                    animator.SetBool("Pair", false);
-                    break;
-
-            }
             if (stade == currentstade)
             {
                 animator.SetBool("CanDown", false);
@@ -137,20 +102,19 @@ public class EnnemiTwoBehaviorTest : EnnemiController
             else if (currentstade < stade)
             {
                 animator.SetBool("CanUp", true);
-                Debug.Log("Up");
+                animator.SetBool("CanDown", false);
                 currentstade++;
-                StartCoroutine(CooldownAim());
+                //StartCoroutine(CooldownAim());
                 canAim = false;
             }
             else if (currentstade > stade)
             {
                 animator.SetBool("CanDown", true);
-                Debug.Log("Down");
+                animator.SetBool("CanUp", false);
                 currentstade--;
-                StartCoroutine(CooldownAim());
+                //StartCoroutine(CooldownAim());
                 canAim = false;
             }
-           
         }
     }
     IEnumerator LaunchBullet()
@@ -220,6 +184,8 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         arrow.SetActive(false);
         arrow2.SetActive(false);
         canShoot = true;
+        animator.SetBool("Impair", false);
+        animator.SetBool("Pair", false);
         yield break;
     }
 
@@ -227,9 +193,16 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     {
         arrow.SetActive(true);
     }
-    public IEnumerator CooldownAim()
+    public void Impair()
     {
-        yield return new WaitForSeconds(0.1f);
+        animator.SetBool("Impair", true);
+        animator.SetBool("Pair", false);
+        canAim = true;
+    }
+    public void Pair()
+    {
+        animator.SetBool("Pair", true);
+        animator.SetBool("Impair", false);
         canAim = true;
     }
 }
