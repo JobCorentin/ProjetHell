@@ -191,7 +191,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         animator.SetBool("IsAiming", false);
         animator.SetBool("HasShot", true);
 
-        E2Bullet currentBullet = Instantiate(bulletPrefab).GetComponent<E2Bullet>();
+        E1Bullet currentBullet = Instantiate(bulletPrefab).GetComponent<E1Bullet>();
 
         currentBullet.ennemiLauncheFrom = this;
         currentBullet.transform.position = musket.transform.position;

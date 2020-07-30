@@ -5,12 +5,14 @@ using UnityEngine;
 public class E1Bullet : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public EnnemiOneController ennemiLauncheFrom;
+    public EnnemiController ennemiLauncheFrom;
 
     public float existenceTime;
     float existenceTimer;
 
     bool reflected = false;
+
+    [HideInInspector] public float attackDirectionAngle;
 
     // Start is called before the first frame update
     void Start()
@@ -71,6 +73,8 @@ public class E1Bullet : MonoBehaviour
             FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.2f, 0.5f));
 
             rb.velocity = (ennemiLauncheFrom.transform.position - transform.position).normalized * 40f;
+
+            transform.rotation = Quaternion.Euler(0, 0, attackDirectionAngle + 180);
         }
 
         if (reflected == true)
@@ -86,5 +90,15 @@ public class E1Bullet : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+
+    public void Orient(Vector2 currentAttackDirection)
+    {
+        if (currentAttackDirection.y > 0)
+            attackDirectionAngle = Vector2.Angle(transform.right, currentAttackDirection);
+        else
+            attackDirectionAngle = Vector2.Angle(-transform.right, currentAttackDirection);
+
+        transform.rotation = Quaternion.Euler(0, 0, attackDirectionAngle);
     }
 }
