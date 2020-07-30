@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 25406835}
   - component: {fileID: 25406834}
   - component: {fileID: 993794806}
+  - component: {fileID: 1745105566}
   m_Layer: 0
   m_Name: P_Graph
   m_TagString: Untagged
@@ -32,6 +33,7 @@ Transform:
   m_Children:
   - {fileID: 7360886272248513384}
   - {fileID: 177958988}
+  - {fileID: 1423297655}
   m_Father: {fileID: 7360886272903129553}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -118,6 +120,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7360886272903129566}
+--- !u!114 &1745105566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25406832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc7d0c8e77d95374d8e2507264dbeedc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fxTransform: {fileID: 1423297655}
 --- !u!1 &354030380
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +254,36 @@ MonoBehaviour:
   - {fileID: 5295353434200141556, guid: c2bd96ec283c87b4992aba2f0d58941f, type: 3}
   - {fileID: 1763825600030723455, guid: 6a4807414826a744a930736950f23a51, type: 3}
   - {fileID: 2395806279780028207, guid: 44fdfc73d930d8d49891fb3ebe1f35b2, type: 3}
+--- !u!1 &1423297654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1423297655}
+  m_Layer: 0
+  m_Name: FXTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1423297655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423297654}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 25406833}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1659303173
 GameObject:
   m_ObjectHideFlags: 0

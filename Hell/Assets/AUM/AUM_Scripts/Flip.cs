@@ -29,5 +29,12 @@ public class Flip : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
             //gameObject.transform.GetComponent<SpriteRenderer>().flipX = false;
         }
+
+
+    }
+
+    public void Fonction(string text)
+    {
+        Debug.Log(text);
     }
 }

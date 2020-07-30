@@ -263,12 +263,14 @@ public class BaseSlashInstancier : MonoBehaviour
 
             canBounce = false;
 
-        Parry.p.protectionCol.gameObject.SetActive(false);
-
         slash.SetActive(false);
 
         coolDownTimer = 0;
         lastSlash = null;
+
+        yield return new WaitForSeconds(0.1f);
+
+        Parry.p.protectionCol.gameObject.SetActive(false);
     }
 
     IEnumerator IsAttackingFor()
