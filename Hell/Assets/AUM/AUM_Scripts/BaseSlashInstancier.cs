@@ -158,7 +158,7 @@ public class BaseSlashInstancier : MonoBehaviour
         {
             if(MovementController.mC.isWallSliding == true)
             {
-                lastSlash = StartCoroutine(Slash(-currentAttackDirection, -currentInputDirection));
+                lastSlash = StartCoroutine(Slash(new Vector2(-currentAttackDirection.x, currentAttackDirection.y), new Vector2(-currentInputDirection.x, currentInputDirection.y)));
             }
             else
             {
@@ -175,12 +175,12 @@ public class BaseSlashInstancier : MonoBehaviour
     {
         animator.SetTrigger("Attacking");
 
-        
-
         StartCoroutine(IsAttackingFor());
 
         slash.SetActive(true);
         BaseSlashCollision.bsc.ennemiTouched = false;
+
+        Parry.p.protectionCol.gameObject.SetActive(true);
 
         if (currentAttackDirection == Vector2.down)
             canBounce = true;
@@ -262,6 +262,8 @@ public class BaseSlashInstancier : MonoBehaviour
         }*/
 
             canBounce = false;
+
+        Parry.p.protectionCol.gameObject.SetActive(false);
 
         slash.SetActive(false);
 

@@ -127,7 +127,7 @@ public class MovementController : MonoBehaviour
 
         if( isWallSliding )
         {
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -speedWallSlide, float.MaxValue));
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -speedWallSlide / Mathf.Abs(InputListener.iL.horizontalInput), float.MaxValue));
         }
 
         if(stuned == false)
