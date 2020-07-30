@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fxTransform: {fileID: 1423297655}
+  dustPT: {fileID: 784676894}
 --- !u!1 &354030380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,12 +1193,17 @@ PrefabInstance:
     - target: {fileID: 5054717706241532183, guid: eb94b473daa8ef0488c0e6f970381a1f,
         type: 3}
       propertyPath: stopAction
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5054717706241532183, guid: eb94b473daa8ef0488c0e6f970381a1f,
         type: 3}
       propertyPath: VelocityModule.x.scalar
       value: -1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054717706241532183, guid: eb94b473daa8ef0488c0e6f970381a1f,
+        type: 3}
+      propertyPath: looping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5054717706241532201, guid: eb94b473daa8ef0488c0e6f970381a1f,
         type: 3}
