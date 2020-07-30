@@ -50,6 +50,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
             {
                 transform.localScale = new Vector3(1f, 1f, 1f);
                 arrow.transform.localScale = new Vector3(1f, 1f, 1f);
+                arrow2.transform.localScale = new Vector3(1f, 1f, 1f);
                 sens = Vector2.left;
             }
             else
@@ -57,6 +58,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
                 transform.localScale = new Vector3(-1f, 1f, 1f);
                 arrow.transform.localScale = new Vector3(-1f, -1f, 1f);
+                arrow2.transform.localScale = new Vector3(-1f, -1f, 1f);
                 sens = Vector2.right;
             }
 
@@ -198,8 +200,8 @@ public class EnnemiTwoBehaviorTest : EnnemiController
             }
             arrow.SetActive(true);
             arrow2.SetActive(true);
-            arrow.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle - (10 * i));
-            arrow2.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle + (10 * i));
+            arrow.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle - (4 * i));
+            arrow2.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle + (4 * i));
             yield return null;
         }
 
@@ -216,6 +218,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         currentBullet.Orient(finalDirectionAttack);
 
         arrow.SetActive(false);
+        arrow2.SetActive(false);
         canShoot = true;
         yield break;
     }
