@@ -222,6 +222,8 @@ public class MovementController : MonoBehaviour
             }
         }
 
+        
+
         InputListener.iL.jumpInput = false;
        
     }

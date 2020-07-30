@@ -193,9 +193,9 @@ public class BaseSlashInstancier : MonoBehaviour
             attackDirectionAngle = -attackDirectionAngle;
         }
 
-        animator.SetFloat("AttackAngle", attackDirectionAngle);
-
         //slash.transform.rotation = Quaternion.Euler(0, 0, attackDirectionAngle);
+
+        animator.SetFloat("AttackAngle", attackDirectionAngle);
 
         MovementController.mC.stuned = true;
 
