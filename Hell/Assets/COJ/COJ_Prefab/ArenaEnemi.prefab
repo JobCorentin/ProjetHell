@@ -174,7 +174,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 7723505670430841034}
-  bulletForce: 25
+  bulletForce: 15
   preparationDuration: 0.8
   ennemiDetection: {fileID: 6633417914603177618}
 --- !u!114 &6633417914288537580
