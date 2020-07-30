@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2632547540658908446}
   - component: {fileID: 2632547540658908445}
   - component: {fileID: 2632547540658908444}
-  - component: {fileID: 1657988780520714342}
   - component: {fileID: 5076872086970593003}
+  - component: {fileID: -9110379284147206583}
   m_Layer: 0
   m_Name: Bullet Musket
   m_TagString: Untagged
@@ -132,21 +132,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48095703, y: 0.19358826}
   m_EdgeRadius: 0
---- !u!114 &1657988780520714342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2632547540658908434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 203099ef13c02ee46bbd3a2aff5da2bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 2632547540658908445}
-  ennemiLauncheFrom: {fileID: 0}
-  existenceTime: 5
 --- !u!58 &5076872086970593003
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -163,3 +148,19 @@ CircleCollider2D:
   m_Offset: {x: -0.015075684, y: -0.0060195923}
   serializedVersion: 2
   m_Radius: 0.21606445
+--- !u!114 &-9110379284147206583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2632547540658908434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e268e877a45c68b48924c7ccbfbd0000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 2632547540658908445}
+  ennemiLauncheFrom: {fileID: 0}
+  existenceTime: 5
+  attackDirectionAngle: 0
