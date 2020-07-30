@@ -10,6 +10,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     public GameObject bulletPrefab;
 
     public GameObject arrow;
+    public GameObject arrow2;
 
     public float bulletForce;
 
@@ -181,6 +182,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                 finalDirectionAttackAngle = Vector2.Angle(musket.transform.right, finalDirectionAttack);
 
                 arrow.SetActive(false);
+                arrow2.SetActive(false);
                 if (finalDirectionAttack.y < 0)
                 {
                     finalDirectionAttackAngle = -finalDirectionAttackAngle;
@@ -195,7 +197,9 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                 yield return null;
             }
             arrow.SetActive(true);
-            arrow.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle);
+            arrow2.SetActive(true);
+            arrow.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle - (10 * i));
+            arrow2.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle + (10 * i));
             yield return null;
         }
 
