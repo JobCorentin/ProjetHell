@@ -32,6 +32,8 @@ public class FX_Initator : MonoBehaviour
         if (lastDesactivate != null)
             StopCoroutine(lastDesactivate);
 
+        Debug.Log("oui");
+
         lastDesactivate = StartCoroutine(ParticleDustDesactivateAfter());
     }
 
