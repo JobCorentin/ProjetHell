@@ -13,6 +13,9 @@ public class E2Bullet : MonoBehaviour
     bool reflected = false;
     Vector2 v;
 
+    [HideInInspector] public float attackDirectionAngle;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,7 @@ public class E2Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         existenceTimer += Time.deltaTime;
 
         if (existenceTimer >= existenceTime)
@@ -68,6 +72,8 @@ public class E2Bullet : MonoBehaviour
             FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.2f, 0.5f));
 
             rb.velocity = (ennemiLauncheFrom.transform.position - transform.position).normalized * 40f;
+
+            transform.rotation = Quaternion.Euler(0, 0, attackDirectionAngle + 180);
         }
 
         if (reflected == true)
@@ -83,5 +89,14 @@ public class E2Bullet : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+    public void Orient(Vector2 currentAttackDirection)
+    {
+        if (currentAttackDirection.y > 0)
+            attackDirectionAngle = Vector2.Angle(transform.right, currentAttackDirection);
+        else
+            attackDirectionAngle = Vector2.Angle(-transform.right, currentAttackDirection);
+
+        transform.rotation = Quaternion.Euler(0, 0, attackDirectionAngle);
     }
 }

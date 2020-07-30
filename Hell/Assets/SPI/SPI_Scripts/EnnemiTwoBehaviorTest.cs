@@ -17,8 +17,10 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     public GameObject musket;
     [HideInInspector] public Vector2 sens;
     [HideInInspector] public float stade;
+    [HideInInspector] public float currentstade;
     public bool lookUp;
     public bool canShoot;
+    [HideInInspector] public bool canAim;
 
     //public EnnemiDetection ennemiDetection;
 
@@ -37,10 +39,6 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         {
             target = pTransform.position + ((transform.position - pTransform.position).normalized * range);
 
-            /*for (int i = 0; i < ennemiDetection.ennemiControllers.Count; i++)
-            {
-                target += (Vector2)(transform.position - ennemiDetection.ennemiControllers[i].transform.position).normalized * 3f;
-            }*/
 
             if (Vector2.Distance(target, transform.position) >= 0.5f)
             {
@@ -49,7 +47,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
             if (pTransform.position.x - transform.position.x < 0)
             {
-                transform.localScale = new Vector3(1f,1f,1f);
+                transform.localScale = new Vector3(1f, 1f, 1f);
                 arrow.transform.localScale = new Vector3(1f, 1f, 1f);
                 sens = Vector2.left;
             }
@@ -63,7 +61,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
             if (Vector2.Distance(transform.position, pTransform.position) <= range * 2f)
             {
-                if ( canShoot)
+                if (canShoot)
                 {
 
                     if (coolDownTimer < coolDown)
@@ -73,7 +71,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                     else
                     {
                         animator.SetBool("HasShot", false);
-                        stade = 0;
+                        currentstade = 0;
                         StartCoroutine(LaunchBullet());
                         coolDownTimer = 0;
                         canShoot = false;
@@ -81,30 +79,64 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                 }
             }
         }
-        if (animator.GetBool("IsAiming") == true)
+        if (animator.GetBool("IsAiming") == true && canAim)
         {
 
-            animator.SetBool("CanDown", false);
-            animator.SetBool("CanUp", false);
-            stade = Mathf.Round(Vector2.Angle(sens, pTransform.position - musket.transform.position)/30);
-            if (lookUp == true)
+            stade = Mathf.Round(Vector2.Angle(sens, pTransform.position - musket.transform.position) / 30);
+            if (lookUp == false)
                 stade = -stade;
-            if (Vector2.Angle(sens, pTransform.position-musket.transform.position) > 15* stade)
-            {
+            /*Debug.Log(stade);
+            Debug.Log(currentstade);
+            Debug.Log(lookUp);*/
 
-                if (lookUp)
-                    animator.SetBool("CanUp", true);
-                else
-                    animator.SetBool("CanDown", true);
-            }
-            if (Vector2.Angle(sens, pTransform.position - musket.transform.position) < 15 * stade)
-            {
-                if (lookUp)
-                    animator.SetBool("CanDown", true);
-                else
-                    animator.SetBool("CanUp", true);
-            }
 
+            switch (currentstade)
+            {
+                case 0:
+                    animator.SetBool("Pair", true);
+                    break;
+                case 1:
+                    animator.SetBool("Impair", true);
+                    break;
+                case 2:
+                    animator.SetBool("Pair", true);
+                    break;
+                case 3:
+                    animator.SetBool("Impair", true);
+                    break;
+                case -1:
+                    animator.SetBool("Impair", true);
+                    break;
+                case -2:
+                    animator.SetBool("Pair", true);
+                    break;
+                case -3:
+                    animator.SetBool("Impair", true);
+                    break;
+
+            }
+            if (stade == currentstade)
+            {
+                animator.SetBool("CanDown", false);
+                animator.SetBool("CanUp", false);
+            }
+            else if (currentstade < stade)
+            {
+                animator.SetBool("CanUp", true);
+                Debug.Log("Up");
+                currentstade++;
+                StartCoroutine(CooldownAim());
+                canAim = false;
+            }
+            else if (currentstade > stade)
+            {
+                animator.SetBool("CanDown", true);
+                Debug.Log("Down");
+                currentstade--;
+                StartCoroutine(CooldownAim());
+                canAim = false;
+            }
+           
         }
     }
     IEnumerator LaunchBullet()
@@ -112,7 +144,6 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         Vector2 baseDirectionAttack = pTransform.position - musket.transform.position;
 
         Vector2 finalDirectionAttack = baseDirectionAttack;
-
 
         animator.SetBool("IsAiming", true);
 
@@ -167,6 +198,8 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
         currentBullet.rb.velocity = finalDirectionAttack * bulletForce;
 
+        currentBullet.Orient(finalDirectionAttack);
+
         arrow.SetActive(false);
         canShoot = true;
         yield break;
@@ -175,5 +208,10 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     public void ActivateAimArrow()
     {
         arrow.SetActive(true);
+    }
+    public IEnumerator CooldownAim()
+    {
+        yield return new WaitForSeconds(0.2f);
+        canAim = true;
     }
 }
