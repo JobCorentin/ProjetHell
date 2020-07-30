@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 1938930115665686311}
   - component: {fileID: 1938930115665686310}
   - component: {fileID: 1938930115665686308}
-  - component: {fileID: 497940412}
+  - component: {fileID: 217715575}
   m_Layer: 10
   m_Name: Musket Arena
   m_TagString: Ennemi
@@ -188,9 +188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c088d7c411ae62541b7667e9dfffa87c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  seeker: {fileID: 0}
-  animator: {fileID: 0}
+  rb: {fileID: 1938930115665686329}
+  seeker: {fileID: 1938930115665686308}
+  animator: {fileID: 1938930115665686310}
   playerDetected: 0
   detectionDistance: 15
   detectionLayers:
@@ -201,7 +201,7 @@ MonoBehaviour:
   health: 1
   speed: 0
   type: 0
-  sr: {fileID: 0}
+  sr: {fileID: 1938930115665686311}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
   stunned: 0
@@ -212,10 +212,10 @@ MonoBehaviour:
   coolDown: 3
   bulletPrefab: {fileID: 2632547540658908434, guid: 9bffa467356781c41b1ab218b1e6974c,
     type: 3}
-  arrow: {fileID: 0}
+  arrow: {fileID: 1938930115673723877}
   bulletForce: 30
   preparationDuration: 2
-  musket: {fileID: 0}
+  musket: {fileID: 1938930115665686333}
   sens: {x: 0, y: 0}
   stade: 0
   currentstade: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &497940412
+--- !u!114 &217715575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

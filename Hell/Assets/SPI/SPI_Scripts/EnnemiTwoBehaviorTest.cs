@@ -72,6 +72,8 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                     {
                         animator.SetBool("HasShot", false);
                         currentstade = 0;
+                        animator.SetBool("Impair", false);
+                        animator.SetBool("Pair", false);
                         StartCoroutine(LaunchBullet());
                         coolDownTimer = 0;
                         canShoot = false;
@@ -83,6 +85,8 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         {
 
             stade = Mathf.Round(Vector2.Angle(sens, pTransform.position - musket.transform.position) / 30);
+            if (stade > 3)
+                stade = 3;
             if (lookUp == false)
                 stade = -stade;
             /*Debug.Log(stade);
@@ -94,24 +98,31 @@ public class EnnemiTwoBehaviorTest : EnnemiController
             {
                 case 0:
                     animator.SetBool("Pair", true);
+                    animator.SetBool("Impair", false);
                     break;
                 case 1:
                     animator.SetBool("Impair", true);
+                    animator.SetBool("Pair", false);
                     break;
                 case 2:
                     animator.SetBool("Pair", true);
+                    animator.SetBool("Impair", false);
                     break;
                 case 3:
                     animator.SetBool("Impair", true);
+                    animator.SetBool("Pair", false);
                     break;
                 case -1:
                     animator.SetBool("Impair", true);
+                    animator.SetBool("Pair", false);
                     break;
                 case -2:
                     animator.SetBool("Pair", true);
+                    animator.SetBool("Impair", false);
                     break;
                 case -3:
                     animator.SetBool("Impair", true);
+                    animator.SetBool("Pair", false);
                     break;
 
             }
@@ -211,7 +222,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     }
     public IEnumerator CooldownAim()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         canAim = true;
     }
 }
