@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using System.Linq;
 
 public class EnnemiController : MonoBehaviour
 {
@@ -29,7 +30,13 @@ public class EnnemiController : MonoBehaviour
     public Material shaderMaterial1;
     public Material shaderMaterial2;
 
+    public int numberBetweenGroupAttack;
+    public float timeBetweenGroupAttack;
+
     [HideInInspector] public bool stunned;
+
+    [HideInInspector] public bool hasAttacked = false;
+    [HideInInspector] public int numbWhoHasAttacked = 0;
 
     public Transform pTransform;
     [HideInInspector] public Vector2 target;
@@ -42,9 +49,24 @@ public class EnnemiController : MonoBehaviour
     int currentWayPoint = 0;
     bool reachedEndPoint = false;
 
+    [HideInInspector] public EnnemiController[] ennemy_Controllers = new EnnemiController[] { };
+
+    public float coolDown;
+    [HideInInspector] public float coolDownTimer = 0;
+
     // Start is called before the first frame update
     public virtual void Start()
     {
+        if(numberBetweenGroupAttack == 0)
+        {
+            numberBetweenGroupAttack = 1;
+        }
+
+        if (timeBetweenGroupAttack == 0)
+        {
+            timeBetweenGroupAttack = 0.6f;
+        }
+
         pTransform = MovementController.mC.transform;
         defautlMaterial = gameObject.GetComponent<SpriteRenderer>().material;
 
@@ -69,8 +91,9 @@ public class EnnemiController : MonoBehaviour
     // Update is called once per frame
     public virtual void FixedUpdate()
     {
+        InvokeRepeating("GetEnnemies", 1f, 1f);
 
-        if(path!= null)
+        if (path!= null)
         {
             if(currentWayPoint >= path.vectorPath.Count)
             {
@@ -95,6 +118,25 @@ public class EnnemiController : MonoBehaviour
         }
     }
 
+    void GetEnnemies()
+    {
+        ennemy_Controllers = transform.parent.GetComponentsInChildren<EnnemiController>();
+
+        for(int i = 0; i < ennemy_Controllers.Length; i++)
+        {
+            for(int x = 0; i < ennemy_Controllers.Length; i++)
+            {
+                if(Vector2.Distance(MovementController.mC.rb.transform.position, ennemy_Controllers[i].transform.position) > 
+                    Vector2.Distance(MovementController.mC.rb.transform.position, ennemy_Controllers[x].transform.position) && i < x)
+                {
+                    EnnemiController temp = ennemy_Controllers[i];
+                    ennemy_Controllers[i] = ennemy_Controllers[x];
+                    ennemy_Controllers[x] = temp;
+                }
+            }
+        }
+    }
+
     public void Detection()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, pTransform.position - transform.position, detectionDistance, detectionLayers);
@@ -102,8 +144,6 @@ public class EnnemiController : MonoBehaviour
         if(hit == true)
             if(hit.collider.tag == "Player")
             {
-                EnnemiController[] ennemy_Controllers = transform.parent.GetComponentsInChildren<EnnemiController>();
-
                 foreach (EnnemiController ennemy_Controller in ennemy_Controllers)
                 {
                     ennemy_Controller.playerDetected = true;
@@ -132,15 +172,15 @@ public class EnnemiController : MonoBehaviour
         }
 
 
-        gameObject.GetComponent<SpriteRenderer>().material = shaderMaterial1; 
+        sr.material = shaderMaterial1; 
 
         yield return new WaitForSeconds(0.1f);
 
-        gameObject.GetComponent<SpriteRenderer>().material = shaderMaterial2;
+        sr.material = shaderMaterial2;
 
         yield return new WaitForSeconds(0.05f);
 
-        gameObject.GetComponent<SpriteRenderer>().material = defautlMaterial;
+        sr.material = defautlMaterial;
 
         if(tough == false)
         {
@@ -258,5 +298,16 @@ public class EnnemiController : MonoBehaviour
         animator.SetTrigger("Dying");
 
         gameObject.SetActive(false);
+    }
+
+    public IEnumerator HasAttackedFor(float time)
+    {
+        hasAttacked = true;
+        while (time > 0)
+        {
+            time -= Time.deltaTime;
+            yield return null;
+        }
+        hasAttacked = false;
     }
 }
