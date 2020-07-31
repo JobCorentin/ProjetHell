@@ -8,6 +8,7 @@ public class EnnemiOneController : EnnemiController
     public GameObject bulletPrefab;
 
     public GameObject arrow;
+    public GameObject arrow2;
 
     public float bulletForce;
 
@@ -21,6 +22,7 @@ public class EnnemiOneController : EnnemiController
         base.Start();
 
         arrow.SetActive(false);
+        arrow2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -106,8 +108,9 @@ public class EnnemiOneController : EnnemiController
         animator.SetTrigger("StartPreparing");
 
         arrow.SetActive(true);
+        arrow2.SetActive(true);
 
-        for (float i = preparationDuration; i > 0; i -= Time.deltaTime)
+        for (float i = 0; i < preparationDuration; i += Time.deltaTime)
         {
             finalDirectionAttack = ( baseDirectionAttack + ((Vector2)(pTransform.position - transform.position) * 10) ).normalized;
 
@@ -119,12 +122,15 @@ public class EnnemiOneController : EnnemiController
             }
 
             arrow.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle);
+            arrow2.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle);
+
+            arrow2.transform.localScale = new Vector2(i / preparationDuration, arrow2.transform.localScale.y);
 
             yield return null;
         }
         animator.SetBool("IsPreparing", false);
         animator.SetTrigger("IsAttacking");
-
+        
         E1Bullet currentBullet = Instantiate(bulletPrefab).GetComponent<E1Bullet>();
 
         currentBullet.ennemiLauncheFrom = this;
@@ -133,6 +139,7 @@ public class EnnemiOneController : EnnemiController
         currentBullet.rb.velocity = finalDirectionAttack * bulletForce;
 
         arrow.SetActive(false);
+        arrow2.SetActive(false);
 
         yield break;
     }

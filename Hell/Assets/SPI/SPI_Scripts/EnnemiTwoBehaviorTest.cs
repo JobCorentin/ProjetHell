@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EnnemiTwoBehaviorTest : EnnemiController
 {
-    public float coolDown;
-    float coolDownTimer = 0;
 
     public GameObject bulletPrefab;
 
@@ -66,12 +64,28 @@ public class EnnemiTwoBehaviorTest : EnnemiController
             {
                 if (canShoot)
                 {
+                    numbWhoHasAttacked = 0;
+                    bool canAttack = true;
 
-                    if (coolDownTimer < coolDown)
+                    for (int i = 0; i < ennemy_Controllers.Length; i++)
                     {
-                        coolDownTimer += Time.fixedDeltaTime;
+                        if (ennemy_Controllers[i].hasAttacked == true && ennemy_Controllers[i].gameObject.activeSelf == true)
+                        {
+                            numbWhoHasAttacked++;
+                        }
+
+                        if (ennemy_Controllers[i].coolDownTimer > ennemy_Controllers[i].coolDown && ennemy_Controllers[i].gameObject.activeSelf == true)
+                        {
+                            if (Vector2.Distance(MovementController.mC.rb.transform.position, ennemy_Controllers[i].transform.position) <
+                            Vector2.Distance(MovementController.mC.rb.transform.position, transform.position))
+                            {
+                                canAttack = false;
+                            }
+                        }
+
                     }
-                    else
+
+                    if (coolDownTimer >= coolDown && numbWhoHasAttacked < numberBetweenGroupAttack && canAttack)
                     {
                         animator.SetBool("HasShot", false);
                         currentstade = 0;
@@ -80,6 +94,12 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                         coolDownTimer = 0;
                         canShoot = false;
                     }
+                    else
+                    {
+                        coolDownTimer += Time.fixedDeltaTime;
+                    }
+
+                    
                 }
             }
         }
@@ -120,6 +140,8 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     }
     IEnumerator LaunchBullet()
     {
+        StartCoroutine(HasAttackedFor(timeBetweenGroupAttack));
+
         Vector2 baseDirectionAttack = pTransform.position - musket.transform.position;
 
         Vector2 finalDirectionAttack = baseDirectionAttack;
