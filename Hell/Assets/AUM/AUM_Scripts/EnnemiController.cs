@@ -139,7 +139,7 @@ public class EnnemiController : MonoBehaviour
 
     public void Detection()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, pTransform.position - transform.position, detectionDistance, detectionLayers);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, MovementController.mC.transform.position - transform.position, detectionDistance, detectionLayers);
 
         if(hit == true)
             if(hit.collider.tag == "Player")

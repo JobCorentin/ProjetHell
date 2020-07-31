@@ -51,6 +51,13 @@ public class BaseSlashCollision : MonoBehaviour
 
                 lastBounce = MovementController.mC.StartCoroutine(Bounce());
             }
+
+            if (ec.type == 0)
+            {
+                EnnemiOneController eoc = ec.GetComponent<EnnemiOneController>();
+
+                eoc.StopLaunchBullet();
+            }
         }
 
         if (collision.transform.tag == "Props")

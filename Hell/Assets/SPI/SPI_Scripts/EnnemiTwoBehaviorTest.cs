@@ -23,6 +23,14 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
     //public EnnemiDetection ennemiDetection;
 
+    public override void Start()
+    {
+        base.Start();
+
+        type = 1;
+
+    }
+
     public override void FixedUpdate()
     {
 
@@ -36,7 +44,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         }
         else
         {
-            target = pTransform.position + ((transform.position - pTransform.position).normalized * range);
+            target = MovementController.mC.transform.position + ((transform.position - MovementController.mC.transform.position).normalized * range);
 
 
             if (Vector2.Distance(target, transform.position) >= 0.5f)
@@ -44,7 +52,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                 base.FixedUpdate();
             }
 
-            if (pTransform.position.x - transform.position.x < 0)
+            if (MovementController.mC.transform.position.x - transform.position.x < 0)
             {
                 transform.localScale = new Vector3(1f, 1f, 1f);
                 arrow.transform.localScale = new Vector3(1f, 1f, 1f);
@@ -60,7 +68,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                 sens = Vector2.right;
             }
 
-            if (Vector2.Distance(transform.position, pTransform.position) <= range * 2f)
+            if (Vector2.Distance(transform.position, MovementController.mC.transform.position) <= range * 2f)
             {
                 if (canShoot)
                 {

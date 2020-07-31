@@ -16,10 +16,14 @@ public class EnnemiOneController : EnnemiController
 
     public EnnemiDetection ennemiDetection;
 
+    Coroutine lastLaunchBullet;
+
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
+
+        type = 0;
 
         arrow.SetActive(false);
         arrow2.SetActive(false);
@@ -76,7 +80,7 @@ public class EnnemiOneController : EnnemiController
 
                 if (coolDownTimer >= coolDown && numbWhoHasAttacked < numberBetweenGroupAttack && canAttack)
                 {
-                    StartCoroutine(LaunchBullet());
+                    lastLaunchBullet = StartCoroutine(LaunchBullet());
                     coolDownTimer = 0;
                 }
                 else
@@ -142,5 +146,16 @@ public class EnnemiOneController : EnnemiController
         arrow2.SetActive(false);
 
         yield break;
+    }
+
+    public void StopLaunchBullet()
+    {
+        animator.SetBool("IsPreparing", false);
+
+        arrow.SetActive(false);
+        arrow2.SetActive(false);
+
+        if(lastLaunchBullet != null)
+            StopCoroutine(lastLaunchBullet);
     }
 }

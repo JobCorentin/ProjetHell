@@ -29,6 +29,8 @@ public class BloodSlashCollision : MonoBehaviour
             MovementController.mC.StartCoroutine(AttackMiniDash((InputListener.iL.directionVector).normalized, ec ));
 
             ec.StartCoroutine(ec.TakeDamage(2));
+
+            
         }
 
         if(collision.transform.tag == "Props")
