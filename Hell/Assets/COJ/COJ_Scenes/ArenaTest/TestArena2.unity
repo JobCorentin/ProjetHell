@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -249,12 +249,18 @@ MonoBehaviour:
   sr: {fileID: 5973246}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
+  numberBetweenGroupAttack: 0
+  timeBetweenGroupAttack: 0
   stunned: 0
+  hasAttacked: 0
+  numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
   range: 15
   nextWayPointDistance: 3
+  ennemy_Controllers: []
   coolDown: 2
+  coolDownTimer: 0
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 1118015920}
@@ -613,12 +619,18 @@ MonoBehaviour:
   sr: {fileID: 84836067}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
+  numberBetweenGroupAttack: 1
+  timeBetweenGroupAttack: 0.5
   stunned: 0
+  hasAttacked: 0
+  numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
   range: 15
   nextWayPointDistance: 3
-  coolDown: 3
+  ennemy_Controllers: []
+  coolDown: 1.5
+  coolDownTimer: 0
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 1468665825}
@@ -888,12 +900,18 @@ MonoBehaviour:
   sr: {fileID: 153197743}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
+  numberBetweenGroupAttack: 1
+  timeBetweenGroupAttack: 0.5
   stunned: 0
+  hasAttacked: 0
+  numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
   range: 15
   nextWayPointDistance: 3
-  coolDown: 3
+  ennemy_Controllers: []
+  coolDown: 1.5
+  coolDownTimer: 0
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 2130393434}
@@ -2136,12 +2154,18 @@ MonoBehaviour:
   sr: {fileID: 550515289}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
+  numberBetweenGroupAttack: 0
+  timeBetweenGroupAttack: 0
   stunned: 0
+  hasAttacked: 0
+  numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
   range: 15
   nextWayPointDistance: 3
+  ennemy_Controllers: []
   coolDown: 2
+  coolDownTimer: 0
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 1543356016}
@@ -2435,12 +2459,18 @@ MonoBehaviour:
   sr: {fileID: 610442287}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
+  numberBetweenGroupAttack: 0
+  timeBetweenGroupAttack: 0
   stunned: 0
+  hasAttacked: 0
+  numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
   range: 15
   nextWayPointDistance: 3
+  ennemy_Controllers: []
   coolDown: 2
+  coolDownTimer: 0
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 914951918}
@@ -13748,12 +13778,18 @@ MonoBehaviour:
   sr: {fileID: 949483571}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
+  numberBetweenGroupAttack: 0
+  timeBetweenGroupAttack: 0
   stunned: 0
+  hasAttacked: 0
+  numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
   range: 15
   nextWayPointDistance: 3
+  ennemy_Controllers: []
   coolDown: 2
+  coolDownTimer: 0
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 1835496230}
@@ -14136,12 +14172,18 @@ MonoBehaviour:
   sr: {fileID: 982264561}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
+  numberBetweenGroupAttack: 0
+  timeBetweenGroupAttack: 0
   stunned: 0
+  hasAttacked: 0
+  numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
   range: 15
   nextWayPointDistance: 3
+  ennemy_Controllers: []
   coolDown: 2
+  coolDownTimer: 0
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 1616605465}
@@ -14374,12 +14416,18 @@ MonoBehaviour:
   sr: {fileID: 996410599}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
+  numberBetweenGroupAttack: 0
+  timeBetweenGroupAttack: 0
   stunned: 0
+  hasAttacked: 0
+  numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
   range: 15
   nextWayPointDistance: 3
+  ennemy_Controllers: []
   coolDown: 2
+  coolDownTimer: 0
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 1296004701}
@@ -14728,12 +14776,18 @@ MonoBehaviour:
   sr: {fileID: 1057454389}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
+  numberBetweenGroupAttack: 0
+  timeBetweenGroupAttack: 0
   stunned: 0
+  hasAttacked: 0
+  numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
   range: 15
   nextWayPointDistance: 3
+  ennemy_Controllers: []
   coolDown: 2
+  coolDownTimer: 0
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 1688853634}
@@ -15258,12 +15312,18 @@ MonoBehaviour:
   sr: {fileID: 1157912683}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
+  numberBetweenGroupAttack: 0
+  timeBetweenGroupAttack: 0
   stunned: 0
+  hasAttacked: 0
+  numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
   range: 15
   nextWayPointDistance: 3
+  ennemy_Controllers: []
   coolDown: 2
+  coolDownTimer: 0
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 1095408343}
@@ -15724,12 +15784,18 @@ MonoBehaviour:
   sr: {fileID: 1326194657}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
+  numberBetweenGroupAttack: 1
+  timeBetweenGroupAttack: 0.5
   stunned: 0
+  hasAttacked: 0
+  numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
   range: 15
   nextWayPointDistance: 3
-  coolDown: 3
+  ennemy_Controllers: []
+  coolDown: 1.5
+  coolDownTimer: 0
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 198560151}
@@ -16063,12 +16129,18 @@ MonoBehaviour:
   sr: {fileID: 1357119723}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
+  numberBetweenGroupAttack: 1
+  timeBetweenGroupAttack: 0.5
   stunned: 0
+  hasAttacked: 0
+  numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
   range: 15
   nextWayPointDistance: 3
-  coolDown: 3
+  ennemy_Controllers: []
+  coolDown: 1.5
+  coolDownTimer: 0
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 107600338}
@@ -16588,12 +16660,18 @@ MonoBehaviour:
   sr: {fileID: 1488518648}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
+  numberBetweenGroupAttack: 0
+  timeBetweenGroupAttack: 0
   stunned: 0
+  hasAttacked: 0
+  numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
   range: 15
   nextWayPointDistance: 3
+  ennemy_Controllers: []
   coolDown: 2
+  coolDownTimer: 0
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 1916521311}
@@ -17343,12 +17421,18 @@ MonoBehaviour:
   sr: {fileID: 1771315593}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
+  numberBetweenGroupAttack: 0
+  timeBetweenGroupAttack: 0
   stunned: 0
+  hasAttacked: 0
+  numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
   range: 15
   nextWayPointDistance: 3
+  ennemy_Controllers: []
   coolDown: 2
+  coolDownTimer: 0
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 1966716373}
@@ -18379,12 +18463,18 @@ MonoBehaviour:
   sr: {fileID: 2127415122}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
+  numberBetweenGroupAttack: 1
+  timeBetweenGroupAttack: 0.5
   stunned: 0
+  hasAttacked: 0
+  numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
   range: 15
   nextWayPointDistance: 3
-  coolDown: 3
+  ennemy_Controllers: []
+  coolDown: 1.5
+  coolDownTimer: 0
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 487478397}
