@@ -76,6 +76,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                         animator.SetBool("HasShot", false);
                         currentstade = 0;
                         StartCoroutine(LaunchBullet());
+                        canAim = true;
                         coolDownTimer = 0;
                         canShoot = false;
                     }
@@ -85,7 +86,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         if (animator.GetBool("IsAiming") == true && canAim)
         {
 
-            stade = Mathf.Round(Vector2.Angle(sens, pTransform.position - musket.transform.position) / 30);
+            stade = Mathf.Round(Vector2.Angle(sens, pTransform.position - musket.transform.position) / 15);
             if (stade > 3)
                 stade = 3;
             if (lookUp == false)
@@ -104,7 +105,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                 animator.SetBool("CanUp", true);
                 animator.SetBool("CanDown", false);
                 currentstade++;
-                //StartCoroutine(CooldownAim());
+                /*StartCoroutine(CooldownAim());*/
                 canAim = false;
             }
             else if (currentstade > stade)
@@ -112,7 +113,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                 animator.SetBool("CanDown", true);
                 animator.SetBool("CanUp", false);
                 currentstade--;
-                //StartCoroutine(CooldownAim());
+                /*StartCoroutine(CooldownAim());*/
                 canAim = false;
             }
         }
@@ -197,12 +198,24 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     {
         animator.SetBool("Impair", true);
         animator.SetBool("Pair", false);
+        animator.SetBool("CanUp", false);
+        animator.SetBool("CanDown", false);
         canAim = true;
     }
     public void Pair()
     {
         animator.SetBool("Pair", true);
         animator.SetBool("Impair", false);
+        animator.SetBool("CanUp", false);
+        animator.SetBool("CanDown", false);
+        canAim = true;
+    }
+    
+    public IEnumerator CooldownAim()
+    {
+        yield return new WaitForSeconds(0.1f);
+        animator.SetBool("CanUp", false);
+        animator.SetBool("CanDown", false);
         canAim = true;
     }
 }

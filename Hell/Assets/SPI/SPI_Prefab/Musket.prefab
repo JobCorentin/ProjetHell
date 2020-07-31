@@ -245,7 +245,7 @@ MonoBehaviour:
     type: 3}
   arrow: {fileID: 8345421285771850965}
   arrow2: {fileID: 378835884450528945}
-  bulletForce: 30
+  bulletForce: 35
   preparationDuration: 2
   musket: {fileID: 7581971443190654395}
   sens: {x: 0, y: 0}
