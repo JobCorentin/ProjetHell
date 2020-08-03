@@ -153,7 +153,7 @@ MonoBehaviour:
   seeker: {fileID: 6633417914288537580}
   animator: {fileID: 6633417914669196249}
   playerDetected: 0
-  detectionDistance: 8
+  detectionDistance: 12
   detectionLayers:
     serializedVersion: 2
     m_Bits: 18688

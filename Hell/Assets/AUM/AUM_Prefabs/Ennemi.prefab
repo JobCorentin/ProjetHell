@@ -438,7 +438,7 @@ MonoBehaviour:
   seeker: {fileID: 2070220071}
   animator: {fileID: 1377145106}
   playerDetected: 0
-  detectionDistance: 8
+  detectionDistance: 12
   detectionLayers:
     serializedVersion: 2
     m_Bits: 18688

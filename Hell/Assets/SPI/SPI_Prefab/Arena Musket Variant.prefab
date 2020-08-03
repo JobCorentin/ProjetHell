@@ -76,10 +76,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8345421285763794954, guid: fa6cf2c309ff66944a0cb7a44172cbb5,
+        type: 3}
+      propertyPath: range
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345421285763794954, guid: fa6cf2c309ff66944a0cb7a44172cbb5,
+        type: 3}
+      propertyPath: detectionDistance
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8345421285763794957, guid: fa6cf2c309ff66944a0cb7a44172cbb5,
         type: 3}
       propertyPath: m_Name
-      value: Arena Musket
+      value: Arena Musket Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa6cf2c309ff66944a0cb7a44172cbb5, type: 3}
