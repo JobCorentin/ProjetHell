@@ -177,6 +177,7 @@ MonoBehaviour:
   ennemy_Controllers: []
   coolDown: 1.5
   coolDownTimer: 0
+  isFlying: 1
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 7723505670430841034}

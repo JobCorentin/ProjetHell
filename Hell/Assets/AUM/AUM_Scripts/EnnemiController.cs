@@ -54,6 +54,8 @@ public class EnnemiController : MonoBehaviour
     public float coolDown;
     [HideInInspector] public float coolDownTimer = 0;
 
+    public bool isFlying;
+
     // Start is called before the first frame update
     public virtual void Start()
     {
@@ -106,8 +108,15 @@ public class EnnemiController : MonoBehaviour
             }
 
             direction = ((Vector2)path.vectorPath[currentWayPoint] - rb.position).normalized;
+            if (isFlying)
+            {
+                rb.AddForce(direction * speed * Time.fixedDeltaTime);
+            }
+            else
+            {
 
-            rb.AddForce(direction * speed * Time.fixedDeltaTime);
+                rb.AddForce(new Vector2 (direction.x,0) * speed * Time.fixedDeltaTime);
+            }
 
             float distance = Vector2.Distance(rb.position, path.vectorPath[currentWayPoint]);
 
