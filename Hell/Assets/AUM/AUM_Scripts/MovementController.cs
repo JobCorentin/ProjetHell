@@ -15,6 +15,7 @@ public class MovementController : MonoBehaviour
     public float secondJumpForce;
 
     float originalSpeed;
+    [HideInInspector] public float speedMultiplier = 1;
 
     public float antiProjectedMultiplier;
 
@@ -73,7 +74,6 @@ public class MovementController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
         wasGrounded = isGrounded;
 
         wasWalled = isWalled;
@@ -132,7 +132,7 @@ public class MovementController : MonoBehaviour
 
         if(stuned == false)
         {
-            rb.AddForce( new Vector2(InputListener.iL.horizontalInput * speed * Time.fixedDeltaTime, 0), ForceMode2D.Force);
+            rb.AddForce( new Vector2(InputListener.iL.horizontalInput * speed * speedMultiplier * Time.fixedDeltaTime, 0), ForceMode2D.Force);
 
             //Empêche le PJ de glisser
             if(InputListener.iL.horizontalInput == 0 && isGrounded)

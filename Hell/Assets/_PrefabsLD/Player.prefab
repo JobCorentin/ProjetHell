@@ -786,6 +786,7 @@ GameObject:
   - component: {fileID: 7360886272903129553}
   - component: {fileID: 7360886272903129556}
   - component: {fileID: 1060429647}
+  - component: {fileID: 4313279357108915609}
   - component: {fileID: 7360886272903129554}
   - component: {fileID: 7360886272903129555}
   - component: {fileID: 7360886272903129558}
@@ -855,6 +856,20 @@ MonoBehaviour:
   life: 5
   initialLife: 0
   invicibiltyTime: 0.5
+--- !u!114 &4313279357108915609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7360886272903129565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4ac86d4a3f8624daf34260e6e0f163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recoveryDuration: 0.5
+  cooldown: 2
 --- !u!114 &7360886272903129554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -872,6 +887,7 @@ MonoBehaviour:
   speed: 4000
   jumpForce: 1250
   secondJumpForce: 1500
+  speedMultiplier: 1
   antiProjectedMultiplier: 0
   groundLayers:
     serializedVersion: 2
@@ -1016,6 +1032,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloodNumbMax: 12
   bloodNumb: 0
+  speedMultiplier1: 1.2
+  speedMultiplier2: 1.5
   text: {fileID: 0}
 --- !u!1 &7360886272987733145
 GameObject:
