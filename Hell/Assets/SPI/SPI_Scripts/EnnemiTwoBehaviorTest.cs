@@ -26,7 +26,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     public override void Start()
     {
         base.Start();
-
+        coolDownTimer = coolDown-0.3f;
         type = 1;
 
     }

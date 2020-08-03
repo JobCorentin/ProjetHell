@@ -235,18 +235,24 @@ MonoBehaviour:
   sr: {fileID: 8345421285763794967}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
+  numberBetweenGroupAttack: 0
+  timeBetweenGroupAttack: 0
   stunned: 0
+  hasAttacked: 0
+  numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
   range: 12
   nextWayPointDistance: 0
-  coolDown: 3
+  ennemy_Controllers: []
+  coolDown: 2
+  coolDownTimer: 0
   bulletPrefab: {fileID: 2632547540658908434, guid: 9bffa467356781c41b1ab218b1e6974c,
     type: 3}
   arrow: {fileID: 8345421285771850965}
   arrow2: {fileID: 378835884450528945}
   bulletForce: 35
-  preparationDuration: 2
+  preparationDuration: 1.2
   musket: {fileID: 7581971443190654395}
   sens: {x: 0, y: 0}
   stade: 0

@@ -153,7 +153,7 @@ MonoBehaviour:
   seeker: {fileID: 6633417914288537580}
   animator: {fileID: 6633417914669196249}
   playerDetected: 0
-  detectionDistance: 8
+  detectionDistance: 12
   detectionLayers:
     serializedVersion: 2
     m_Bits: 18688
@@ -175,14 +175,15 @@ MonoBehaviour:
   range: 6
   nextWayPointDistance: 3
   ennemy_Controllers: []
-  coolDown: 2
+  coolDown: 1.5
   coolDownTimer: 0
+  isFlying: 1
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 7723505670430841034}
   arrow2: {fileID: 5241226547291384111}
   bulletForce: 15
-  preparationDuration: 0.8
+  preparationDuration: 0.6
   ennemiDetection: {fileID: 6633417914603177618}
 --- !u!114 &6633417914288537580
 MonoBehaviour:
