@@ -57,6 +57,16 @@ public class MovementController : MonoBehaviour
 
     public Coroutine lastChangeSpeed;
 
+
+
+
+
+    [Space(5)]
+    [Header("Sound")]
+    public AudioClip playerJump;
+    [Range(0f, 5f)] public float playerJumpVolume = 1f;
+
+
     private void Awake()
     {
         mC = this;
@@ -147,6 +157,7 @@ public class MovementController : MonoBehaviour
                     rb.AddForce(new Vector2(xWallJump * -wallSlideBaseInputDir.x, yWallJump).normalized * wallJumpForce * Time.fixedDeltaTime, ForceMode2D.Impulse);
 
                     animator.SetTrigger("Jumping");
+                    SoundManager.instance.PlaySfx(playerJump, playerJumpVolume, 1);
 
                     StartCoroutine(IsJumpingFor());
 
@@ -162,6 +173,8 @@ public class MovementController : MonoBehaviour
                     if(canJump == true)
                     {
                         animator.SetTrigger("Jumping");
+                        SoundManager.instance.PlaySfx(playerJump, playerJumpVolume, 1);
+
                         if(canDoubleJump == true)
                         {
                             FXManager.fxm.fxInstancier(0, groundCheck,0);
@@ -172,6 +185,7 @@ public class MovementController : MonoBehaviour
                     else if(canDoubleJump == true)
                     {
                         animator.SetTrigger("DoubleJumping");
+                        SoundManager.instance.PlaySfx(playerJump, playerJumpVolume, 1);
                     }
 
                     rb.velocity = new Vector2(rb.velocity.x, 0);

@@ -3,7 +3,12 @@ guid: 7e05d4613394ae2449ec708345ef9cc0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - animator: {instanceID: 0}
+  - slash: {instanceID: 0}
+  - bloodSlash: {instanceID: 0}
+  - sr: {instanceID: 0}
+  - playerAttack: {fileID: 8300000, guid: 95be0ce396082cc4fa31b20b32c24e87, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

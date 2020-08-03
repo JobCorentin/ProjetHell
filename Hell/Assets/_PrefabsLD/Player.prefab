@@ -891,6 +891,8 @@ MonoBehaviour:
   yWallJump: 1
   wallJumpForce: 2000
   stuned: 0
+  playerJump: {fileID: 8300000, guid: 49ff46c563910b2499c01c2004a9d426, type: 3}
+  playerJumpVolume: 0.4
 --- !u!114 &7360886272903129555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -938,6 +940,8 @@ MonoBehaviour:
   slashNumb: 1
   slashNumbMax: 0
   attackDirectionAngle: 0
+  playerAttack: {fileID: 8300000, guid: 95be0ce396082cc4fa31b20b32c24e87, type: 3}
+  playerAttackVolume: 1.4
 --- !u!114 &3210968349215444155
 MonoBehaviour:
   m_ObjectHideFlags: 0
