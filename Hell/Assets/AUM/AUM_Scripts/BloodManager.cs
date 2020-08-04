@@ -9,12 +9,15 @@ public class BloodManager : MonoBehaviour
     public int bloodNumbMax;
     [HideInInspector] public int bloodNumb;
 
+    public float speedMultiplier1;
+    public float speedMultiplier2;
+
     public TMPro.TextMeshProUGUI text;
 
     // Start is called before the first frame update
     void Start()
     {
-        bloodNumb = bloodNumbMax / 2;
+        bloodNumb = 0;
 
         bm = this;
         text = GameObject.Find("BloodText").GetComponent<TMPro.TextMeshProUGUI>();
@@ -24,5 +27,20 @@ public class BloodManager : MonoBehaviour
     void Update()
     {
         text.text = "Blood : " + bloodNumb + " / " + bloodNumbMax;
+
+        
+        if (bloodNumb == bloodNumbMax)
+        {
+            MovementController.mC.speedMultiplier = speedMultiplier1;
+        }
+        else if(bloodNumb >= bloodNumbMax / 2f)
+        {
+            MovementController.mC.speedMultiplier = speedMultiplier2;
+        }
+        else if (bloodNumb < bloodNumbMax / 2f)
+        {
+            MovementController.mC.speedMultiplier = 1f;
+        }
+
     }
 }

@@ -45,6 +45,8 @@ public class HealthManager : MonoBehaviour
         FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.1f, 0));
         invicibilityTimer = 0;
 
+        BloodManager.bm.bloodNumb = 0;
+
         for(float i = 0.2f * amount; i > 0; i -= Time.deltaTime)
         {
             BaseSlashInstancier.bsi.sr.color = Color.red;
