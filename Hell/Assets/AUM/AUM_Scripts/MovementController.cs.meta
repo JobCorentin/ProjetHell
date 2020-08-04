@@ -3,7 +3,14 @@ guid: a18392187e14a3041b1c24c71d61ce32
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - animator: {instanceID: 0}
+  - rb: {instanceID: 0}
+  - groundCheck: {instanceID: 0}
+  - leftWallCheck: {instanceID: 0}
+  - rightWallCheck: {instanceID: 0}
+  - playerJump: {fileID: 8300000, guid: 49ff46c563910b2499c01c2004a9d426, type: 3}
+  - playerAttack: {fileID: 8300000, guid: 95be0ce396082cc4fa31b20b32c24e87, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

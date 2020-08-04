@@ -790,10 +790,10 @@ GameObject:
   - component: {fileID: 7360886272903129554}
   - component: {fileID: 7360886272903129555}
   - component: {fileID: 7360886272903129558}
-  - component: {fileID: 3210968349215444155}
   - component: {fileID: 1308424749}
   - component: {fileID: 7360886272903129566}
   - component: {fileID: 1080339161}
+  - component: {fileID: 273561559245599799}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -907,6 +907,8 @@ MonoBehaviour:
   yWallJump: 1
   wallJumpForce: 2000
   stuned: 0
+  playerJump: {fileID: 8300000, guid: 49ff46c563910b2499c01c2004a9d426, type: 3}
+  playerJumpVolume: 0.4
 --- !u!114 &7360886272903129555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -954,23 +956,8 @@ MonoBehaviour:
   slashNumb: 1
   slashNumbMax: 0
   attackDirectionAngle: 0
---- !u!114 &3210968349215444155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7360886272903129565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa50902ab52aafd4e92d6824cab1425a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  protectionCol: {fileID: 3248599729246829289}
-  protectionDuration: 0.6
-  recoveryDuration: 0.1
-  cooldown: 1
-  parrying: 0
+  playerAttack: {fileID: 8300000, guid: 95be0ce396082cc4fa31b20b32c24e87, type: 3}
+  playerAttackVolume: 1.4
 --- !u!61 &1308424749
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1035,6 +1022,23 @@ MonoBehaviour:
   speedMultiplier1: 1.2
   speedMultiplier2: 1.5
   text: {fileID: 0}
+--- !u!114 &273561559245599799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7360886272903129565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa50902ab52aafd4e92d6824cab1425a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  protectionCol: {fileID: 3248599729246829289}
+  protectionDuration: 0
+  recoveryDuration: 0
+  cooldown: 0
+  parrying: 0
 --- !u!1 &7360886272987733145
 GameObject:
   m_ObjectHideFlags: 0
