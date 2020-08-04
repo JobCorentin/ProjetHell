@@ -259,6 +259,7 @@ MonoBehaviour:
   - {fileID: 5295353434200141556, guid: c2bd96ec283c87b4992aba2f0d58941f, type: 3}
   - {fileID: 1763825600030723455, guid: 6a4807414826a744a930736950f23a51, type: 3}
   - {fileID: 2395806279780028207, guid: 44fdfc73d930d8d49891fb3ebe1f35b2, type: 3}
+  - {fileID: 7533060704102175751, guid: 1c02c9bf7509f0f45b085d916dd02e01, type: 3}
 --- !u!1 &1423297654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,10 +1036,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   protectionCol: {fileID: 3248599729246829289}
-  protectionDuration: 0
-  recoveryDuration: 0
-  cooldown: 0
-  parrying: 0
 --- !u!1 &7360886272987733145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,6 +1225,11 @@ PrefabInstance:
       propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5054717706241532183, guid: eb94b473daa8ef0488c0e6f970381a1f,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 5054717706241532201, guid: eb94b473daa8ef0488c0e6f970381a1f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1291,7 +1293,7 @@ PrefabInstance:
     - target: {fileID: 5054717706241532202, guid: eb94b473daa8ef0488c0e6f970381a1f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5054717707854765437, guid: eb94b473daa8ef0488c0e6f970381a1f,
         type: 3}

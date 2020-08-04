@@ -64,7 +64,7 @@ public class E1Bullet : MonoBehaviour
         //Collision avec le layer Parry
         if(collision.gameObject.layer == 13)
         {
-            FXManager.fxm.fxInstancier(3, collision.transform, BaseSlashInstancier.bsi.attackDirectionAngle + Random.Range(-10, 10));
+            FXManager.fxm.fxInstancier(4, gameObject.transform, BaseSlashInstancier.bsi.attackDirectionAngle + Random.Range(-10, 10));
 
             //Parry.p.StopParry();
 
