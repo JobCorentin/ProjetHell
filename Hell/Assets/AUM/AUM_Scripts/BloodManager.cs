@@ -29,7 +29,7 @@ public class BloodManager : MonoBehaviour
         text.text = "Blood : " + bloodNumb + " / " + bloodNumbMax;
 
         
-        if (bloodNumb == bloodNumbMax)
+        /*if (bloodNumb == bloodNumbMax)
         {
             MovementController.mC.speedMultiplier = speedMultiplier1;
         }
@@ -40,7 +40,7 @@ public class BloodManager : MonoBehaviour
         else if (bloodNumb < bloodNumbMax / 2f)
         {
             MovementController.mC.speedMultiplier = 1f;
-        }
+        }*/
 
     }
 }

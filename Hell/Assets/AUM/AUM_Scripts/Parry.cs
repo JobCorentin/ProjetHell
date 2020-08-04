@@ -8,7 +8,7 @@ public class Parry : MonoBehaviour
 
     public Transform protectionCol;
 
-    public float protectionDuration;
+    /*public float protectionDuration;
     public float recoveryDuration;
 
     public float cooldown;
@@ -16,7 +16,7 @@ public class Parry : MonoBehaviour
 
     Coroutine lastParry;
 
-    public bool parrying;
+    public bool parrying;*/
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class Parry : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(cooldownTimer < cooldown)
+        /*if(cooldownTimer < cooldown)
         {
             cooldownTimer += Time.fixedDeltaTime;
         }
@@ -127,7 +127,7 @@ public class Parry : MonoBehaviour
             StopCoroutine(lastParry);*/
     }
 
-    IEnumerator ActivateBloodParry()
+    /*IEnumerator ActivateBloodParry()
     {
         BloodManager.bm.bloodNumb -= 6;
 
@@ -165,5 +165,5 @@ public class Parry : MonoBehaviour
 
         yield break;
 
-    }
+    }*/
 }
