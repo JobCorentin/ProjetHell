@@ -58,6 +58,13 @@ public class BaseSlashCollision : MonoBehaviour
 
                 eoc.StopLaunchBullet();
             }
+
+            if (ec.type == 1)
+            {
+                EnnemiTwoBehaviorTest etc = ec.GetComponent<EnnemiTwoBehaviorTest>();
+
+                etc.StopLaunchBullet();
+            }
         }
 
         if (collision.transform.tag == "Props")

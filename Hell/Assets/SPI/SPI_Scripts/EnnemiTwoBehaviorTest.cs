@@ -21,6 +21,8 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     public bool canShoot;
     [HideInInspector] public bool canAim;
 
+    Coroutine lastLaunchBullet;
+
     //public EnnemiDetection ennemiDetection;
 
     public override void Start()
@@ -97,7 +99,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                     {
                         animator.SetBool("HasShot", false);
                         currentstade = 0;
-                        StartCoroutine(LaunchBullet());
+                        lastLaunchBullet = StartCoroutine(LaunchBullet());
                         canAim = true;
                         coolDownTimer = 0;
                         canShoot = false;
@@ -247,5 +249,16 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         animator.SetBool("CanUp", false);
         animator.SetBool("CanDown", false);
         canAim = true;
+    }
+
+    public void StopLaunchBullet()
+    {
+        animator.SetBool("IsAiming", false);
+
+        arrow.SetActive(false);
+        arrow2.SetActive(false);
+
+        if (lastLaunchBullet != null)
+            StopCoroutine(lastLaunchBullet);
     }
 }

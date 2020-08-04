@@ -243,8 +243,8 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   tough: 0
   health: 1
-  speed: 1200
-  type: 0
+  speed: 1000
+  type: 2
   sr: {fileID: 6059860427982487036}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
@@ -265,11 +265,12 @@ MonoBehaviour:
   slash: {fileID: 1323936563}
   canAttack: 0
   lookAt: {x: 0, y: 0}
-  dashImpulsion: {x: 1, y: 1}
+  dashImpulsion: {x: 1, y: 0.2}
   currentDash: {x: 0, y: 0}
-  duration: 0
-  movementForce: 0
-  momentumMultiplier: 0
+  duration: 0.25
+  movementForce: 1000
+  momentumMultiplier: 1
+  preparationDuration: 0.8
 --- !u!212 &6059860427982487036
 SpriteRenderer:
   m_ObjectHideFlags: 0

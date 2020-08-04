@@ -8,7 +8,7 @@ public class EnnemiThreeBehavior : EnnemiController
     public EnnemiDetection ennemiDetection;
     public GameObject slash;
     Coroutine lastSlash;
-    [HideInInspector] public bool canAttack;
+    public bool canAttack;
 
     [HideInInspector] public Vector2 lookAt;
     public Vector2 dashImpulsion;
@@ -19,12 +19,14 @@ public class EnnemiThreeBehavior : EnnemiController
     public float movementForce;
     public float momentumMultiplier;
 
+    public float preparationDuration;
 
 
     public override void Start()
     {
         base.Start();
         canAttack = true;
+        coolDownTimer = coolDown - 0.3f;
     }
 
     public override void FixedUpdate()
@@ -48,7 +50,7 @@ public class EnnemiThreeBehavior : EnnemiController
             }
             
 
-            if (Vector2.Distance(target, transform.position) >= 0.5f)
+            if (Vector2.Distance(target, transform.position) >= 0.5f && stunned == false)
             {
                 base.FixedUpdate();
             }
@@ -60,7 +62,6 @@ public class EnnemiThreeBehavior : EnnemiController
             }
             else
             {
-
                 transform.localScale = new Vector3(-1f, 1f, 1f);
             }
 
@@ -74,7 +75,7 @@ public class EnnemiThreeBehavior : EnnemiController
                         currentDash = dashImpulsion;
                     else if (lookAt.x < 0)
                         currentDash = -dashImpulsion;
-                    StartCoroutine(JumpAttack(currentDash));
+                    StartCoroutine(PrepareAttack());
                     canAttack = false;
                     coolDownTimer = 0;
                 }
@@ -83,26 +84,45 @@ public class EnnemiThreeBehavior : EnnemiController
                     coolDownTimer += Time.fixedDeltaTime;
                 }
             }
+            else if (canAttack== false)
+                animator.SetBool("Attack", false);
+
         }
+    }
+
+
+    IEnumerator PrepareAttack ()
+    {
+        animator.SetBool("IsPreparing", true);
+        stunned = true;
+        yield return new WaitForSeconds(preparationDuration);
+        StartCoroutine(JumpAttack(currentDash));
     }
 
     IEnumerator JumpAttack(Vector2 dashDirection)
     {
-        stunned = true;
-
+        animator.SetBool("IsPreparing", false);
+        animator.SetBool("Attack", true);
         slash.SetActive(true);
+        Debug.Log("attack");
 
-        for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
-        {
-            rb.velocity = dashDirection.normalized * movementForce * i * Time.fixedDeltaTime;
+            for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
+            {
+                rb.velocity = dashDirection.normalized * movementForce * i * Time.fixedDeltaTime;
 
-            yield return new WaitForFixedUpdate();
+            }
 
-        }
+
+        //yield return new WaitForSeconds(duration);
+        yield return null;
+    }
+
+    void EndAttack()
+    {
         slash.SetActive(false);
         stunned = false;
         canAttack = true;
-        yield return null;
+        animator.SetBool("Attack", false);
     }
 
 }

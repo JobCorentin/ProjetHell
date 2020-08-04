@@ -231,7 +231,7 @@ MonoBehaviour:
   tough: 0
   health: 1
   speed: 0
-  type: 0
+  type: 1
   sr: {fileID: 8345421285763794967}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
@@ -247,6 +247,7 @@ MonoBehaviour:
   ennemy_Controllers: []
   coolDown: 2
   coolDownTimer: 0
+  isFlying: 0
   bulletPrefab: {fileID: 2632547540658908434, guid: 9bffa467356781c41b1ab218b1e6974c,
     type: 3}
   arrow: {fileID: 8345421285771850965}
