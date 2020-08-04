@@ -47,6 +47,14 @@ public class BaseSlashInstancier : MonoBehaviour
     [HideInInspector]public float attackDirectionAngle;
 
 
+
+
+    [Space(10)]
+    [Header ("Sound")]
+    public AudioClip playerAttack;
+    [Range(0f, 5f)] public float playerAttackVolume = 1f;
+
+
     void Start()
     {
         bsi = this;
@@ -174,6 +182,7 @@ public class BaseSlashInstancier : MonoBehaviour
     IEnumerator Slash(Vector2 currentAttackDirection, Vector2 currentInputDirection)
     {
         animator.SetTrigger("Attacking");
+        SoundManager.instance.PlaySfx(playerAttack, playerAttackVolume, 1);
 
         StartCoroutine(IsAttackingFor());
 
