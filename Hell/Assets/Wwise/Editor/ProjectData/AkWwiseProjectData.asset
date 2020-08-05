@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a124b3ec37c701f4f8a9e6e267ba172d, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 3926a85ad5b30841a40120aa7b53cb78
+    GuidInternal: 
+    m_lastTime: -8586051183523184207
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: db03273c1718c0479a6339a62413169b
+    GuidInternal: 
+    m_lastTime: -8586051183523363732
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 4284ab4eb2341646a069c5e5531758ca
+    GuidInternal: 
+    m_lastTime: -8586051173574346285
+    List:
+    - name: Player
+      guid: 7b75d94ef3d5f044b64a0a2d571effac
+      id: 1069431850
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 7
+      Path: Default Work Unit\Player
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 14895eb1fb392f4fb3e6729aaa4bce9d
+    GuidInternal: 
+    m_lastTime: -8586051173575393486
+    List:
+    - name: playerAttack_event
+      guid: 10279b5fc0213c4188fb26138c10d335
+      id: 1318061999
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: playerAttack_event
+        ObjectType: 3
+      Path: Default Work Unit\playerAttack_event
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: b2879151ec231c4eb4923d2114a6d4d9
+    GuidInternal: 
+    m_lastTime: -8586051183522775308
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 88dd8058f7cc7b49a33a867a1dde6bd0
+    GuidInternal: 
+    m_lastTime: -8586051183522046834
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 9f7133fbe6cfcc4c8f9a5c8126ca4b7b
+    GuidInternal: 
+    m_lastTime: -8586051183522486077
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 1cad4c75250fd34eb902fc75f861dcba
+    GuidInternal: 
+    m_lastTime: -8586051183522695524
+    List: []
+  ExpandedItems:
+  - /Hell_WwiseProject
+  - /Hell_WwiseProject/Events
+  - /Hell_WwiseProject/Events/Default Work Unit
+  - /Hell_WwiseProject/SoundBanks
+  - /Hell_WwiseProject/SoundBanks/Default Work Unit
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="playerAttack_event" ID="{5F9B2710-21C0-413C-88FB-26138C10D335}">
+					<ChildrenList>
+						<Action Name="" ID="{D326228A-3A0E-4B34-BF8B-8FC90CEADB2C}" ShortID="414995068">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sword_Attack_3 (1)" ID="{B2A6A7DF-D392-4AF3-B196-F18EE5030050}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
