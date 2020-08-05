@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1318061999	playerAttack_event			\Default Work Unit\playerAttack_event	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	372095652	Sword_Attack_3 (1)	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\Sword_Attack_3 (1)_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sword_Attack_3 (1)		113600
+

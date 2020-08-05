@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215663688117658491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.62, y: -1.91, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3650094436796544964}
@@ -102,7 +102,7 @@ MonoBehaviour:
   isDestroyed: 0
   fragList:
   - {fileID: 1095163057006647127, guid: 0d7bc3d6da31b9c4aa4de2c200dc403c, type: 3}
-  - {fileID: 46562564351039949, guid: ec7b441a4f971e34ba279cec1c4ef949, type: 3}
+  - {fileID: 4433701119249001597, guid: 4cfd7810625583441a6470d00d68ed54, type: 3}
   - {fileID: 6196155943197975507, guid: 5c66fc421b6f8f44f8eb3eca1e182bd1, type: 3}
   - {fileID: 6620695567295331859, guid: 8303c47fedd675043beb54761c2f5ee1, type: 3}
   - {fileID: 1217330768968614132, guid: 8af8630894359634cb57cd0115679f6e, type: 3}
@@ -110,6 +110,8 @@ MonoBehaviour:
   - {fileID: 4433701119249001597, guid: 4cfd7810625583441a6470d00d68ed54, type: 3}
   - {fileID: 4433701119249001597, guid: 4cfd7810625583441a6470d00d68ed54, type: 3}
   fog: {fileID: 6276961999480984658, guid: 59e3cfeeef4a1d14899c93e8807c0b68, type: 3}
+  wheel: {fileID: 3981785412997363593, guid: 963d4361bed74e945a1b2151a494e474, type: 3}
+  isChar: 1
 --- !u!61 &215663688117658488
 BoxCollider2D:
   m_ObjectHideFlags: 0
