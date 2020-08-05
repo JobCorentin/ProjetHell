@@ -257,10 +257,10 @@ MonoBehaviour:
   numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
-  range: 3
+  range: 4
   nextWayPointDistance: 3
   ennemy_Controllers: []
-  coolDown: 2
+  coolDown: 1.5
   coolDownTimer: 0
   isFlying: 0
   ennemiDetection: {fileID: 3637085431136922249}
@@ -270,9 +270,9 @@ MonoBehaviour:
   dashImpulsion: {x: 1, y: 0.4}
   currentDash: {x: 0, y: 0}
   duration: 0.25
-  movementForce: 1100
+  movementForce: 1200
   momentumMultiplier: 1
-  preparationDuration: 0.8
+  preparationDuration: 0.5
 --- !u!212 &6059860427982487036
 SpriteRenderer:
   m_ObjectHideFlags: 0
