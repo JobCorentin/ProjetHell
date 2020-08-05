@@ -5,7 +5,7 @@ using UnityEngine;
 public class ZombiSlashCollision : MonoBehaviour
 {
 
-    bool reflected = false;
+    public bool reflected = false;
     public EnnemiThreeBehavior etb;
 
     private void OnTriggerEnter2D(Collider2D collision)
