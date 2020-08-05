@@ -9,12 +9,14 @@ public class PropsBehaviour : MonoBehaviour
     public bool isDestroyed;
     public List<GameObject> fragList;
     public GameObject fog;
+    public GameObject wheel;
     Transform t;
     Transform originalTransform;
 
     float timeBtweenDamage = 0.3f;
 
     bool IsHeal;
+    public bool isChar;
 
     private void Awake()
     {
@@ -57,7 +59,10 @@ public class PropsBehaviour : MonoBehaviour
 
     void Destroyed()
     {
-
+        if(isChar== true)
+        {
+            SpawnWheel();
+        }
         SpawnFrag();
         SpawnFog();
         isDestroyed = true;
@@ -73,6 +78,12 @@ public class PropsBehaviour : MonoBehaviour
             currentFrag.transform.Rotate(new Vector3(0, 0, Random.Range(45f, 270f)));
             currentFrag.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-5, 5) * 200, Random.Range(-5, 5) * 200));
         }
+    }
+
+    void SpawnWheel()
+    {
+        GameObject currentWheel = Instantiate(wheel, originalTransform);
+        currentWheel.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-5, 5) * 200, Random.Range(-5, 5) * 100));
     }
 
     void SpawnFog()
