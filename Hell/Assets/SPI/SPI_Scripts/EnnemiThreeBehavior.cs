@@ -27,6 +27,7 @@ public class EnnemiThreeBehavior : EnnemiController
         base.Start();
         canAttack = true;
         coolDownTimer = coolDown - 0.3f;
+        currentDash = dashImpulsion;
     }
 
     public override void FixedUpdate()
@@ -72,9 +73,10 @@ public class EnnemiThreeBehavior : EnnemiController
                 {
 
                     if (lookAt.x >= 0)
-                        currentDash = dashImpulsion;
+                        currentDash.x = dashImpulsion.x;
                     else if (lookAt.x < 0)
-                        currentDash = -dashImpulsion;
+                        currentDash.x = -dashImpulsion.x;
+                    
                     StartCoroutine(PrepareAttack());
                     canAttack = false;
                     coolDownTimer = 0;
@@ -139,10 +141,12 @@ public class EnnemiThreeBehavior : EnnemiController
         stunned = false;
         canAttack = true;
         animator.SetBool("IsStun", false);
+        slash.GetComponent<ZombiSlashCollision>().reflected = false;
     }
 
     public void PushedBack()
     {
+        gameObject.layer = 10;
         slash.SetActive(false);
         animator.SetBool("Attack", false);
         animator.SetBool("IsPreparing", false);
@@ -154,7 +158,7 @@ public class EnnemiThreeBehavior : EnnemiController
             rb.velocity = knockBack.normalized * movementForce * i * Time.fixedDeltaTime;
 
         }
-
+        gameObject.layer = 16;
         StartCoroutine(Recover());
     }
 
