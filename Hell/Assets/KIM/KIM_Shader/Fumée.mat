@@ -34,7 +34,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Main_Text:
-        m_Texture: {fileID: 2800000, guid: 27089057f533dc8488fb1c0428b34a47, type: 3}
+        m_Texture: {fileID: 2800000, guid: ec15291c521c5e64db4bda0d1165ecb8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_137A551F:
@@ -78,7 +78,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Smoke_Erosion: 0.04
+    - Smoke_Erosion: 0.027
     - Smoke_Intensity: 0.47
     - Vector1_51B3DDF5: 0.02
     - Vector1_BED26EAB: 0.03
