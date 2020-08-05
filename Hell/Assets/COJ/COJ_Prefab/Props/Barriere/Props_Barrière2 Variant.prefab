@@ -10,12 +10,12 @@ PrefabInstance:
     - target: {fileID: 3483971326343714824, guid: 5d7e3f2d42d4a6549b390d1fb1904883,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.59
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3483971326343714824, guid: 5d7e3f2d42d4a6549b390d1fb1904883,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3483971326343714824, guid: 5d7e3f2d42d4a6549b390d1fb1904883,
         type: 3}
@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 3483971326343714868, guid: 5d7e3f2d42d4a6549b390d1fb1904883,
         type: 3}
       propertyPath: m_Name
-      value: "Props_Barri\xE8re2"
+      value: "Props_Barri\xE8re2 Variant"
       objectReference: {fileID: 0}
     - target: {fileID: 3483971326343714870, guid: 5d7e3f2d42d4a6549b390d1fb1904883,
         type: 3}

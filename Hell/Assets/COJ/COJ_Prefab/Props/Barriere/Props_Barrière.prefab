@@ -58,7 +58,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3483971326343714868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.59, y: -1.82, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 780799115}
@@ -137,6 +137,8 @@ MonoBehaviour:
   - {fileID: 7541940376144747849, guid: bbcb4a1a71b47684aaf95162af917529, type: 3}
   - {fileID: 1382991727930569566, guid: 935cc3981f4329447811674d28783e32, type: 3}
   fog: {fileID: 6276961999480984658, guid: 59e3cfeeef4a1d14899c93e8807c0b68, type: 3}
+  wheel: {fileID: 0}
+  isChar: 0
 --- !u!61 &3483971326343714871
 BoxCollider2D:
   m_ObjectHideFlags: 0
