@@ -79,7 +79,7 @@ public class E1Bullet : MonoBehaviour
 
         if (reflected == true)
         {
-            if(collision.gameObject.layer == 10)
+            if(collision.gameObject.tag == "Ennemi")
             {
                 EnnemiController ec = collision.GetComponent<EnnemiController>();
 

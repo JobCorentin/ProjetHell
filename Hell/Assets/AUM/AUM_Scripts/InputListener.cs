@@ -46,7 +46,7 @@ public class InputListener : MonoBehaviour
             attackInput = Input.GetButtonDown("Attack");
 
         if (!parryInput)
-            parryInput = Input.GetButton("Parry");
+            parryInput = Input.GetButtonDown("Parry");
 
         /*if (!bloodModeInput)
             bloodModeInput = Input.GetButtonDown("BloodMode");*/

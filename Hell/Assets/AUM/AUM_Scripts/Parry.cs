@@ -27,6 +27,7 @@ public class Parry : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
         /*if(cooldownTimer < cooldown)
         {
             cooldownTimer += Time.fixedDeltaTime;

@@ -29,7 +29,7 @@ public class GainLife : MonoBehaviour
 
         if (InputListener.iL.parryInput == true && cooldownTimer >= cooldown && MovementController.mC.isGrounded)
         {
-            if (BloodManager.bm.bloodNumb >= 6)
+            if (BloodManager.bm.bloodNumb >= 3)
                 StartCoroutine(UseBlood());
         }
 
@@ -38,26 +38,19 @@ public class GainLife : MonoBehaviour
 
     IEnumerator UseBlood()
     {
+        cooldownTimer = 0;
+
         MovementController.mC.stuned = true;
 
         MovementController.mC.rb.velocity = Vector2.zero;
 
-        bool gainEverything = false;
+        int bloodNumbMinus3 = BloodManager.bm.bloodNumb - 3;
 
-        if(BloodManager.bm.bloodNumb < BloodManager.bm.bloodNumbMax)
-        {
-            gainEverything = false;
-        }
-        else if (BloodManager.bm.bloodNumb == BloodManager.bm.bloodNumbMax)
-        {
-            gainEverything = true;
-        }
-
-        while(BloodManager.bm.bloodNumb > 0)
+        while (BloodManager.bm.bloodNumb > bloodNumbMinus3)
         {
             BloodManager.bm.bloodNumb -= 1;
 
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.5f);
         }
 
         /*for (float i = recoveryDuration; i > 0; i -= Time.deltaTime)
@@ -67,21 +60,8 @@ public class GainLife : MonoBehaviour
 
         MovementController.mC.stuned = false;
 
-        if (!gainEverything)
-        {
-            if (HealthManager.hm.life < HealthManager.hm.initialLife)
-                HealthManager.hm.life += 1;
-
-            StartCoroutine(ChangeSpeedMultiplierFor(1, 8f));
-        }
-        else
-        {
-            HealthManager.hm.life = HealthManager.hm.initialLife;
-
-            StartCoroutine(ChangeSpeedMultiplierFor(2, 16f));
-        }
-
-        cooldownTimer = 0;
+        if (HealthManager.hm.life < HealthManager.hm.initialLife)
+            HealthManager.hm.life += 1;
 
         yield break;
 
