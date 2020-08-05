@@ -95,7 +95,10 @@ public class E1Bullet : MonoBehaviour
     public void Orient(Vector2 currentAttackDirection)
     {
         if (currentAttackDirection.y > 0)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
             attackDirectionAngle = Vector2.Angle(transform.right, currentAttackDirection);
+        }
         else
             attackDirectionAngle = Vector2.Angle(-transform.right, currentAttackDirection);
 

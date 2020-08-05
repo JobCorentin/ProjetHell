@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2727f58b17a514447b6e6dc6926afdb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  etb: {fileID: 2972335080529176160}
 --- !u!1 &3440117890736498078
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +237,7 @@ MonoBehaviour:
   seeker: {fileID: 667676187886705258}
   animator: {fileID: 3559978837884426510}
   playerDetected: 0
-  detectionDistance: 12
+  detectionDistance: 20
   detectionLayers:
     serializedVersion: 2
     m_Bits: 18688
