@@ -66,6 +66,13 @@ public class BaseSlashCollision : MonoBehaviour
 
                 etc.StopLaunchBullet();
             }
+            if (ec.type == 2)
+            {
+                EnnemiThreeBehavior erc = ec.GetComponent<EnnemiThreeBehavior>();
+
+                erc.StopAttack();
+            }
+
         }
 
         if (collision.transform.tag == "Props")

@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2727f58b17a514447b6e6dc6926afdb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reflected: 0
+  etb: {fileID: 2972335080529176160}
 --- !u!1 &3440117890736498078
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +199,7 @@ GameObject:
   - component: {fileID: 3107127054189808469}
   - component: {fileID: 9023005953487328411}
   - component: {fileID: 667676187886705258}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Zombi
   m_TagString: Ennemi
   m_Icon: {fileID: 0}
@@ -236,7 +238,7 @@ MonoBehaviour:
   seeker: {fileID: 667676187886705258}
   animator: {fileID: 3559978837884426510}
   playerDetected: 0
-  detectionDistance: 12
+  detectionDistance: 20
   detectionLayers:
     serializedVersion: 2
     m_Bits: 18688
@@ -255,22 +257,22 @@ MonoBehaviour:
   numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
-  range: 3
+  range: 4
   nextWayPointDistance: 3
   ennemy_Controllers: []
-  coolDown: 2
+  coolDown: 1.5
   coolDownTimer: 0
   isFlying: 0
   ennemiDetection: {fileID: 3637085431136922249}
   slash: {fileID: 1323936563}
   canAttack: 0
   lookAt: {x: 0, y: 0}
-  dashImpulsion: {x: 1, y: 0.2}
+  dashImpulsion: {x: 1, y: 0.4}
   currentDash: {x: 0, y: 0}
   duration: 0.25
-  movementForce: 1000
+  movementForce: 1200
   momentumMultiplier: 1
-  preparationDuration: 0.8
+  preparationDuration: 0.5
 --- !u!212 &6059860427982487036
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -356,7 +358,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 5
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 7
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -375,7 +377,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02032137, y: -0.2642343}
+  m_Offset: {x: 0.02032137, y: -0.23880994}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -386,7 +388,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7967863, y: 1.5284686}
+  m_Size: {x: 0.7967863, y: 1.4776199}
   m_EdgeRadius: 0
 --- !u!114 &667676187886705258
 MonoBehaviour:

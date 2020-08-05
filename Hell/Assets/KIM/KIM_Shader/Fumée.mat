@@ -34,7 +34,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Main_Text:
-        m_Texture: {fileID: 2800000, guid: b0afcc599b106b74ebac09e01971bbc0, type: 3}
+        m_Texture: {fileID: 2800000, guid: ec15291c521c5e64db4bda0d1165ecb8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_137A551F:
@@ -62,7 +62,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b0afcc599b106b74ebac09e01971bbc0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -78,8 +78,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Smoke_Erosion: 0
-    - Smoke_Intensity: 0.51
+    - Smoke_Erosion: 0.027
+    - Smoke_Intensity: 0.47
     - Vector1_51B3DDF5: 0.02
     - Vector1_BED26EAB: 0.03
     - _AlphaClip: 0
@@ -105,9 +105,9 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_68172F18: {r: 32.265312, g: 1.6741438, b: 1.6741438, a: 0}
-    - Main_Color: {r: 1, g: 1, b: 1, a: 0}
+    - Main_Color: {r: 1.1353015, g: 0.897542, b: 0.897542, a: 0}
     - Main_Speed: {r: -0.2, g: -0.3, b: 0, a: 0}
-    - Secondary_Speed: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - Secondary_Speed: {r: 0.09, g: 0.04, b: 0, a: 0}
     - Vector2_7238C757: {r: 0.5, g: 0.5, b: 0, a: 0}
     - Vector2_864CDF9C: {r: 0.1, g: 0.1, b: 0, a: 0}
     - Vector2_A6CA06EC: {r: 0.1, g: 0.1, b: 0, a: 0}
