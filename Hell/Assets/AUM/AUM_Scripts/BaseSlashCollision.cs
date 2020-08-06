@@ -38,7 +38,7 @@ public class BaseSlashCollision : MonoBehaviour
             if(BloodManager.bm.bloodNumb < BloodManager.bm.bloodNumbMax)
                 BloodManager.bm.bloodNumb += 1;
 
-            MovementController.mC.StartCoroutine(AttackMiniDash((InputListener.iL.directionVector).normalized, ec));
+            MovementController.mC.StartCoroutine(AttackMiniDash((InputListener.iL.directionVector).normalized, ec, movementForce));
 
             ec.StartCoroutine(ec.TakeDamage(1));
             FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.045f,0f));
@@ -113,7 +113,7 @@ public class BaseSlashCollision : MonoBehaviour
         bouncing = false;
     }
 
-    IEnumerator AttackMiniDash(Vector2 dashDirection, EnnemiController ennemiController)
+    public IEnumerator AttackMiniDash(Vector2 dashDirection, EnnemiController ennemiController, float force)
     {
         ennemiController.stunned = true;
 
@@ -139,7 +139,7 @@ public class BaseSlashCollision : MonoBehaviour
 
         for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         { 
-            ennemiController.rb.velocity = (currentAttackDirection.normalized * 1.5f + dashDirection.normalized).normalized * movementForce * 1.3f * i * Time.fixedDeltaTime;
+            ennemiController.rb.velocity = (currentAttackDirection.normalized * 1.5f + dashDirection.normalized).normalized * force * 1.3f * i * Time.fixedDeltaTime;
 
             //MovementController.mC.rb.velocity = dashDirection * movementForce * i * Time.fixedDeltaTime;
 

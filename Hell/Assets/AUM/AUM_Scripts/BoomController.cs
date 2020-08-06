@@ -39,6 +39,8 @@ public class BoomController : MonoBehaviour
             EnnemiController ec = collision.GetComponent<EnnemiController>();
             CameraShake.cs.WeakShake();
 
+            MovementController.mC.StartCoroutine(BaseSlashCollision.bsc.AttackMiniDash((rb.velocity).normalized, ec, 500f));
+
             ec.StartCoroutine(ec.TakeDamage(1));
             FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.045f, 0f));
 
@@ -105,7 +107,7 @@ public class BoomController : MonoBehaviour
         {
             if(HealthManager.hm.life < HealthManager.hm.initialLife)
             {
-                HealthManager.hm.life++;
+                //HealthManager.hm.life++;
             }
         }
 

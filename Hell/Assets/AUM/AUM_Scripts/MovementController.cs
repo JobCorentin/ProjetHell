@@ -10,6 +10,8 @@ public class MovementController : MonoBehaviour
 
     public Rigidbody2D rb;
 
+    public Collider2D col;
+
     public float speed;
     public float jumpForce;
     public float secondJumpForce;
