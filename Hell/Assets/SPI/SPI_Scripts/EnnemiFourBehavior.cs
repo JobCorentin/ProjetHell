@@ -14,6 +14,7 @@ public class EnnemiFourBehavior : EnnemiController
 
     [HideInInspector] public Vector2 lookAt;
 
+    public LayerMask chargeLayers;
 
     /*
     public Vector2 dashImpulsion;
@@ -31,7 +32,7 @@ public class EnnemiFourBehavior : EnnemiController
         base.Start();
         canAttack = true;
         coolDownTimer = coolDown - 0.3f;
-        currentDash = dashImpulsion;
+        //currentDash = dashImpulsion;
     }
 
     public override void FixedUpdate()
@@ -75,7 +76,7 @@ public class EnnemiFourBehavior : EnnemiController
                 }
                 else // Charge
                 {
-                    RaycastHit2D hit = Physics2D.Raycast(transform.position, lookAt, Mathf.Infinity, 17);
+                    RaycastHit2D hit = Physics2D.Raycast(transform.position, lookAt, Mathf.Infinity, chargeLayers);
                     if (hit == true)
                     {
                         target = hit.transform.position;
@@ -88,6 +89,11 @@ public class EnnemiFourBehavior : EnnemiController
             if (charge)
             {
                 base.FixedUpdate();
+                if (target.x <transform.position.x  )
+                {
+
+                }
+
             }
             /*if (Vector2.Distance(target, transform.position) >= 0.5f && stunned == false)
             {
