@@ -25,6 +25,8 @@ public class GainLife : MonoBehaviour
 
     bool wasPressed;
 
+    BoomController currentBoomerang;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +56,12 @@ public class GainLife : MonoBehaviour
                 StartCoroutine(UseBlood());
         }
 
-        if(inputPressedFor < 0.5f && wasPressed == true && InputListener.iL.parryInput == false /*&& noSword == false*/)
+        if (inputPressedFor < 0.5f && wasPressed == true && InputListener.iL.parryInput == false && noSword == true)
+        {
+            StartCoroutine(DashToBoomerang());
+        }
+
+        if (inputPressedFor < 0.5f && wasPressed == true && InputListener.iL.parryInput == false && noSword == false)
         {
             if (BloodManager.bm.bloodNumb >= 3)
                 LaunchBoomerang();
@@ -102,15 +109,39 @@ public class GainLife : MonoBehaviour
     {
         BloodManager.bm.bloodNumb -= 3;
 
-        BoomController bc = Instantiate(boomerangPrefab).GetComponent<BoomController>();
+        currentBoomerang = Instantiate(boomerangPrefab).GetComponent<BoomController>();
 
-        bc.transform.position = transform.position;
+        currentBoomerang.transform.position = transform.position;
 
-        bc.target = (Vector2)transform.position + ((InputListener.iL.directionVector).normalized * 15f);
+        currentBoomerang.target = (Vector2)transform.position + ((InputListener.iL.directionVector).normalized * 15f);
 
-        bc.speed = attackSpeed;
+        currentBoomerang.speed = attackSpeed;
 
-        StartCoroutine(bc.GoToTargetThenPlayer());
+        StartCoroutine(currentBoomerang.GoToTargetThenPlayer());
+    }
+
+    IEnumerator DashToBoomerang()
+    {
+        MovementController.mC.col.enabled = false;
+
+        while (Vector2.Distance(transform.position, currentBoomerang.transform.position) > 3f)
+        {
+            MovementController.mC.rb.velocity = (currentBoomerang.transform.position - transform.position).normalized * 60f;
+
+            yield return null;
+        }
+
+        MovementController.mC.rb.AddForce((currentBoomerang.transform.position - transform.position).normalized, ForceMode2D.Impulse);
+
+        currentBoomerang.StopAllCoroutines();
+
+        Destroy(currentBoomerang.gameObject);
+
+        noSword = false;
+
+        MovementController.mC.col.enabled = true;
+
+        yield break;
     }
 
     IEnumerator ChangeSpeedMultiplierFor(float valueBonus, float time)
