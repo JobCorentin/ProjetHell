@@ -92,7 +92,7 @@ public class BaseSlashInstancier : MonoBehaviour
                 coolDownTimer += Time.fixedDeltaTime;
             }
 
-            if (InputListener.iL.attackInput == true && coolDownTimer > coolDown / 2f /*&& slashNumb > 0*/)
+            if (InputListener.iL.attackInput == true && coolDownTimer > coolDown / 2f /*&& slashNumb > 0*/ && GainLife.gl.noSword == false)
             {
                 AttackDirectionDecision(false);
             }
