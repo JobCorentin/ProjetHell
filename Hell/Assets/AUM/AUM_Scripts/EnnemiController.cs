@@ -56,6 +56,8 @@ public class EnnemiController : MonoBehaviour
 
     public bool isFlying;
 
+    public bool playerWasDetected;
+
     // Start is called before the first frame update
     public virtual void Start()
     {
@@ -72,7 +74,7 @@ public class EnnemiController : MonoBehaviour
         pTransform = MovementController.mC.transform;
         defautlMaterial = gameObject.GetComponent<SpriteRenderer>().material;
 
-        InvokeRepeating("UpdatePath", 0f, 0.1f);
+        InvokeRepeating("GetEnnemies", 1f, 1f);
     }
 
     void UpdatePath()
@@ -93,7 +95,10 @@ public class EnnemiController : MonoBehaviour
     // Update is called once per frame
     public virtual void FixedUpdate()
     {
-        InvokeRepeating("GetEnnemies", 1f, 1f);
+        if(playerWasDetected == false && playerDetected == true)
+        {
+            InvokeRepeating("UpdatePath", 0f, 0.3f);
+        }
 
         if (path!= null)
         {
@@ -125,6 +130,8 @@ public class EnnemiController : MonoBehaviour
                 currentWayPoint++;
             }
         }
+
+        playerWasDetected = playerDetected;
     }
 
     void GetEnnemies()
