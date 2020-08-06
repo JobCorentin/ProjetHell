@@ -18,6 +18,8 @@ public class EnnemiOneController : EnnemiController
 
     Coroutine lastLaunchBullet;
 
+    public bool isTypeB;
+
     // Start is called before the first frame update
     public override void Start()
     {
@@ -140,6 +142,28 @@ public class EnnemiOneController : EnnemiController
         currentBullet.ennemiLauncheFrom = this;
         currentBullet.transform.position = transform.position;
 
+        if (isTypeB)
+        {
+            E1Bullet currentBulletB = Instantiate(bulletPrefab).GetComponent<E1Bullet>();
+            currentBulletB.ennemiLauncheFrom = this;
+            currentBulletB.transform.position = transform.position;
+
+            E1Bullet currentBulletC = Instantiate(bulletPrefab).GetComponent<E1Bullet>();
+            currentBulletC.ennemiLauncheFrom = this;
+            currentBulletC.transform.position = transform.position;
+
+            float finalDirectionAttackAngleB = Vector2.Angle(transform.right, finalDirectionAttack);
+            float finalDirectionAttackAngleC = Vector2.Angle(transform.right, finalDirectionAttack);
+
+
+
+            Vector2 finalDirectionAttackB = (finalDirectionAttack + ((Vector2.one) * 0.2f)).normalized;
+            Vector2 finalDirectionAttackC = (finalDirectionAttack + ((Vector2.one) * -0.2f)).normalized;
+
+            currentBulletB.rb.velocity = finalDirectionAttackB * bulletForce;
+            currentBulletC.rb.velocity = finalDirectionAttackC * bulletForce;
+
+        }
         currentBullet.rb.velocity = finalDirectionAttack * bulletForce;
 
         arrow.SetActive(false);

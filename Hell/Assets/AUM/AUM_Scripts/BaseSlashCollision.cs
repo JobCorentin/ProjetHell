@@ -56,8 +56,8 @@ public class BaseSlashCollision : MonoBehaviour
             if (ec.type == 0)
             {
                 EnnemiOneController eoc = ec.GetComponent<EnnemiOneController>();
-
-                eoc.StopLaunchBullet();
+                if (eoc.isTypeB == false)
+                    eoc.StopLaunchBullet();
             }
 
             if (ec.type == 1)
