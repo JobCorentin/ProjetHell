@@ -15,6 +15,7 @@ public class EnnemiFourBehavior : EnnemiController
     [HideInInspector] public Vector2 lookAt;
 
     public LayerMask chargeLayers;
+    public float distanceFromWall;
 
     /*
     public Vector2 dashImpulsion;
@@ -60,38 +61,41 @@ public class EnnemiFourBehavior : EnnemiController
         }
         else
         {
-            targetTransform = pTransform;
-            target = targetTransform.position;
 
-            for (int i = 0; i < ennemiDetection.ennemiControllers.Count; i++)
+            /*for (int i = 0; i < ennemiDetection.ennemiControllers.Count; i++)
             {
                 target += (Vector2)(transform.position - ennemiDetection.ennemiControllers[i].transform.position).normalized * 3f; //distance ennemis entre eux
-            }
+            }*/
 
             if (canAttack)
             {
-                if (target.y > transform.position.y + 10) //Si le joueur est suffisamment haut, le centaure lance un katana
-                {
-
-                }
-                else // Charge
+                if ((pTransform.position.x - transform.position.x) * lookAt.x > 0)// Charge
                 {
                     RaycastHit2D hit = Physics2D.Raycast(transform.position, lookAt, Mathf.Infinity, chargeLayers);
-                    if (hit == true)
+                    if (hit == true & Vector2.Distance(hit.transform.position, transform.position) > distanceFromWall)
                     {
                         target = hit.transform.position;
                         canAttack = false;
                         StartCoroutine(PrepareCharge());
                     }
                 }
+                else if (pTransform.position.y > transform.position.y) //Si le joueur est suffisamment haut, le centaure lance un katana
+                {
+
+                    StartCoroutine(BetweenAttack());
+                }
             }
 
             if (charge)
             {
                 base.FixedUpdate();
-                if (target.x <transform.position.x  )
-                {
 
+                if (Vector2.Distance(target, transform.position) < distanceFromWall)
+                {
+                    charge = false;
+                    animator.SetBool("IsCharging", false);
+                    slash.SetActive(false);
+                    StartCoroutine(BetweenAttack());
                 }
 
             }
@@ -134,6 +138,15 @@ public class EnnemiFourBehavior : EnnemiController
         yield return new WaitForSeconds(preparationDuration);
         slash.SetActive(true);
         charge = true;
+        animator.SetBool("IsPreparingCharge", false);
+        animator.SetBool("IsCharging", true);
+    }
+
+    IEnumerator BetweenAttack()
+    {
+        lookAt = -lookAt;
+        yield return new WaitForSeconds(coolDown);
+        canAttack = true;
     }
     /*
     void EndAttack()
