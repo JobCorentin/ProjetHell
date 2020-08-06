@@ -41,16 +41,7 @@ public class GainLife : MonoBehaviour
             cooldownTimer += Time.fixedDeltaTime;
         }
 
-        if(InputListener.iL.parryInput)
-        {
-            inputPressedFor += Time.fixedDeltaTime;
-        }
-        else
-        {
-            inputPressedFor = 0;
-        }
-
-        if (inputPressedFor >= 0.5f && cooldownTimer >= cooldown && MovementController.mC.isGrounded && gainingLife == false)
+        if (inputPressedFor >= 0.5f && MovementController.mC.isGrounded && gainingLife == false)
         {
             if (BloodManager.bm.bloodNumb >= 3)
                 StartCoroutine(UseBlood());
@@ -65,6 +56,15 @@ public class GainLife : MonoBehaviour
         {
             if (BloodManager.bm.bloodNumb >= 3)
                 LaunchBoomerang();
+        }
+
+        if (InputListener.iL.parryInput)
+        {
+            inputPressedFor += Time.fixedDeltaTime;
+        }
+        else
+        {
+            inputPressedFor = 0;
         }
 
         wasPressed = InputListener.iL.parryInput;
