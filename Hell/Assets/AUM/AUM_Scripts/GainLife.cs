@@ -11,7 +11,19 @@ public class GainLife : MonoBehaviour
     public float cooldown;
     float cooldownTimer = 0;
 
+    public float attackSpeed;
+
     Coroutine lastParry;
+
+    public GameObject boomerangPrefab;
+
+    [HideInInspector] public bool noSword = false;
+
+    float inputPressedFor;
+
+    bool gainingLife = false;
+
+    bool wasPressed;
 
     // Start is called before the first frame update
     void Start()
@@ -27,18 +39,35 @@ public class GainLife : MonoBehaviour
             cooldownTimer += Time.fixedDeltaTime;
         }
 
-        if (InputListener.iL.parryInput == true && cooldownTimer >= cooldown && MovementController.mC.isGrounded)
+        if(InputListener.iL.parryInput)
+        {
+            inputPressedFor += Time.fixedDeltaTime;
+        }
+        else
+        {
+            inputPressedFor = 0;
+        }
+
+        if (inputPressedFor >= 0.5f && cooldownTimer >= cooldown && MovementController.mC.isGrounded && gainingLife == false)
         {
             if (BloodManager.bm.bloodNumb >= 3)
                 StartCoroutine(UseBlood());
         }
 
-        InputListener.iL.parryInput = false;
+        if(inputPressedFor < 0.5f && wasPressed == true && InputListener.iL.parryInput == false /*&& noSword == false*/)
+        {
+            if (BloodManager.bm.bloodNumb >= 3)
+                LaunchBoomerang();
+        }
+
+        wasPressed = InputListener.iL.parryInput;
     }
 
     IEnumerator UseBlood()
     {
         cooldownTimer = 0;
+
+        gainingLife = true;
 
         MovementController.mC.stuned = true;
 
@@ -63,8 +92,25 @@ public class GainLife : MonoBehaviour
         if (HealthManager.hm.life < HealthManager.hm.initialLife)
             HealthManager.hm.life += 1;
 
+        gainingLife = false;
+
         yield break;
 
+    }
+
+    void LaunchBoomerang()
+    {
+        BloodManager.bm.bloodNumb -= 3;
+
+        BoomController bc = Instantiate(boomerangPrefab).GetComponent<BoomController>();
+
+        bc.transform.position = transform.position;
+
+        bc.target = (Vector2)transform.position + ((InputListener.iL.directionVector).normalized * 15f);
+
+        bc.speed = attackSpeed;
+
+        StartCoroutine(bc.GoToTargetThenPlayer());
     }
 
     IEnumerator ChangeSpeedMultiplierFor(float valueBonus, float time)

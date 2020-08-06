@@ -871,6 +871,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recoveryDuration: 0.5
   cooldown: 2
+  attackSpeed: 50
+  boomerangPrefab: {fileID: 7094243265040849470, guid: 85051d8d75821ad4eb18343a007b882f,
+    type: 3}
+  noSword: 0
 --- !u!114 &7360886272903129554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,7 +909,7 @@ MonoBehaviour:
   rightWallCheck: {fileID: 1659303174}
   speedWallSlide: 3
   xWallJump: 1
-  yWallJump: 1
+  yWallJump: 1.5
   wallJumpForce: 2000
   stuned: 0
   playerJump: {fileID: 8300000, guid: 49ff46c563910b2499c01c2004a9d426, type: 3}
