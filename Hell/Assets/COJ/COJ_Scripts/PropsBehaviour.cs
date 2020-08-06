@@ -76,14 +76,14 @@ public class PropsBehaviour : MonoBehaviour
             t.position = gameObject.transform.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
             GameObject currentFrag = Instantiate(fragList[i], t);
             currentFrag.transform.Rotate(new Vector3(0, 0, Random.Range(45f, 270f)));
-            currentFrag.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-5, 5) * 200, Random.Range(-5, 5) * 200));
+            currentFrag.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-3, 3) * 10, Random.Range(-3, 3) * 10),ForceMode2D.Impulse);
         }
     }
 
     void SpawnWheel()
     {
         GameObject currentWheel = Instantiate(wheel, originalTransform);
-        currentWheel.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-5, 5) * 200, Random.Range(-5, 5) * 100));
+        currentWheel.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-3, 3) * 10, Random.Range(-3, 3) * 10),ForceMode2D.Impulse);
     }
 
     void SpawnFog()

@@ -27,7 +27,8 @@ public class WheelBehaviour : MonoBehaviour
         if(collision.gameObject.layer == 9 && isMoveable == true)
         {
             FXManager.fxm.fxInstancier(3, transform, 0);
-            rb.AddForce(new Vector2((transform.position.x - collision.transform.position.x), 1f / 3f).normalized * 300);
+            rb.velocity = Vector2.zero;
+            rb.AddForce(new Vector2((transform.position.x - collision.transform.position.x), 1f).normalized * 10,ForceMode2D.Impulse);
             isRolling = true;
         }
     }
