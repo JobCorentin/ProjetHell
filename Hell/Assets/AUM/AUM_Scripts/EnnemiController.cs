@@ -58,6 +58,8 @@ public class EnnemiController : MonoBehaviour
 
     public bool playerWasDetected;
 
+    public GameObject Remains;
+
     // Start is called before the first frame update
     public virtual void Start()
     {
@@ -173,11 +175,10 @@ public class EnnemiController : MonoBehaviour
 
     public IEnumerator TakeDamage(int amount)
     {
-        animator.SetTrigger("IsTakingDamage");
         MovementController.mC.canDoubleJump = true;
         BaseSlashInstancier.bsi.slashNumb = BaseSlashInstancier.bsi.slashNumbMax;
         BaseSlashInstancier.bsi.canGainHeight = true;
-        health -= amount;
+
         if (amount == 1)
         {
             CameraShake.cs.WeakShake();
@@ -187,26 +188,30 @@ public class EnnemiController : MonoBehaviour
             CameraShake.cs.StrongShake();
         }
 
+        health -= amount;
+        if (health > 0)
+        {
+            animator.SetTrigger("IsTakingDamage");
 
-        sr.material = shaderMaterial1; 
+            sr.material = shaderMaterial1;
 
-        yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.1f);
 
-        sr.material = shaderMaterial2;
+            sr.material = shaderMaterial2;
 
-        yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.05f);
 
-        sr.material = defautlMaterial;
-
-        if(tough == false)
+            sr.material = defautlMaterial;
+        }
+        else if (health <= 0)
         {
             Die();
         }
 
-        if (health <= 0)
+        /*if (tough == false)
         {
             Die();
-        }
+        }*/
 
     }
 
@@ -313,7 +318,7 @@ public class EnnemiController : MonoBehaviour
 
         animator.SetTrigger("Dying");
 
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     public IEnumerator HasAttackedFor(float time)
@@ -325,5 +330,17 @@ public class EnnemiController : MonoBehaviour
             yield return null;
         }
         hasAttacked = false;
+    }
+
+    public void spawnRemains()
+    {
+        GameObject newRemains = Instantiate(Remains, gameObject.transform);
+        newRemains.transform.parent = GameObject.Find("RemainHolder").transform;
+        gameObject.SetActive(false);
+    }
+
+    public void deactivate()
+    {
+        gameObject.SetActive(false);
     }
 }

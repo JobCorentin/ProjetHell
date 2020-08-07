@@ -263,6 +263,8 @@ MonoBehaviour:
   coolDown: 1.5
   coolDownTimer: 0
   isFlying: 0
+  playerWasDetected: 0
+  Remains: {fileID: 8208348773777369088, guid: e848fa07068b6764eb7f6809792dd8ab, type: 3}
   ennemiDetection: {fileID: 3637085431136922249}
   slash: {fileID: 1323936563}
   canAttack: 0
