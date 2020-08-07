@@ -86,6 +86,11 @@ PrefabInstance:
       propertyPath: detectionDistance
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 8345421285763794954, guid: fa6cf2c309ff66944a0cb7a44172cbb5,
+        type: 3}
+      propertyPath: hasSpawn
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8345421285763794957, guid: fa6cf2c309ff66944a0cb7a44172cbb5,
         type: 3}
       propertyPath: m_Name

@@ -1,34 +1,28 @@
 fileFormatVersion: 2
-guid: be8fc98de785d9e4f82c269005202f60
+guid: 504589153eb014846b1632b9e46df3ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -204934611762766117
-    second: pixel-art---zombie-bandit-death_0
+      213: 8279837246053817094
+    second: pixel art - zombie - respawn_0
   - first:
-      213: 7238130627627682504
-    second: pixel-art---zombie-bandit-death_1
+      213: 821525688029823218
+    second: pixel art - zombie - respawn_1
   - first:
-      213: -6167294982603054903
-    second: pixel-art---zombie-bandit-death_2
+      213: -6993817394418041155
+    second: pixel art - zombie - respawn_2
   - first:
-      213: 2197410372629044752
-    second: pixel-art---zombie-bandit-death_3
+      213: 7306337341484747537
+    second: pixel art - zombie - respawn_3
   - first:
-      213: -3621955368278519257
-    second: pixel-art---zombie-bandit-death_4
+      213: -2076416299865748437
+    second: pixel art - zombie - respawn_4
   - first:
-      213: 8456445034485966782
-    second: pixel-art---zombie-bandit-death_5
+      213: -7022764094432114762
+    second: pixel art - zombie - respawn_5
   - first:
-      213: 7100519841621379891
-    second: pixel-art---zombie-bandit-death_6
-  - first:
-      213: 5747988113316022054
-    second: pixel-art---zombie-bandit-death_7
-  - first:
-      213: -2478316966754717649
-    second: pixel-art---zombie-bandit-death_8
+      213: -3221623691486949865
+    second: pixel art - zombie - respawn_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -74,7 +68,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -126,12 +120,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixel-art---zombie-bandit-death_0
+      name: pixel art - zombie - respawn_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
+        width: 97
         height: 93
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -140,19 +134,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bde92bf6e0de72df0800000000000000
-      internalID: -204934611762766117
+      spriteID: 60b16195b14e7e270800000000000000
+      internalID: 8279837246053817094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixel-art---zombie-bandit-death_1
+      name: pixel art - zombie - respawn_1
       rect:
         serializedVersion: 2
-        x: 96
+        x: 97
         y: 0
-        width: 96
+        width: 97
         height: 93
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -161,19 +155,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ca8f91e471037460800000000000000
-      internalID: 7238130627627682504
+      spriteID: 2f040e8b245a66b00800000000000000
+      internalID: 821525688029823218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixel-art---zombie-bandit-death_2
+      name: pixel art - zombie - respawn_2
       rect:
         serializedVersion: 2
-        x: 192
+        x: 194
         y: 0
-        width: 96
+        width: 97
         height: 93
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -182,19 +176,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c065e893ed596aa0800000000000000
-      internalID: -6167294982603054903
+      spriteID: dbeb3c57228f0fe90800000000000000
+      internalID: -6993817394418041155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixel-art---zombie-bandit-death_3
+      name: pixel art - zombie - respawn_3
       rect:
         serializedVersion: 2
-        x: 288
+        x: 291
         y: 0
-        width: 96
+        width: 97
         height: 93
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -203,19 +197,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01e105e6715ce7e10800000000000000
-      internalID: 2197410372629044752
+      spriteID: 11bce58f913556560800000000000000
+      internalID: 7306337341484747537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixel-art---zombie-bandit-death_4
+      name: pixel art - zombie - respawn_4
       rect:
         serializedVersion: 2
-        x: 384
+        x: 388
         y: 0
-        width: 96
+        width: 97
         height: 93
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -224,19 +218,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 722907158ca3cbdc0800000000000000
-      internalID: -3621955368278519257
+      spriteID: b2ccba860661f23e0800000000000000
+      internalID: -2076416299865748437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixel-art---zombie-bandit-death_5
+      name: pixel art - zombie - respawn_5
       rect:
         serializedVersion: 2
-        x: 480
+        x: 485
         y: 0
-        width: 96
+        width: 97
         height: 93
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -245,19 +239,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb7e62764f35b5570800000000000000
-      internalID: 8456445034485966782
+      spriteID: 6b7810aa3412a8e90800000000000000
+      internalID: -7022764094432114762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixel-art---zombie-bandit-death_6
+      name: pixel art - zombie - respawn_6
       rect:
         serializedVersion: 2
-        x: 576
+        x: 582
         y: 0
-        width: 96
+        width: 97
         height: 93
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -266,50 +260,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33b84700d2d1a8260800000000000000
-      internalID: 7100519841621379891
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pixel-art---zombie-bandit-death_7
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 0
-        width: 96
-        height: 93
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6278e532cb4f4cf40800000000000000
-      internalID: 5747988113316022054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pixel-art---zombie-bandit-death_8
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 96
-        height: 93
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f20f2c379df3b9dd0800000000000000
-      internalID: -2478316966754717649
+      spriteID: 71e00fc425e7a43d0800000000000000
+      internalID: -3221623691486949865
       vertices: []
       indices: 
       edges: []

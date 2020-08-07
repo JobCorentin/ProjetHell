@@ -35,116 +35,119 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
     public override void FixedUpdate()
     {
-
-        if (stunned == true)
+        if (hasSpawn == true)
         {
-            return;
-        }
-        if (playerDetected == false)
-        {
-            Detection();
-        }
-        else
-        {
-            target = MovementController.mC.transform.position + ((transform.position - MovementController.mC.transform.position).normalized * range);
 
-
-            if (Vector2.Distance(target, transform.position) >= 0.5f)
+            if (stunned == true)
             {
-                base.FixedUpdate();
+                return;
             }
-
-            if (MovementController.mC.transform.position.x - transform.position.x < 0)
+            if (playerDetected == false)
             {
-                transform.localScale = new Vector3(1f, 1f, 1f);
-                arrow.transform.localScale = new Vector3(1f, 1f, 1f);
-                arrow2.transform.localScale = new Vector3(1f, 1f, 1f);
-                sens = Vector2.left;
+                Detection();
             }
             else
             {
+                target = MovementController.mC.transform.position + ((transform.position - MovementController.mC.transform.position).normalized * range);
 
-                transform.localScale = new Vector3(-1f, 1f, 1f);
-                arrow.transform.localScale = new Vector3(-1f, -1f, 1f);
-                arrow2.transform.localScale = new Vector3(-1f, -1f, 1f);
-                sens = Vector2.right;
-            }
 
-            if (Vector2.Distance(transform.position, MovementController.mC.transform.position) <= range * 2f)
-            {
-                if (canShoot)
+                if (Vector2.Distance(target, transform.position) >= 0.5f)
                 {
-                    numbWhoHasAttacked = 0;
-                    bool canAttack = true;
+                    base.FixedUpdate();
+                }
 
-                    for (int i = 0; i < ennemy_Controllers.Length; i++)
+                if (MovementController.mC.transform.position.x - transform.position.x < 0)
+                {
+                    transform.localScale = new Vector3(1f, 1f, 1f);
+                    arrow.transform.localScale = new Vector3(1f, 1f, 1f);
+                    arrow2.transform.localScale = new Vector3(1f, 1f, 1f);
+                    sens = Vector2.left;
+                }
+                else
+                {
+
+                    transform.localScale = new Vector3(-1f, 1f, 1f);
+                    arrow.transform.localScale = new Vector3(-1f, -1f, 1f);
+                    arrow2.transform.localScale = new Vector3(-1f, -1f, 1f);
+                    sens = Vector2.right;
+                }
+
+                if (Vector2.Distance(transform.position, MovementController.mC.transform.position) <= range * 2f)
+                {
+                    if (canShoot)
                     {
-                        if (ennemy_Controllers[i].hasAttacked == true && ennemy_Controllers[i].gameObject.activeSelf == true)
-                        {
-                            numbWhoHasAttacked++;
-                        }
+                        numbWhoHasAttacked = 0;
+                        bool canAttack = true;
 
-                        if (ennemy_Controllers[i].coolDownTimer > ennemy_Controllers[i].coolDown && ennemy_Controllers[i].gameObject.activeSelf == true)
+                        for (int i = 0; i < ennemy_Controllers.Length; i++)
                         {
-                            if (Vector2.Distance(MovementController.mC.rb.transform.position, ennemy_Controllers[i].transform.position) <
-                            Vector2.Distance(MovementController.mC.rb.transform.position, transform.position))
+                            if (ennemy_Controllers[i].hasAttacked == true && ennemy_Controllers[i].gameObject.activeSelf == true)
                             {
-                                canAttack = false;
+                                numbWhoHasAttacked++;
                             }
+
+                            if (ennemy_Controllers[i].coolDownTimer > ennemy_Controllers[i].coolDown && ennemy_Controllers[i].gameObject.activeSelf == true)
+                            {
+                                if (Vector2.Distance(MovementController.mC.rb.transform.position, ennemy_Controllers[i].transform.position) <
+                                Vector2.Distance(MovementController.mC.rb.transform.position, transform.position))
+                                {
+                                    canAttack = false;
+                                }
+                            }
+
                         }
 
-                    }
+                        if (coolDownTimer >= coolDown && numbWhoHasAttacked < numberBetweenGroupAttack && canAttack)
+                        {
+                            animator.SetBool("HasShot", false);
+                            currentstade = 0;
+                            lastLaunchBullet = StartCoroutine(LaunchBullet());
+                            canAim = true;
+                            coolDownTimer = 0;
+                            canShoot = false;
+                        }
+                        else
+                        {
+                            coolDownTimer += Time.fixedDeltaTime;
+                        }
 
-                    if (coolDownTimer >= coolDown && numbWhoHasAttacked < numberBetweenGroupAttack && canAttack)
-                    {
-                        animator.SetBool("HasShot", false);
-                        currentstade = 0;
-                        lastLaunchBullet = StartCoroutine(LaunchBullet());
-                        canAim = true;
-                        coolDownTimer = 0;
-                        canShoot = false;
-                    }
-                    else
-                    {
-                        coolDownTimer += Time.fixedDeltaTime;
-                    }
 
-                    
+                    }
                 }
             }
-        }
-        if (animator.GetBool("IsAiming") == true && canAim)
-        {
+            if (animator.GetBool("IsAiming") == true && canAim)
+            {
 
-            stade = Mathf.Round(Vector2.Angle(sens, pTransform.position - musket.transform.position) / 15);
-            if (stade > 3)
-                stade = 3;
-            if (lookUp == false)
-                stade = -stade;
-            Debug.Log(stade);
-            Debug.Log(currentstade);
-            Debug.Log(lookUp);
+                stade = Mathf.Round(Vector2.Angle(sens, pTransform.position - musket.transform.position) / 15);
+                if (stade > 3)
+                    stade = 3;
+                if (lookUp == false)
+                    stade = -stade;
+                Debug.Log(stade);
+                Debug.Log(currentstade);
+                Debug.Log(lookUp);
 
-            if (stade == currentstade)
-            {
-                animator.SetBool("CanDown", false);
-                animator.SetBool("CanUp", false);
-            }
-            else if (currentstade < stade)
-            {
-                animator.SetBool("CanUp", true);
-                animator.SetBool("CanDown", false);
-                currentstade++;
-                /*StartCoroutine(CooldownAim());*/
-                canAim = false;
-            }
-            else if (currentstade > stade)
-            {
-                animator.SetBool("CanDown", true);
-                animator.SetBool("CanUp", false);
-                currentstade--;
-                /*StartCoroutine(CooldownAim());*/
-                canAim = false;
+                if (stade == currentstade)
+                {
+                    animator.SetBool("CanDown", false);
+                    animator.SetBool("CanUp", false);
+                }
+                else if (currentstade < stade)
+                {
+                    animator.SetBool("CanUp", true);
+                    animator.SetBool("CanDown", false);
+                    currentstade++;
+                    /*StartCoroutine(CooldownAim());*/
+                    canAim = false;
+                }
+                else if (currentstade > stade)
+                {
+                    animator.SetBool("CanDown", true);
+                    animator.SetBool("CanUp", false);
+                    currentstade--;
+                    /*StartCoroutine(CooldownAim());*/
+                    canAim = false;
+                }
             }
         }
     }

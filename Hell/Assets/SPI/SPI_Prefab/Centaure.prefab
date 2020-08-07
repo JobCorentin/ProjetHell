@@ -203,6 +203,9 @@ MonoBehaviour:
   coolDown: 0.8
   coolDownTimer: 0
   isFlying: 0
+  playerWasDetected: 0
+  Remains: {fileID: 0}
+  hasSpawn: 0
   ennemiDetection: {fileID: 5842063382109803147}
   canAttack: 0
   charge: 0

@@ -32,63 +32,66 @@ public class EnnemiThreeBehavior : EnnemiController
 
     public override void FixedUpdate()
     {
-        if (stunned == true)
+        if (hasSpawn == true)
         {
-            return;
-        }
-        if (playerDetected == false)
-        {
-            Detection();
-        }
-        else
-        {
-            target = pTransform.position;
-            lookAt = MovementController.mC.transform.position - transform.position;
-            
-            for (int i = 0; i < ennemiDetection.ennemiControllers.Count; i++)
+            if (stunned == true)
             {
-                target += (Vector2)(transform.position - ennemiDetection.ennemiControllers[i].transform.position).normalized * 3f; //distance ennemis entre eux
+                return;
             }
-            
-
-            if (Vector2.Distance(target, transform.position) >= 0.5f && stunned == false)
+            if (playerDetected == false)
             {
-                base.FixedUpdate();
-            }
-            
-
-            if (lookAt.x < 0)
-            {
-                transform.localScale = new Vector3(1f, 1f, 1f);
+                Detection();
             }
             else
             {
-                transform.localScale = new Vector3(-1f, 1f, 1f);
-            }
+                target = pTransform.position;
+                lookAt = MovementController.mC.transform.position - transform.position;
 
-
-            if (Vector2.Distance(transform.position, pTransform.position) <= range * 2f && canAttack)
-            {
-                if (coolDownTimer >= coolDown)
+                for (int i = 0; i < ennemiDetection.ennemiControllers.Count; i++)
                 {
+                    target += (Vector2)(transform.position - ennemiDetection.ennemiControllers[i].transform.position).normalized * 3f; //distance ennemis entre eux
+                }
 
-                    if (lookAt.x >= 0)
-                        currentDash.x = dashImpulsion.x;
-                    else if (lookAt.x < 0)
-                        currentDash.x = -dashImpulsion.x;
-                    
-                    StartCoroutine(PrepareAttack());
-                    canAttack = false;
-                    coolDownTimer = 0;
+
+                if (Vector2.Distance(target, transform.position) >= 0.5f && stunned == false)
+                {
+                    base.FixedUpdate();
+                }
+
+
+                if (lookAt.x < 0)
+                {
+                    transform.localScale = new Vector3(1f, 1f, 1f);
                 }
                 else
                 {
-                    coolDownTimer += Time.fixedDeltaTime;
+                    transform.localScale = new Vector3(-1f, 1f, 1f);
                 }
-            }
-            else if (canAttack== false)
-                animator.SetBool("Attack", false);
 
+
+                if (Vector2.Distance(transform.position, pTransform.position) <= range * 2f && canAttack)
+                {
+                    if (coolDownTimer >= coolDown)
+                    {
+
+                        if (lookAt.x >= 0)
+                            currentDash.x = dashImpulsion.x;
+                        else if (lookAt.x < 0)
+                            currentDash.x = -dashImpulsion.x;
+
+                        StartCoroutine(PrepareAttack());
+                        canAttack = false;
+                        coolDownTimer = 0;
+                    }
+                    else
+                    {
+                        coolDownTimer += Time.fixedDeltaTime;
+                    }
+                }
+                else if (canAttack == false)
+                    animator.SetBool("Attack", false);
+
+            }
         }
     }
 

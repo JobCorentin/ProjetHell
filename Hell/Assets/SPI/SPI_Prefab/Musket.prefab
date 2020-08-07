@@ -250,6 +250,7 @@ MonoBehaviour:
   isFlying: 0
   playerWasDetected: 0
   Remains: {fileID: 227656790259838056, guid: 25c846dc16d5e8047914eaf231f9a133, type: 3}
+  hasSpawn: 1
   bulletPrefab: {fileID: 2632547540658908434, guid: 9bffa467356781c41b1ab218b1e6974c,
     type: 3}
   arrow: {fileID: 8345421285771850965}

@@ -60,6 +60,8 @@ public class EnnemiController : MonoBehaviour
 
     public GameObject Remains;
 
+    public bool hasSpawn;
+
     // Start is called before the first frame update
     public virtual void Start()
     {
@@ -97,43 +99,48 @@ public class EnnemiController : MonoBehaviour
     // Update is called once per frame
     public virtual void FixedUpdate()
     {
-        if(playerWasDetected == false && playerDetected == true)
+        if (hasSpawn == true)
         {
-            InvokeRepeating("UpdatePath", 0f, 0.3f);
+
+            if (playerWasDetected == false && playerDetected == true)
+            {
+                InvokeRepeating("UpdatePath", 0f, 0.3f);
+            }
+
+            if (path != null)
+            {
+                if (currentWayPoint >= path.vectorPath.Count)
+                {
+                    reachedEndPoint = true;
+                    return;
+                }
+                else
+                {
+                    reachedEndPoint = false;
+                }
+
+                direction = ((Vector2)path.vectorPath[currentWayPoint] - rb.position).normalized;
+                if (isFlying)
+                {
+                    rb.AddForce(direction * speed * Time.fixedDeltaTime);
+                }
+                else
+                {
+
+                    rb.AddForce(new Vector2(direction.x, 0) * speed * Time.fixedDeltaTime);
+                }
+
+                float distance = Vector2.Distance(rb.position, path.vectorPath[currentWayPoint]);
+
+                if (distance < nextWayPointDistance)
+                {
+                    currentWayPoint++;
+                }
+            }
+
+            playerWasDetected = playerDetected;
+
         }
-
-        if (path!= null)
-        {
-            if(currentWayPoint >= path.vectorPath.Count)
-            {
-                reachedEndPoint = true;
-                return;
-            }
-            else
-            {
-                reachedEndPoint = false;
-            }
-
-            direction = ((Vector2)path.vectorPath[currentWayPoint] - rb.position).normalized;
-            if (isFlying)
-            {
-                rb.AddForce(direction * speed * Time.fixedDeltaTime);
-            }
-            else
-            {
-
-                rb.AddForce(new Vector2 (direction.x,0) * speed * Time.fixedDeltaTime);
-            }
-
-            float distance = Vector2.Distance(rb.position, path.vectorPath[currentWayPoint]);
-
-            if(distance < nextWayPointDistance)
-            {
-                currentWayPoint++;
-            }
-        }
-
-        playerWasDetected = playerDetected;
     }
 
     void GetEnnemies()
@@ -175,44 +182,47 @@ public class EnnemiController : MonoBehaviour
 
     public IEnumerator TakeDamage(int amount)
     {
-        MovementController.mC.canDoubleJump = true;
-        BaseSlashInstancier.bsi.slashNumb = BaseSlashInstancier.bsi.slashNumbMax;
-        BaseSlashInstancier.bsi.canGainHeight = true;
-
-        if (amount == 1)
+        if (hasSpawn == true)
         {
-            CameraShake.cs.WeakShake();
+
+            MovementController.mC.canDoubleJump = true;
+            BaseSlashInstancier.bsi.slashNumb = BaseSlashInstancier.bsi.slashNumbMax;
+            BaseSlashInstancier.bsi.canGainHeight = true;
+
+            if (amount == 1)
+            {
+                CameraShake.cs.WeakShake();
+            }
+            else if (amount == 2)
+            {
+                CameraShake.cs.StrongShake();
+            }
+
+            health -= amount;
+            if (health > 0)
+            {
+                animator.SetTrigger("IsTakingDamage");
+
+                sr.material = shaderMaterial1;
+
+                yield return new WaitForSeconds(0.1f);
+
+                sr.material = shaderMaterial2;
+
+                yield return new WaitForSeconds(0.05f);
+
+                sr.material = defautlMaterial;
+            }
+            else if (health <= 0)
+            {
+                Die();
+            }
+
+            /*if (tough == false)
+            {
+                Die();
+            }*/
         }
-        else if (amount == 2)
-        {
-            CameraShake.cs.StrongShake();
-        }
-
-        health -= amount;
-        if (health > 0)
-        {
-            animator.SetTrigger("IsTakingDamage");
-
-            sr.material = shaderMaterial1;
-
-            yield return new WaitForSeconds(0.1f);
-
-            sr.material = shaderMaterial2;
-
-            yield return new WaitForSeconds(0.05f);
-
-            sr.material = defautlMaterial;
-        }
-        else if (health <= 0)
-        {
-            Die();
-        }
-
-        /*if (tough == false)
-        {
-            Die();
-        }*/
-
     }
 
     public IEnumerator DamageDash(Vector2 dashDirection, float duration, float movementForce, float momentumMultiplier)
@@ -342,5 +352,15 @@ public class EnnemiController : MonoBehaviour
     public void deactivate()
     {
         gameObject.SetActive(false);
+    }
+
+    public void spawning()
+    {
+        hasSpawn = false;
+    }
+
+    public void spawned()
+    {
+        hasSpawn = true;
     }
 }

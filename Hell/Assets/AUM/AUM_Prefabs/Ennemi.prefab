@@ -463,6 +463,9 @@ MonoBehaviour:
   coolDown: 1.5
   coolDownTimer: 0
   isFlying: 1
+  playerWasDetected: 0
+  Remains: {fileID: 0}
+  hasSpawn: 1
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 3972673011885713921}
@@ -470,6 +473,7 @@ MonoBehaviour:
   bulletForce: 20
   preparationDuration: 0.6
   ennemiDetection: {fileID: 1311175769}
+  isTypeB: 0
 --- !u!114 &2070220071
 MonoBehaviour:
   m_ObjectHideFlags: 0

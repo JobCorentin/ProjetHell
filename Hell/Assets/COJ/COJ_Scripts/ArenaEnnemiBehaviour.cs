@@ -8,11 +8,15 @@ namespace Cinemachine
     {
         public EnnemiWave wave;
         public EnnemiController enemiStat;
+        Animator animator;
 
-        private void Start()
+        private void Awake()
         {
             enemiStat = gameObject.GetComponent<EnnemiController>();
             wave = gameObject.GetComponentInParent<EnnemiWave>();
+            animator = gameObject.GetComponent<Animator>();
+            animator.SetBool("Spawning",true);
+            StartCoroutine(isSpawning());
         }
 
         void Update()
@@ -21,6 +25,16 @@ namespace Cinemachine
             {
                 wave.waveEnnemi.Remove(gameObject);
             }
+        }
+
+        IEnumerator isSpawning()
+        {
+            float spawnTime = Random.Range(0.5f, 1.5f);
+            enemiStat.hasSpawn = false;
+
+            yield return new WaitForSeconds(spawnTime);
+
+            animator.SetTrigger("hasSpawn");
         }
     }
 }

@@ -34,69 +34,72 @@ public class EnnemiOneController : EnnemiController
     // Update is called once per frame
     public override void FixedUpdate()
     {
-        if(stunned == true)
+        if (hasSpawn == true)
         {
-            return;
-        }
-
-        if(playerDetected == false)
-        {
-            Detection();
-        }
-        else
-        {
-            target = pTransform.position + ((transform.position - pTransform.position).normalized * range);
-
-            for (int i = 0; i < ennemiDetection.ennemiControllers.Count; i++)
+            if (stunned == true)
             {
-                target += (Vector2)(transform.position - ennemiDetection.ennemiControllers[i].transform.position).normalized * 3f;
+                return;
             }
 
-            if (Vector2.Distance(target, transform.position) >= 0.5f)
+            if (playerDetected == false)
             {
-                base.FixedUpdate();
+                Detection();
             }
-
-            if (Vector2.Distance(transform.position, pTransform.position) <= range * 2f)
+            else
             {
-                numbWhoHasAttacked = 0;
-                bool canAttack = true;
+                target = pTransform.position + ((transform.position - pTransform.position).normalized * range);
 
-                for (int i = 0; i < ennemy_Controllers.Length; i++)
+                for (int i = 0; i < ennemiDetection.ennemiControllers.Count; i++)
                 {
-                    if (ennemy_Controllers[i].hasAttacked == true && ennemy_Controllers[i].gameObject.activeSelf == true)
-                    {
-                        numbWhoHasAttacked++;
-                    }
+                    target += (Vector2)(transform.position - ennemiDetection.ennemiControllers[i].transform.position).normalized * 3f;
+                }
 
-                    if (ennemy_Controllers[i].coolDownTimer > ennemy_Controllers[i].coolDown && ennemy_Controllers[i].gameObject.activeSelf == true)
+                if (Vector2.Distance(target, transform.position) >= 0.5f)
+                {
+                    base.FixedUpdate();
+                }
+
+                if (Vector2.Distance(transform.position, pTransform.position) <= range * 2f)
+                {
+                    numbWhoHasAttacked = 0;
+                    bool canAttack = true;
+
+                    for (int i = 0; i < ennemy_Controllers.Length; i++)
                     {
-                        if (Vector2.Distance(MovementController.mC.rb.transform.position, ennemy_Controllers[i].transform.position) <
-                        Vector2.Distance(MovementController.mC.rb.transform.position, transform.position))
+                        if (ennemy_Controllers[i].hasAttacked == true && ennemy_Controllers[i].gameObject.activeSelf == true)
                         {
-                            canAttack = false;
+                            numbWhoHasAttacked++;
                         }
+
+                        if (ennemy_Controllers[i].coolDownTimer > ennemy_Controllers[i].coolDown && ennemy_Controllers[i].gameObject.activeSelf == true)
+                        {
+                            if (Vector2.Distance(MovementController.mC.rb.transform.position, ennemy_Controllers[i].transform.position) <
+                            Vector2.Distance(MovementController.mC.rb.transform.position, transform.position))
+                            {
+                                canAttack = false;
+                            }
+                        }
+
                     }
 
+                    if (coolDownTimer >= coolDown && numbWhoHasAttacked < numberBetweenGroupAttack && canAttack)
+                    {
+                        lastLaunchBullet = StartCoroutine(LaunchBullet());
+                        coolDownTimer = 0;
+                    }
+                    else
+                    {
+                        coolDownTimer += Time.fixedDeltaTime;
+                    }
+
+
+
+
                 }
 
-                if (coolDownTimer >= coolDown && numbWhoHasAttacked < numberBetweenGroupAttack && canAttack)
-                {
-                    lastLaunchBullet = StartCoroutine(LaunchBullet());
-                    coolDownTimer = 0;
-                }
-                else
-                {
-                    coolDownTimer += Time.fixedDeltaTime;
-                }
-                
-
-
-
+                //if(Vector2.Distance(transform.position, pTransform.position))
+                //rb.AddForce(pTransform)
             }
-
-            //if(Vector2.Distance(transform.position, pTransform.position))
-            //rb.AddForce(pTransform)
         }
 
 

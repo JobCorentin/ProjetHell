@@ -21,6 +21,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2972335080529176160, guid: 15095481eedb1d94b83ad88eb6a981a4,
+        type: 3}
+      propertyPath: hasSpawn
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5635878640082345347, guid: 15095481eedb1d94b83ad88eb6a981a4,
         type: 3}
       propertyPath: m_Name
@@ -29,6 +34,17 @@ PrefabInstance:
     - target: {fileID: 5635878640082345347, guid: 15095481eedb1d94b83ad88eb6a981a4,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059860427982487036, guid: 15095481eedb1d94b83ad88eb6a981a4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6014610053731629956, guid: e0815b7b272649f42b20d3392e6a58e8,
+        type: 3}
+    - target: {fileID: 6059860427982487036, guid: 15095481eedb1d94b83ad88eb6a981a4,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8127314753870370868, guid: 15095481eedb1d94b83ad88eb6a981a4,
