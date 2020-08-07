@@ -7,6 +7,7 @@ public class ZombiSlashCollision : MonoBehaviour
 
     public bool reflected = false;
     public EnnemiThreeBehavior etb;
+    public bool isCentaur;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,9 +20,10 @@ public class ZombiSlashCollision : MonoBehaviour
 
             reflected = true;
 
-            FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.2f, 0.5f));
+            FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.5f, 0.25f));
 
-            etb.PushedBack();
+            if(isCentaur==false)
+                etb.PushedBack();
 
             HealthManager.hm.StartCoroutine(HealthManager.hm.TakeDamage(0));
             Vector2 v = new Vector2(2, 1);

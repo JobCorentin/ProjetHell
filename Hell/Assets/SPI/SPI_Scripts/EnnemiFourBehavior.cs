@@ -13,9 +13,15 @@ public class EnnemiFourBehavior : EnnemiController
     [HideInInspector] public Transform targetTransform;
 
     [HideInInspector] public Vector2 lookAt;
+    [HideInInspector] public Vector2 lastLookAt;
 
     public LayerMask chargeLayers;
     public float distanceFromWall;
+
+    public GameObject katanaPrefab;
+    public float katanaForce;
+    public GameObject katanaLauncher;
+    [HideInInspector] public bool lastPatternWasCharge;
 
     /*
     public Vector2 dashImpulsion;
@@ -48,7 +54,6 @@ public class EnnemiFourBehavior : EnnemiController
         if (lookAt.x <= 0)
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
-
         }
         else
         {
@@ -69,7 +74,13 @@ public class EnnemiFourBehavior : EnnemiController
 
             if (canAttack)
             {
-                if ((pTransform.position.x - transform.position.x) * lookAt.x > 0)// Charge
+                if (pTransform.position.y > transform.position.y + 5 || pTransform.position.y < transform.position.y - 5) //Si le joueur est suffisamment haut, le centaure lance un katana
+                {
+                    target = pTransform.position;
+                    canAttack = false;
+                    StartCoroutine(PrepareKatana());
+                }
+                else if ((pTransform.position.x - transform.position.x) * lookAt.x > 0) // Charge
                 {
                     RaycastHit2D hit = Physics2D.Raycast(transform.position, lookAt, Mathf.Infinity, chargeLayers);
                     if (hit == true & Vector2.Distance(hit.transform.position, transform.position) > distanceFromWall)
@@ -79,10 +90,11 @@ public class EnnemiFourBehavior : EnnemiController
                         StartCoroutine(PrepareCharge());
                     }
                 }
-                else if (pTransform.position.y > transform.position.y) //Si le joueur est suffisamment haut, le centaure lance un katana
+                else
                 {
-
-                    StartCoroutine(BetweenAttack());
+                    target = pTransform.position;
+                    canAttack = false;
+                    StartCoroutine(PrepareKatana());
                 }
             }
 
@@ -90,44 +102,17 @@ public class EnnemiFourBehavior : EnnemiController
             {
                 base.FixedUpdate();
 
+                if (Vector2.Distance(target, transform.position) < 1.25f*distanceFromWall)
+                    animator.SetBool("IsCharging", false);
                 if (Vector2.Distance(target, transform.position) < distanceFromWall)
                 {
                     charge = false;
-                    animator.SetBool("IsCharging", false);
                     slash.SetActive(false);
                     StartCoroutine(BetweenAttack());
                 }
 
             }
-            /*if (Vector2.Distance(target, transform.position) >= 0.5f && stunned == false)
-            {
-                base.FixedUpdate();
-            }*/
-
-
-            /*
-            if (Vector2.Distance(transform.position, pTransform.position) <= range * 2f && canAttack)
-            {
-                if (coolDownTimer >= coolDown)
-                {
-
-                    if (lookAt.x >= 0)
-                        currentDash.x = dashImpulsion.x;
-                    else if (lookAt.x < 0)
-                        currentDash.x = -dashImpulsion.x;
-
-                    StartCoroutine(PrepareAttack());
-                    canAttack = false;
-                    coolDownTimer = 0;
-                }
-                else
-                {
-                    coolDownTimer += Time.fixedDeltaTime;
-                }
-            }
-            else if (canAttack == false)
-                animator.SetBool("Attack", false);
-                */
+       
         }
     }
 
@@ -140,14 +125,50 @@ public class EnnemiFourBehavior : EnnemiController
         charge = true;
         animator.SetBool("IsPreparingCharge", false);
         animator.SetBool("IsCharging", true);
+        lastPatternWasCharge = true;
+    }
+    IEnumerator PrepareKatana()
+    {
+        animator.SetBool("IsPreparingKatana", true);
+        lastLookAt = lookAt;
+        lookAt = pTransform.position - transform.position;
+        yield return new WaitForSeconds(preparationDuration);
+        animator.SetBool("IsPreparingKatana", false);
+        lastPatternWasCharge = false;
+        if(Vector2.Distance(transform.position, pTransform.position) > range)
+        {
+            animator.SetBool("LaunchBoth", true);
+            //StartCoroutine(LaunchingKatana());
+        }
+        else
+        {
+            animator.SetBool("LaunchKatana", true);
+            //StartCoroutine(LaunchingKatana());
+        }
     }
 
     IEnumerator BetweenAttack()
     {
-        lookAt = -lookAt;
+        if (lastPatternWasCharge)
+            lookAt = -lookAt;
+        else
+            lookAt = lastLookAt;
         yield return new WaitForSeconds(coolDown);
         canAttack = true;
+        animator.SetBool("LaunchBoth", false);
+        animator.SetBool("LaunchKatana", false);
     }
+
+    IEnumerator LaunchingKatana()
+    {
+        E2Bullet currentBullet = Instantiate(katanaPrefab).GetComponent<E2Bullet>();
+        currentBullet.transform.position = katanaLauncher.transform.position;
+        Vector2 attackDirection = pTransform.position - katanaLauncher.transform.position;
+        currentBullet.Orient(attackDirection);
+        currentBullet.rb.velocity = attackDirection * katanaForce;
+        yield return null;
+    }
+
     /*
     void EndAttack()
     {

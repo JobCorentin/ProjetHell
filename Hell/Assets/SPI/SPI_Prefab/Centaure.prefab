@@ -123,6 +123,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reflected: 0
   etb: {fileID: 0}
+  isCentaur: 1
+--- !u!1 &1744033078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1744033079}
+  m_Layer: 16
+  m_Name: KatanaLauncher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1744033079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744033078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.81, y: 0.39, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6586246800977173099}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6586246800977173096
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +190,7 @@ Transform:
   m_Children:
   - {fileID: 1003175927}
   - {fileID: 904283937636698690}
+  - {fileID: 1744033079}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -200,7 +232,7 @@ MonoBehaviour:
   range: 5
   nextWayPointDistance: 3
   ennemy_Controllers: []
-  coolDown: 0.8
+  coolDown: 0.75
   coolDownTimer: 0
   isFlying: 0
   playerWasDetected: 0
@@ -212,11 +244,17 @@ MonoBehaviour:
   slash: {fileID: 1003175926}
   targetTransform: {fileID: 0}
   lookAt: {x: 0, y: 0}
+  lastLookAt: {x: 0, y: 0}
   chargeLayers:
     serializedVersion: 2
     m_Bits: 147456
   distanceFromWall: 4
-  preparationDuration: 0.5
+  katanaPrefab: {fileID: 1813276328214907302, guid: ee8d1717cf791fa4a9d079a8eda33463,
+    type: 3}
+  katanaForce: 2
+  katanaLauncher: {fileID: 1744033078}
+  lastPatternWasCharge: 0
+  preparationDuration: 0.8
 --- !u!212 &6586246800977173009
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -349,7 +387,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.40481758, y: -0.41458583}
+  m_Offset: {x: 0.40481758, y: -0.45579958}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -360,7 +398,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3395615, y: 1.0004411}
+  m_Size: {x: 1.3395615, y: 1.0828686}
   m_EdgeRadius: 0
 --- !u!61 &6586246800977173098
 BoxCollider2D:
