@@ -7,6 +7,7 @@ public class FreezTimeManager : MonoBehaviour
     public static FreezTimeManager ftm;
 
     bool isFrozen = false;
+    bool canFreeze = true;
 
     private void Awake()
     {
@@ -23,13 +24,15 @@ public class FreezTimeManager : MonoBehaviour
 
     public IEnumerator FreezeTimeFor(float duration, float newScale)
     {
-        if(isFrozen == false)
+        if(isFrozen == false && canFreeze == true)
         {
             isFrozen = true;
+            canFreeze = false;
             Time.timeScale = newScale;
             yield return new WaitForSecondsRealtime(duration);
             Time.timeScale = 1;
             isFrozen = false;
+            canFreeze = true;
         }
     }
 }
