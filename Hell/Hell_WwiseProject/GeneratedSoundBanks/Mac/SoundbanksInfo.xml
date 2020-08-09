@@ -11,25 +11,65 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1069431850" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\Player</ObjectPath>
-			<ShortName>Player</ShortName>
-			<Path>Player.bnk</Path>
-			<IncludedEvents>
-				<Event Id="1318061999" Name="playerAttack_event" ObjectPath="\Events\Default Work Unit\playerAttack_event" DurationType="OneShot" DurationMin="0.591333" DurationMax="0.591333">
-					<IncludedMemoryFiles>
-						<File Id="372095652" Language="SFX">
-							<ShortName>Sword_Attack_3 (1).wav</ShortName>
-							<Path>SFX\Sword_Attack_3 (1)_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-			</IncludedEvents>
-		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2088000327" Name="Player_Sword_Attack" ObjectPath="\Events\Default Work Unit\Player\Player_Sword_Attack" DurationType="OneShot" DurationMin="0.714848" DurationMax="1.383379">
+					<IncludedMemoryFiles>
+						<File Id="227027860" Language="SFX">
+							<ShortName>SwordMetalSlash_3.wav</ShortName>
+							<Path>SFX\SwordMetalSlash_3_E0A60DC8.wem</Path>
+						</File>
+						<File Id="262896654" Language="SFX">
+							<ShortName>SwordMetalSlash_6.wav</ShortName>
+							<Path>SFX\SwordMetalSlash_6_715C250E.wem</Path>
+						</File>
+						<File Id="270547711" Language="SFX">
+							<ShortName>SwordMetalSlash_2.wav</ShortName>
+							<Path>SFX\SwordMetalSlash_2_1C11CDC8.wem</Path>
+						</File>
+						<File Id="293308061" Language="SFX">
+							<ShortName>SwordWhoosh.wav</ShortName>
+							<Path>SFX\SwordWhoosh_4EA6CE40.wem</Path>
+						</File>
+						<File Id="382664733" Language="SFX">
+							<ShortName>SwordMetalSlash_1.wav</ShortName>
+							<Path>SFX\SwordMetalSlash_1_6FA242BA.wem</Path>
+						</File>
+						<File Id="422114316" Language="SFX">
+							<ShortName>SwordMetalSlash_7.wav</ShortName>
+							<Path>SFX\SwordMetalSlash_7_D841FE79.wem</Path>
+						</File>
+						<File Id="449820504" Language="SFX">
+							<ShortName>SwordMetalSlash_4.wav</ShortName>
+							<Path>SFX\SwordMetalSlash_4_5E56A693.wem</Path>
+						</File>
+						<File Id="528583243" Language="SFX">
+							<ShortName>SwordMetalSlash_5.wav</ShortName>
+							<Path>SFX\SwordMetalSlash_5_BE00F3C9.wem</Path>
+						</File>
+						<File Id="574610569" Language="SFX">
+							<ShortName>SwordMetalSlash_9.wav</ShortName>
+							<Path>SFX\SwordMetalSlash_9_B06E9AF0.wem</Path>
+						</File>
+						<File Id="647441318" Language="SFX">
+							<ShortName>SwordMetalSlash_8.wav</ShortName>
+							<Path>SFX\SwordMetalSlash_8_F2F236D9.wem</Path>
+						</File>
+						<File Id="683137341" Language="SFX">
+							<ShortName>SwordMetalSlash_10.wav</ShortName>
+							<Path>SFX\SwordMetalSlash_10_97D79C07.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

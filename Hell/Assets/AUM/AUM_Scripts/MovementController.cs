@@ -159,7 +159,7 @@ public class MovementController : MonoBehaviour
                     rb.AddForce(new Vector2(xWallJump * -wallSlideBaseInputDir.x, yWallJump).normalized * wallJumpForce * Time.fixedDeltaTime, ForceMode2D.Impulse);
 
                     animator.SetTrigger("Jumping");
-                    SoundManager.instance.PlaySfx(playerJump, playerJumpVolume, 1);
+                    //SoundManager.instance.PlaySfx(playerJump, playerJumpVolume, 1);
 
                     StartCoroutine(IsJumpingFor());
 
@@ -175,7 +175,7 @@ public class MovementController : MonoBehaviour
                     if(canJump == true)
                     {
                         animator.SetTrigger("Jumping");
-                        SoundManager.instance.PlaySfx(playerJump, playerJumpVolume, 1);
+                        //SoundManager.instance.PlaySfx(playerJump, playerJumpVolume, 1);
 
                         if(canDoubleJump == true)
                         {
@@ -187,7 +187,7 @@ public class MovementController : MonoBehaviour
                     else if(canDoubleJump == true)
                     {
                         animator.SetTrigger("DoubleJumping");
-                        SoundManager.instance.PlaySfx(playerJump, playerJumpVolume, 1);
+                        //SoundManager.instance.PlaySfx(playerJump, playerJumpVolume, 1);
                     }
 
                     rb.velocity = new Vector2(rb.velocity.x, 0);

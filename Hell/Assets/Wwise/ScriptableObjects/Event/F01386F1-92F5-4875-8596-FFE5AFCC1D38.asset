@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c912fa2057d54ad4ab196834d509cd80, type: 3}
-  m_Name: 5F9B2710-21C0-413C-88FB-26138C10D335
+  m_Name: F01386F1-92F5-4875-8596-FFE5AFCC1D38
   m_EditorClassIdentifier: 
-  objectName: playerAttack_event
-  id: 1318061999
-  guid: 5F9B2710-21C0-413C-88FB-26138C10D335
+  objectName: Player_Sword_Attack
+  id: 2088000327
+  guid: F01386F1-92F5-4875-8596-FFE5AFCC1D38

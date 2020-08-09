@@ -3,17 +3,43 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="playerAttack_event" ID="{5F9B2710-21C0-413C-88FB-26138C10D335}">
+				<Folder Name="Player" ID="{75942B6A-7B7F-4F1C-9289-B4A10551536E}" ShortID="508610181">
 					<ChildrenList>
-						<Action Name="" ID="{D326228A-3A0E-4B34-BF8B-8FC90CEADB2C}" ShortID="414995068">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Sword_Attack_3 (1)" ID="{B2A6A7DF-D392-4AF3-B196-F18EE5030050}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Player_Sword_Attack" ID="{F01386F1-92F5-4875-8596-FFE5AFCC1D38}">
+							<ChildrenList>
+								<Action Name="" ID="{958D3B53-3DC7-44EB-9563-AA33D0873117}" ShortID="247793063">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sword_Whoosh" ID="{26B8F8A3-0321-4263-A7D0-88E88231E700}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6F1B2CE8-7337-4FCD-B8DA-6629EEF93A60}" ShortID="675835453">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.085">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{819DCAB9-6B91-40FC-BAAC-007E367E8542}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="0.005"/>
+															<Property Name="Min" Type="Real64" Value="-0.005"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sword_MetalSwing" ID="{C3EB2335-944F-4DBE-BF16-BB46A4312F3E}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

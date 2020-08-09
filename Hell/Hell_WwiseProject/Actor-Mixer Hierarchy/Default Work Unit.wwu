@@ -3,7 +3,11 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{F5116C16-750D-4CBA-982E-AE6B8689C727}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Sword_Attack_3 (1)" ID="{B2A6A7DF-D392-4AF3-B196-F18EE5030050}" ShortID="189055251">
+				<ActorMixer Name="Player" ID="{DADCA897-40DA-4D2E-B2E2-8CC207B30147}" ShortID="429869514">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
@@ -13,18 +17,393 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Sword_Attack_3 (1)" ID="{923B7812-2304-4597-9821-67E443D7D819}">
-							<Language>SFX</Language>
-							<AudioFile>Sword_Attack_3 (1).wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="372095652"/>
-							</MediaIDList>
-						</AudioFileSource>
+						<RandomSequenceContainer Name="Sword_MetalSwing" ID="{C3EB2335-944F-4DBE-BF16-BB46A4312F3E}" ShortID="165538353">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{656F2664-316C-4B39-9A11-434D631181F0}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SwordMetalSlash_1" ID="{B3269285-BA88-4BF3-BC53-65DE9085A0BF}" ShortID="320905953">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SwordMetalSlash_1" ID="{BA8EC097-EACB-4D60-8F20-DD4B1267B59A}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.158598142453328"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.097598856894356"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.568513341409623"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SwordMetalSlash_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="382664733"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SwordMetalSlash_1" ID="{BA8EC097-EACB-4D60-8F20-DD4B1267B59A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SwordMetalSlash_2" ID="{9CC20C4D-C68B-4E85-8EE0-34738D01F834}" ShortID="987950961">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SwordMetalSlash_2" ID="{75B2C006-D98A-435C-A9A9-316F715DCBD0}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.301365436585593"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.185948886403877"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.904096309756779"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SwordMetalSlash_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="270547711"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SwordMetalSlash_2" ID="{75B2C006-D98A-435C-A9A9-316F715DCBD0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SwordMetalSlash_3" ID="{07271E79-6184-4358-9EC8-36FC7ECD0DF1}" ShortID="554172919">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SwordMetalSlash_3" ID="{89DD812B-72CA-4942-ADED-1B7A3C8B4AC6}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.2295563088249"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.350930908893238"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.633258782965241"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.630620204702886"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SwordMetalSlash_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="227027860"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SwordMetalSlash_3" ID="{89DD812B-72CA-4942-ADED-1B7A3C8B4AC6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SwordMetalSlash_4" ID="{FC8FC8C7-458A-4797-BBF9-718904F3E6E8}" ShortID="208384386">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SwordMetalSlash_4" ID="{A3387C6C-78D9-4E2F-936B-97A15BD39FE1}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.105543285807474"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.190658838878017"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.280881325132793"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SwordMetalSlash_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="449820504"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SwordMetalSlash_4" ID="{A3387C6C-78D9-4E2F-936B-97A15BD39FE1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SwordMetalSlash_5" ID="{079D4D0E-C97A-4352-96B8-0217D03085B9}" ShortID="608935946">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SwordMetalSlash_5" ID="{D621D629-4C7E-40F8-8ECF-C0F4F3AAFE15}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.235031528593172"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.139163405088063"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.692724505327245"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.680354424874973"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SwordMetalSlash_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="528583243"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SwordMetalSlash_5" ID="{D621D629-4C7E-40F8-8ECF-C0F4F3AAFE15}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SwordMetalSlash_6" ID="{993407AD-09F4-4442-95A4-1C92A644DC99}" ShortID="735637443">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SwordMetalSlash_6" ID="{5A10DAAB-BB86-4F0C-BBA2-4C3F4E38D7AA}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.224278492218805"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.149518994812537"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.54356374056472"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SwordMetalSlash_6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="262896654"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SwordMetalSlash_6" ID="{5A10DAAB-BB86-4F0C-BBA2-4C3F4E38D7AA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SwordMetalSlash_7" ID="{6A80C886-EDA1-46EA-9E91-75A4CA61F451}" ShortID="329755724">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SwordMetalSlash_7" ID="{7CE33229-EAE5-4976-A6FB-AEF500186DB2}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.245130929083962"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.116437191314882"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.839573432112571"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SwordMetalSlash_7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="422114316"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SwordMetalSlash_7" ID="{7CE33229-EAE5-4976-A6FB-AEF500186DB2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SwordMetalSlash_8" ID="{8AFE7B06-7573-45B8-A625-5EC08CB7D0E3}" ShortID="120948939">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SwordMetalSlash_8" ID="{E5D668FE-AA92-46E4-90EF-A5A5CD06D8EA}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.193496451091852"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.144242808995744"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.833793798341254"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SwordMetalSlash_8.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="647441318"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SwordMetalSlash_8" ID="{E5D668FE-AA92-46E4-90EF-A5A5CD06D8EA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SwordMetalSlash_9" ID="{29423DC3-869C-4409-A101-76DBCD1ED222}" ShortID="76888131">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SwordMetalSlash_9" ID="{C1FD09E7-F713-4187-9ACC-9CC4936CDDDB}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.149349858664927"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0880097381418321"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.597399434659709"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.56272893175535"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SwordMetalSlash_9.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="574610569"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SwordMetalSlash_9" ID="{C1FD09E7-F713-4187-9ACC-9CC4936CDDDB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SwordMetalSlash_10" ID="{3EBEB3D6-4D72-4917-BD37-6337B00F39AF}" ShortID="73817529">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SwordMetalSlash_10" ID="{8E02BEA6-3169-49B5-B61C-54D3CA374321}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.177041592892865"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.106224955735719"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.586450276457615"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.579811216724132"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SwordMetalSlash_10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="683137341"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SwordMetalSlash_10" ID="{8E02BEA6-3169-49B5-B61C-54D3CA374321}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="Sword_Whoosh" ID="{26B8F8A3-0321-4263-A7D0-88E88231E700}" ShortID="753894251">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>30</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A9905FE6-57F3-4AEE-A782-85DD3873B118}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="5"/>
+													<Property Name="Min" Type="Real64" Value="-5"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>1500</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4F0C8040-D7FB-4B37-88A4-074D38F34CAB}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="400"/>
+													<Property Name="Min" Type="Real64" Value="-400"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SwordWhoosh" ID="{A9A86ABE-A2B8-4EB6-9C11-C499FE258BC4}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.528857826235517"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.681948249619482"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.292263535551207"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.02292237442922"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>SwordWhoosh.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="293308061"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SwordWhoosh" ID="{A9A86ABE-A2B8-4EB6-9C11-C499FE258BC4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Sword_Attack_3 (1)" ID="{923B7812-2304-4597-9821-67E443D7D819}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

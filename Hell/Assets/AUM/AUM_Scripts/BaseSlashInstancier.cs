@@ -51,7 +51,7 @@ public class BaseSlashInstancier : MonoBehaviour
 
     [Space(10)]
     [Header ("Sound")]
-    public AudioClip playerAttack;
+    public AK.Wwise.Event playerAttackAudio;
     [Range(0f, 5f)] public float playerAttackVolume = 1f;
 
 
@@ -182,7 +182,7 @@ public class BaseSlashInstancier : MonoBehaviour
     IEnumerator Slash(Vector2 currentAttackDirection, Vector2 currentInputDirection)
     {
         animator.SetTrigger("Attacking");
-        SoundManager.instance.PlaySfx(playerAttack, playerAttackVolume, 1);
+        playerAttackAudio.Post(gameObject);
 
         StartCoroutine(IsAttackingFor());
 

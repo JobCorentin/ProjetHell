@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0247f5a8a2212474c9db0fb623f282fb, type: 3}
-  m_Name: 4ED9757B-D5F3-44F0-B64A-0A2D571EFFAC
+  m_Name: AA8A0333-85D1-410E-89E1-7A29E7D73F96
   m_EditorClassIdentifier: 
-  objectName: Player
-  id: 1069431850
-  guid: 4ED9757B-D5F3-44F0-B64A-0A2D571EFFAC
+  objectName: Main
+  id: 3161908922
+  guid: AA8A0333-85D1-410E-89E1-7A29E7D73F96

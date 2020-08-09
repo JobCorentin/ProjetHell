@@ -14,7 +14,7 @@ public class StartingTrigger : MonoBehaviour
 
     private void Start()
     {
-        SoundManager.instance.PlayMusic(musicClip, musicVolumeModificator);
+        //SoundManager.instance.PlayMusic(musicClip, musicVolumeModificator);
         Destroy(gameObject);
     }
 }

@@ -40,33 +40,47 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 4284ab4eb2341646a069c5e5531758ca
     GuidInternal: 
-    m_lastTime: -8586051173574346285
+    m_lastTime: -8586046665625637433
     List:
-    - name: Player
-      guid: 7b75d94ef3d5f044b64a0a2d571effac
-      id: 1069431850
+    - name: Main
+      guid: 33038aaad1850e4189e17a29e7d73f96
+      id: 3161908922
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Player
+      - ElementName: Main
         ObjectType: 7
-      Path: Default Work Unit\Player
+      Path: Default Work Unit\Main
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 14895eb1fb392f4fb3e6729aaa4bce9d
     GuidInternal: 
-    m_lastTime: -8586051173575393486
+    m_lastTime: -8586046665625747227
     List:
-    - name: playerAttack_event
-      guid: 10279b5fc0213c4188fb26138c10d335
-      id: 1318061999
+    - name: Player
+      guid: 6a2b94757f7b1c4f9289b4a10551536e
+      id: 1069431850
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: playerAttack_event
+      - ElementName: Player
+        ObjectType: 4
+      Path: Default Work Unit\Player
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_Sword_Attack
+      guid: f18613f0f59275488596ffe5afcc1d38
+      id: 2088000327
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: Player_Sword_Attack
         ObjectType: 3
-      Path: Default Work Unit\playerAttack_event
+      Path: Default Work Unit\Player\Player_Sword_Attack
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -98,11 +112,6 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8586051183522695524
     List: []
-  ExpandedItems:
-  - /Hell_WwiseProject
-  - /Hell_WwiseProject/Events
-  - /Hell_WwiseProject/Events/Default Work Unit
-  - /Hell_WwiseProject/SoundBanks
-  - /Hell_WwiseProject/SoundBanks/Default Work Unit
+  ExpandedItems: []
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
