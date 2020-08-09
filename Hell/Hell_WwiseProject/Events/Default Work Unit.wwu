@@ -4,25 +4,21 @@
 		<WorkUnit Name="Default Work Unit" ID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" PersistMode="Standalone">
 			<ChildrenList>
 				<Folder Name="Player" ID="{75942B6A-7B7F-4F1C-9289-B4A10551536E}" ShortID="508610181">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Event Name="Player_Sword_Attack" ID="{F01386F1-92F5-4875-8596-FFE5AFCC1D38}">
 							<ChildrenList>
-								<Action Name="" ID="{958D3B53-3DC7-44EB-9563-AA33D0873117}" ShortID="247793063">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Sword_Whoosh" ID="{26B8F8A3-0321-4263-A7D0-88E88231E700}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{6F1B2CE8-7337-4FCD-B8DA-6629EEF93A60}" ShortID="675835453">
 									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.085">
+										<Property Name="Delay" Type="Real64" Value="0.08">
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{819DCAB9-6B91-40FC-BAAC-007E367E8542}">
 														<PropertyList>
 															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="0.005"/>
 															<Property Name="Min" Type="Real64" Value="-0.005"/>
 														</PropertyList>
 													</Modifier>
@@ -33,6 +29,102 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Sword_MetalSwing" ID="{C3EB2335-944F-4DBE-BF16-BB46A4312F3E}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9EC772F3-4673-44A7-B7BE-6694E15EB34F}" ShortID="262406763">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sword_Whoosh" ID="{08104828-8446-44CB-A4D5-2B9D19D6B936}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Jump" ID="{CC132177-5A64-41C6-8EC2-CA6956B754F0}">
+							<ChildrenList>
+								<Action Name="" ID="{9D37D9F1-1DD5-4F11-8537-727A7140FD1C}" ShortID="1019744089">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jump_Whoosh" ID="{03770782-EA6C-4F64-8655-E2D5B41F361B}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{FFDDAC37-1901-406F-87AC-C2E7E5211F12}" ShortID="52863379">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.1">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{09542C5C-76C0-41B0-9B33-0A378B529BAA}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-0.05"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jump_Clothes" ID="{BD311CEE-957C-4875-B868-3D0B83E094E8}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C4847B3D-6654-444D-9F20-5209AD503478}" ShortID="844062590">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.05"/>
+										<Property Name="Probability" Type="Real64" Value="5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jump_Voices" ID="{FF2B2FA0-4963-45AE-A4B3-495F86F2C3CC}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Wall_Slide" ID="{C91D81EB-004F-4E10-8786-D290F13BB671}"/>
+						<Event Name="Player_Footstep" ID="{13E57215-767E-4FDD-A3A8-74615301574A}"/>
+						<Event Name="Player_Parry" ID="{B7025917-3F9F-4677-BACD-1B1AABB84943}">
+							<ChildrenList>
+								<Action Name="" ID="{256CA178-AAA0-4B0B-B74F-FA4DA26B2B9B}" ShortID="995390243">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sword_Impact" ID="{0E266D66-B992-46F5-AFE7-1AD8E38545CE}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Take_Damages" ID="{DC9C5BCB-BE59-4525-92A8-7F99EB66DE8F}">
+							<ChildrenList>
+								<Action Name="" ID="{E935A9E1-EA50-49D5-ACA2-DD2A73F13A93}" ShortID="657952200">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Damage_Hit" ID="{C0CBA1CF-57ED-4FFE-8A30-21F47511CB34}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{57A44B55-743B-40FB-B763-D8BC6AE27463}" ShortID="930754876">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Pain" ID="{991673E5-27A0-4215-9D62-DB84456D0259}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Death" ID="{CF9B3752-0400-40A3-8E44-A2A934A50494}"/>
+						<Event Name="Player_Health_Sounds" ID="{2EF83ABF-0402-45CE-B92F-83B708F40F55}">
+							<ChildrenList>
+								<Action Name="" ID="{05A281B9-7F20-492A-90B3-D68B1B776CFA}" ShortID="614635082">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Breath" ID="{A3101FA5-60C2-472A-BB9A-52D73384B66F}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

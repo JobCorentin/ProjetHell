@@ -20,6 +20,14 @@ public class BaseSlashCollision : MonoBehaviour
 
     [HideInInspector] public Coroutine lastBounce;
 
+
+
+    [Space(10)]
+    [Header("Sounds")]
+    public AK.Wwise.Event playerParryContactAudio;
+
+
+
     private void Awake()
     {
         bsc = this;
@@ -69,7 +77,6 @@ public class BaseSlashCollision : MonoBehaviour
             if (ec.type == 2)
             {
                 EnnemiThreeBehavior erc = ec.GetComponent<EnnemiThreeBehavior>();
-
                 erc.StopAttack();
             }
 
@@ -93,6 +100,7 @@ public class BaseSlashCollision : MonoBehaviour
 
     public IEnumerator Bounce()
     {
+
         BetterJump.bj.lowJumpMultiplier = 1;
 
         bouncing = true;

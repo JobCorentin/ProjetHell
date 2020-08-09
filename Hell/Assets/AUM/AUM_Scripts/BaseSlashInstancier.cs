@@ -52,7 +52,7 @@ public class BaseSlashInstancier : MonoBehaviour
     [Space(10)]
     [Header ("Sound")]
     public AK.Wwise.Event playerAttackAudio;
-    [Range(0f, 5f)] public float playerAttackVolume = 1f;
+
 
 
     void Start()

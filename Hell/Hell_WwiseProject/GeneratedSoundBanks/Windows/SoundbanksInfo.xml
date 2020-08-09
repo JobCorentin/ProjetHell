@@ -21,55 +21,134 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2088000327" Name="Player_Sword_Attack" ObjectPath="\Events\Default Work Unit\Player\Player_Sword_Attack" DurationType="OneShot" DurationMin="0.714848" DurationMax="1.383379">
+				<Event Id="2975122654" Name="Player_Health_Sounds" ObjectPath="\Events\Default Work Unit\Player\Player_Health_Sounds" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="125666552" Language="SFX">
+							<ShortName>CC-CK VO Male 01 Breath Slow.wav</ShortName>
+							<Path>SFX\CC-CK VO Male 01 Breath Slow_3BCED0C6.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1305133589" Name="Player_Jump" ObjectPath="\Events\Default Work Unit\Player\Player_Jump" DurationType="OneShot" DurationMin="0.675674" DurationMax="1.246958">
+					<IncludedMemoryFiles>
+						<File Id="1017632" Language="SFX">
+							<ShortName>JumpClothes_7.wav</ShortName>
+							<Path>SFX\JumpClothes_7_4D29A588.wem</Path>
+						</File>
+						<File Id="67714508" Language="SFX">
+							<ShortName>JumpClothes_5.wav</ShortName>
+							<Path>SFX\JumpClothes_5_50282B71.wem</Path>
+						</File>
+						<File Id="110725631" Language="SFX">
+							<ShortName>JumpClothes_3.wav</ShortName>
+							<Path>SFX\JumpClothes_3_18449C4E.wem</Path>
+						</File>
+						<File Id="322264621" Language="SFX">
+							<ShortName>JumpClothes_1.wav</ShortName>
+							<Path>SFX\JumpClothes_1_0D2EE645.wem</Path>
+						</File>
+						<File Id="405455083" Language="SFX">
+							<ShortName>JumpClothes_4.wav</ShortName>
+							<Path>SFX\JumpClothes_4_C71F3D54.wem</Path>
+						</File>
+						<File Id="432712411" Language="SFX">
+							<ShortName>PlayerVoiceJump_1.wav</ShortName>
+							<Path>SFX\PlayerVoiceJump_1_10C4C929.wem</Path>
+						</File>
+						<File Id="529911862" Language="SFX">
+							<ShortName>JumpClothes_6.wav</ShortName>
+							<Path>SFX\JumpClothes_6_70A8BD6C.wem</Path>
+						</File>
+						<File Id="690019946" Language="SFX">
+							<ShortName>PlayerVoiceJump_2.wav</ShortName>
+							<Path>SFX\PlayerVoiceJump_2_10C4C929.wem</Path>
+						</File>
+						<File Id="804780276" Language="SFX">
+							<ShortName>JumpClothes_8.wav</ShortName>
+							<Path>SFX\JumpClothes_8_983BDF1E.wem</Path>
+						</File>
+						<File Id="914218953" Language="SFX">
+							<ShortName>JumpClothes_2.wav</ShortName>
+							<Path>SFX\JumpClothes_2_E83034EB.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4017406829" Name="Player_Parry" ObjectPath="\Events\Default Work Unit\Player\Player_Parry" DurationType="OneShot" DurationMin="0.893556" DurationMax="1.002982">
+					<IncludedMemoryFiles>
+						<File Id="206956865" Language="SFX">
+							<ShortName>Sword_Impact.wav</ShortName>
+							<Path>SFX\Sword_Impact_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2088000327" Name="Player_Sword_Attack" ObjectPath="\Events\Default Work Unit\Player\Player_Sword_Attack" DurationType="OneShot" DurationMin="0.709848" DurationMax="1.373379">
 					<IncludedMemoryFiles>
 						<File Id="227027860" Language="SFX">
 							<ShortName>SwordMetalSlash_3.wav</ShortName>
-							<Path>SFX\SwordMetalSlash_3_E0A60DC8.wem</Path>
+							<Path>SFX\SwordMetalSlash_3_9BB583E2.wem</Path>
 						</File>
 						<File Id="262896654" Language="SFX">
 							<ShortName>SwordMetalSlash_6.wav</ShortName>
-							<Path>SFX\SwordMetalSlash_6_715C250E.wem</Path>
+							<Path>SFX\SwordMetalSlash_6_F1A4802C.wem</Path>
 						</File>
 						<File Id="270547711" Language="SFX">
 							<ShortName>SwordMetalSlash_2.wav</ShortName>
-							<Path>SFX\SwordMetalSlash_2_1C11CDC8.wem</Path>
-						</File>
-						<File Id="293308061" Language="SFX">
-							<ShortName>SwordWhoosh.wav</ShortName>
-							<Path>SFX\SwordWhoosh_4EA6CE40.wem</Path>
+							<Path>SFX\SwordMetalSlash_2_B5FCCBFF.wem</Path>
 						</File>
 						<File Id="382664733" Language="SFX">
 							<ShortName>SwordMetalSlash_1.wav</ShortName>
-							<Path>SFX\SwordMetalSlash_1_6FA242BA.wem</Path>
+							<Path>SFX\SwordMetalSlash_1_95C074CD.wem</Path>
 						</File>
 						<File Id="422114316" Language="SFX">
 							<ShortName>SwordMetalSlash_7.wav</ShortName>
-							<Path>SFX\SwordMetalSlash_7_D841FE79.wem</Path>
+							<Path>SFX\SwordMetalSlash_7_78ED1016.wem</Path>
 						</File>
 						<File Id="449820504" Language="SFX">
 							<ShortName>SwordMetalSlash_4.wav</ShortName>
-							<Path>SFX\SwordMetalSlash_4_5E56A693.wem</Path>
+							<Path>SFX\SwordMetalSlash_4_EB95CDAD.wem</Path>
 						</File>
 						<File Id="528583243" Language="SFX">
 							<ShortName>SwordMetalSlash_5.wav</ShortName>
-							<Path>SFX\SwordMetalSlash_5_BE00F3C9.wem</Path>
+							<Path>SFX\SwordMetalSlash_5_9530B133.wem</Path>
 						</File>
 						<File Id="574610569" Language="SFX">
 							<ShortName>SwordMetalSlash_9.wav</ShortName>
-							<Path>SFX\SwordMetalSlash_9_B06E9AF0.wem</Path>
+							<Path>SFX\SwordMetalSlash_9_D9E434C1.wem</Path>
 						</File>
 						<File Id="647441318" Language="SFX">
 							<ShortName>SwordMetalSlash_8.wav</ShortName>
-							<Path>SFX\SwordMetalSlash_8_F2F236D9.wem</Path>
+							<Path>SFX\SwordMetalSlash_8_5CF56C04.wem</Path>
 						</File>
 						<File Id="683137341" Language="SFX">
 							<ShortName>SwordMetalSlash_10.wav</ShortName>
-							<Path>SFX\SwordMetalSlash_10_97D79C07.wem</Path>
+							<Path>SFX\SwordMetalSlash_10_A5429B5A.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1229797707" Name="Player_Take_Damages" ObjectPath="\Events\Default Work Unit\Player\Player_Take_Damages" DurationType="OneShot" DurationMin="0.605137" DurationMax="0.768822">
+					<IncludedMemoryFiles>
+						<File Id="97750179" Language="SFX">
+							<ShortName>Player Damage.wav</ShortName>
+							<Path>SFX\Player Damage_10C4C929.wem</Path>
+						</File>
+						<File Id="451454607" Language="SFX">
+							<ShortName>PlayerPain_2.wav</ShortName>
+							<Path>SFX\PlayerPain_2_0DE2AD0A.wem</Path>
+						</File>
+						<File Id="623300503" Language="SFX">
+							<ShortName>PlayerPain_6.wav</ShortName>
+							<Path>SFX\PlayerPain_6_8C7E7C05.wem</Path>
+						</File>
+						<File Id="698514762" Language="SFX">
+							<ShortName>PlayerPain_1.wav</ShortName>
+							<Path>SFX\PlayerPain_1_286B9F3F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="444815956" Name="PlayerLife" ObjectPath="\Game Parameters\Default Work Unit\PlayerLife"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

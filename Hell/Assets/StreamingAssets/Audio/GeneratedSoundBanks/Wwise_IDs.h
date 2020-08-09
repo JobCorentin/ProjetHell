@@ -13,8 +13,17 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAYER_HEALTH_SOUNDS = 2975122654U;
+        static const AkUniqueID PLAYER_JUMP = 1305133589U;
+        static const AkUniqueID PLAYER_PARRY = 4017406829U;
         static const AkUniqueID PLAYER_SWORD_ATTACK = 2088000327U;
+        static const AkUniqueID PLAYER_TAKE_DAMAGES = 1229797707U;
     } // namespace EVENTS
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID PLAYERLIFE = 444815956U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

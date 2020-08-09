@@ -5,6 +5,10 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{AA8A0333-85D1-410E-89E1-7A29E7D73F96}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Player_Jump" ID="{CC132177-5A64-41C6-8EC2-CA6956B754F0}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Take_Damages" ID="{DC9C5BCB-BE59-4525-92A8-7F99EB66DE8F}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Health_Sounds" ID="{2EF83ABF-0402-45CE-B92F-83B708F40F55}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Parry" ID="{B7025917-3F9F-4677-BACD-1B1AABB84943}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Sword_Attack" ID="{F01386F1-92F5-4875-8596-FFE5AFCC1D38}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
