@@ -72,7 +72,7 @@ public class BaseSlashCollision : MonoBehaviour
             {
                 EnnemiTwoBehaviorTest etc = ec.GetComponent<EnnemiTwoBehaviorTest>();
 
-                etc.StopLaunchBullet();
+                etc.StopMusket();
             }
             if (ec.type == 2)
             {

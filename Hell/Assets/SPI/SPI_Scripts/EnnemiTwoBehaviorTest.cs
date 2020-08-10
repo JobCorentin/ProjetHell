@@ -264,4 +264,10 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         if (lastLaunchBullet != null)
             StopCoroutine(lastLaunchBullet);
     }
+
+    public void StopMusket()
+    {
+        StopCoroutine(lastLaunchBullet);
+        StopCoroutine(CooldownAim());
+    }
 }
