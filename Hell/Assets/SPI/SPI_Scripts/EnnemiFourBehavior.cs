@@ -163,10 +163,11 @@ public class EnnemiFourBehavior : EnnemiController
     {
         E2Bullet currentBullet = Instantiate(katanaPrefab).GetComponent<E2Bullet>();
         currentBullet.transform.position = katanaLauncher.transform.position;
-        Vector2 attackDirection = pTransform.position - katanaLauncher.transform.position;
+        Vector2 attackDirection = pTransform.position - katanaLauncher.transform.position ;
+        attackDirection = (attackDirection + ((Vector2)(pTransform.position - katanaLauncher.transform.position) * 10)).normalized;
         currentBullet.Orient(attackDirection);
         currentBullet.rb.velocity = attackDirection * katanaForce;
-        yield return null;
+       yield return null;
     }
 
     public void StopAttack()
