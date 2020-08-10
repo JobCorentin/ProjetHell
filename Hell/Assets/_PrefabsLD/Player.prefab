@@ -124,6 +124,7 @@ MonoBehaviour:
   rb: {fileID: 7360886272903129566}
   dustPS: {fileID: 784676894}
   smallDustPS: {fileID: 1311573108}
+  mv: {fileID: 7360886272903129554}
 --- !u!114 &1745105566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -911,7 +912,7 @@ MonoBehaviour:
   col: {fileID: 1308424749}
   speed: 4000
   jumpForce: 1250
-  secondJumpForce: 1500
+  secondJumpForce: 1800
   speedMultiplier: 1
   antiProjectedMultiplier: 0
   groundLayers:
@@ -932,6 +933,7 @@ MonoBehaviour:
   yWallJump: 1.5
   wallJumpForce: 2000
   stuned: 0
+  pushedBack: 0
   playerJumpAudio:
     idInternal: 0
     valueGuidInternal: 

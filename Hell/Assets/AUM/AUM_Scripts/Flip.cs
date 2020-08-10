@@ -9,6 +9,7 @@ public class Flip : MonoBehaviour
     public ParticleSystem dustPS;
     public ParticleSystem smallDustPS;
     float baseDustPSX;
+    public MovementController mv;
 
     // Start is called before the first frame update
     void Start()
@@ -22,18 +23,21 @@ public class Flip : MonoBehaviour
         if (Mathf.Abs(rb.velocity.x) < 0.1f)
             return;
 
-        if (rb.velocity.x < 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-            //gameObject.transform.GetComponent<SpriteRenderer>().flipX = true;
-        }
 
-        if (rb.velocity.x > 0)
+        if (mv.pushedBack == false)
         {
-            transform.localScale = new Vector3(1, 1, 1);
-            //gameObject.transform.GetComponent<SpriteRenderer>().flipX = false;
-        }
+            if (rb.velocity.x < 0)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+                //gameObject.transform.GetComponent<SpriteRenderer>().flipX = true;
+            }
 
+            if (rb.velocity.x > 0)
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+                //gameObject.transform.GetComponent<SpriteRenderer>().flipX = false;
+            }
+        }
 
     }
 

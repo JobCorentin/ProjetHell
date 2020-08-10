@@ -19,6 +19,7 @@ public class EnnemiOneController : EnnemiController
     Coroutine lastLaunchBullet;
 
     public bool isTypeB;
+    [HideInInspector] public bool isAttacking;
 
     // Start is called before the first frame update
     public override void Start()
@@ -45,7 +46,7 @@ public class EnnemiOneController : EnnemiController
             {
                 Detection();
             }
-            else
+            else 
             {
                 target = pTransform.position + ((transform.position - pTransform.position).normalized * range);
 
@@ -81,18 +82,18 @@ public class EnnemiOneController : EnnemiController
                         }
 
                     }
-
-                    if (coolDownTimer >= coolDown && numbWhoHasAttacked < numberBetweenGroupAttack && canAttack)
+                    if (isAttacking == false)
                     {
-                        lastLaunchBullet = StartCoroutine(LaunchBullet());
-                        coolDownTimer = 0;
+                        if (coolDownTimer >= coolDown && numbWhoHasAttacked < numberBetweenGroupAttack && canAttack)
+                        {
+                            lastLaunchBullet = StartCoroutine(LaunchBullet());
+                            coolDownTimer = 0;
+                        }
+                        else
+                        {
+                            coolDownTimer += Time.fixedDeltaTime;
+                        }
                     }
-                    else
-                    {
-                        coolDownTimer += Time.fixedDeltaTime;
-                    }
-
-
 
 
                 }
@@ -108,6 +109,7 @@ public class EnnemiOneController : EnnemiController
 
     IEnumerator LaunchBullet()
     {
+        isAttacking = true;
         StartCoroutine(HasAttackedFor(timeBetweenGroupAttack));
 
         Vector2 baseDirectionAttack = pTransform.position - transform.position;
@@ -171,18 +173,18 @@ public class EnnemiOneController : EnnemiController
 
         arrow.SetActive(false);
         arrow2.SetActive(false);
-
+        isAttacking = false;
         yield break;
     }
 
     public void StopLaunchBullet()
     {
         animator.SetBool("IsPreparing", false);
-
         arrow.SetActive(false);
         arrow2.SetActive(false);
-
         if(lastLaunchBullet != null)
             StopCoroutine(lastLaunchBullet);
+
+        isAttacking = true;
     }
 }

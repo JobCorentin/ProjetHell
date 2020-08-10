@@ -60,7 +60,7 @@ public class MovementController : MonoBehaviour
 
     public Coroutine lastChangeSpeed;
 
-
+    [HideInInspector] public bool pushedBack;
 
 
 
@@ -78,7 +78,7 @@ public class MovementController : MonoBehaviour
     {
         wasGrounded = false;
         isGrounded = false;
-
+        pushedBack = false;
         originalSpeed = speed;
     }
 
@@ -291,7 +291,7 @@ public class MovementController : MonoBehaviour
 
             yield return new WaitForFixedUpdate();
         }
-
+        //pushedBack = false;
         stuned = false;
     }
 
@@ -319,5 +319,12 @@ public class MovementController : MonoBehaviour
         {
             Instantiate(dust, groundCheck.transform.position, Quaternion.identity);
         }
+    }
+
+    public IEnumerator Pushed(float duration)
+    {
+        pushedBack = true;
+        yield return new WaitForSeconds(duration);
+        pushedBack = false;
     }
 }

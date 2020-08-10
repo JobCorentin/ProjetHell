@@ -169,6 +169,21 @@ public class EnnemiFourBehavior : EnnemiController
         yield return null;
     }
 
+    public void StopAttack()
+    {
+        StopCoroutine(LaunchingKatana());
+        StopCoroutine(BetweenAttack());
+        StopCoroutine(PrepareCharge());
+        StopCoroutine(PrepareKatana());
+        stunned = true;
+        charge = false;
+        slash.SetActive(false);
+        animator.SetBool("IsCharging", false);
+        animator.SetBool("LaunchBoth", false);
+        animator.SetBool("LaunchKatana", false);
+        animator.SetBool("IsPreparingCharge", false);
+    }
+
     /*
     void EndAttack()
     {
@@ -178,15 +193,6 @@ public class EnnemiFourBehavior : EnnemiController
         animator.SetBool("Attack", false);
     }
 
-    public void StopAttack()
-    {
-        animator.SetBool("Attack", false);
-        animator.SetBool("IsPreparing", false);
-        stunned = true;
-        //slash.SetActive(false);
-        animator.SetBool("IsStun", true);
-        StartCoroutine(Recover());
-    }
     IEnumerator Recover()
     {
         yield return new WaitForSeconds(0.5f);
