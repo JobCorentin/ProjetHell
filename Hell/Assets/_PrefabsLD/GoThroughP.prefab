@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5865853581549568214}
   - component: {fileID: 5865853581549575976}
   - component: {fileID: 9033725417077986726}
-  m_Layer: 8
-  m_Name: Platform (4)
+  m_Layer: 19
+  m_Name: GoThroughP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

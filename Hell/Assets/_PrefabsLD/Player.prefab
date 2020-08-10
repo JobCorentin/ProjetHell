@@ -916,7 +916,7 @@ MonoBehaviour:
   antiProjectedMultiplier: 0
   groundLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 524544
   wallLayers:
     serializedVersion: 2
     m_Bits: 16640
