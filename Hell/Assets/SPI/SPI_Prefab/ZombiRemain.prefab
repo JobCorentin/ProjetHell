@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8529136719448731527}
   - component: {fileID: 5986738731817854435}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ZombiRemain
   m_TagString: Untagged
   m_Icon: {fileID: 0}

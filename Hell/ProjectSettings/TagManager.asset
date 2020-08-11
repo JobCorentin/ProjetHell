@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ennemi
   - Props
+  - Parallax
   layers:
   - Default
   - TransparentFX

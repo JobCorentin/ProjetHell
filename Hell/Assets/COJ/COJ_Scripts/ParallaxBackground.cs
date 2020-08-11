@@ -11,11 +11,12 @@ public class ParallaxBackground : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cameraTransform = GameObject.FindGameObjectWithTag("MainCamera").transform;
         lastCameraPosition = cameraTransform.position;
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         Vector3 deltaMovement = cameraTransform.position - lastCameraPosition;
         transform.position += new Vector3(deltaMovement.x * parallaxEffectMultiplier.x, deltaMovement.y * parallaxEffectMultiplier.y);
