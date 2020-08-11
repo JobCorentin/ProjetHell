@@ -163,10 +163,26 @@ public class EnnemiFourBehavior : EnnemiController
     {
         E2Bullet currentBullet = Instantiate(katanaPrefab).GetComponent<E2Bullet>();
         currentBullet.transform.position = katanaLauncher.transform.position;
-        Vector2 attackDirection = pTransform.position - katanaLauncher.transform.position;
+        Vector2 attackDirection = pTransform.position - katanaLauncher.transform.position ;
+        attackDirection = (attackDirection + ((Vector2)(pTransform.position - katanaLauncher.transform.position) * 10)).normalized;
         currentBullet.Orient(attackDirection);
         currentBullet.rb.velocity = attackDirection * katanaForce;
-        yield return null;
+       yield return null;
+    }
+
+    public void StopAttack()
+    {
+        StopCoroutine(LaunchingKatana());
+        StopCoroutine(BetweenAttack());
+        StopCoroutine(PrepareCharge());
+        StopCoroutine(PrepareKatana());
+        stunned = true;
+        charge = false;
+        slash.SetActive(false);
+        animator.SetBool("IsCharging", false);
+        animator.SetBool("LaunchBoth", false);
+        animator.SetBool("LaunchKatana", false);
+        animator.SetBool("IsPreparingCharge", false);
     }
 
     /*
@@ -178,15 +194,6 @@ public class EnnemiFourBehavior : EnnemiController
         animator.SetBool("Attack", false);
     }
 
-    public void StopAttack()
-    {
-        animator.SetBool("Attack", false);
-        animator.SetBool("IsPreparing", false);
-        stunned = true;
-        //slash.SetActive(false);
-        animator.SetBool("IsStun", true);
-        StartCoroutine(Recover());
-    }
     IEnumerator Recover()
     {
         yield return new WaitForSeconds(0.5f);

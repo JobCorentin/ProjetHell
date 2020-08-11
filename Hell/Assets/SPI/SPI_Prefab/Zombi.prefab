@@ -123,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reflected: 0
   etb: {fileID: 2972335080529176160}
+  isCentaur: 0
 --- !u!1 &3440117890736498078
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +271,7 @@ MonoBehaviour:
   slash: {fileID: 1323936563}
   canAttack: 0
   lookAt: {x: 0, y: 0}
-  dashImpulsion: {x: 1, y: 0.4}
+  dashImpulsion: {x: 1, y: 0}
   currentDash: {x: 0, y: 0}
   duration: 0.25
   movementForce: 1200

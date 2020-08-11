@@ -267,7 +267,13 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
     public void StopMusket()
     {
-        StopCoroutine(lastLaunchBullet);
+        animator.SetBool("IsAiming", false);
+
+        arrow.SetActive(false);
+        arrow2.SetActive(false);
+
+        if (lastLaunchBullet != null)
+            StopCoroutine(lastLaunchBullet);
         StopCoroutine(CooldownAim());
     }
 }

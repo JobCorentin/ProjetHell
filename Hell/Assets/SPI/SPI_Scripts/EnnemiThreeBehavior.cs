@@ -155,7 +155,7 @@ public class EnnemiThreeBehavior : EnnemiController
         animator.SetBool("IsPreparing", false);
         animator.SetBool("IsStun", true);
         stunned = true;
-        Vector2 knockBack = new Vector2(-currentDash.x*2, currentDash.y*1.5f);
+        Vector2 knockBack = new Vector2(-currentDash.x*2, 0); //currentDash.y*1.5f
         for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         {
             rb.velocity = knockBack.normalized * movementForce * i * Time.fixedDeltaTime;
