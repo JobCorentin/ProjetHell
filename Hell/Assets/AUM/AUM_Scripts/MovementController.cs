@@ -144,7 +144,7 @@ public class MovementController : MonoBehaviour
         if(stuned == false)
         {
             if (isGrounded)
-                rb.velocity = new Vector2(Mathf.Round(InputListener.iL.horizontalInput) * speed * speedMultiplier * Time.fixedDeltaTime / 5, 0);
+                rb.velocity = new Vector2(Mathf.Round(InputListener.iL.horizontalInput) * speed * speedMultiplier * Time.fixedDeltaTime / 7, 0);
             else
                 rb.AddForce( new Vector2(InputListener.iL.horizontalInput * speed * speedMultiplier * Time.fixedDeltaTime, 0), ForceMode2D.Force);
 
