@@ -102,7 +102,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: anim_coeur_mort
-  m_Speed: 1
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -413,7 +413,7 @@ AnimatorStateMachine:
     m_Position: {x: 980, y: 230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -342969044849584264}
-    m_Position: {x: 980, y: -40, z: 0}
+    m_Position: {x: 350, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4062307212712656470}
     m_Position: {x: -50, y: 190, z: 0}
