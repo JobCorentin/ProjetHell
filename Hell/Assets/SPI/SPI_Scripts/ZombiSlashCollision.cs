@@ -25,7 +25,7 @@ public class ZombiSlashCollision : MonoBehaviour
             if(isCentaur==false)
                 etb.PushedBack();
 
-            HealthManager.hm.StartCoroutine(HealthManager.hm.TakeDamage(0));
+            //HealthManager.hm.StartCoroutine(HealthManager.hm.TakeDamage(0));
             Vector2 v = new Vector2(2, 1);
             Vector2 v2 = new Vector2(-2, 1);
             MovementController.mC.StartCoroutine(MovementController.mC.Pushed(0.3f));

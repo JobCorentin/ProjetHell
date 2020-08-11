@@ -60,10 +60,12 @@ public class E2Bullet : MonoBehaviour
             //Parry.p.StopParry();
 
 
-            FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.2f, 0.5f));
+            FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.2f, 0.25f));
 
             Vector2 v = new Vector2(2, 1);
             Vector2 v2 = new Vector2(-2, 1);
+
+            MovementController.mC.StartCoroutine(MovementController.mC.Pushed(0.3f));
             if (collision.transform.position.x - transform.position.x >= 0)
                 MovementController.mC.StartCoroutine(MovementController.mC.MiniDash(v, MovementController.mC.rb, 0.3f, 4700, 0.1f));
             else if (collision.transform.position.x - transform.position.x < 0)
