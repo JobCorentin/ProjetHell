@@ -418,6 +418,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heart Type B Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 9068368647490355577, guid: 71f540bd437ce73479d10917654812da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71f540bd437ce73479d10917654812da, type: 3}
 --- !u!1001 &170468140
@@ -565,6 +570,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Heart Type B Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068368647490355577, guid: 71f540bd437ce73479d10917654812da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71f540bd437ce73479d10917654812da, type: 3}
@@ -1481,6 +1491,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heart Type B Variant (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9068368647490355577, guid: 71f540bd437ce73479d10917654812da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71f540bd437ce73479d10917654812da, type: 3}
 --- !u!1001 &729547580
@@ -1698,6 +1713,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Heart Type B Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068368647490355577, guid: 71f540bd437ce73479d10917654812da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71f540bd437ce73479d10917654812da, type: 3}
@@ -3385,6 +3405,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1559395529}
     m_Modifications:
+    - target: {fileID: 6586246800977173013, guid: d3eb6cfeb7efeba41aab72cbd02ce3b7,
+        type: 3}
+      propertyPath: hasSpawn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6586246800977173096, guid: d3eb6cfeb7efeba41aab72cbd02ce3b7,
         type: 3}
       propertyPath: m_Name
@@ -3393,7 +3418,7 @@ PrefabInstance:
     - target: {fileID: 6586246800977173096, guid: d3eb6cfeb7efeba41aab72cbd02ce3b7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6586246800977173099, guid: d3eb6cfeb7efeba41aab72cbd02ce3b7,
         type: 3}
