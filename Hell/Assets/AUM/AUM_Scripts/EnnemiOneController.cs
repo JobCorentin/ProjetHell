@@ -187,4 +187,10 @@ public class EnnemiOneController : EnnemiController
 
         isAttacking = true;
     }
+
+    public void dieHeart()
+    {
+        BoxCollider2D bc2 = gameObject.GetComponent<BoxCollider2D>();
+        bc2.enabled = false;
+    }
 }

@@ -201,7 +201,7 @@ public class EnnemiController : MonoBehaviour
             health -= amount;
             if (health > 0)
             {
-                animator.SetTrigger("IsTakingDamage");
+                //animator.SetTrigger("IsTakingDamage");
 
                 sr.material = shaderMaterial1;
 
@@ -351,6 +351,8 @@ public class EnnemiController : MonoBehaviour
 
     public void deactivate()
     {
+        if(type == 0)
+            gameObject.GetComponent<BoxCollider2D>().enabled = true;
         gameObject.SetActive(false);
     }
 
