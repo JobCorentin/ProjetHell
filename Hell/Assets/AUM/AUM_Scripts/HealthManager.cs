@@ -82,6 +82,12 @@ public class HealthManager : MonoBehaviour
 
     public void Die()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        MovementController.mC.stuned = true;
+
+        MovementController.mC.animator.SetTrigger("Die");
+
+        MovementController.mC.rb.gravityScale = 0;
+
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

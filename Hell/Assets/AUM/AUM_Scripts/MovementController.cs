@@ -143,7 +143,10 @@ public class MovementController : MonoBehaviour
 
         if(stuned == false)
         {
-            rb.AddForce( new Vector2(InputListener.iL.horizontalInput * speed * speedMultiplier * Time.fixedDeltaTime, 0), ForceMode2D.Force);
+            if (isGrounded)
+                rb.velocity = new Vector2(Mathf.Round(InputListener.iL.horizontalInput) * speed * speedMultiplier * Time.fixedDeltaTime / 7, 0);
+            else
+                rb.AddForce( new Vector2(InputListener.iL.horizontalInput * speed * speedMultiplier * Time.fixedDeltaTime, 0), ForceMode2D.Force);
 
             //Empêche le PJ de glisser
             if(InputListener.iL.horizontalInput == 0 && isGrounded)
