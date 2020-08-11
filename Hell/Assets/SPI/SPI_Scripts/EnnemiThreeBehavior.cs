@@ -79,7 +79,7 @@ public class EnnemiThreeBehavior : EnnemiController
                         else if (lookAt.x < 0)
                             currentDash.x = -dashImpulsion.x;
 
-                        StartCoroutine(PrepareAttack());
+                        lastSlash = StartCoroutine(PrepareAttack(currentDash));
                         canAttack = false;
                         coolDownTimer = 0;
                     }
@@ -96,16 +96,13 @@ public class EnnemiThreeBehavior : EnnemiController
     }
 
 
-    IEnumerator PrepareAttack ()
+    IEnumerator PrepareAttack (Vector2 dashDirection)
     {
         animator.SetBool("IsPreparing", true);
         stunned = true;
-        yield return new WaitForSeconds(preparationDuration);
-        StartCoroutine(JumpAttack(currentDash));
-    }
 
-    IEnumerator JumpAttack(Vector2 dashDirection)
-    {
+        yield return new WaitForSeconds(preparationDuration);
+
         animator.SetBool("IsPreparing", false);
         animator.SetBool("Attack", true);
         slash.SetActive(true);
@@ -131,6 +128,9 @@ public class EnnemiThreeBehavior : EnnemiController
 
     public void StopAttack()
     {
+        if(lastSlash != null)
+            StopCoroutine(lastSlash);
+
         animator.SetBool("Attack", false);
         animator.SetBool("IsPreparing", false);
         stunned = true;
@@ -155,7 +155,7 @@ public class EnnemiThreeBehavior : EnnemiController
         animator.SetBool("IsPreparing", false);
         animator.SetBool("IsStun", true);
         stunned = true;
-        Vector2 knockBack = new Vector2(-currentDash.x*2, currentDash.y*1.5f);
+        Vector2 knockBack = new Vector2(-currentDash.x*2, 0); //currentDash.y*1.5f
         for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
         {
             rb.velocity = knockBack.normalized * movementForce * i * Time.fixedDeltaTime;

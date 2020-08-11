@@ -72,12 +72,19 @@ public class BaseSlashCollision : MonoBehaviour
             {
                 EnnemiTwoBehaviorTest etc = ec.GetComponent<EnnemiTwoBehaviorTest>();
 
-                etc.StopLaunchBullet();
+                etc.StopMusket();
             }
             if (ec.type == 2)
             {
                 EnnemiThreeBehavior erc = ec.GetComponent<EnnemiThreeBehavior>();
                 erc.StopAttack();
+            }
+            if(ec.type == 3)
+            {
+
+                EnnemiFourBehavior efc = ec.GetComponent<EnnemiFourBehavior>();
+                if (efc.health == 1)
+                    efc.StopAttack();
             }
 
         }
