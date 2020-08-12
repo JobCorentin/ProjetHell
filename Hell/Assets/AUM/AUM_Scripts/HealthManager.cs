@@ -88,6 +88,6 @@ public class HealthManager : MonoBehaviour
 
         MovementController.mC.rb.gravityScale = 0;
 
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
