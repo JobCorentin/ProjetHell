@@ -85,7 +85,17 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Player_Wall_Slide" ID="{C91D81EB-004F-4E10-8786-D290F13BB671}"/>
-						<Event Name="Player_Footstep" ID="{13E57215-767E-4FDD-A3A8-74615301574A}"/>
+						<Event Name="Player_Footstep" ID="{13E57215-767E-4FDD-A3A8-74615301574A}">
+							<ChildrenList>
+								<Action Name="" ID="{35E73E5A-C9AB-4E6E-A1F7-809F7330AA73}" ShortID="627592570">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Footstep" ID="{DF8DC97A-5E0C-4739-AFE4-5729EB5CFA23}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Player_Parry" ID="{B7025917-3F9F-4677-BACD-1B1AABB84943}">
 							<ChildrenList>
 								<Action Name="" ID="{256CA178-AAA0-4B0B-B74F-FA4DA26B2B9B}" ShortID="995390243">

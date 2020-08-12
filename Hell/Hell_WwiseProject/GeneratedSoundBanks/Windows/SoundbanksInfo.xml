@@ -21,6 +21,134 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2453392179" Name="Player_Footstep" ObjectPath="\Events\Default Work Unit\Player\Player_Footstep" DurationType="OneShot" DurationMin="0.163735" DurationMax="0.454751">
+					<IncludedMemoryFiles>
+						<File Id="130640124" Language="SFX">
+							<ShortName>FootstepConcrete_6.wav</ShortName>
+							<Path>SFX\FootstepConcrete_6_D864793D.wem</Path>
+						</File>
+						<File Id="333434390" Language="SFX">
+							<ShortName>FootstepWater_2.wav</ShortName>
+							<Path>SFX\FootstepWater_2_A5F9879C.wem</Path>
+						</File>
+						<File Id="344298138" Language="SFX">
+							<ShortName>FootstepGrass_1.wav</ShortName>
+							<Path>SFX\FootstepGrass_1_6CDF315E.wem</Path>
+						</File>
+						<File Id="346224109" Language="SFX">
+							<ShortName>FootstepWood_4.wav</ShortName>
+							<Path>SFX\FootstepWood_4_B59A91C7.wem</Path>
+						</File>
+						<File Id="404749305" Language="SFX">
+							<ShortName>FootstepWater_4.wav</ShortName>
+							<Path>SFX\FootstepWater_4_8C145003.wem</Path>
+						</File>
+						<File Id="415025672" Language="SFX">
+							<ShortName>FootstepWater_5.wav</ShortName>
+							<Path>SFX\FootstepWater_5_69B41A8F.wem</Path>
+						</File>
+						<File Id="460819150" Language="SFX">
+							<ShortName>FootstepWood_5.wav</ShortName>
+							<Path>SFX\FootstepWood_5_F9C8C396.wem</Path>
+						</File>
+						<File Id="511919527" Language="SFX">
+							<ShortName>FootstepConcrete_5.wav</ShortName>
+							<Path>SFX\FootstepConcrete_5_837D050D.wem</Path>
+						</File>
+						<File Id="532153537" Language="SFX">
+							<ShortName>FootstepWater_6.wav</ShortName>
+							<Path>SFX\FootstepWater_6_2A6DB7D6.wem</Path>
+						</File>
+						<File Id="607446543" Language="SFX">
+							<ShortName>FootstepWood_3.wav</ShortName>
+							<Path>SFX\FootstepWood_3_D2A260D9.wem</Path>
+						</File>
+						<File Id="689541487" Language="SFX">
+							<ShortName>FootstepConcrete_2.wav</ShortName>
+							<Path>SFX\FootstepConcrete_2_FA6CD973.wem</Path>
+						</File>
+						<File Id="782147939" Language="SFX">
+							<ShortName>FootstepConcrete_4.wav</ShortName>
+							<Path>SFX\FootstepConcrete_4_9DE824AD.wem</Path>
+						</File>
+						<File Id="784835478" Language="SFX">
+							<ShortName>FootstepWater_3.wav</ShortName>
+							<Path>SFX\FootstepWater_3_08B5C422.wem</Path>
+						</File>
+						<File Id="794038641" Language="SFX">
+							<ShortName>FootstepWood_2.wav</ShortName>
+							<Path>SFX\FootstepWood_2_DD99AD0C.wem</Path>
+						</File>
+						<File Id="825666160" Language="SFX">
+							<ShortName>FootstepConcrete_3.wav</ShortName>
+							<Path>SFX\FootstepConcrete_3_4524DBAB.wem</Path>
+						</File>
+						<File Id="880538827" Language="SFX">
+							<ShortName>FootstepGrass_4.wav</ShortName>
+							<Path>SFX\FootstepGrass_4_4A4A6542.wem</Path>
+						</File>
+						<File Id="899013627" Language="SFX">
+							<ShortName>FootstepConcrete_1.wav</ShortName>
+							<Path>SFX\FootstepConcrete_1_9930EBB0.wem</Path>
+						</File>
+						<File Id="1012787112" Language="SFX">
+							<ShortName>FootstepWood_1.wav</ShortName>
+							<Path>SFX\FootstepWood_1_17603206.wem</Path>
+						</File>
+						<File Id="1041003874" Language="SFX">
+							<ShortName>FootstepGrass_5.wav</ShortName>
+							<Path>SFX\FootstepGrass_5_9467DE95.wem</Path>
+						</File>
+						<File Id="1041399421" Language="SFX">
+							<ShortName>FootstepGrass_3.wav</ShortName>
+							<Path>SFX\FootstepGrass_3_855B020D.wem</Path>
+						</File>
+						<File Id="1044382645" Language="SFX">
+							<ShortName>FootstepWater_1.wav</ShortName>
+							<Path>SFX\FootstepWater_1_53BE37C0.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{DB7246E4-69DB-453C-833F-157DF6B24788}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{DB7246E4-69DB-453C-833F-157DF6B24788}">
+							<Media>
+								<File Id="899013627"/>
+								<File Id="689541487"/>
+								<File Id="825666160"/>
+								<File Id="782147939"/>
+								<File Id="511919527"/>
+								<File Id="130640124"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{20F6C9D1-03BF-486D-B382-F4520E02FC46}">
+							<Media>
+								<File Id="1012787112"/>
+								<File Id="794038641"/>
+								<File Id="607446543"/>
+								<File Id="346224109"/>
+								<File Id="460819150"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{EF1F6BAD-49B9-4712-9983-E60C4CC42288}">
+							<Media>
+								<File Id="1044382645"/>
+								<File Id="333434390"/>
+								<File Id="784835478"/>
+								<File Id="404749305"/>
+								<File Id="415025672"/>
+								<File Id="532153537"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{BE08BD8D-C00D-47B9-821B-069437E25E4D}">
+							<Media>
+								<File Id="344298138"/>
+								<File Id="1041399421"/>
+								<File Id="880538827"/>
+								<File Id="1041003874"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 				<Event Id="2975122654" Name="Player_Health_Sounds" ObjectPath="\Events\Default Work Unit\Player\Player_Health_Sounds" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="125666552" Language="SFX">
@@ -149,6 +277,16 @@
 			<GameParameters>
 				<GameParameter Id="444815956" Name="PlayerLife" ObjectPath="\Game Parameters\Default Work Unit\PlayerLife"/>
 			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="684570577" Name="FootStep_Material" ObjectPath="\Switches\Default Work Unit\FootStep_Material">
+					<Switches>
+						<Switch Id="841620460" Name="Concrete" ObjectPath="\Switches\Default Work Unit\FootStep_Material\Concrete"/>
+						<Switch Id="4248645337" Name="Grass" ObjectPath="\Switches\Default Work Unit\FootStep_Material\Grass"/>
+						<Switch Id="2058049674" Name="Wood" ObjectPath="\Switches\Default Work Unit\FootStep_Material\Wood"/>
+						<Switch Id="3934470635" Name="Blood" ObjectPath="\Switches\Default Work Unit\FootStep_Material\Blood"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

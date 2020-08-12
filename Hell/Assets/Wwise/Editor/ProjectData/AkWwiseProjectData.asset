@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 4284ab4eb2341646a069c5e5531758ca
     GuidInternal: 
-    m_lastTime: -8586046143296311929
+    m_lastTime: -8586044369707887690
     List:
     - name: Main
       guid: 33038aaad1850e4189e17a29e7d73f96
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 14895eb1fb392f4fb3e6729aaa4bce9d
     GuidInternal: 
-    m_lastTime: -8586046143296182692
+    m_lastTime: -8586044369881562320
     List:
     - name: Player
       guid: 6a2b94757f7b1c4f9289b4a10551536e
@@ -95,6 +95,20 @@ MonoBehaviour:
       - ElementName: Player_Footstep
         ObjectType: 3
       Path: Default Work Unit\Player\Player_Footstep
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_Health_Sounds
+      guid: bf3af82e0204ce45b92f83b708f40f55
+      id: 2975122654
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: Player_Health_Sounds
+        ObjectType: 3
+      Path: Default Work Unit\Player\Player_Health_Sounds
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -196,8 +210,45 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 9f7133fbe6cfcc4c8f9a5c8126ca4b7b
     GuidInternal: 
-    m_lastTime: -8586051183522486077
-    List: []
+    m_lastTime: -8586044470850526431
+    List:
+    - name: FootStep_Material
+      guid: 7a069758b1efcd40b470554bbb180c5c
+      id: 684570577
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: FootStep_Material
+        ObjectType: 11
+      Path: Default Work Unit\FootStep_Material
+      values:
+      - name: Blood
+        guid: ad6b1fefb94912479983e60c4cc42288
+        id: 3934470635
+        PathAndIcons:
+        - ElementName: Blood
+          ObjectType: 10
+      - name: Concrete
+        guid: e44672dbdb693c45833f157df6b24788
+        id: 841620460
+        PathAndIcons:
+        - ElementName: Concrete
+          ObjectType: 10
+      - name: Grass
+        guid: 8dbd08be0dc0b947821b069437e25e4d
+        id: 4248645337
+        PathAndIcons:
+        - ElementName: Grass
+          ObjectType: 10
+      - name: Wood
+        guid: d1c9f620bf036d48b382f4520e02fc46
+        id: 2058049674
+        PathAndIcons:
+        - ElementName: Wood
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPath: Default Work Unit
@@ -210,5 +261,7 @@ MonoBehaviour:
   - /Hell_WwiseProject/Events
   - /Hell_WwiseProject/Events/Default Work Unit
   - /Hell_WwiseProject/Events/Default Work Unit/Player
+  - /Hell_WwiseProject/SoundBanks
+  - /Hell_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

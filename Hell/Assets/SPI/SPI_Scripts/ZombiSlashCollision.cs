@@ -9,11 +9,16 @@ public class ZombiSlashCollision : MonoBehaviour
     public EnnemiThreeBehavior etb;
     public bool isCentaur;
 
+    [Space(10)]
+    [Header("Sounds")]
+    public AK.Wwise.Event attackParryAudio;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Collision avec le layer Parry
         if (collision.gameObject.layer == 13)
         {
+            attackParryAudio.Post(gameObject);
             FXManager.fxm.fxInstancier(4, gameObject.transform, BaseSlashInstancier.bsi.attackDirectionAngle + Random.Range(-10, 10));
 
             //Parry.p.StopParry();

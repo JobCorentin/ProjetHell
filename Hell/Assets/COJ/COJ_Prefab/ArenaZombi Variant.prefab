@@ -21,6 +21,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1323936565, guid: 15095481eedb1d94b83ad88eb6a981a4, type: 3}
+      propertyPath: attackParryAudio.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: cddd03e68692edd46b4544d70cde89e6,
+        type: 2}
     - target: {fileID: 2972335080529176160, guid: 15095481eedb1d94b83ad88eb6a981a4,
         type: 3}
       propertyPath: hasSpawn

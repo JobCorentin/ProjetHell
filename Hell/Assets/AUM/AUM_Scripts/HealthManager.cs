@@ -30,7 +30,7 @@ public class HealthManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerLifeGameSync.SetGlobalValue(life);
+        playerLifeGameSync.SetGlobalValue(life); //Voir ci dessus
         playerHealthConstantAudio.Post(gameObject);
 
         hm = this;
