@@ -62,6 +62,8 @@ public class MovementController : MonoBehaviour
 
     [HideInInspector] public bool pushedBack;
 
+    float isGroundedFor = 0;
+
 
 
     [Space(5)]
@@ -91,11 +93,11 @@ public class MovementController : MonoBehaviour
 
         isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(0.5f, 0.2f), 0, groundLayers);
 
-        isWalled = Physics2D.OverlapBox(leftWallCheck.position, new Vector2(0.2f, 0.75f), 0, wallLayers);
+        isWalled = Physics2D.OverlapBox(leftWallCheck.position, new Vector2(0.1f, 0.75f), 0, wallLayers);
 
         if(isWalled == false)
         {
-            isWalled = Physics2D.OverlapBox(rightWallCheck.position, new Vector2(0.2f, 0.75f), 0, wallLayers);
+            isWalled = Physics2D.OverlapBox(rightWallCheck.position, new Vector2(0.1f, 0.75f), 0, wallLayers);
         }
 
         if (isGrounded)
@@ -110,7 +112,14 @@ public class MovementController : MonoBehaviour
             canJump = false;
         }
 
-
+        if (isGrounded)
+        {
+            isGroundedFor += Time.fixedDeltaTime;
+        }
+        else
+        {
+            isGroundedFor = 0;
+        }
 
         wasWallSliding = isWallSliding;
 
@@ -227,6 +236,10 @@ public class MovementController : MonoBehaviour
                 animator.SetTrigger("GroundToAir");
             }
         }
+        else if(isGroundedFor > 0.5f)
+        {
+            animator.ResetTrigger("AirToGround");
+        }
 
         if (wasWalled != isWalled)
         {
@@ -302,7 +315,7 @@ public class MovementController : MonoBehaviour
     {
         animator.SetBool("IsJumping", true);
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
 
         animator.SetBool("IsJumping", false);
     }
