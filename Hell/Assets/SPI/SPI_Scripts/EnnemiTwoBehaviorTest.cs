@@ -123,9 +123,6 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                     stade = 3;
                 if (lookUp == false)
                     stade = -stade;
-                Debug.Log(stade);
-                Debug.Log(currentstade);
-                Debug.Log(lookUp);
 
                 if (stade == currentstade)
                 {

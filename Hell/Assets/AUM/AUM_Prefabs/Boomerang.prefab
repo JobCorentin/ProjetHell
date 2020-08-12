@@ -174,6 +174,7 @@ MonoBehaviour:
   speed: 0
   rb: {fileID: 9019725140978479160}
   sr: {fileID: 3350581841144312309}
+  col: {fileID: 3534094479107745600}
   touchedEnnemy: 0
 --- !u!50 &9019725140978479160
 Rigidbody2D:

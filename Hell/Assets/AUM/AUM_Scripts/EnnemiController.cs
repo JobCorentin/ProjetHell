@@ -62,6 +62,8 @@ public class EnnemiController : MonoBehaviour
 
     public bool hasSpawn;
 
+    [HideInInspector] public bool dead = false;
+
     // Start is called before the first frame update
     public virtual void Start()
     {
@@ -99,6 +101,11 @@ public class EnnemiController : MonoBehaviour
     // Update is called once per frame
     public virtual void FixedUpdate()
     {
+        if(dead == true)
+        {
+
+        }
+
         if (hasSpawn == true)
         {
 

@@ -15,7 +15,9 @@ public class HealthManager : MonoBehaviour
 
     TMPro.TextMeshProUGUI text;
 
+    [HideInInspector] public CheckPoint lastCheckPoint;
 
+    Animator fadeAnimator;
 
 
     [Space(10)]
@@ -30,6 +32,8 @@ public class HealthManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        MovementController.mC.animator.SetTrigger("Respawn");
+
         playerLifeGameSync.SetGlobalValue(life);
         playerHealthConstantAudio.Post(gameObject);
 
@@ -38,6 +42,8 @@ public class HealthManager : MonoBehaviour
         text = GameObject.Find("LifeText").GetComponent<TMPro.TextMeshProUGUI>();
 
         initialLife = life;
+
+        fadeAnimator = GameObject.Find("Fade").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -74,19 +80,53 @@ public class HealthManager : MonoBehaviour
             yield return null;
         }
 
+        BaseSlashInstancier.bsi.sr.color = Color.white;
+
         if (life <= 0)
         {
-            Die();
+            StartCoroutine(Die());
         }
     }
 
-    public void Die()
+    public IEnumerator Die()
     {
         MovementController.mC.stuned = true;
 
         MovementController.mC.animator.SetTrigger("Die");
 
+        float temp = MovementController.mC.rb.gravityScale;
+
         MovementController.mC.rb.gravityScale = 0;
+
+        MovementController.mC.rb.velocity = Vector2.zero;
+
+        MovementController.mC.col.enabled = false;
+
+        yield return new WaitForSeconds(1.5f);
+
+        fadeAnimator.SetTrigger("FadeIn");
+
+        yield return new WaitForSeconds(1.5f);
+
+        MovementController.mC.transform.position = lastCheckPoint.transform.position;
+
+        life = initialLife;
+
+        lastCheckPoint.respawning = true;
+
+        MovementController.mC.animator.SetTrigger("Respawn");
+
+        MovementController.mC.col.enabled = true;
+
+        MovementController.mC.rb.gravityScale = temp;
+
+        MovementController.mC.stuned = false;
+
+        fadeAnimator.SetTrigger("FadeOut");
+
+        yield return new WaitForSeconds(1f);
+
+        lastCheckPoint.respawning = true;
 
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

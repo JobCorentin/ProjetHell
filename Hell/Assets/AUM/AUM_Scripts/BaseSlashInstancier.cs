@@ -70,7 +70,6 @@ public class BaseSlashInstancier : MonoBehaviour
     {
         if(bloodMode == true)
         {
-            sr.color = new Color(Color.red.r, Color.red.g, Color.red.b, sr.color.a);
 
             if (coolDownTimer < bloodCoolDown)
             {
@@ -85,14 +84,13 @@ public class BaseSlashInstancier : MonoBehaviour
         }
         else
         {
-            sr.color = new Color(Color.white.r, Color.white.g, Color.white.b, sr.color.a);
 
             if (coolDownTimer < coolDown)
             {
                 coolDownTimer += Time.fixedDeltaTime;
             }
 
-            if (InputListener.iL.attackInput == true && coolDownTimer > coolDown / 2f /*&& slashNumb > 0*/ && GainLife.gl.noSword == false)
+            if (InputListener.iL.attackInput == true && coolDownTimer > coolDown / 2f /*&& slashNumb > 0*/ && GainLife.gl.noSword == false && MovementController.mC.stuned == false)
             {
                 AttackDirectionDecision(false);
             }

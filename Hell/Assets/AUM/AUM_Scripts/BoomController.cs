@@ -12,6 +12,8 @@ public class BoomController : MonoBehaviour
 
     public SpriteRenderer sr;
 
+    public Collider2D col;
+
     [HideInInspector] public bool touchedEnnemy = false;
 
     // Start is called before the first frame update
@@ -88,6 +90,12 @@ public class BoomController : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.5f);
+
+        col.enabled = false;
+
+        yield return null;
+
+        col.enabled = true;
 
         for (float i = 0; i < 0.2f; i += Time.deltaTime)
         {

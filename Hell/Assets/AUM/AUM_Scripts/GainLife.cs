@@ -82,8 +82,12 @@ public class GainLife : MonoBehaviour
 
         int bloodNumbMinus3 = BloodManager.bm.bloodNumb - 3;
 
+        
+
         while (BloodManager.bm.bloodNumb > bloodNumbMinus3)
         {
+            BaseSlashInstancier.bsi.sr.color = new Color(BaseSlashInstancier.bsi.sr.color.r, BaseSlashInstancier.bsi.sr.color.g, BaseSlashInstancier.bsi.sr.color.b, (BloodManager.bm.bloodNumb - bloodNumbMinus3) / 3);
+
             BloodManager.bm.bloodNumb -= 1;
 
             yield return new WaitForSeconds(0.5f);
@@ -101,8 +105,10 @@ public class GainLife : MonoBehaviour
 
         gainingLife = false;
 
-        yield break;
+        yield return new WaitForSeconds(0.5f);
 
+
+        BaseSlashInstancier.bsi.sr.color = new Color(BaseSlashInstancier.bsi.sr.color.r, BaseSlashInstancier.bsi.sr.color.g, BaseSlashInstancier.bsi.sr.color.b, 1);
     }
 
     void LaunchBoomerang()
