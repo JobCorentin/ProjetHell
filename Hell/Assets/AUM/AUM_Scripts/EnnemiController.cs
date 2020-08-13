@@ -26,6 +26,8 @@ public class EnnemiController : MonoBehaviour
 
     public SpriteRenderer sr;
 
+    public Collider2D col;
+
     Material defautlMaterial;
     public Material shaderMaterial1;
     public Material shaderMaterial2;
@@ -63,10 +65,15 @@ public class EnnemiController : MonoBehaviour
     public bool hasSpawn;
 
     [HideInInspector] public bool dead = false;
+    Vector2 initialPosition;
+    int initialHealth;
 
     // Start is called before the first frame update
     public virtual void Start()
     {
+        initialPosition = transform.position;
+        initialHealth = health;
+
         if(numberBetweenGroupAttack == 0)
         {
             numberBetweenGroupAttack = 1;
@@ -101,9 +108,37 @@ public class EnnemiController : MonoBehaviour
     // Update is called once per frame
     public virtual void FixedUpdate()
     {
-        if(dead == true)
-        {
+        if(HealthManager.hm.lastCheckPoint != null)
+            if (HealthManager.hm.lastCheckPoint.respawning == true)
+            {
+                transform.position = initialPosition;
+                health = initialHealth;
 
+
+                sr.enabled = true;
+
+                playerDetected = false;
+
+                animator.SetBool("Respawning", true);
+
+                dead = false;
+            }
+            else
+            {
+                animator.SetBool("Respawning", false);
+            }
+
+        if (dead == true)
+        {
+            playerDetected = false;
+            sr.enabled = false;
+
+            return;
+        }
+        
+        if(dead == false)
+        {
+            sr.enabled = true;
         }
 
         if (hasSpawn == true)
@@ -335,6 +370,8 @@ public class EnnemiController : MonoBehaviour
 
         animator.SetTrigger("Dying");
 
+        dead = true; 
+
         //gameObject.SetActive(false);
     }
 
@@ -353,7 +390,7 @@ public class EnnemiController : MonoBehaviour
     {
         GameObject newRemains = Instantiate(Remains, gameObject.transform);
         newRemains.transform.parent = GameObject.Find("RemainHolder").transform;
-        gameObject.SetActive(false);
+        dead = true;
     }
 
     public void deactivate()

@@ -223,7 +223,7 @@ MonoBehaviour:
   seeker: {fileID: 8345421285763794964}
   animator: {fileID: 8345421285763794966}
   playerDetected: 0
-  detectionDistance: 15
+  detectionDistance: 20
   detectionLayers:
     serializedVersion: 2
     m_Bits: 18688
@@ -233,6 +233,7 @@ MonoBehaviour:
   speed: 0
   type: 1
   sr: {fileID: 8345421285763794967}
+  col: {fileID: 8345421285763794955}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
   numberBetweenGroupAttack: 0
@@ -251,6 +252,7 @@ MonoBehaviour:
   playerWasDetected: 0
   Remains: {fileID: 227656790259838056, guid: 25c846dc16d5e8047914eaf231f9a133, type: 3}
   hasSpawn: 1
+  dead: 0
   bulletPrefab: {fileID: 2632547540658908434, guid: 9bffa467356781c41b1ab218b1e6974c,
     type: 3}
   arrow: {fileID: 8345421285771850965}
