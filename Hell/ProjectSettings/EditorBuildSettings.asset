@@ -12,27 +12,6 @@ EditorBuildSettings:
     path: Assets/COJ/COJ_Scenes/ArenaTest/Skatepark.unity
     guid: ac5f47a7b4b126d46892d2cb8f3576dd
   - enabled: 1
-    path: Assets/COJ/COJ_Scenes/ArenaTest/TestLevel1.unity
-    guid: 553bf47da1d835c48999969fde411894
-  - enabled: 1
-    path: Assets/COJ/COJ_Scenes/ArenaTest/TestArena2.unity
-    guid: 69d355aa8271bac43b89d67b464c23e0
-  - enabled: 1
-    path: Assets/COJ/COJ_Scenes/ArenaTest/TestArena3.unity
-    guid: dae7781a81b8f634b982050e1eea3d28
-  - enabled: 1
-    path: Assets/COJ/COJ_Scenes/ArenaTest/TestArena4.unity
-    guid: 77f5b35ec4796cf499eee2f1ec42b207
-  - enabled: 1
-    path: Assets/COJ/COJ_Scenes/ArenaTest/TestArena5.unity
-    guid: 57c23e6cf355e4541bc24cdaf43cba18
-  - enabled: 1
-    path: Assets/COJ/COJ_Scenes/ArenaTest/TestArena6.unity
-    guid: ad93b26bdc8d1b74b81307428756525e
-  - enabled: 1
-    path: Assets/COJ/COJ_Scenes/ArenaTest/TestArena7.unity
-    guid: b2ccd5e901d144346a496b48c02355c4
-  - enabled: 1
-    path: Assets/SPI/SPI_Scene/Tower.unity
-    guid: 007985f0d5d18db4c914fcb3a6c7cd8d
+    path: Assets/COJ/COJ_Scenes/LD Akuma.unity
+    guid: 0c316e0bff161fc43ab24cb559ad3c89
   m_configObjects: {}

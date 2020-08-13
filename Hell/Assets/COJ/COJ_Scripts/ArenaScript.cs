@@ -12,6 +12,7 @@ namespace Cinemachine
         int waveCount;
 
         bool hasActivated = false;
+        bool finished = false;
 
         private void Start()
         {
@@ -35,7 +36,7 @@ namespace Cinemachine
 
         private void Update()
         {
-            if(arenaWave.Count <= 0)
+            if(arenaWave.Count <= 0 && finished == false )
             {
                 arena.SetActive(false);
             }

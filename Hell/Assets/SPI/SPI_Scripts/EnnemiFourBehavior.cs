@@ -8,6 +8,7 @@ public class EnnemiFourBehavior : EnnemiController
     public EnnemiDetection ennemiDetection;
     public bool canAttack;
     [HideInInspector] public bool charge;
+    [HideInInspector] public bool katana;
     public GameObject slash;
 
     [HideInInspector] public Transform targetTransform;
@@ -21,7 +22,6 @@ public class EnnemiFourBehavior : EnnemiController
     public GameObject katanaPrefab;
     public float katanaForce;
     public GameObject katanaLauncher;
-    [HideInInspector] public bool lastPatternWasCharge;
 
     /*
     public Vector2 dashImpulsion;
@@ -31,6 +31,12 @@ public class EnnemiFourBehavior : EnnemiController
     public float momentumMultiplier;
     */
     public float preparationDuration;
+
+    [HideInInspector] public Coroutine pattern;
+    [HideInInspector] public float seuilPatternCharge;
+    [HideInInspector] public float seuilPatternBoth;
+    [HideInInspector] public int lastPatternNum;
+    [HideInInspector] public bool hasDoneTwice=false;
 
 
     public override void Start()
@@ -74,28 +80,7 @@ public class EnnemiFourBehavior : EnnemiController
 
             if (canAttack)
             {
-                if (pTransform.position.y > transform.position.y + 5 || pTransform.position.y < transform.position.y - 5) //Si le joueur est suffisamment haut, le centaure lance un katana
-                {
-                    target = pTransform.position;
-                    canAttack = false;
-                    StartCoroutine(PrepareKatana());
-                }
-                else if ((pTransform.position.x - transform.position.x) * lookAt.x > 0) // Charge
-                {
-                    RaycastHit2D hit = Physics2D.Raycast(transform.position, lookAt, Mathf.Infinity, chargeLayers);
-                    if (hit == true & Vector2.Distance(hit.transform.position, transform.position) > distanceFromWall)
-                    {
-                        target = hit.transform.position;
-                        canAttack = false;
-                        StartCoroutine(PrepareCharge());
-                    }
-                }
-                else
-                {
-                    target = pTransform.position;
-                    canAttack = false;
-                    StartCoroutine(PrepareKatana());
-                }
+                CalculatePattern();
             }
 
             if (charge)
@@ -112,6 +97,12 @@ public class EnnemiFourBehavior : EnnemiController
                 }
 
             }
+
+            if(katana)
+            {
+
+                lookAt = pTransform.position - transform.position;
+            }
        
         }
     }
@@ -125,17 +116,16 @@ public class EnnemiFourBehavior : EnnemiController
         charge = true;
         animator.SetBool("IsPreparingCharge", false);
         animator.SetBool("IsCharging", true);
-        lastPatternWasCharge = true;
     }
-    IEnumerator PrepareKatana()
+    IEnumerator PrepareKatana(bool both)
     {
         animator.SetBool("IsPreparingKatana", true);
-        lastLookAt = lookAt;
-        lookAt = pTransform.position - transform.position;
+        if(lastPatternNum ==0)
+            lastLookAt = lookAt;
+        katana = true;
         yield return new WaitForSeconds(preparationDuration);
         animator.SetBool("IsPreparingKatana", false);
-        lastPatternWasCharge = false;
-        if(Vector2.Distance(transform.position, pTransform.position) > range)
+        if(both)
         {
             animator.SetBool("LaunchBoth", true);
             //StartCoroutine(LaunchingKatana());
@@ -149,10 +139,13 @@ public class EnnemiFourBehavior : EnnemiController
 
     IEnumerator BetweenAttack()
     {
-        if (lastPatternWasCharge)
+        if (lastPatternNum == 0)
             lookAt = -lookAt;
         else
+        {
             lookAt = lastLookAt;
+            katana = false;
+        }
         yield return new WaitForSeconds(coolDown);
         canAttack = true;
         animator.SetBool("LaunchBoth", false);
@@ -175,7 +168,8 @@ public class EnnemiFourBehavior : EnnemiController
         StopCoroutine(LaunchingKatana());
         StopCoroutine(BetweenAttack());
         StopCoroutine(PrepareCharge());
-        StopCoroutine(PrepareKatana());
+        StopCoroutine(PrepareKatana(true));
+        StopCoroutine(PrepareKatana(false));
         stunned = true;
         charge = false;
         slash.SetActive(false);
@@ -183,6 +177,120 @@ public class EnnemiFourBehavior : EnnemiController
         animator.SetBool("LaunchBoth", false);
         animator.SetBool("LaunchKatana", false);
         animator.SetBool("IsPreparingCharge", false);
+    }
+
+    public void CalculatePattern()
+    {
+
+        seuilPatternCharge = 0.5f;
+        seuilPatternBoth = 0.75f;
+        if (hasDoneTwice== false)
+        {
+
+            if (lastPatternNum == 0) //charge
+            {
+                seuilPatternCharge += 0.25f;
+            }
+            else if (lastPatternNum == 1) // one katana
+            {
+                seuilPatternBoth -= 0.1f;
+            }
+            else if (lastPatternNum == 2) // both katana
+            {
+                seuilPatternCharge -= 0.1f;
+                seuilPatternBoth += 0.1f;
+            }
+        } else
+        {
+
+            if (lastPatternNum == 0) //charge
+            {
+                seuilPatternCharge -= 0.2f;
+            }
+            else if (lastPatternNum == 1) // one katana
+            {
+                seuilPatternCharge += 0.25f;
+                seuilPatternBoth -= 0.05f;
+            }
+            else if (lastPatternNum == 2) // both katana
+            {
+
+                seuilPatternCharge += 0.2f;
+                seuilPatternBoth += 0.15f;
+            }
+        }
+        hasDoneTwice = false;
+
+
+
+        if (pTransform.position.y > transform.position.y + 5 || pTransform.position.y < transform.position.y - 5) //Si le joueur est suffisamment haut, le centaure lance un katana
+        {
+            seuilPatternCharge -= 0.15f;
+
+        }
+        else
+        {
+
+            seuilPatternCharge += 0.15f;
+            seuilPatternBoth += 0.5f; 
+        }
+        if ((pTransform.position.x - transform.position.x) * lookAt.x > 0) // Charge
+        {
+
+            seuilPatternCharge += 0.05f;
+        }
+
+        if (Vector2.Distance(transform.position, pTransform.position) > range)
+        {
+            seuilPatternCharge -= 0.1f;
+            seuilPatternBoth -= 0.15f;
+        }
+        if (health <= (health / 3))
+        {
+            seuilPatternCharge += 0.2f;
+        }
+
+
+        float calc = Random.Range(0.0f, 1f);
+
+        if(calc <= seuilPatternCharge)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, lookAt, Mathf.Infinity, chargeLayers);
+            if (hit == true & Vector2.Distance(hit.transform.position, transform.position) > distanceFromWall)
+            {
+                target = hit.transform.position;
+                canAttack = false;
+                StartCoroutine(PrepareCharge());
+
+                if (lastPatternNum == 0)
+                    hasDoneTwice = true;
+                lastPatternNum = 0;
+
+            } else
+            {
+                lookAt = -lookAt;
+                BetweenAttack();
+            }
+
+        } else
+        {
+            if (calc >= seuilPatternBoth)
+            {
+                canAttack = false;
+                StartCoroutine(PrepareKatana(true));
+                if (lastPatternNum == 2)
+                    hasDoneTwice = true;
+                lastPatternNum = 2;
+            } else
+            {
+                canAttack = false;
+                StartCoroutine(PrepareKatana(false));
+                if (lastPatternNum == 1)
+                    hasDoneTwice = true;
+                lastPatternNum = 1;
+            }
+        }
+
     }
 
     /*
