@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GainLife : MonoBehaviour
 {
+
     public static GainLife gl;
 
     public float recoveryDuration;
@@ -113,6 +114,8 @@ public class GainLife : MonoBehaviour
 
     void LaunchBoomerang()
     {
+        MovementController.mC.animator.SetTrigger("Throwing");
+
         BloodManager.bm.bloodNumb -= 3;
 
         currentBoomerang = Instantiate(boomerangPrefab).GetComponent<BoomController>();
