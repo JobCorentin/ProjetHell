@@ -8,16 +8,30 @@ namespace Cinemachine
     {
         public ArenaScript arena;
         public List<GameObject> waveEnnemi;
+        List<EnnemiController> waveEnnemiControllers = new List<EnnemiController>();
         bool ended = false;
 
         private void Start()
         {
+            foreach(GameObject waveEnnem in waveEnnemi)
+            {
+                waveEnnemiControllers.Add(waveEnnem.GetComponent<EnnemiController>());
+            }
+
             arena = gameObject.GetComponentInParent<ArenaScript>();
         }
 
         void Update()
         {
-            if (waveEnnemi.Count == 0 && ended == false)
+            int ennemisDead = 0;
+
+            foreach(EnnemiController waveEnnemiController in waveEnnemiControllers)
+            {
+                if (waveEnnemiController.dead == true)
+                    ennemisDead++;
+            }
+
+            if (ennemisDead == waveEnnemi.Count && ended == false)
             {
                 ended = true;
                 arena.NextWave();
