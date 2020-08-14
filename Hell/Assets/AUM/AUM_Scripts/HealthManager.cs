@@ -126,7 +126,7 @@ public class HealthManager : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        lastCheckPoint.respawning = true;
+        lastCheckPoint.respawning = false;
 
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

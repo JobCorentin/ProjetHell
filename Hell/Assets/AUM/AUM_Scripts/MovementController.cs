@@ -315,7 +315,7 @@ public class MovementController : MonoBehaviour
     {
         animator.SetBool("IsJumping", true);
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.15f);
 
         animator.SetBool("IsJumping", false);
     }

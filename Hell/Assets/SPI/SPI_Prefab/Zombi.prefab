@@ -249,6 +249,7 @@ MonoBehaviour:
   speed: 1000
   type: 2
   sr: {fileID: 6059860427982487036}
+  col: {fileID: 9023005953487328411}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
   numberBetweenGroupAttack: 0
@@ -267,6 +268,7 @@ MonoBehaviour:
   playerWasDetected: 0
   Remains: {fileID: 8208348773777369088, guid: e848fa07068b6764eb7f6809792dd8ab, type: 3}
   hasSpawn: 1
+  dead: 0
   ennemiDetection: {fileID: 3637085431136922249}
   slash: {fileID: 1323936563}
   canAttack: 0
