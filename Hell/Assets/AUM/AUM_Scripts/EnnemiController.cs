@@ -375,6 +375,7 @@ public class EnnemiController : MonoBehaviour
             }
             else
             {
+                if(hasSpawn == true)
                 animator.SetBool("Respawning", false);
             }
 

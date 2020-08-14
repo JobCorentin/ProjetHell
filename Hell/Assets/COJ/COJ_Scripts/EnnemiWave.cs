@@ -8,7 +8,7 @@ namespace Cinemachine
     {
         public ArenaScript arena;
         public List<GameObject> waveEnnemi;
-        List<EnnemiController> waveEnnemiControllers = new List<EnnemiController>();
+        [HideInInspector] public List<EnnemiController> waveEnnemiControllers = new List<EnnemiController>();
         bool ended = false;
 
         private void Start()
@@ -33,7 +33,8 @@ namespace Cinemachine
 
             if (ennemisDead == waveEnnemi.Count && ended == false)
             {
-                ended = true;
+                //ended = true;
+                gameObject.SetActive(false);
                 arena.NextWave();
             }
         }

@@ -33,6 +33,8 @@ namespace Cinemachine
 
             yield return new WaitForSeconds(spawnTime);
 
+            enemiStat.animator.SetBool("Respawning", false);
+
             enemiStat.animator.SetTrigger("hasSpawn");
         }
     }
