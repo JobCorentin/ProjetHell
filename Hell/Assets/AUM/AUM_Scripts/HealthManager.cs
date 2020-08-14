@@ -90,19 +90,24 @@ public class HealthManager : MonoBehaviour
 
     public IEnumerator Die()
     {
-        MovementController.mC.stuned = true;
-
         MovementController.mC.animator.SetTrigger("Die");
 
         float temp = MovementController.mC.rb.gravityScale;
 
         MovementController.mC.rb.gravityScale = 0;
 
-        MovementController.mC.rb.velocity = Vector2.zero;
+        
 
         MovementController.mC.col.enabled = false;
 
-        yield return new WaitForSeconds(1.5f);
+        for(float i = 1.5f; i > 0; i -= Time.deltaTime)
+        {
+            MovementController.mC.rb.velocity = Vector2.zero;
+
+            MovementController.mC.stuned = true;
+
+            yield return null;
+        }
 
         fadeAnimator.SetTrigger("FadeIn");
 
@@ -120,13 +125,13 @@ public class HealthManager : MonoBehaviour
 
         MovementController.mC.rb.gravityScale = temp;
 
-        MovementController.mC.stuned = false;
-
         fadeAnimator.SetTrigger("FadeOut");
 
         yield return new WaitForSeconds(1f);
 
         lastCheckPoint.respawning = false;
+
+        MovementController.mC.stuned = false;
 
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

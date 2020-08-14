@@ -35,6 +35,8 @@ public class EnnemiOneController : EnnemiController
     // Update is called once per frame
     public override void FixedUpdate()
     {
+        CheckingIfAlive();
+
         if (hasSpawn == true)
         {
             if (stunned == true)

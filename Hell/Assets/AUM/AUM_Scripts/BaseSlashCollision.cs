@@ -36,11 +36,16 @@ public class BaseSlashCollision : MonoBehaviour
     {
         if (collision.transform.tag == "Ennemi")
         {
+            EnnemiController ec = collision.GetComponent<EnnemiController>();
+
+            if (ec.dead == true)
+                return;
+
             FXManager.fxm.fxInstancier(2, collision.transform, BaseSlashInstancier.bsi.attackDirectionAngle + Random.Range(-10,10));
             //FXManager.fxm.fxInstancier(4, collision.transform, 0);
 
             ennemiTouched = true;
-            EnnemiController ec = collision.GetComponent<EnnemiController>();
+            
             CameraShake.cs.WeakShake();
 
             if(BloodManager.bm.bloodNumb < BloodManager.bm.bloodNumbMax)

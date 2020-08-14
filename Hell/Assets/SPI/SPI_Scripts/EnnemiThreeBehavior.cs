@@ -32,6 +32,8 @@ public class EnnemiThreeBehavior : EnnemiController
 
     public override void FixedUpdate()
     {
+        CheckingIfAlive();
+
         if (hasSpawn == true)
         {
             if (stunned == true)

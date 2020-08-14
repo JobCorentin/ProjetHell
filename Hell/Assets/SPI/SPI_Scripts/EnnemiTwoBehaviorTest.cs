@@ -35,6 +35,8 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
     public override void FixedUpdate()
     {
+        CheckingIfAlive();
+
         if (hasSpawn == true)
         {
 
