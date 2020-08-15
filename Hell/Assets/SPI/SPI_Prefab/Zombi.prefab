@@ -123,6 +123,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reflected: 0
   etb: {fileID: 2972335080529176160}
+  isCentaur: 0
+  attackParryAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &3440117890736498078
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,6 +281,17 @@ MonoBehaviour:
   movementForce: 1200
   momentumMultiplier: 1
   preparationDuration: 0.5
+  soldierAttack:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d650f01fe79bc2841bcda10dc24a8d62,
+      type: 2}
+  soldierIdle:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e5a4f94159fdaad40891a2ebe917ac38,
+      type: 2}
+  soldierIdleAudioTimer: 10
 --- !u!212 &6059860427982487036
 SpriteRenderer:
   m_ObjectHideFlags: 0

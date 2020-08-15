@@ -25,6 +25,21 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
     //public EnnemiDetection ennemiDetection;
 
+
+
+
+
+    [Space(10)]
+    [Header("Sounds")]
+    public AK.Wwise.Event musketAimAudio;
+    public AK.Wwise.Event musketShotAudio;
+    public AK.Wwise.Event musketIdleAudio;
+    public AK.Wwise.Event musketDeathAudio;
+    public int musketIdleAudioTimer;
+    bool isInAudioCoroutine = false;
+    bool canPlayDeathAudio = true;
+
+
     public override void Start()
     {
         base.Start();
@@ -35,6 +50,17 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
     public override void FixedUpdate()
     {
+        if (!isInAudioCoroutine)
+        {
+            StartCoroutine(MusketIdleAudioCooldown());
+        }
+        if (health <= 0 && canPlayDeathAudio)
+        {
+            musketDeathAudio.Post(gameObject);
+            canPlayDeathAudio = false;
+        }
+
+
         if (hasSpawn == true)
         {
 
@@ -160,6 +186,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         Vector2 finalDirectionAttack = baseDirectionAttack;
 
         animator.SetBool("IsAiming", true);
+        musketAimAudio.Post(gameObject);
 
         for (float i = preparationDuration; i > 0; i -= Time.deltaTime)
         {
@@ -212,6 +239,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
 
         currentBullet.ennemiLauncheFrom = this;
         currentBullet.transform.position = musket.transform.position;
+        musketShotAudio.Post(gameObject);
 
         currentBullet.rb.velocity = finalDirectionAttack * bulletForce;
 
@@ -257,11 +285,23 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     public void StopLaunchBullet()
     {
         animator.SetBool("IsAiming", false);
+        musketAimAudio.Stop(gameObject);
 
         arrow.SetActive(false);
         arrow2.SetActive(false);
 
         if (lastLaunchBullet != null)
             StopCoroutine(lastLaunchBullet);
+    }
+
+
+
+
+    IEnumerator MusketIdleAudioCooldown()
+    {
+        isInAudioCoroutine = true;
+        yield return new WaitForSeconds(Random.Range(musketIdleAudioTimer - (musketIdleAudioTimer / 2), musketIdleAudioTimer + (musketIdleAudioTimer / 2)));
+        musketIdleAudio.Post(gameObject);
+        isInAudioCoroutine = false;
     }
 }

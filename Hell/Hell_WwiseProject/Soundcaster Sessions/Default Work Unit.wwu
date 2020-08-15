@@ -6,16 +6,20 @@
 				<SoundcasterSession Name="Player" ID="{5087CBB5-653F-4397-B226-88B86D252F70}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Player_Health_Sounds" ID="{2EF83ABF-0402-45CE-B92F-83B708F40F55}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
+							<ObjectRef Name="Player_Death" ID="{CF9B3752-0400-40A3-8E44-A2A934A50494}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Player_Take_Damages" ID="{DC9C5BCB-BE59-4525-92A8-7F99EB66DE8F}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
+							<ObjectRef Name="Player_Health_Sounds" ID="{2EF83ABF-0402-45CE-B92F-83B708F40F55}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Player_Death" ID="{CF9B3752-0400-40A3-8E44-A2A934A50494}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
+							<ObjectRef Name="Player_Take_Damages" ID="{DC9C5BCB-BE59-4525-92A8-7F99EB66DE8F}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
 							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Main_Theme" ID="{521C487F-D9F2-4E6A-99FD-C0CFC410EACB}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
+							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Player_Sword_Attack" ID="{F01386F1-92F5-4875-8596-FFE5AFCC1D38}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
@@ -46,7 +50,41 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Concrete" ID="{DB7246E4-69DB-453C-833F-157DF6B24788}"/>
+						<CurrentSwitchRef Name="Blood" ID="{EF1F6BAD-49B9-4712-9983-E60C4CC42288}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Musket" ID="{A9B0359A-6542-43F2-9CF0-F3B77BFF2FD4}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Main_Theme" ID="{521C487F-D9F2-4E6A-99FD-C0CFC410EACB}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Musket_Idle" ID="{EA1984AC-0CAE-475C-9C69-C4FAB29E84DB}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Musket_AIM" ID="{DD8F28CE-ADDB-4131-BBE6-F3EB0A78AB33}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Musket_FireAttack" ID="{47025977-3E62-400C-94B1-4636FF3C951D}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Musket_Death" ID="{76EEEBB4-683E-4278-9700-3BB22D8E6DAA}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="PlayerLife" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}"/>
+							<Value>5</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Blood" ID="{EF1F6BAD-49B9-4712-9983-E60C4CC42288}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

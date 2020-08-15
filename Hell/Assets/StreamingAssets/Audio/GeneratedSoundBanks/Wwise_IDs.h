@@ -13,12 +13,19 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID MAIN_THEME = 2557777556U;
+        static const AkUniqueID MUSKET_AIM = 3275726432U;
+        static const AkUniqueID MUSKET_DEATH = 69452829U;
+        static const AkUniqueID MUSKET_FIREATTACK = 3756653709U;
+        static const AkUniqueID MUSKET_IDLE = 1184701203U;
         static const AkUniqueID PLAYER_FOOTSTEP = 2453392179U;
         static const AkUniqueID PLAYER_HEALTH_SOUNDS = 2975122654U;
         static const AkUniqueID PLAYER_JUMP = 1305133589U;
         static const AkUniqueID PLAYER_PARRY = 4017406829U;
         static const AkUniqueID PLAYER_SWORD_ATTACK = 2088000327U;
         static const AkUniqueID PLAYER_TAKE_DAMAGES = 1229797707U;
+        static const AkUniqueID SOLDIER_ATTACK = 789006460U;
+        static const AkUniqueID SOLDIER_IDLE = 1896704958U;
     } // namespace EVENTS
 
     namespace SWITCHES

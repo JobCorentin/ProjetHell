@@ -21,91 +21,155 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2557777556" Name="Main_Theme" ObjectPath="\Events\Default Work Unit\Musics\Main_Theme" DurationType="OneShot" DurationMin="150.206741" DurationMax="150.206741">
+					<IncludedMemoryFiles>
+						<File Id="917200825" Language="SFX">
+							<ShortName>MainTheme_Wah=v.wav</ShortName>
+							<Path>SFX\MainTheme_Wah=v_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3275726432" Name="Musket_AIM" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_AIM" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.978430" DurationMax="1.978430">
+					<IncludedMemoryFiles>
+						<File Id="328969755" Language="SFX">
+							<ShortName>Musket Cock &amp; Dry Fire 01.wav</ShortName>
+							<Path>SFX\Musket Cock &amp; Dry Fire 01_F69878A4.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="69452829" Name="Musket_Death" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_Death" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.469748" DurationMax="2.218657">
+					<IncludedMemoryFiles>
+						<File Id="214022767" Language="SFX">
+							<ShortName>MusketDeath_1.wav</ShortName>
+							<Path>SFX\MusketDeath_1_10C4C929.wem</Path>
+						</File>
+						<File Id="257111943" Language="SFX">
+							<ShortName>MusketDeath_2.wav</ShortName>
+							<Path>SFX\MusketDeath_2_10C4C929.wem</Path>
+						</File>
+						<File Id="948472799" Language="SFX">
+							<ShortName>Hit.wav</ShortName>
+							<Path>SFX\Hit_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3756653709" Name="Musket_FireAttack" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_FireAttack" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="3.429350" DurationMax="5.443754">
+					<IncludedMemoryFiles>
+						<File Id="1037279960" Language="SFX">
+							<ShortName>GUN Handgun 9MM 2 Far Front Side 7x AT835ST.wav</ShortName>
+							<Path>SFX\GUN Handgun 9MM 2 Far Front Side 7x AT835ST_7A11D0FE.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1184701203" Name="Musket_Idle" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_Idle" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.767070" DurationMax="3.511777">
+					<IncludedMemoryFiles>
+						<File Id="29356416" Language="SFX">
+							<ShortName>MusketIdle_4.wav</ShortName>
+							<Path>SFX\MusketIdle_4_D7DB312C.wem</Path>
+						</File>
+						<File Id="74599734" Language="SFX">
+							<ShortName>MusketIdle_2.wav</ShortName>
+							<Path>SFX\MusketIdle_2_6527D9B3.wem</Path>
+						</File>
+						<File Id="158020536" Language="SFX">
+							<ShortName>MusketIdle_3.wav</ShortName>
+							<Path>SFX\MusketIdle_3_8C124642.wem</Path>
+						</File>
+						<File Id="184719624" Language="SFX">
+							<ShortName>MusketIdle_1.wav</ShortName>
+							<Path>SFX\MusketIdle_1_48D0CCC2.wem</Path>
+						</File>
+						<File Id="196097453" Language="SFX">
+							<ShortName>MusketIdle_5.wav</ShortName>
+							<Path>SFX\MusketIdle_5_8BD0720A.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2453392179" Name="Player_Footstep" ObjectPath="\Events\Default Work Unit\Player\Player_Footstep" DurationType="OneShot" DurationMin="0.163735" DurationMax="0.454751">
 					<IncludedMemoryFiles>
 						<File Id="130640124" Language="SFX">
 							<ShortName>FootstepConcrete_6.wav</ShortName>
-							<Path>SFX\FootstepConcrete_6_D864793D.wem</Path>
+							<Path>SFX\FootstepConcrete_6_AB3469A4.wem</Path>
 						</File>
 						<File Id="333434390" Language="SFX">
 							<ShortName>FootstepWater_2.wav</ShortName>
-							<Path>SFX\FootstepWater_2_A5F9879C.wem</Path>
+							<Path>SFX\FootstepWater_2_2758A451.wem</Path>
 						</File>
 						<File Id="344298138" Language="SFX">
 							<ShortName>FootstepGrass_1.wav</ShortName>
-							<Path>SFX\FootstepGrass_1_6CDF315E.wem</Path>
+							<Path>SFX\FootstepGrass_1_0BC0A086.wem</Path>
 						</File>
 						<File Id="346224109" Language="SFX">
 							<ShortName>FootstepWood_4.wav</ShortName>
-							<Path>SFX\FootstepWood_4_B59A91C7.wem</Path>
+							<Path>SFX\FootstepWood_4_CFC58377.wem</Path>
 						</File>
 						<File Id="404749305" Language="SFX">
 							<ShortName>FootstepWater_4.wav</ShortName>
-							<Path>SFX\FootstepWater_4_8C145003.wem</Path>
+							<Path>SFX\FootstepWater_4_435582D2.wem</Path>
 						</File>
 						<File Id="415025672" Language="SFX">
 							<ShortName>FootstepWater_5.wav</ShortName>
-							<Path>SFX\FootstepWater_5_69B41A8F.wem</Path>
+							<Path>SFX\FootstepWater_5_6BE879B1.wem</Path>
 						</File>
 						<File Id="460819150" Language="SFX">
 							<ShortName>FootstepWood_5.wav</ShortName>
-							<Path>SFX\FootstepWood_5_F9C8C396.wem</Path>
+							<Path>SFX\FootstepWood_5_B635F651.wem</Path>
 						</File>
 						<File Id="511919527" Language="SFX">
 							<ShortName>FootstepConcrete_5.wav</ShortName>
-							<Path>SFX\FootstepConcrete_5_837D050D.wem</Path>
+							<Path>SFX\FootstepConcrete_5_A5A3DEEA.wem</Path>
 						</File>
 						<File Id="532153537" Language="SFX">
 							<ShortName>FootstepWater_6.wav</ShortName>
-							<Path>SFX\FootstepWater_6_2A6DB7D6.wem</Path>
+							<Path>SFX\FootstepWater_6_7F4E9220.wem</Path>
 						</File>
 						<File Id="607446543" Language="SFX">
 							<ShortName>FootstepWood_3.wav</ShortName>
-							<Path>SFX\FootstepWood_3_D2A260D9.wem</Path>
+							<Path>SFX\FootstepWood_3_D704ACE7.wem</Path>
 						</File>
 						<File Id="689541487" Language="SFX">
 							<ShortName>FootstepConcrete_2.wav</ShortName>
-							<Path>SFX\FootstepConcrete_2_FA6CD973.wem</Path>
+							<Path>SFX\FootstepConcrete_2_8370ED62.wem</Path>
 						</File>
 						<File Id="782147939" Language="SFX">
 							<ShortName>FootstepConcrete_4.wav</ShortName>
-							<Path>SFX\FootstepConcrete_4_9DE824AD.wem</Path>
+							<Path>SFX\FootstepConcrete_4_95E5E719.wem</Path>
 						</File>
 						<File Id="784835478" Language="SFX">
 							<ShortName>FootstepWater_3.wav</ShortName>
-							<Path>SFX\FootstepWater_3_08B5C422.wem</Path>
+							<Path>SFX\FootstepWater_3_C202C739.wem</Path>
 						</File>
 						<File Id="794038641" Language="SFX">
 							<ShortName>FootstepWood_2.wav</ShortName>
-							<Path>SFX\FootstepWood_2_DD99AD0C.wem</Path>
+							<Path>SFX\FootstepWood_2_01CECBEA.wem</Path>
 						</File>
 						<File Id="825666160" Language="SFX">
 							<ShortName>FootstepConcrete_3.wav</ShortName>
-							<Path>SFX\FootstepConcrete_3_4524DBAB.wem</Path>
+							<Path>SFX\FootstepConcrete_3_1AB1FF95.wem</Path>
 						</File>
 						<File Id="880538827" Language="SFX">
 							<ShortName>FootstepGrass_4.wav</ShortName>
-							<Path>SFX\FootstepGrass_4_4A4A6542.wem</Path>
+							<Path>SFX\FootstepGrass_4_03739558.wem</Path>
 						</File>
 						<File Id="899013627" Language="SFX">
 							<ShortName>FootstepConcrete_1.wav</ShortName>
-							<Path>SFX\FootstepConcrete_1_9930EBB0.wem</Path>
+							<Path>SFX\FootstepConcrete_1_E2B5CC48.wem</Path>
 						</File>
 						<File Id="1012787112" Language="SFX">
 							<ShortName>FootstepWood_1.wav</ShortName>
-							<Path>SFX\FootstepWood_1_17603206.wem</Path>
+							<Path>SFX\FootstepWood_1_50285449.wem</Path>
 						</File>
 						<File Id="1041003874" Language="SFX">
 							<ShortName>FootstepGrass_5.wav</ShortName>
-							<Path>SFX\FootstepGrass_5_9467DE95.wem</Path>
+							<Path>SFX\FootstepGrass_5_F64F027B.wem</Path>
 						</File>
 						<File Id="1041399421" Language="SFX">
 							<ShortName>FootstepGrass_3.wav</ShortName>
-							<Path>SFX\FootstepGrass_3_855B020D.wem</Path>
+							<Path>SFX\FootstepGrass_3_65CECE20.wem</Path>
 						</File>
 						<File Id="1044382645" Language="SFX">
 							<ShortName>FootstepWater_1.wav</ShortName>
-							<Path>SFX\FootstepWater_1_53BE37C0.wem</Path>
+							<Path>SFX\FootstepWater_1_1A84D941.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<DefaultSwitchValue>{DB7246E4-69DB-453C-833F-157DF6B24788}</DefaultSwitchValue>
@@ -270,6 +334,58 @@
 						<File Id="698514762" Language="SFX">
 							<ShortName>PlayerPain_1.wav</ShortName>
 							<Path>SFX\PlayerPain_1_286B9F3F.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="789006460" Name="Soldier_Attack" ObjectPath="\Events\Default Work Unit\Bad Guys\Soldier_Attack" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.350494" DurationMax="0.764003">
+					<IncludedMemoryFiles>
+						<File Id="504815808" Language="SFX">
+							<ShortName>SoldierAttackVoice_1.wav</ShortName>
+							<Path>SFX\SoldierAttackVoice_1_204B8B28.wem</Path>
+						</File>
+						<File Id="512572648" Language="SFX">
+							<ShortName>SoldierAttackVoice_2.wav</ShortName>
+							<Path>SFX\SoldierAttackVoice_2_0BA2E422.wem</Path>
+						</File>
+						<File Id="625302998" Language="SFX">
+							<ShortName>SoldierAttackVoice_4.wav</ShortName>
+							<Path>SFX\SoldierAttackVoice_4_7422B1B6.wem</Path>
+						</File>
+						<File Id="693660259" Language="SFX">
+							<ShortName>SoldierAttackVoice_3.wav</ShortName>
+							<Path>SFX\SoldierAttackVoice_3_3918F713.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1896704958" Name="Soldier_Idle" ObjectPath="\Events\Default Work Unit\Bad Guys\Soldier_Idle" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.258264" DurationMax="3.295045">
+					<IncludedMemoryFiles>
+						<File Id="213079774" Language="SFX">
+							<ShortName>SoldierIdle_6.wav</ShortName>
+							<Path>SFX\SoldierIdle_6_76035410.wem</Path>
+						</File>
+						<File Id="241674225" Language="SFX">
+							<ShortName>SoldierIdle_3.wav</ShortName>
+							<Path>SFX\SoldierIdle_3_4BD32FB7.wem</Path>
+						</File>
+						<File Id="584311886" Language="SFX">
+							<ShortName>SoldierIdle_5.wav</ShortName>
+							<Path>SFX\SoldierIdle_5_D4450811.wem</Path>
+						</File>
+						<File Id="635803235" Language="SFX">
+							<ShortName>SoldierIdle_7.wav</ShortName>
+							<Path>SFX\SoldierIdle_7_10C4C929.wem</Path>
+						</File>
+						<File Id="653056460" Language="SFX">
+							<ShortName>SoldierIdle_1.wav</ShortName>
+							<Path>SFX\SoldierIdle_1_171CEB85.wem</Path>
+						</File>
+						<File Id="717449962" Language="SFX">
+							<ShortName>SoldierIdle_4.wav</ShortName>
+							<Path>SFX\SoldierIdle_4_10C4C929.wem</Path>
+						</File>
+						<File Id="959353516" Language="SFX">
+							<ShortName>SoldierIdle_2.wav</ShortName>
+							<Path>SFX\SoldierIdle_2_2F3F0108.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

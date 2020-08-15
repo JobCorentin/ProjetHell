@@ -264,6 +264,27 @@ MonoBehaviour:
   lookUp: 0
   canShoot: 1
   canAim: 0
+  musketAimAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9700db13ccddcd74193d4067a1f523d0,
+      type: 2}
+  musketShotAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7571357d417d52744b6e0ea5916e294b,
+      type: 2}
+  musketIdleAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0561457184794544291b86a28ea8cc3b,
+      type: 2}
+  musketDeathAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9b008259d5eccfa42b40847336e1fddb,
+      type: 2}
+  musketIdleAudioTimer: 10
 --- !u!50 &8345421285763794953
 Rigidbody2D:
   serializedVersion: 4
