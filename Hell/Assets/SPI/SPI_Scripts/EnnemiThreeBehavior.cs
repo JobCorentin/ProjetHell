@@ -43,6 +43,11 @@ public class EnnemiThreeBehavior : EnnemiController
     public override void FixedUpdate()
     {
         CheckingIfAlive();
+
+        if (!isInAudioCoroutine)
+        {
+            StartCoroutine(SoldierIdleAudioCooldown());
+        }
         
         if(dead)
         {
