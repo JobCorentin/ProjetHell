@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 4284ab4eb2341646a069c5e5531758ca
     GuidInternal: 
-    m_lastTime: -8586046143296311929
+    m_lastTime: -8586040937650975716
     List:
     - name: Main
       guid: 33038aaad1850e4189e17a29e7d73f96
@@ -56,8 +56,242 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 14895eb1fb392f4fb3e6729aaa4bce9d
     GuidInternal: 
-    m_lastTime: -8586046143296182692
+    m_lastTime: -8586040910918580474
     List:
+    - name: Bad Guys
+      guid: 3f5756db27424849b2a3879cd6bf2447
+      id: 3734085730
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      Path: Default Work Unit\Bad Guys
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Centaur_Charge
+      guid: 98fcebc806e69f46945b09a4d620fcac
+      id: 1647725780
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Centaur_Charge
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Centaur_Charge
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Centaur_Damages
+      guid: f8d66a4d2f037d4189648f5e0a7c115c
+      id: 3060686034
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Centaur_Damages
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Centaur_Damages
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Centaur_Death
+      guid: c67cf0dba9ef2f49bb6b7acacc6268fe
+      id: 730632742
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Centaur_Death
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Centaur_Death
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Centaur_Idle
+      guid: 85f08dfc0c17954193ee60dc1be04825
+      id: 4239594550
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Centaur_Idle
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Centaur_Idle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Centaur_KatanaThrow
+      guid: ff76eafbe3b0bf4287b7d5cf2722b6d2
+      id: 1327286010
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Centaur_KatanaThrow
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Centaur_KatanaThrow
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hearth_Damages
+      guid: aa0df277837c0e47af9d3ab4dae46338
+      id: 4005551194
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Hearth_Damages
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Hearth_Damages
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hearth_Death
+      guid: 7166cde31e3a1641907c88d4790af0d6
+      id: 867542894
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Hearth_Death
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Hearth_Death
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hearth_FireAttack
+      guid: 47a29a56cb29b24ab817682cd184ed17
+      id: 879101832
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Hearth_FireAttack
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Hearth_FireAttack
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hearth_Idle
+      guid: 727cbdf5a9d75042b4c58224a4d4c356
+      id: 4018902270
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Hearth_Idle
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Hearth_Idle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hearth_Lauch_Attack
+      guid: d891a44a60340b43b8b3d1c689a36111
+      id: 3537539166
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Hearth_Lauch_Attack
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Hearth_Lauch_Attack
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Main_Theme
+      guid: 7f481c52f2d96a4e99fdc0cfc410eacb
+      id: 2557777556
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Musics
+        ObjectType: 4
+      - ElementName: Main_Theme
+        ObjectType: 3
+      Path: Default Work Unit\Musics\Main_Theme
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Musics
+      guid: ff31918e577e7f4b903b8416253dafc6
+      id: 1730564753
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Musics
+        ObjectType: 4
+      Path: Default Work Unit\Musics
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Musket_AIM
+      guid: ce288fdddbad3141bbe6f3eb0a78ab33
+      id: 3275726432
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Musket_AIM
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Musket_AIM
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Musket_Death
+      guid: b4ebee763e68784297003bb22d8e6daa
+      id: 69452829
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Musket_Death
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Musket_Death
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Musket_FireAttack
+      guid: 77590247623e0c4094b14636ff3c951d
+      id: 3756653709
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Musket_FireAttack
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Musket_FireAttack
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Musket_Idle
+      guid: ac8419eaae0c5c479c69c4fab29e84db
+      id: 1184701203
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Musket_Idle
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Musket_Idle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Player
       guid: 6a2b94757f7b1c4f9289b4a10551536e
       id: 1069431850
@@ -95,6 +329,20 @@ MonoBehaviour:
       - ElementName: Player_Footstep
         ObjectType: 3
       Path: Default Work Unit\Player\Player_Footstep
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_Health_Sounds
+      guid: bf3af82e0204ce45b92f83b708f40f55
+      id: 2975122654
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: Player_Health_Sounds
+        ObjectType: 3
+      Path: Default Work Unit\Player\Player_Health_Sounds
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -140,6 +388,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Player_Sword_Throw
+      guid: b1471f3d696f2a428001007540bbaf38
+      id: 3631697037
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: Player_Sword_Throw
+        ObjectType: 3
+      Path: Default Work Unit\Player\Player_Sword_Throw
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Player_Take_Damages
       guid: cb5b9cdc59be254592a87f99eb66de8f
       id: 1229797707
@@ -165,6 +427,62 @@ MonoBehaviour:
       - ElementName: Player_Wall_Slide
         ObjectType: 3
       Path: Default Work Unit\Player\Player_Wall_Slide
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Soldier_Attack
+      guid: 29ef146f578b5f428bc1ffb2fb287422
+      id: 789006460
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Soldier_Attack
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Soldier_Attack
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Soldier_Damages
+      guid: deea3eeafc6b5242ba9a97c8a50afc74
+      id: 2595123482
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Soldier_Damages
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Soldier_Damages
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Soldier_Death
+      guid: 8e24658f5a05344387b8ab7e3d1035b7
+      id: 3583423278
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Soldier_Death
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Soldier_Death
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Soldier_Idle
+      guid: a419505365b89044982ace4afacab507
+      id: 1896704958
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Soldier_Idle
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Soldier_Idle
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -196,8 +514,45 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 9f7133fbe6cfcc4c8f9a5c8126ca4b7b
     GuidInternal: 
-    m_lastTime: -8586051183522486077
-    List: []
+    m_lastTime: -8586044470850526431
+    List:
+    - name: FootStep_Material
+      guid: 7a069758b1efcd40b470554bbb180c5c
+      id: 684570577
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: FootStep_Material
+        ObjectType: 11
+      Path: Default Work Unit\FootStep_Material
+      values:
+      - name: Blood
+        guid: ad6b1fefb94912479983e60c4cc42288
+        id: 3934470635
+        PathAndIcons:
+        - ElementName: Blood
+          ObjectType: 10
+      - name: Concrete
+        guid: e44672dbdb693c45833f157df6b24788
+        id: 841620460
+        PathAndIcons:
+        - ElementName: Concrete
+          ObjectType: 10
+      - name: Grass
+        guid: 8dbd08be0dc0b947821b069437e25e4d
+        id: 4248645337
+        PathAndIcons:
+        - ElementName: Grass
+          ObjectType: 10
+      - name: Wood
+        guid: d1c9f620bf036d48b382f4520e02fc46
+        id: 2058049674
+        PathAndIcons:
+        - ElementName: Wood
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPath: Default Work Unit
@@ -209,6 +564,6 @@ MonoBehaviour:
   - /Hell_WwiseProject
   - /Hell_WwiseProject/Events
   - /Hell_WwiseProject/Events/Default Work Unit
-  - /Hell_WwiseProject/Events/Default Work Unit/Player
+  - /Hell_WwiseProject/Events/Default Work Unit/Bad Guys
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

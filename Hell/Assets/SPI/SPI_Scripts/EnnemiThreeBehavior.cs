@@ -22,6 +22,16 @@ public class EnnemiThreeBehavior : EnnemiController
     public float preparationDuration;
 
 
+
+    [Space(10)]
+    [Header("Sounds")]
+    public AK.Wwise.Event soldierAttack;
+    public AK.Wwise.Event soldierIdle;
+    public int soldierIdleAudioTimer;
+    bool isInAudioCoroutine = false;
+
+
+
     public override void Start()
     {
         base.Start();
@@ -113,6 +123,8 @@ public class EnnemiThreeBehavior : EnnemiController
         animator.SetBool("IsPreparing", false);
         animator.SetBool("Attack", true);
         slash.SetActive(true);
+        soldierAttack.Post(gameObject);
+
 
             for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
             {
@@ -172,4 +184,14 @@ public class EnnemiThreeBehavior : EnnemiController
         StartCoroutine(Recover());
     }
 
+
+
+
+    IEnumerator SoldierIdleAudioCooldown()
+    {
+        isInAudioCoroutine = true;
+        yield return new WaitForSeconds(Random.Range(soldierIdleAudioTimer - (soldierIdleAudioTimer / 2), soldierIdleAudioTimer + (soldierIdleAudioTimer / 2)));
+        soldierIdle.Post(gameObject);
+        isInAudioCoroutine = false;
+    }
 }

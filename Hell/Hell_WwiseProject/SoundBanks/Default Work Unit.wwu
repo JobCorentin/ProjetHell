@@ -5,11 +5,19 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{AA8A0333-85D1-410E-89E1-7A29E7D73F96}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Musket_FireAttack" ID="{47025977-3E62-400C-94B1-4636FF3C951D}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Musket_AIM" ID="{DD8F28CE-ADDB-4131-BBE6-F3EB0A78AB33}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Jump" ID="{CC132177-5A64-41C6-8EC2-CA6956B754F0}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Soldier_Attack" ID="{6F14EF29-8B57-425F-8BC1-FFB2FB287422}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Musket_Death" ID="{76EEEBB4-683E-4278-9700-3BB22D8E6DAA}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Soldier_Idle" ID="{535019A4-B865-4490-982A-CE4AFACAB507}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Take_Damages" ID="{DC9C5BCB-BE59-4525-92A8-7F99EB66DE8F}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Health_Sounds" ID="{2EF83ABF-0402-45CE-B92F-83B708F40F55}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Parry" ID="{B7025917-3F9F-4677-BACD-1B1AABB84943}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Musket_Idle" ID="{EA1984AC-0CAE-475C-9C69-C4FAB29E84DB}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Sword_Attack" ID="{F01386F1-92F5-4875-8596-FFE5AFCC1D38}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Main_Theme" ID="{521C487F-D9F2-4E6A-99FD-C0CFC410EACB}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Footstep" ID="{13E57215-767E-4FDD-A3A8-74615301574A}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

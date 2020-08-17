@@ -12,6 +12,14 @@ public class E1Bullet : MonoBehaviour
 
     bool reflected = false;
 
+
+    [Space(10)]
+    [Header("Sounds")]
+    public AK.Wwise.Event projectilParryAudio;
+
+
+
+
     [HideInInspector] public float attackDirectionAngle;
 
     // Start is called before the first frame update
@@ -64,6 +72,7 @@ public class E1Bullet : MonoBehaviour
         //Collision avec le layer Parry
         if(collision.gameObject.layer == 13)
         {
+            projectilParryAudio.Post(gameObject);
             FXManager.fxm.fxInstancier(4, gameObject.transform, BaseSlashInstancier.bsi.attackDirectionAngle + Random.Range(-10, 10));
 
             //Parry.p.StopParry();
