@@ -33,6 +33,11 @@ public class EnnemiThreeBehavior : EnnemiController
     public override void FixedUpdate()
     {
         CheckingIfAlive();
+        
+        if(dead)
+        {
+            slash.SetActive(false);
+        }
 
         if (hasSpawn == true)
         {

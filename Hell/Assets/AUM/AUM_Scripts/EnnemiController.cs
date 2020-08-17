@@ -64,13 +64,15 @@ public class EnnemiController : MonoBehaviour
 
     public bool hasSpawn;
 
-    [HideInInspector] public bool dead = false;
+    public bool dead = false;
     [HideInInspector] public Vector2 initialPosition;
     [HideInInspector] public int initialHealth;
 
     // Start is called before the first frame update
     public virtual void Start()
     {
+        dead = false;
+
         initialPosition = transform.position;
         initialHealth = health;
 
@@ -373,6 +375,7 @@ public class EnnemiController : MonoBehaviour
             }
             else
             {
+                if(hasSpawn == true)
                 animator.SetBool("Respawning", false);
             }
 

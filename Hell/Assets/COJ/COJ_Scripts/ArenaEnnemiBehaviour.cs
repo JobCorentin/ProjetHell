@@ -14,8 +14,7 @@ namespace Cinemachine
         {
             enemiStat = gameObject.GetComponent<EnnemiController>();
             wave = gameObject.GetComponentInParent<EnnemiWave>();
-            animator = gameObject.GetComponent<Animator>();
-            animator.SetBool("Spawning",true);
+            enemiStat.animator.SetBool("Spawning",true);
             StartCoroutine(isSpawning());
         }
 
@@ -23,7 +22,7 @@ namespace Cinemachine
         {
             if(enemiStat.health <= 0)
             {
-                wave.waveEnnemi.Remove(gameObject);
+                //wave.waveEnnemi.Remove(gameObject);
             }
         }
 
@@ -34,7 +33,9 @@ namespace Cinemachine
 
             yield return new WaitForSeconds(spawnTime);
 
-            animator.SetTrigger("hasSpawn");
+            enemiStat.animator.SetBool("Respawning", false);
+
+            enemiStat.animator.SetTrigger("hasSpawn");
         }
     }
 }
