@@ -27,11 +27,13 @@ public class GainLife : MonoBehaviour
     bool wasPressed;
 
     BoomController currentBoomerang;
+    public GameObject DashEffect; 
 
     // Start is called before the first frame update
     void Start()
     {
         gl = this;
+        DashEffect.SetActive(false);
     }
 
     // Update is called once per frame
@@ -132,7 +134,7 @@ public class GainLife : MonoBehaviour
     IEnumerator DashToBoomerang()
     {
         MovementController.mC.col.enabled = false;
-
+        StartCoroutine(dashFx(0.2f, 0.3f));
         while (Vector2.Distance(transform.position, currentBoomerang.transform.position) > 3f)
         {
             MovementController.mC.rb.velocity = (currentBoomerang.transform.position - transform.position).normalized * 60f;
@@ -145,12 +147,10 @@ public class GainLife : MonoBehaviour
         currentBoomerang.StopAllCoroutines();
 
         Destroy(currentBoomerang.gameObject);
-
         noSword = false;
-
         MovementController.mC.col.enabled = true;
 
-        yield break;
+       
     }
 
     IEnumerator ChangeSpeedMultiplierFor(float valueBonus, float time)
@@ -166,5 +166,28 @@ public class GainLife : MonoBehaviour
         }
 
         MovementController.mC.speedMultiplier = 1;
+    }
+
+    IEnumerator dashFx(float time1, float time2)
+    {
+        var main = DashEffect.GetComponent<ParticleSystem>();
+        var main2 = DashEffect.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>();
+
+        DashEffect.SetActive(true);
+        if(MovementController.mC.rb.velocity.x < 0)
+        {
+            DashEffect.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (MovementController.mC.rb.velocity.x > 0)
+        {
+            DashEffect.transform.localScale = new Vector3(1, 1, 1);
+        }
+        yield return new WaitForSeconds(time1);
+        main.loop = false;
+        main2.loop = false;
+        yield return new WaitForSeconds(time2);
+        main.loop = true;
+        main2.loop = true;
+        DashEffect.SetActive(false);
     }
 }
