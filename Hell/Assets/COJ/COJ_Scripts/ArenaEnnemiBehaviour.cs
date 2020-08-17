@@ -10,6 +10,8 @@ namespace Cinemachine
         public EnnemiController enemiStat;
         Animator animator;
 
+        public bool died;
+
         private void Awake()
         {
             enemiStat = gameObject.GetComponent<EnnemiController>();
@@ -20,14 +22,18 @@ namespace Cinemachine
 
         void Update()
         {
-            if(enemiStat.health <= 0)
+            if(enemiStat.health <= 0 /*&& died==false*/)
             {
-                //wave.waveEnnemi.Remove(gameObject);
+                died = true;
+                if (enemiStat.type == 0)
+                    wave.waveEnnemi.Remove(gameObject);
             }
         }
 
         IEnumerator isSpawning()
         {
+            //gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            died = false;
             float spawnTime = Random.Range(0.5f, 1.5f);
             enemiStat.hasSpawn = false;
 

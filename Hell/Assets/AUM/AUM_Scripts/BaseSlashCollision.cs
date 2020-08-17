@@ -38,7 +38,7 @@ public class BaseSlashCollision : MonoBehaviour
         {
             EnnemiController ec = collision.GetComponent<EnnemiController>();
 
-            if (ec.dead == true)
+            if (ec.dead == true || ec.hasSpawn == false)
                 return;
 
             FXManager.fxm.fxInstancier(2, collision.transform, BaseSlashInstancier.bsi.attackDirectionAngle + Random.Range(-10,10));

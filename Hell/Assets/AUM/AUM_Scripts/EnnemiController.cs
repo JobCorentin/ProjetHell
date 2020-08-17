@@ -414,6 +414,8 @@ public class EnnemiController : MonoBehaviour
 
     public void spawned()
     {
+        //gameObject.GetComponent<BoxCollider2D>().enabled = true;
         hasSpawn = true;
     }
+
 }

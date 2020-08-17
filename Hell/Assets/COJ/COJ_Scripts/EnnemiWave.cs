@@ -33,7 +33,7 @@ namespace Cinemachine
 
             if (ennemisDead == waveEnnemi.Count && ended == false)
             {
-                //ended = true;
+                ended = true;
                 gameObject.SetActive(false);
                 arena.NextWave();
             }
