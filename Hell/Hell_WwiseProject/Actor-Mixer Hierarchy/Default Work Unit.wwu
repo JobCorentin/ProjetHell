@@ -11,7 +11,7 @@
 								<RTPC Name="" ID="{9492B8B3-55BA-41FB-A7EC-A709A976A92C}" ShortID="287880365">
 									<ReferenceList>
 										<Reference Name="ControlInput">
-											<ObjectRef Name="PlayerLife" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}" WorkUnitID="{519187B2-23EC-4E1C-B492-3D2114A6D4D9}"/>
+											<ObjectRef Name="LowPass_Duration" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}" WorkUnitID="{519187B2-23EC-4E1C-B492-3D2114A6D4D9}"/>
 										</Reference>
 									</ReferenceList>
 									<Curve Name="" ID="{BCE7CADC-00F4-4600-B799-7EC4A84055B7}">
@@ -21,22 +21,12 @@
 										<PointList>
 											<Point>
 												<XPos>0</XPos>
-												<YPos>50</YPos>
+												<YPos>0</YPos>
 												<Flags>5</Flags>
 											</Point>
 											<Point>
-												<XPos>1</XPos>
+												<XPos>500</XPos>
 												<YPos>50</YPos>
-												<Flags>0</Flags>
-											</Point>
-											<Point>
-												<XPos>1.001</XPos>
-												<YPos>0</YPos>
-												<Flags>0</Flags>
-											</Point>
-											<Point>
-												<XPos>5</XPos>
-												<YPos>0</YPos>
 												<Flags>37</Flags>
 											</Point>
 										</PointList>
@@ -1128,7 +1118,7 @@
 										<RTPC Name="" ID="{74DFA77B-7FAD-452A-BCE1-33FAF6D21E25}" ShortID="756204377">
 											<ReferenceList>
 												<Reference Name="ControlInput">
-													<ObjectRef Name="PlayerLife" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}" WorkUnitID="{519187B2-23EC-4E1C-B492-3D2114A6D4D9}"/>
+													<ObjectRef Name="LowPass_Duration" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}" WorkUnitID="{519187B2-23EC-4E1C-B492-3D2114A6D4D9}"/>
 												</Reference>
 											</ReferenceList>
 											<Curve Name="" ID="{0AA10DEC-B992-4670-AC88-F0FFC9BF7E0F}">
@@ -1138,32 +1128,13 @@
 												<PointList>
 													<Point>
 														<XPos>0</XPos>
-														<YPos>0</YPos>
+														<YPos>-200</YPos>
 														<Flags>5</Flags>
+														<SegmentShape>Exp2</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>1</XPos>
+														<XPos>500</XPos>
 														<YPos>0</YPos>
-														<Flags>0</Flags>
-													</Point>
-													<Point>
-														<XPos>1.00754</XPos>
-														<YPos>-20</YPos>
-														<Flags>0</Flags>
-													</Point>
-													<Point>
-														<XPos>2</XPos>
-														<YPos>-20</YPos>
-														<Flags>0</Flags>
-													</Point>
-													<Point>
-														<XPos>2.001</XPos>
-														<YPos>-200</YPos>
-														<Flags>0</Flags>
-													</Point>
-													<Point>
-														<XPos>5</XPos>
-														<YPos>-200</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -2119,7 +2090,7 @@
 										<RTPC Name="" ID="{71083D8E-4ABF-407A-86B8-BFF4A19F1839}" ShortID="988057745">
 											<ReferenceList>
 												<Reference Name="ControlInput">
-													<ObjectRef Name="PlayerLife" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}" WorkUnitID="{519187B2-23EC-4E1C-B492-3D2114A6D4D9}"/>
+													<ObjectRef Name="LowPass_Duration" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}" WorkUnitID="{519187B2-23EC-4E1C-B492-3D2114A6D4D9}"/>
 												</Reference>
 											</ReferenceList>
 											<Curve Name="" ID="{EDC6A099-83A9-4606-A0DF-D50BE3685C89}">
@@ -2129,22 +2100,13 @@
 												<PointList>
 													<Point>
 														<XPos>0</XPos>
-														<YPos>0</YPos>
+														<YPos>-200</YPos>
 														<Flags>5</Flags>
+														<SegmentShape>Exp2</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>1</XPos>
+														<XPos>500</XPos>
 														<YPos>0</YPos>
-														<Flags>0</Flags>
-													</Point>
-													<Point>
-														<XPos>1.001</XPos>
-														<YPos>-200</YPos>
-														<Flags>0</Flags>
-													</Point>
-													<Point>
-														<XPos>5</XPos>
-														<YPos>-200</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -2188,7 +2150,7 @@
 								<RTPC Name="" ID="{C2F7AD9C-974A-45C0-A362-CBB1B765AF6C}" ShortID="1059277508">
 									<ReferenceList>
 										<Reference Name="ControlInput">
-											<ObjectRef Name="PlayerLife" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}" WorkUnitID="{519187B2-23EC-4E1C-B492-3D2114A6D4D9}"/>
+											<ObjectRef Name="LowPass_Duration" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}" WorkUnitID="{519187B2-23EC-4E1C-B492-3D2114A6D4D9}"/>
 										</Reference>
 									</ReferenceList>
 									<Curve Name="" ID="{18ED33F2-A3A7-4C1F-909A-281809C53C0B}">
@@ -2198,22 +2160,12 @@
 										<PointList>
 											<Point>
 												<XPos>0</XPos>
-												<YPos>75</YPos>
+												<YPos>0</YPos>
 												<Flags>5</Flags>
 											</Point>
 											<Point>
-												<XPos>0.99346</XPos>
+												<XPos>500</XPos>
 												<YPos>75</YPos>
-												<Flags>0</Flags>
-											</Point>
-											<Point>
-												<XPos>1.001</XPos>
-												<YPos>0</YPos>
-												<Flags>0</Flags>
-											</Point>
-											<Point>
-												<XPos>5</XPos>
-												<YPos>0</YPos>
 												<Flags>37</Flags>
 											</Point>
 										</PointList>
@@ -2301,7 +2253,7 @@
 								<RTPC Name="" ID="{E8881C20-F016-4738-B4E1-17962A24719B}" ShortID="589239829">
 									<ReferenceList>
 										<Reference Name="ControlInput">
-											<ObjectRef Name="PlayerLife" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}" WorkUnitID="{519187B2-23EC-4E1C-B492-3D2114A6D4D9}"/>
+											<ObjectRef Name="LowPass_Duration" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}" WorkUnitID="{519187B2-23EC-4E1C-B492-3D2114A6D4D9}"/>
 										</Reference>
 									</ReferenceList>
 									<Curve Name="" ID="{17028B89-466D-41DD-A5E2-2AF05B73533D}">
@@ -2311,22 +2263,12 @@
 										<PointList>
 											<Point>
 												<XPos>0</XPos>
-												<YPos>50</YPos>
+												<YPos>0</YPos>
 												<Flags>5</Flags>
 											</Point>
 											<Point>
-												<XPos>1</XPos>
+												<XPos>500</XPos>
 												<YPos>50</YPos>
-												<Flags>0</Flags>
-											</Point>
-											<Point>
-												<XPos>1.001</XPos>
-												<YPos>0</YPos>
-												<Flags>0</Flags>
-											</Point>
-											<Point>
-												<XPos>5</XPos>
-												<YPos>0</YPos>
 												<Flags>37</Flags>
 											</Point>
 										</PointList>
@@ -3304,6 +3246,155 @@
 								<ActiveSource Name="Hearth" ID="{BE214F11-40DB-431D-8902-7A8214E71798}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="Centaur_Idle" ID="{9855547A-B9A8-4AF7-ABA3-D10227CBF1C4}" ShortID="138972093">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="CentaurIdle_1" ID="{B57B9447-8B63-4A99-95D8-EEAA237C20E6}" ShortID="43948779">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurIdle_1" ID="{68137E43-F9CF-4085-B8D7-46086953D000}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.994163491723744"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.63930670305365"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurIdle_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="723715463"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurIdle_1" ID="{68137E43-F9CF-4085-B8D7-46086953D000}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurIdle_2" ID="{256249F5-5274-4781-B699-AE7CB242D4A6}" ShortID="682788796">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurIdle_2" ID="{26530C15-DEFE-4903-B088-A95194736CE6}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.53630597174658"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.61085659246575"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurIdle_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="857653009"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurIdle_2" ID="{26530C15-DEFE-4903-B088-A95194736CE6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurIdle_3" ID="{C9DBDDD3-58C8-4F52-A297-CCF62B2B08F6}" ShortID="864679214">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurIdle_3" ID="{36E9A697-2996-4B30-BD6C-50E495B0F660}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.125463220605023"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.100370576484018"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.13515148758562"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurIdle_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="393081860"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurIdle_3" ID="{36E9A697-2996-4B30-BD6C-50E495B0F660}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurIdle_4" ID="{6A710628-DD73-4427-99DF-C61264C754DB}" ShortID="300369891">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurIdle_4" ID="{92F505D4-2D0C-4867-8A97-827275262D7C}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0702417772545662"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.16722804295091"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurIdle_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="353700281"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurIdle_4" ID="{92F505D4-2D0C-4867-8A97-827275262D7C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurIdle_5" ID="{BDBA93B3-DC65-4F8D-A930-C72B2A0C289A}" ShortID="24215182">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurIdle_5" ID="{BC52849A-24DC-44BB-8344-9D46CBEDCB13}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.17494149543379"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0962178224885845"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.95959139554794"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurIdle_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="519137111"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurIdle_5" ID="{BC52849A-24DC-44BB-8344-9D46CBEDCB13}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 					<PositioningInfo>
 						<Position Name="" ID="{194A086A-407B-4C75-8BE1-39F582570FA9}"/>

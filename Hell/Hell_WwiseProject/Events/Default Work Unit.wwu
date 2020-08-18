@@ -264,7 +264,17 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Hearth_Death" ID="{E3CD6671-3A1E-4116-907C-88D4790AF0D6}"/>
-						<Event Name="Centaur_Idle" ID="{FC8DF085-170C-4195-93EE-60DC1BE04825}"/>
+						<Event Name="Centaur_Idle" ID="{FC8DF085-170C-4195-93EE-60DC1BE04825}">
+							<ChildrenList>
+								<Action Name="" ID="{B19A5B59-D5A6-47B5-8516-B5870FD44E57}" ShortID="666603407">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Centaur_Idle" ID="{9855547A-B9A8-4AF7-ABA3-D10227CBF1C4}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Centaur_Charge" ID="{C8EBFC98-E606-469F-945B-09A4D620FCAC}"/>
 						<Event Name="Centaur_KatanaThrow" ID="{FBEA76FF-B0E3-42BF-87B7-D5CF2722B6D2}"/>
 						<Event Name="Centaur_Damages" ID="{4D6AD6F8-032F-417D-8964-8F5E0A7C115C}"/>
