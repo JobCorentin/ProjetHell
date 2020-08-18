@@ -52,7 +52,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     {
         CheckingIfAlive();
 
-        if (!isInAudioCoroutine)
+        if (!isInAudioCoroutine && health > 0)
         {
             StartCoroutine(MusketIdleAudioCooldown());
         }
@@ -307,7 +307,10 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     {
         isInAudioCoroutine = true;
         yield return new WaitForSeconds(Random.Range(musketIdleAudioTimer - (musketIdleAudioTimer / 2), musketIdleAudioTimer + (musketIdleAudioTimer / 2)));
-        musketIdleAudio.Post(gameObject);
+        if (health > 0)
+        {
+            musketIdleAudio.Post(gameObject);
+        }
         isInAudioCoroutine = false;
     }
 }

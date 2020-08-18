@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e606ceeac4529409a68aa1899cce2c, type: 3}
   m_Name: 78E44170-9EB1-4242-8597-697FB0F89BF0
   m_EditorClassIdentifier: 
-  objectName: PlayerLife
-  id: 444815956
+  objectName: LowPass_Duration
+  id: 3588564833
   guid: 78E44170-9EB1-4242-8597-697FB0F89BF0

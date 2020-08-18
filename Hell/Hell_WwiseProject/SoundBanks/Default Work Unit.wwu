@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Musket_FireAttack" ID="{47025977-3E62-400C-94B1-4636FF3C951D}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Musket_AIM" ID="{DD8F28CE-ADDB-4131-BBE6-F3EB0A78AB33}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Centaur_Idle" ID="{FC8DF085-170C-4195-93EE-60DC1BE04825}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Jump" ID="{CC132177-5A64-41C6-8EC2-CA6956B754F0}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hearth_Idle" ID="{F5BD7C72-D7A9-4250-B4C5-8224A4D4C356}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Soldier_Attack" ID="{6F14EF29-8B57-425F-8BC1-FFB2FB287422}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>

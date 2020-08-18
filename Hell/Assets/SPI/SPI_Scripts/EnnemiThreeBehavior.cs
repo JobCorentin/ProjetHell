@@ -25,10 +25,12 @@ public class EnnemiThreeBehavior : EnnemiController
 
     [Space(10)]
     [Header("Sounds")]
-    public AK.Wwise.Event soldierAttack;
-    public AK.Wwise.Event soldierIdle;
+    public AK.Wwise.Event soldierAttackAudio;
+    public AK.Wwise.Event soldierIdleAudio;
+    public AK.Wwise.Event soldierDeathAudio;
     public int soldierIdleAudioTimer;
     bool isInAudioCoroutine = false;
+    bool canPlayDeathAudio = true;
 
 
 
@@ -44,12 +46,18 @@ public class EnnemiThreeBehavior : EnnemiController
     {
         CheckingIfAlive();
 
-        if (!isInAudioCoroutine)
+        if (!isInAudioCoroutine && health > 0)
         {
             StartCoroutine(SoldierIdleAudioCooldown());
         }
-        
-        if(dead)
+        if (health <= 0 && canPlayDeathAudio)
+        {
+            soldierDeathAudio.Post(gameObject);
+            canPlayDeathAudio = false;
+        }
+
+
+        if (dead)
         {
             slash.SetActive(false);
         }
@@ -128,7 +136,7 @@ public class EnnemiThreeBehavior : EnnemiController
         animator.SetBool("IsPreparing", false);
         animator.SetBool("Attack", true);
         slash.SetActive(true);
-        soldierAttack.Post(gameObject);
+        soldierAttackAudio.Post(gameObject);
 
 
             for (float i = duration + momentumMultiplier; i >= momentumMultiplier; i -= Time.fixedDeltaTime)
@@ -196,7 +204,10 @@ public class EnnemiThreeBehavior : EnnemiController
     {
         isInAudioCoroutine = true;
         yield return new WaitForSeconds(Random.Range(soldierIdleAudioTimer - (soldierIdleAudioTimer / 2), soldierIdleAudioTimer + (soldierIdleAudioTimer / 2)));
-        soldierIdle.Post(gameObject);
+        if (health > 0)
+        {
+            soldierIdleAudio.Post(gameObject);
+        }
         isInAudioCoroutine = false;
     }
 }

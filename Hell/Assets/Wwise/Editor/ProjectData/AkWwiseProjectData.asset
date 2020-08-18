@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 4284ab4eb2341646a069c5e5531758ca
     GuidInternal: 
-    m_lastTime: -8586038691080593907
+    m_lastTime: -8586038463067412623
     List:
     - name: Main
       guid: 33038aaad1850e4189e17a29e7d73f96
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 14895eb1fb392f4fb3e6729aaa4bce9d
     GuidInternal: 
-    m_lastTime: -8586038691081621156
+    m_lastTime: -8586038468376177673
     List:
     - name: Bad Guys
       guid: 3f5756db27424849b2a3879cd6bf2447
@@ -444,20 +444,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Soldier_Damages
-      guid: deea3eeafc6b5242ba9a97c8a50afc74
-      id: 2595123482
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Bad Guys
-        ObjectType: 4
-      - ElementName: Soldier_Damages
-        ObjectType: 3
-      Path: Default Work Unit\Bad Guys\Soldier_Damages
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: Soldier_Death
       guid: 8e24658f5a05344387b8ab7e3d1035b7
       id: 3583423278
@@ -491,17 +477,35 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b2879151ec231c4eb4923d2114a6d4d9
     GuidInternal: 
-    m_lastTime: -8586046225839233520
+    m_lastTime: -8586038468375011124
     List:
-    - name: PlayerLife
+    - name: LowPass_Duration
       guid: 7041e478b19e42428597697fb0f89bf0
-      id: 444815956
+      id: 3588564833
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: PlayerLife
+      - ElementName: LowPass_Duration
         ObjectType: 13
-      Path: Default Work Unit\PlayerLife
+      Path: Default Work Unit\LowPass_Duration
+    - name: Music_Volumes
+      guid: f2876d0570d62f429f6ad3e67ad8bf4f
+      id: 1618484098
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_Volumes
+        ObjectType: 13
+      Path: Default Work Unit\Music_Volumes
+    - name: SFX_Volumes
+      guid: 3f9651e63a827648a2a83bd05be25ef6
+      id: 130395146
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX_Volumes
+        ObjectType: 13
+      Path: Default Work Unit\SFX_Volumes
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPath: Default Work Unit
@@ -564,6 +568,6 @@ MonoBehaviour:
   - /Hell_WwiseProject
   - /Hell_WwiseProject/Events
   - /Hell_WwiseProject/Events/Default Work Unit
-  - /Hell_WwiseProject/Events/Default Work Unit/Player
+  - /Hell_WwiseProject/Events/Default Work Unit/Bad Guys
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
