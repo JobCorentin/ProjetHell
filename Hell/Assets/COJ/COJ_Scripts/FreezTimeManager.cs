@@ -16,7 +16,7 @@ public class FreezTimeManager : MonoBehaviour
 
     private void Update()
     {
-        if(isFrozen == false)
+        if(isFrozen == false && PauseMenu.GameIsPaused == false)
         {
             Time.timeScale = 1;
         }

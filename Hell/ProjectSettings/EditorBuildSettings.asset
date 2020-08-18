@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/__FinalScenes/Menu.unity
+    path: Assets/__FinalScenes/MenuBuild.unity
     guid: 529ba56c9c35f0646849938033e8a2c4
   - enabled: 1
     path: Assets/COJ/COJ_Scenes/ArenaTest/Skatepark.unity
