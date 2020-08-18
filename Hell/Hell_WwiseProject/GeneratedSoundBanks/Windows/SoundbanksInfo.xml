@@ -21,6 +21,38 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="4005551194" Name="Hearth_Damages" ObjectPath="\Events\Default Work Unit\Bad Guys\Hearth_Damages" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.756712" DurationMax="2.816417">
+					<IncludedMemoryFiles>
+						<File Id="73734437" Language="SFX">
+							<ShortName>HearthSquizz_2.wav</ShortName>
+							<Path>SFX\HearthSquizz_2_10C4C929.wem</Path>
+						</File>
+						<File Id="156427360" Language="SFX">
+							<ShortName>HearthSquizz_3.wav</ShortName>
+							<Path>SFX\HearthSquizz_3_10C4C929.wem</Path>
+						</File>
+						<File Id="353414289" Language="SFX">
+							<ShortName>HearthSquizz_1.wav</ShortName>
+							<Path>SFX\HearthSquizz_1_10C4C929.wem</Path>
+						</File>
+						<File Id="410598787" Language="SFX">
+							<ShortName>HearthSquizz_4.wav</ShortName>
+							<Path>SFX\HearthSquizz_4_10C4C929.wem</Path>
+						</File>
+						<File Id="948472799" Language="SFX">
+							<ShortName>Hit.wav</ShortName>
+							<Path>SFX\Hit_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4018902270" Name="Hearth_Idle" ObjectPath="\Events\Default Work Unit\Bad Guys\Hearth_Idle" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.845374" DurationMax="0.845374">
+					<IncludedMemoryFiles>
+						<File Id="647560748" Language="SFX">
+							<ShortName>Hearth.wav</ShortName>
+							<Path>SFX\Hearth_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2557777556" Name="Main_Theme" ObjectPath="\Events\Default Work Unit\Musics\Main_Theme" DurationType="OneShot" DurationMin="150.206741" DurationMax="150.206741">
 					<IncludedMemoryFiles>
 						<File Id="917200825" Language="SFX">
@@ -33,11 +65,11 @@
 					<IncludedMemoryFiles>
 						<File Id="328969755" Language="SFX">
 							<ShortName>Musket Cock &amp; Dry Fire 01.wav</ShortName>
-							<Path>SFX\Musket Cock &amp; Dry Fire 01_F69878A4.wem</Path>
+							<Path>SFX\Musket Cock &amp; Dry Fire 01_E656D3CC.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="69452829" Name="Musket_Death" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_Death" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.469748" DurationMax="2.218657">
+				<Event Id="69452829" Name="Musket_Death" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_Death" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.519748" DurationMax="2.268657">
 					<IncludedMemoryFiles>
 						<File Id="214022767" Language="SFX">
 							<ShortName>MusketDeath_1.wav</ShortName>
@@ -57,7 +89,7 @@
 					<IncludedMemoryFiles>
 						<File Id="1037279960" Language="SFX">
 							<ShortName>GUN Handgun 9MM 2 Far Front Side 7x AT835ST.wav</ShortName>
-							<Path>SFX\GUN Handgun 9MM 2 Far Front Side 7x AT835ST_7A11D0FE.wem</Path>
+							<Path>SFX\GUN Handgun 9MM 2 Far Front Side 7x AT835ST_CE2207E8.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -65,23 +97,23 @@
 					<IncludedMemoryFiles>
 						<File Id="29356416" Language="SFX">
 							<ShortName>MusketIdle_4.wav</ShortName>
-							<Path>SFX\MusketIdle_4_D7DB312C.wem</Path>
+							<Path>SFX\MusketIdle_4_6229FAEF.wem</Path>
 						</File>
 						<File Id="74599734" Language="SFX">
 							<ShortName>MusketIdle_2.wav</ShortName>
-							<Path>SFX\MusketIdle_2_6527D9B3.wem</Path>
+							<Path>SFX\MusketIdle_2_01CC1DC5.wem</Path>
 						</File>
 						<File Id="158020536" Language="SFX">
 							<ShortName>MusketIdle_3.wav</ShortName>
-							<Path>SFX\MusketIdle_3_8C124642.wem</Path>
+							<Path>SFX\MusketIdle_3_8124C0CD.wem</Path>
 						</File>
 						<File Id="184719624" Language="SFX">
 							<ShortName>MusketIdle_1.wav</ShortName>
-							<Path>SFX\MusketIdle_1_48D0CCC2.wem</Path>
+							<Path>SFX\MusketIdle_1_2769F5EE.wem</Path>
 						</File>
 						<File Id="196097453" Language="SFX">
 							<ShortName>MusketIdle_5.wav</ShortName>
-							<Path>SFX\MusketIdle_5_8BD0720A.wem</Path>
+							<Path>SFX\MusketIdle_5_1BED86D1.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -219,6 +251,10 @@
 							<ShortName>CC-CK VO Male 01 Breath Slow.wav</ShortName>
 							<Path>SFX\CC-CK VO Male 01 Breath Slow_3BCED0C6.wem</Path>
 						</File>
+						<File Id="662840401" Language="SFX">
+							<ShortName>Player_Hearth.wav</ShortName>
+							<Path>SFX\Player_Hearth_81E28FE0.wem</Path>
+						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="1305133589" Name="Player_Jump" ObjectPath="\Events\Default Work Unit\Player\Player_Jump" DurationType="OneShot" DurationMin="0.675674" DurationMax="1.246958">
@@ -341,19 +377,19 @@
 					<IncludedMemoryFiles>
 						<File Id="504815808" Language="SFX">
 							<ShortName>SoldierAttackVoice_1.wav</ShortName>
-							<Path>SFX\SoldierAttackVoice_1_204B8B28.wem</Path>
+							<Path>SFX\SoldierAttackVoice_1_671C6518.wem</Path>
 						</File>
 						<File Id="512572648" Language="SFX">
 							<ShortName>SoldierAttackVoice_2.wav</ShortName>
-							<Path>SFX\SoldierAttackVoice_2_0BA2E422.wem</Path>
+							<Path>SFX\SoldierAttackVoice_2_3014E03A.wem</Path>
 						</File>
 						<File Id="625302998" Language="SFX">
 							<ShortName>SoldierAttackVoice_4.wav</ShortName>
-							<Path>SFX\SoldierAttackVoice_4_7422B1B6.wem</Path>
+							<Path>SFX\SoldierAttackVoice_4_51A1D9D5.wem</Path>
 						</File>
 						<File Id="693660259" Language="SFX">
 							<ShortName>SoldierAttackVoice_3.wav</ShortName>
-							<Path>SFX\SoldierAttackVoice_3_3918F713.wem</Path>
+							<Path>SFX\SoldierAttackVoice_3_F2687855.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -361,15 +397,15 @@
 					<IncludedMemoryFiles>
 						<File Id="213079774" Language="SFX">
 							<ShortName>SoldierIdle_6.wav</ShortName>
-							<Path>SFX\SoldierIdle_6_76035410.wem</Path>
+							<Path>SFX\SoldierIdle_6_F3011512.wem</Path>
 						</File>
 						<File Id="241674225" Language="SFX">
 							<ShortName>SoldierIdle_3.wav</ShortName>
-							<Path>SFX\SoldierIdle_3_4BD32FB7.wem</Path>
+							<Path>SFX\SoldierIdle_3_F295B568.wem</Path>
 						</File>
 						<File Id="584311886" Language="SFX">
 							<ShortName>SoldierIdle_5.wav</ShortName>
-							<Path>SFX\SoldierIdle_5_D4450811.wem</Path>
+							<Path>SFX\SoldierIdle_5_C8780304.wem</Path>
 						</File>
 						<File Id="635803235" Language="SFX">
 							<ShortName>SoldierIdle_7.wav</ShortName>
@@ -377,7 +413,7 @@
 						</File>
 						<File Id="653056460" Language="SFX">
 							<ShortName>SoldierIdle_1.wav</ShortName>
-							<Path>SFX\SoldierIdle_1_171CEB85.wem</Path>
+							<Path>SFX\SoldierIdle_1_B2091926.wem</Path>
 						</File>
 						<File Id="717449962" Language="SFX">
 							<ShortName>SoldierIdle_4.wav</ShortName>
@@ -385,13 +421,15 @@
 						</File>
 						<File Id="959353516" Language="SFX">
 							<ShortName>SoldierIdle_2.wav</ShortName>
-							<Path>SFX\SoldierIdle_2_2F3F0108.wem</Path>
+							<Path>SFX\SoldierIdle_2_38B4E692.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
 			<GameParameters>
+				<GameParameter Id="130395146" Name="SFX_Volumes" ObjectPath="\Game Parameters\Default Work Unit\SFX_Volumes"/>
 				<GameParameter Id="444815956" Name="PlayerLife" ObjectPath="\Game Parameters\Default Work Unit\PlayerLife"/>
+				<GameParameter Id="1618484098" Name="Music_Volumes" ObjectPath="\Game Parameters\Default Work Unit\Music_Volumes"/>
 			</GameParameters>
 			<SwitchGroups>
 				<SwitchGroup Id="684570577" Name="FootStep_Material" ObjectPath="\Switches\Default Work Unit\FootStep_Material">

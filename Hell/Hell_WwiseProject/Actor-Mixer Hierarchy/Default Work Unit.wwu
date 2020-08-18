@@ -45,6 +45,34 @@
 							</RTPCList>
 						</Property>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{943FE4A8-1252-4B97-B2AE-FD24719C920E}" ShortID="355015318">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="SFX_Volumes" ID="{E651963F-823A-4876-A2A8-3BD05BE25EF6}" WorkUnitID="{519187B2-23EC-4E1C-B492-3D2114A6D4D9}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{9431EA92-258E-4FB2-AE11-FC784C030AC6}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -2080,6 +2108,76 @@
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
+						<Sound Name="Player_Hearth" ID="{E07E07F1-B49E-439C-ADCB-D62E0F6F4A61}" ShortID="13413026">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{71083D8E-4ABF-407A-86B8-BFF4A19F1839}" ShortID="988057745">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="PlayerLife" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}" WorkUnitID="{519187B2-23EC-4E1C-B492-3D2114A6D4D9}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{EDC6A099-83A9-4606-A0DF-D50BE3685C89}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>0</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>1.001</XPos>
+														<YPos>-200</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>5</XPos>
+														<YPos>-200</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Player_Hearth" ID="{625C5734-1CB8-4BE3-BA0E-2F92A55AEAF8}">
+									<PropertyList>
+										<Property Name="LoopEnd" Type="Real64" Value="2.00965077811947"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Player_Hearth.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="662840401"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Player_Hearth" ID="{625C5734-1CB8-4BE3-BA0E-2F92A55AEAF8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Musics" ID="{B26E6108-316B-49A6-8354-4A6C084DDB0A}" ShortID="753845168">
@@ -2133,6 +2231,32 @@
 							<ValueList>
 								<Value>-15</Value>
 							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{C9FDAB81-00A8-439B-B4D7-90860BB60395}" ShortID="473210037">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Music_Volumes" ID="{056D87F2-D670-422F-9F6A-D3E67AD8BF4F}" WorkUnitID="{519187B2-23EC-4E1C-B492-3D2114A6D4D9}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{DFC5FBBA-2697-412B-953D-B4E32A48F964}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
@@ -2211,6 +2335,34 @@
 							</RTPCList>
 						</Property>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{6850697A-F968-408C-B8F2-6A0810444D72}" ShortID="955073074">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="SFX_Volumes" ID="{E651963F-823A-4876-A2A8-3BD05BE25EF6}" WorkUnitID="{519187B2-23EC-4E1C-B492-3D2114A6D4D9}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{47CFA97C-3F50-4726-BD8A-96BC33F72561}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -2548,6 +2700,11 @@
 						</RandomSequenceContainer>
 						<Sound Name="Hit" ID="{3E823EFD-598D-4108-828B-68108DAE707B}" ShortID="122016514">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -3023,6 +3180,128 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="SoundSeed Air Woosh" ID="{AE142564-D203-4B1F-AE55-C7DCE1009497}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="Hearth_Squizz" ID="{CE88F231-361F-41FA-8477-87F7AD3A49AE}" ShortID="1016688309">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="HearthSquizz_1" ID="{F34AE55B-EE07-44E7-892F-1AF1890F4C54}" ShortID="57278649">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HearthSquizz_1" ID="{7A85DA11-511F-4D32-8479-754D1BB4C014}">
+											<Language>SFX</Language>
+											<AudioFile>HearthSquizz_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="353414289"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HearthSquizz_1" ID="{7A85DA11-511F-4D32-8479-754D1BB4C014}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="HearthSquizz_2" ID="{A534FD24-E0A8-4995-BE54-F68EC188AEE2}" ShortID="775100025">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HearthSquizz_2" ID="{202734FB-3C87-4F5A-88A9-1B3507F9CCF4}">
+											<Language>SFX</Language>
+											<AudioFile>HearthSquizz_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="73734437"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HearthSquizz_2" ID="{202734FB-3C87-4F5A-88A9-1B3507F9CCF4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="HearthSquizz_3" ID="{D6B4967D-5B9C-4F88-9D1E-8AABDEBAAAC2}" ShortID="721997640">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HearthSquizz_3" ID="{E2D2703B-030F-4764-BE73-1CCCA964345A}">
+											<Language>SFX</Language>
+											<AudioFile>HearthSquizz_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="156427360"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HearthSquizz_3" ID="{E2D2703B-030F-4764-BE73-1CCCA964345A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="HearthSquizz_4" ID="{1BD2B51C-4FE7-444E-BBD5-F667FB9B532C}" ShortID="719654014">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HearthSquizz_4" ID="{6C2D2AE4-989D-4C7D-976F-884CF5D4A366}">
+											<Language>SFX</Language>
+											<AudioFile>HearthSquizz_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="410598787"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HearthSquizz_4" ID="{6C2D2AE4-989D-4C7D-976F-884CF5D4A366}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="Hearth" ID="{4289C199-F2F4-4E57-A38E-717D0373CA4C}" ShortID="309353421">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Hearth" ID="{BE214F11-40DB-431D-8902-7A8214E71798}">
+									<Language>SFX</Language>
+									<AudioFile>Hearth.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="647560748"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Hearth" ID="{BE214F11-40DB-431D-8902-7A8214E71798}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

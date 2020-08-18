@@ -30,8 +30,8 @@
 	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1596488533" DateHigh="0"/>
 	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1597159800" DateHigh="0"/>
 	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\States\Default Work Unit.wwu" DateLow="1596488533" DateHigh="0"/>
-	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1597174829" DateHigh="0"/>
-	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1597169914" DateHigh="0"/>
+	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1597742419" DateHigh="0"/>
+	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1597743026" DateHigh="0"/>
 	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Queries\Factory Queries.wwu" DateLow="1596468847" DateHigh="0"/>
 	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1596488533" DateHigh="0"/>
 	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Presets\Factory Spatial Audio.wwu" DateLow="1596468847" DateHigh="0"/>
@@ -41,9 +41,9 @@
 	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1596488533" DateHigh="0"/>
 	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1596488533" DateHigh="0"/>
 	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Hell_WwiseProject.wproj" DateLow="1596982002" DateHigh="0"/>
-	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Hell_WwiseProject.duper.wsettings" DateLow="1597224009" DateHigh="0"/>
-	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1596984301" DateHigh="0"/>
-	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Events\Default Work Unit.wwu" DateLow="1597169897" DateHigh="0"/>
+	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Hell_WwiseProject.duper.wsettings" DateLow="1597743058" DateHigh="0"/>
+	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1597742131" DateHigh="0"/>
+	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Events\Default Work Unit.wwu" DateLow="1597743026" DateHigh="0"/>
 	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Effects\Factory Effects.wwu" DateLow="1596468847" DateHigh="0"/>
 	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1596488533" DateHigh="0"/>
 	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1596488533" DateHigh="0"/>
@@ -51,6 +51,6 @@
 	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="1596488533" DateHigh="0"/>
 	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1596489528" DateHigh="0"/>
 	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1596488533" DateHigh="0"/>
-	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1596488533" DateHigh="0"/>
-	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1597224003" DateHigh="0"/>
+	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1597507070" DateHigh="0"/>
+	<ValidationCacheItem File="D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1597742419" DateHigh="0"/>
 </ValidationCache>

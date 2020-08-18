@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 4284ab4eb2341646a069c5e5531758ca
     GuidInternal: 
-    m_lastTime: -8586040937650975716
+    m_lastTime: -8586038691080593907
     List:
     - name: Main
       guid: 33038aaad1850e4189e17a29e7d73f96
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 14895eb1fb392f4fb3e6729aaa4bce9d
     GuidInternal: 
-    m_lastTime: -8586040910918580474
+    m_lastTime: -8586038691081621156
     List:
     - name: Bad Guys
       guid: 3f5756db27424849b2a3879cd6bf2447
@@ -564,6 +564,6 @@ MonoBehaviour:
   - /Hell_WwiseProject
   - /Hell_WwiseProject/Events
   - /Hell_WwiseProject/Events/Default Work Unit
-  - /Hell_WwiseProject/Events/Default Work Unit/Bad Guys
+  - /Hell_WwiseProject/Events/Default Work Unit/Player
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
