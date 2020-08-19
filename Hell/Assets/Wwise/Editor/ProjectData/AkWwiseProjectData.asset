@@ -17,14 +17,14 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3926a85ad5b30841a40120aa7b53cb78
     GuidInternal: 
-    m_lastTime: -8586051183523184207
+    m_lastTime: -8586049880700822767
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: db03273c1718c0479a6339a62413169b
     GuidInternal: 
-    m_lastTime: -8586051183523363732
+    m_lastTime: -8586049880701002296
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 4284ab4eb2341646a069c5e5531758ca
     GuidInternal: 
-    m_lastTime: -8586038463067412623
+    m_lastTime: -8586038377620079728
     List:
     - name: Main
       guid: 33038aaad1850e4189e17a29e7d73f96
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 14895eb1fb392f4fb3e6729aaa4bce9d
     GuidInternal: 
-    m_lastTime: -8586038468376177673
+    m_lastTime: -8586038377621097009
     List:
     - name: Bad Guys
       guid: 3f5756db27424849b2a3879cd6bf2447
@@ -477,7 +477,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b2879151ec231c4eb4923d2114a6d4d9
     GuidInternal: 
-    m_lastTime: -8586038468375011124
+    m_lastTime: -8586038377621007218
     List:
     - name: LowPass_Duration
       guid: 7041e478b19e42428597697fb0f89bf0
@@ -511,14 +511,14 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 88dd8058f7cc7b49a33a867a1dde6bd0
     GuidInternal: 
-    m_lastTime: -8586051183522046834
+    m_lastTime: -8586049880700872628
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: 9f7133fbe6cfcc4c8f9a5c8126ca4b7b
     GuidInternal: 
-    m_lastTime: -8586044470850526431
+    m_lastTime: -8586039539942439480
     List:
     - name: FootStep_Material
       guid: 7a069758b1efcd40b470554bbb180c5c
@@ -562,12 +562,8 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 1cad4c75250fd34eb902fc75f861dcba
     GuidInternal: 
-    m_lastTime: -8586051183522695524
+    m_lastTime: -8586049880700832740
     List: []
-  ExpandedItems:
-  - /Hell_WwiseProject
-  - /Hell_WwiseProject/Events
-  - /Hell_WwiseProject/Events/Default Work Unit
-  - /Hell_WwiseProject/Events/Default Work Unit/Bad Guys
+  ExpandedItems: []
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
