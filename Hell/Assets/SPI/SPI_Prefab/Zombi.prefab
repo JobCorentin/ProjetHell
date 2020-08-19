@@ -273,6 +273,8 @@ MonoBehaviour:
   Remains: {fileID: 8208348773777369088, guid: e848fa07068b6764eb7f6809792dd8ab, type: 3}
   hasSpawn: 1
   dead: 0
+  initialPosition: {x: 0, y: 0}
+  initialHealth: 0
   ennemiDetection: {fileID: 3637085431136922249}
   slash: {fileID: 1323936563}
   canAttack: 0
@@ -283,15 +285,20 @@ MonoBehaviour:
   movementForce: 1200
   momentumMultiplier: 1
   preparationDuration: 0.5
-  soldierAttack:
+  soldierAttackAudio:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: d650f01fe79bc2841bcda10dc24a8d62,
       type: 2}
-  soldierIdle:
+  soldierIdleAudio:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: e5a4f94159fdaad40891a2ebe917ac38,
+      type: 2}
+  soldierDeathAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d4a30fa4209ac1043ae67500339e719c,
       type: 2}
   soldierIdleAudioTimer: 10
 --- !u!212 &6059860427982487036

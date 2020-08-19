@@ -22,9 +22,11 @@ public class HealthManager : MonoBehaviour
 
     [Space(10)]
     [Header("Sound")]
-    public AK.Wwise.RTPC playerLifeGameSync; //Truc pour Link la variable life avec un filtre sonore (L'accouphène ici)
+    public AK.Wwise.RTPC lowPassDurationGameSync; //Truc pour Link la variable life avec un filtre sonore (L'accouphène ici)
     public AK.Wwise.Event playerDamageAudio;
     public AK.Wwise.Event playerHealthConstantAudio; //Souffle et battement de coeur quand la vie est basse
+    public int lowPassDuration;
+    int lowPassTimer;
 
 
     
@@ -34,7 +36,6 @@ public class HealthManager : MonoBehaviour
     {
         MovementController.mC.animator.SetTrigger("Respawn");
 
-        playerLifeGameSync.SetGlobalValue(life);
         playerHealthConstantAudio.Post(gameObject);
 
         hm = this;
@@ -46,10 +47,20 @@ public class HealthManager : MonoBehaviour
         fadeAnimator = GameObject.Find("Fade").GetComponent<Animator>();
     }
 
+
+
+    private void FixedUpdate()
+    {
+        if (lowPassTimer > 0)
+        {
+            lowPassTimer--;
+            lowPassDurationGameSync.SetGlobalValue(lowPassTimer);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        playerLifeGameSync.SetGlobalValue(life);
 
         text.text = "Life : " + life;
 
@@ -66,6 +77,7 @@ public class HealthManager : MonoBehaviour
 
 
         playerDamageAudio.Post(gameObject);
+        lowPassTimer = lowPassDuration;
 
         life -= amount;
         FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.1f, 0));

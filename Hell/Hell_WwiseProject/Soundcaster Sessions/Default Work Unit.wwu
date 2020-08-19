@@ -44,7 +44,7 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
-							<GameParameterRef Name="PlayerLife" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}"/>
+							<GameParameterRef Name="LowPass_Duration" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}"/>
 							<Value>5</Value>
 						</RTPCValue>
 					</RTPCValueList>
@@ -78,8 +78,16 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
-							<GameParameterRef Name="PlayerLife" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}"/>
-							<Value>5</Value>
+							<GameParameterRef Name="Music_Volumes" ID="{056D87F2-D670-422F-9F6A-D3E67AD8BF4F}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="LowPass_Duration" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}"/>
+							<Value>1.05116636866767E-311</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SFX_Volumes" ID="{E651963F-823A-4876-A2A8-3BD05BE25EF6}"/>
+							<Value>100</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>

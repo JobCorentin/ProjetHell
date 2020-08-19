@@ -138,6 +138,13 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{A2726B4F-A534-4AD3-B452-93AB392F7ED1}" ShortID="309953539">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Hearth" ID="{E07E07F1-B49E-439C-ADCB-D62E0F6F4A61}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Player_Sword_Throw" ID="{3D1F47B1-6F69-422A-8001-007540BBAF38}"/>
@@ -211,6 +218,9 @@
 									</ReferenceList>
 								</Action>
 								<Action Name="" ID="{56C00F5D-E3EA-481D-B735-8BAF20AF2CE9}" ShortID="333492890">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.05"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Musket_Death" ID="{63ED2AC9-DFE5-40C6-BEE0-B1DC5FB6F215}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
@@ -219,12 +229,52 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Hearth_Idle" ID="{F5BD7C72-D7A9-4250-B4C5-8224A4D4C356}"/>
+						<Event Name="Hearth_Idle" ID="{F5BD7C72-D7A9-4250-B4C5-8224A4D4C356}">
+							<ChildrenList>
+								<Action Name="" ID="{C086AB91-6E03-49BF-8EED-C9CC43597B0C}" ShortID="424484053">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hearth" ID="{4289C199-F2F4-4E57-A38E-717D0373CA4C}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Hearth_Lauch_Attack" ID="{4AA491D8-3460-430B-B8B3-D1C689A36111}"/>
 						<Event Name="Hearth_FireAttack" ID="{569AA247-29CB-4AB2-B817-682CD184ED17}"/>
-						<Event Name="Hearth_Damages" ID="{77F20DAA-7C83-470E-AF9D-3AB4DAE46338}"/>
+						<Event Name="Hearth_Damages" ID="{77F20DAA-7C83-470E-AF9D-3AB4DAE46338}">
+							<ChildrenList>
+								<Action Name="" ID="{78E6B624-B4D7-4E9F-86F5-17C338DB177D}" ShortID="274963573">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hearth_Squizz" ID="{CE88F231-361F-41FA-8477-87F7AD3A49AE}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{258AE3EA-E099-44F3-9771-812672FDFAD2}" ShortID="370420541">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hit" ID="{3E823EFD-598D-4108-828B-68108DAE707B}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Hearth_Death" ID="{E3CD6671-3A1E-4116-907C-88D4790AF0D6}"/>
-						<Event Name="Centaur_Idle" ID="{FC8DF085-170C-4195-93EE-60DC1BE04825}"/>
+						<Event Name="Centaur_Idle" ID="{FC8DF085-170C-4195-93EE-60DC1BE04825}">
+							<ChildrenList>
+								<Action Name="" ID="{B19A5B59-D5A6-47B5-8516-B5870FD44E57}" ShortID="666603407">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Centaur_Idle" ID="{9855547A-B9A8-4AF7-ABA3-D10227CBF1C4}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Centaur_Charge" ID="{C8EBFC98-E606-469F-945B-09A4D620FCAC}"/>
 						<Event Name="Centaur_KatanaThrow" ID="{FBEA76FF-B0E3-42BF-87B7-D5CF2722B6D2}"/>
 						<Event Name="Centaur_Damages" ID="{4D6AD6F8-032F-417D-8964-8F5E0A7C115C}"/>
@@ -262,8 +312,27 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Soldier_Damages" ID="{EA3EEADE-6BFC-4252-BA9A-97C8A50AFC74}"/>
-						<Event Name="Soldier_Death" ID="{8F65248E-055A-4334-87B8-AB7E3D1035B7}"/>
+						<Event Name="Soldier_Death" ID="{8F65248E-055A-4334-87B8-AB7E3D1035B7}">
+							<ChildrenList>
+								<Action Name="" ID="{87191DAA-5664-4126-9A08-E1204FC89D12}" ShortID="835969784">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hit" ID="{3E823EFD-598D-4108-828B-68108DAE707B}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{38253032-8F04-4181-80DD-41BB6DD8BFF9}" ShortID="181430587">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Musket_Death" ID="{63ED2AC9-DFE5-40C6-BEE0-B1DC5FB6F215}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
