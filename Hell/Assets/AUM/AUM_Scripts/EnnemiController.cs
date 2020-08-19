@@ -193,7 +193,7 @@ public class EnnemiController : MonoBehaviour
 
     }
 
-    public IEnumerator TakeDamage(int amount)
+    public virtual IEnumerator TakeDamage(int amount)
     {
         if (hasSpawn == true)
         {

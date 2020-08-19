@@ -109,6 +109,11 @@ public class EnnemiOneController : EnnemiController
 
     }
 
+    public override IEnumerator TakeDamage(int amount)
+    {
+        return base.TakeDamage(amount);
+    }
+
     IEnumerator LaunchBullet()
     {
         isAttacking = true;

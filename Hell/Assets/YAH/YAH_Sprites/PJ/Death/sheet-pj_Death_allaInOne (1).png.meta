@@ -1,0 +1,527 @@
+fileFormatVersion: 2
+guid: 6b2df52832630954094ee65d91ded8bb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3004998572718236846
+    second: sheet-pj_Death_allaInOne (1)_0
+  - first:
+      213: 4096641325691224179
+    second: sheet-pj_Death_allaInOne (1)_1
+  - first:
+      213: -5244092650890892280
+    second: sheet-pj_Death_allaInOne (1)_2
+  - first:
+      213: -6164129558197511152
+    second: sheet-pj_Death_allaInOne (1)_3
+  - first:
+      213: -1803507064908603674
+    second: sheet-pj_Death_allaInOne (1)_4
+  - first:
+      213: 2241304944968036373
+    second: sheet-pj_Death_allaInOne (1)_5
+  - first:
+      213: -5126798173330931959
+    second: sheet-pj_Death_allaInOne (1)_6
+  - first:
+      213: 4260853134828376529
+    second: sheet-pj_Death_allaInOne (1)_7
+  - first:
+      213: -2925405947128953471
+    second: sheet-pj_Death_allaInOne (1)_8
+  - first:
+      213: 3597032270445391437
+    second: sheet-pj_Death_allaInOne (1)_9
+  - first:
+      213: -4941842152558177569
+    second: sheet-pj_Death_allaInOne (1)_10
+  - first:
+      213: 7504082183194968864
+    second: sheet-pj_Death_allaInOne (1)_11
+  - first:
+      213: -7507708902147941214
+    second: sheet-pj_Death_allaInOne (1)_12
+  - first:
+      213: 1013609608101230663
+    second: sheet-pj_Death_allaInOne (1)_13
+  - first:
+      213: 6365413392982975698
+    second: sheet-pj_Death_allaInOne (1)_14
+  - first:
+      213: 5081220625731572756
+    second: sheet-pj_Death_allaInOne (1)_15
+  - first:
+      213: -8525947025306510994
+    second: sheet-pj_Death_allaInOne (1)_16
+  - first:
+      213: -2259675873807630843
+    second: sheet-pj_Death_allaInOne (1)_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 804
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.5333333, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea42d6dd746e3b920800000000000000
+      internalID: 3004998572718236846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 804
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370c20ea4913ad830800000000000000
+      internalID: 4096641325691224179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_2
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 804
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c6966b48d3937b0800000000000000
+      internalID: -5244092650890892280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_3
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 804
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01cd62663dc947aa0800000000000000
+      internalID: -6164129558197511152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 603
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee173e31e7a8f6e0800000000000000
+      internalID: -1803507064908603674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_5
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 603
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5107526f8f6ba1f10800000000000000
+      internalID: 2241304944968036373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_6
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 603
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ffc7b6934f9d8b0800000000000000
+      internalID: -5126798173330931959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_7
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 603
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d11e85e957912b30800000000000000
+      internalID: 4260853134828376529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 402
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18540916aced667d0800000000000000
+      internalID: -2925405947128953471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_9
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 402
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ea385cac93be130800000000000000
+      internalID: 3597032270445391437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_10
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 402
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2d7b8cebc0b6bb0800000000000000
+      internalID: -4941842152558177569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_11
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 402
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0238caebcfad32860800000000000000
+      internalID: 7504082183194968864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 201
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac1f62f7824fc790800000000000000
+      internalID: -7507708902147941214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_13
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 201
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748fbc77190111e00800000000000000
+      internalID: 1013609608101230663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_14
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 201
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d4a34961cd765850800000000000000
+      internalID: 6365413392982975698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_15
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 201
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4145e16dc3f148640800000000000000
+      internalID: 5081220625731572756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-pj_Death_allaInOne (1)_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 270
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0.5870647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e699ec65a50cda980800000000000000
+      internalID: -8525947025306510994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

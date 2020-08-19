@@ -18,6 +18,7 @@ public class HealthManager : MonoBehaviour
     [HideInInspector] public CheckPoint lastCheckPoint;
 
     Animator fadeAnimator;
+    Animator deathBackgroundAnimator;
 
 
     [Space(10)]
