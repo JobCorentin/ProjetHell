@@ -3395,6 +3395,117 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Hearth_Fire" ID="{32A0EF70-5823-4752-AF5B-6AAEF43E90BA}" ShortID="502433867">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{123CFB7F-B4AA-4166-8496-19F8FF781571}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="400"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="HearthFire_1" ID="{82013246-94C6-45CF-8D87-C8D4E84C20B3}" ShortID="850474298">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HearthFire_1" ID="{725B8511-2BA4-4FA3-9B51-7E103537F792}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.106487124530177"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.75038210946479"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.592334630199112"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.3427167396639"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>HearthFire_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="321662568"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HearthFire_1" ID="{725B8511-2BA4-4FA3-9B51-7E103537F792}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="HearthFire_2" ID="{01AB57EB-FC0B-48B3-BE8A-CA0772797B5B}" ShortID="396467718">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HearthFire_2" ID="{DC6D6B67-F119-4213-9466-6A9E863E1DA0}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="2.28150475258597"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.649538719597428"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.9310434721834"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>HearthFire_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1058675388"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HearthFire_2" ID="{DC6D6B67-F119-4213-9466-6A9E863E1DA0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="HearthLauchAttack" ID="{57DA2BFA-4359-4CE7-BA78-C0F6A4380921}" ShortID="88181757">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="HearthLauchAttack" ID="{B2DC62C4-C230-4307-AFDE-54B29759B4DC}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.885174222657099"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.26285139626627"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>HearthLauchAttack.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="432523895"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="HearthLauchAttack" ID="{B2DC62C4-C230-4307-AFDE-54B29759B4DC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<PositioningInfo>
 						<Position Name="" ID="{194A086A-407B-4C75-8BE1-39F582570FA9}"/>

@@ -68,6 +68,10 @@ public class EnnemiController : MonoBehaviour
     [HideInInspector] public Vector2 initialPosition;
     [HideInInspector] public int initialHealth;
 
+
+
+    public AK.Wwise.Event DamagesAudio;
+
     // Start is called before the first frame update
     public virtual void Start()
     {
@@ -215,6 +219,12 @@ public class EnnemiController : MonoBehaviour
             if (health > 0)
             {
                 //animator.SetTrigger("IsTakingDamage");
+
+                if (DamagesAudio != null)
+                {
+                    DamagesAudio.Post(gameObject);
+                }
+
 
                 sr.material = shaderMaterial1;
 

@@ -15,7 +15,9 @@ namespace AK
     {
         static const AkUniqueID CENTAUR_IDLE = 4239594550U;
         static const AkUniqueID HEARTH_DAMAGES = 4005551194U;
+        static const AkUniqueID HEARTH_FIREATTACK = 879101832U;
         static const AkUniqueID HEARTH_IDLE = 4018902270U;
+        static const AkUniqueID HEARTH_LAUCH_ATTACK = 3537539166U;
         static const AkUniqueID MAIN_THEME = 2557777556U;
         static const AkUniqueID MUSKET_AIM = 3275726432U;
         static const AkUniqueID MUSKET_DEATH = 69452829U;
@@ -50,6 +52,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID GLOBAL_VOLUME = 2115185289U;
         static const AkUniqueID LOWPASS_DURATION = 3588564833U;
         static const AkUniqueID MUSIC_VOLUMES = 1618484098U;
         static const AkUniqueID SFX_VOLUMES = 130395146U;

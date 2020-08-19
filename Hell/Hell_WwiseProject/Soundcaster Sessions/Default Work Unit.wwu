@@ -83,7 +83,53 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="LowPass_Duration" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}"/>
-							<Value>1.05116636866767E-311</Value>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Global_Volume" ID="{47F1D92A-2D4E-424A-BCAC-5583C314A49E}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SFX_Volumes" ID="{E651963F-823A-4876-A2A8-3BD05BE25EF6}"/>
+							<Value>100</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Blood" ID="{EF1F6BAD-49B9-4712-9983-E60C4CC42288}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Hearth" ID="{3F06AA8D-80E9-43F6-8057-E59336884DF7}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Hearth_Damages" ID="{77F20DAA-7C83-470E-AF9D-3AB4DAE46338}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Hearth_Death" ID="{E3CD6671-3A1E-4116-907C-88D4790AF0D6}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Hearth_Lauch_Attack" ID="{4AA491D8-3460-430B-B8B3-D1C689A36111}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Hearth_FireAttack" ID="{569AA247-29CB-4AB2-B817-682CD184ED17}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Music_Volumes" ID="{056D87F2-D670-422F-9F6A-D3E67AD8BF4F}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="LowPass_Duration" ID="{78E44170-9EB1-4242-8597-697FB0F89BF0}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Global_Volume" ID="{47F1D92A-2D4E-424A-BCAC-5583C314A49E}"/>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SFX_Volumes" ID="{E651963F-823A-4876-A2A8-3BD05BE25EF6}"/>

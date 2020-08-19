@@ -163,6 +163,7 @@ MonoBehaviour:
   speed: 2250
   type: 0
   sr: {fileID: 2436330051584460618}
+  col: {fileID: 0}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
   numberBetweenGroupAttack: 0
@@ -178,6 +179,17 @@ MonoBehaviour:
   coolDown: 1.5
   coolDownTimer: 0
   isFlying: 1
+  playerWasDetected: 0
+  Remains: {fileID: 0}
+  hasSpawn: 0
+  dead: 0
+  initialPosition: {x: 0, y: 0}
+  initialHealth: 0
+  DamagesAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6977cffe7c250e649bfa4e3cf8daf7f5,
+      type: 2}
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 7723505670430841034}
@@ -185,6 +197,34 @@ MonoBehaviour:
   bulletForce: 15
   preparationDuration: 0.6
   ennemiDetection: {fileID: 6633417914603177618}
+  isTypeB: 0
+  isAttacking: 0
+  hearthLaunchAttackAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: debfc53fb5f804e4fa112a7989771f6b,
+      type: 2}
+  hearthAttackAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c2b33ce7d468f1649b7666ed7a40c482,
+      type: 2}
+  hearthIdleAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 194f0520da3d31e4c87162ce04817a39,
+      type: 2}
+  hearthDamagesAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6977cffe7c250e649bfa4e3cf8daf7f5,
+      type: 2}
+  hearthDeathAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: db22751ebeb10a84587d9a1633bf5b34,
+      type: 2}
+  hearthIdleAudioTimer: 10
 --- !u!114 &6633417914288537580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,6 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wave: {fileID: 0}
   enemiStat: {fileID: 0}
+  died: 0
 --- !u!95 &6633417914669196249
 Animator:
   serializedVersion: 3
