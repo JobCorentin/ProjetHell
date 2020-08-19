@@ -5,27 +5,29 @@ using Pathfinding;
 
 public class ChangeAstarPose : MonoBehaviour
 {
-    public AstarData data;
-    GridGraph gg;
+    public GridGraph gg;
 
-    public GameObject newGridPose;
-
+    public int areaID;
+    public AstarZoneManager manager;
 
     private void Start()
     {
 
-        gg = data.gridGraph;
+        gg = AstarPath.active.data.gridGraph;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Palyer")
+        if (collision.CompareTag("Player"))
         {
-            //pathfinder.GetComponent<AstarPath>.center = newGridPose.transform.position;
-            gg.center = newGridPose.transform.position;
-
-            //astar.Scan();
+            manager.ChangingArea(areaID);
         }
     }
 
+    public void SetAreaPosition()
+    {
+        gg.center = gameObject.transform.position;
+
+        AstarPath.active.Scan();
+    }
 }
