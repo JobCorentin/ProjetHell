@@ -217,7 +217,6 @@ public class EnnemiController : MonoBehaviour
             health -= amount;
             if (health > 0)
             {
-                //animator.SetTrigger("IsTakingDamage");
 
                 if (DamagesAudio != null)
                 {
@@ -234,7 +233,6 @@ public class EnnemiController : MonoBehaviour
                 yield return new WaitForSeconds(0.05f);
 
                 sr.material = defautlMaterial;
-                hasNoHp = true;
             }
             else if (health <= 0)
             {

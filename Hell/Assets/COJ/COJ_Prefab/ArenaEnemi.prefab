@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 2436330051584460615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4754715843418656554}
   - {fileID: 6633417914603177619}
@@ -185,6 +185,7 @@ MonoBehaviour:
   dead: 0
   initialPosition: {x: 0, y: 0}
   initialHealth: 0
+  hasNoHp: 0
   DamagesAudio:
     idInternal: 0
     valueGuidInternal: 
