@@ -10,6 +10,10 @@ public class MainMenu : MonoBehaviour
 
     public Dropdown resolutionDropdown;
 
+    public float Global;
+    public float SFX;
+    public float music;
+
     private void Start()
     {
         resolutions = Screen.resolutions;
@@ -50,6 +54,24 @@ public class MainMenu : MonoBehaviour
     public void SetVolume(float volume)
     {
         Debug.Log(volume);
+    }
+
+    public void SetVolumeGlobal(float volume)
+    {
+        Global = volume;
+        Debug.Log(Global);
+    }
+
+    public void SetVolumeSFX(float volume)
+    {
+        SFX = volume;
+        Debug.Log(SFX);
+    }
+
+    public void SetVolumeMusic(float volume)
+    {
+        music = volume;
+        Debug.Log(music);
     }
 
     public void SetFullscreen (bool isFullScreen)
