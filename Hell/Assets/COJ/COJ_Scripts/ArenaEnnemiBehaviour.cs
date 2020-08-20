@@ -22,11 +22,10 @@ namespace Cinemachine
 
         void Update()
         {
-            if(enemiStat.health <= 0 /*&& died==false*/)
+            if(enemiStat.health <= 0 && died==false)
             {
                 died = true;
-                if (enemiStat.type == 0)
-                    wave.waveEnnemi.Remove(gameObject);
+                wave.waveEnnemi.Remove(gameObject);
             }
         }
 
