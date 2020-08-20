@@ -11,8 +11,14 @@ public class MainMenu : MonoBehaviour
     public Dropdown resolutionDropdown;
 
     public float Global;
+    public AK.Wwise.RTPC globalWwiseVolume;
+
     public float SFX;
+    public AK.Wwise.RTPC sfxWwiseVolume;
+
     public float music;
+    public AK.Wwise.RTPC musicWwiseVolume;
+
 
     private void Start()
     {
@@ -40,6 +46,16 @@ public class MainMenu : MonoBehaviour
         resolutionDropdown.value = currentResolutuionIndex;
         resolutionDropdown.RefreshShownValue();
     }
+
+    private void Update()
+    {
+        globalWwiseVolume.SetGlobalValue(Global);
+        sfxWwiseVolume.SetGlobalValue(SFX);
+        musicWwiseVolume.SetGlobalValue(music);
+    }
+
+
+
     public void LoadScene(int index)
     {
         SceneManager.LoadScene(index);
