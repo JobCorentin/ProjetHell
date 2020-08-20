@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: db03273c1718c0479a6339a62413169b
     GuidInternal: 
-    m_lastTime: -8586049880701002296
+    m_lastTime: -8586037607398315432
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 4284ab4eb2341646a069c5e5531758ca
     GuidInternal: 
-    m_lastTime: -8586038377620079728
+    m_lastTime: -8586037551636075157
     List:
     - name: Main
       guid: 33038aaad1850e4189e17a29e7d73f96
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 14895eb1fb392f4fb3e6729aaa4bce9d
     GuidInternal: 
-    m_lastTime: -8586038377621097009
+    m_lastTime: -8586037555978680256
     List:
     - name: Bad Guys
       guid: 3f5756db27424849b2a3879cd6bf2447
@@ -477,8 +477,17 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b2879151ec231c4eb4923d2114a6d4d9
     GuidInternal: 
-    m_lastTime: -8586038377621007218
+    m_lastTime: -8586037607397238285
     List:
+    - name: Global_Volume
+      guid: 2ad9f1474e2d4a42bcac5583c314a49e
+      id: 2115185289
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Global_Volume
+        ObjectType: 13
+      Path: Default Work Unit\Global_Volume
     - name: LowPass_Duration
       guid: 7041e478b19e42428597697fb0f89bf0
       id: 3588564833
@@ -564,6 +573,10 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8586049880700832740
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /Hell_WwiseProject
+  - /Hell_WwiseProject/Events
+  - /Hell_WwiseProject/Events/Default Work Unit
+  - /Hell_WwiseProject/Events/Default Work Unit/Bad Guys
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

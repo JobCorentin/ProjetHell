@@ -84,7 +84,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Player_Wall_Slide" ID="{C91D81EB-004F-4E10-8786-D290F13BB671}"/>
 						<Event Name="Player_Footstep" ID="{13E57215-767E-4FDD-A3A8-74615301574A}">
 							<ChildrenList>
 								<Action Name="" ID="{35E73E5A-C9AB-4E6E-A1F7-809F7330AA73}" ShortID="627592570">
@@ -148,6 +147,7 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Player_Sword_Throw" ID="{3D1F47B1-6F69-422A-8001-007540BBAF38}"/>
+						<Event Name="Player_Heal" ID="{1301DB3D-5203-45E8-A636-9D9BAC5BDB45}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Musics" ID="{8E9131FF-7E57-4B7F-903B-8416253DAFC6}" ShortID="811126068">
@@ -264,16 +264,6 @@
 						</Event>
 						<Event Name="Hearth_Damages" ID="{77F20DAA-7C83-470E-AF9D-3AB4DAE46338}">
 							<ChildrenList>
-								<Action Name="" ID="{78E6B624-B4D7-4E9F-86F5-17C338DB177D}" ShortID="274963573">
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.05"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Hearth_Squizz" ID="{CE88F231-361F-41FA-8477-87F7AD3A49AE}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{258AE3EA-E099-44F3-9771-812672FDFAD2}" ShortID="370420541">
 									<ReferenceList>
 										<Reference Name="Target">
@@ -283,7 +273,27 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Hearth_Death" ID="{E3CD6671-3A1E-4116-907C-88D4790AF0D6}"/>
+						<Event Name="Hearth_Death" ID="{E3CD6671-3A1E-4116-907C-88D4790AF0D6}">
+							<ChildrenList>
+								<Action Name="" ID="{C0635E9C-D38A-4B54-84B8-1D49555249BD}" ShortID="224121462">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hit" ID="{3E823EFD-598D-4108-828B-68108DAE707B}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{EF7DBD5E-8A0C-4CEE-9C35-38F502329086}" ShortID="654181532">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hearth_Squizz" ID="{CE88F231-361F-41FA-8477-87F7AD3A49AE}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Centaur_Idle" ID="{FC8DF085-170C-4195-93EE-60DC1BE04825}">
 							<ChildrenList>
 								<Action Name="" ID="{B19A5B59-D5A6-47B5-8516-B5870FD44E57}" ShortID="666603407">
@@ -295,7 +305,24 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Centaur_Charge" ID="{C8EBFC98-E606-469F-945B-09A4D620FCAC}"/>
+						<Event Name="Centaur_Charge" ID="{C8EBFC98-E606-469F-945B-09A4D620FCAC}">
+							<ChildrenList>
+								<Action Name="" ID="{A2A1B3CE-BF69-41BE-A493-36DDD0BBA6D9}" ShortID="545217486">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Centaur_Charge_Voice" ID="{08EBD6E0-87E8-42A2-AD86-B7BA7928355E}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{283575AA-349E-4B29-B6F4-BFC53383CD3B}" ShortID="789028847">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Centaur_Attack-Whoosh" ID="{FC63166A-B835-4764-818D-E025AAA14A07}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Centaur_KatanaThrow" ID="{FBEA76FF-B0E3-42BF-87B7-D5CF2722B6D2}"/>
 						<Event Name="Centaur_Damages" ID="{4D6AD6F8-032F-417D-8964-8F5E0A7C115C}"/>
 						<Event Name="Centaur_Death" ID="{DBF07CC6-EFA9-492F-BB6B-7ACACC6268FE}"/>
@@ -332,16 +359,16 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Soldier_Death" ID="{8F65248E-055A-4334-87B8-AB7E3D1035B7}">
+						<Event Name="Soldier_Death" ID="{39F7BC48-AB7F-47C9-A73B-5831F9C96988}">
 							<ChildrenList>
-								<Action Name="" ID="{87191DAA-5664-4126-9A08-E1204FC89D12}" ShortID="835969784">
+								<Action Name="" ID="{F1001056-B82C-40B7-AB4F-CFB8BCDB2DC0}" ShortID="703082802">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Hit" ID="{3E823EFD-598D-4108-828B-68108DAE707B}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{38253032-8F04-4181-80DD-41BB6DD8BFF9}" ShortID="181430587">
+								<Action Name="" ID="{A40682B0-D563-4D9C-9F28-278A51DD5F29}" ShortID="866775596">
 									<PropertyList>
 										<Property Name="Delay" Type="Real64" Value="0.05"/>
 									</PropertyList>
@@ -353,6 +380,26 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Centaur_Charge_Footstep" ID="{7950AE0E-2D33-43F6-B68F-33FB3E0F07D2}">
+							<ChildrenList>
+								<Action Name="" ID="{300929D3-3D93-44E9-B03D-E92EEC773F65}" ShortID="891678533">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Centaur_Footstep" ID="{52DACE3B-40E7-4165-BCA3-ED1FDDEFE2DE}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="World" ID="{679D1A96-B733-4BFB-8EF7-81E372F46AE8}" ShortID="721190264">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="20"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Checkpoints" ID="{EC9B155D-3FC6-47E7-88F5-090E40030FC1}"/>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

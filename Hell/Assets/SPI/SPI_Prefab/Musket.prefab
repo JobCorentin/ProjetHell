@@ -253,6 +253,18 @@ MonoBehaviour:
   Remains: {fileID: 227656790259838056, guid: 25c846dc16d5e8047914eaf231f9a133, type: 3}
   hasSpawn: 1
   dead: 0
+  initialPosition: {x: 0, y: 0}
+  initialHealth: 0
+  hasNoHp: 0
+  DamagesAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  DeathAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9b008259d5eccfa42b40847336e1fddb,
+      type: 2}
   bulletPrefab: {fileID: 2632547540658908434, guid: 9bffa467356781c41b1ab218b1e6974c,
     type: 3}
   arrow: {fileID: 8345421285771850965}
@@ -280,11 +292,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 0561457184794544291b86a28ea8cc3b,
-      type: 2}
-  musketDeathAudio:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 9b008259d5eccfa42b40847336e1fddb,
       type: 2}
   musketIdleAudioTimer: 10
 --- !u!50 &8345421285763794953

@@ -275,6 +275,16 @@ MonoBehaviour:
   dead: 0
   initialPosition: {x: 0, y: 0}
   initialHealth: 0
+  hasNoHp: 0
+  DamagesAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  DeathAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8a45f49df0b03534889cb9f9be1e116e,
+      type: 2}
   ennemiDetection: {fileID: 3637085431136922249}
   slash: {fileID: 1323936563}
   canAttack: 0
@@ -294,11 +304,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: e5a4f94159fdaad40891a2ebe917ac38,
-      type: 2}
-  soldierDeathAudio:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: d4a30fa4209ac1043ae67500339e719c,
       type: 2}
   soldierIdleAudioTimer: 10
 --- !u!212 &6059860427982487036

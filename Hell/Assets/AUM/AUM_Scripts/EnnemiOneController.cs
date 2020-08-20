@@ -32,7 +32,6 @@ public class EnnemiOneController : EnnemiController
     public AK.Wwise.Event hearthDeathAudio;
     public int hearthIdleAudioTimer;
     bool isInAudioCoroutine = false;
-    bool canPlayDeathAudio = true;
 
 
     // Start is called before the first frame update
@@ -52,11 +51,6 @@ public class EnnemiOneController : EnnemiController
         if (!isInAudioCoroutine && health > 0)
         {
             StartCoroutine(HearthIdleAudioCooldown());
-        }
-        if (health <= 0 && canPlayDeathAudio)
-        {
-            hearthDeathAudio.Post(gameObject);
-            canPlayDeathAudio = false;
         }
 
 

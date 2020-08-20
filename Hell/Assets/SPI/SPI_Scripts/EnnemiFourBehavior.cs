@@ -39,6 +39,15 @@ public class EnnemiFourBehavior : EnnemiController
     [HideInInspector] public bool hasDoneTwice=false;
 
 
+    [Space(10)]
+    [Header("Sounds")]
+    public AK.Wwise.Event centaurIdleAudio;
+    public AK.Wwise.Event centaurChargeAudio;
+    public int centaurIdleAudioTimer;
+    bool isInAudioCoroutine = false;
+    bool canPlayIdleAudio = true;
+
+
     public override void Start()
     {
         lookAt = Vector2.left;
@@ -50,6 +59,13 @@ public class EnnemiFourBehavior : EnnemiController
 
     public override void FixedUpdate()
     {
+        if (!isInAudioCoroutine && health > 0)
+        {
+            StartCoroutine(CentaurIdleAudioCooldown());
+        }
+
+
+
         if (stunned == true)
         {
             return;
@@ -88,7 +104,13 @@ public class EnnemiFourBehavior : EnnemiController
                 base.FixedUpdate();
 
                 if (Vector2.Distance(target, transform.position) < 1.25f*distanceFromWall)
+                {
                     animator.SetBool("IsCharging", false);
+
+                    centaurChargeAudio.Stop(gameObject);
+                    canPlayIdleAudio = true;
+                }
+
                 if (Vector2.Distance(target, transform.position) < distanceFromWall)
                 {
                     charge = false;
@@ -111,11 +133,13 @@ public class EnnemiFourBehavior : EnnemiController
     IEnumerator PrepareCharge()
     {
         animator.SetBool("IsPreparingCharge", true);
+        canPlayIdleAudio = false;
         yield return new WaitForSeconds(preparationDuration);
         slash.SetActive(true);
         charge = true;
         animator.SetBool("IsPreparingCharge", false);
         animator.SetBool("IsCharging", true);
+        centaurChargeAudio.Post(gameObject);
     }
     IEnumerator PrepareKatana(bool both)
     {
@@ -146,6 +170,10 @@ public class EnnemiFourBehavior : EnnemiController
             lookAt = lastLookAt;
             katana = false;
         }
+        centaurChargeAudio.Stop(gameObject);
+        canPlayIdleAudio = true;
+
+
         yield return new WaitForSeconds(coolDown);
         canAttack = true;
         animator.SetBool("LaunchBoth", false);
@@ -177,6 +205,10 @@ public class EnnemiFourBehavior : EnnemiController
         animator.SetBool("LaunchBoth", false);
         animator.SetBool("LaunchKatana", false);
         animator.SetBool("IsPreparingCharge", false);
+
+        centaurChargeAudio.Stop(gameObject);
+
+        canPlayIdleAudio = true;
     }
 
     public void CalculatePattern()
@@ -328,4 +360,18 @@ public class EnnemiFourBehavior : EnnemiController
         gameObject.layer = 16;
         StartCoroutine(Recover());
     }*/
+
+
+
+
+    IEnumerator CentaurIdleAudioCooldown()
+    {
+        isInAudioCoroutine = true;
+        yield return new WaitForSeconds(Random.Range(centaurIdleAudioTimer - (centaurIdleAudioTimer / 2), centaurIdleAudioTimer + (centaurIdleAudioTimer / 2)));
+        if (health > 0 && canPlayIdleAudio)
+        {
+            centaurIdleAudio.Post(gameObject);
+        }
+        isInAudioCoroutine = false;
+    }
 }

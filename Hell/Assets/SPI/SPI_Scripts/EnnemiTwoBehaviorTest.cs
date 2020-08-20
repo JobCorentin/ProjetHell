@@ -34,10 +34,8 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     public AK.Wwise.Event musketAimAudio;
     public AK.Wwise.Event musketShotAudio;
     public AK.Wwise.Event musketIdleAudio;
-    public AK.Wwise.Event musketDeathAudio;
     public int musketIdleAudioTimer;
     bool isInAudioCoroutine = false;
-    bool canPlayDeathAudio = true;
 
 
     public override void Start()
@@ -55,11 +53,6 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         if (!isInAudioCoroutine && health > 0)
         {
             StartCoroutine(MusketIdleAudioCooldown());
-        }
-        if (health <= 0 && canPlayDeathAudio)
-        {
-            musketDeathAudio.Post(gameObject);
-            canPlayDeathAudio = false;
         }
 
 
