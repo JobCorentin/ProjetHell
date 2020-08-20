@@ -240,8 +240,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Hearth_Lauch_Attack" ID="{4AA491D8-3460-430B-B8B3-D1C689A36111}"/>
-						<Event Name="Hearth_FireAttack" ID="{569AA247-29CB-4AB2-B817-682CD184ED17}"/>
+						<Event Name="Hearth_Lauch_Attack" ID="{4AA491D8-3460-430B-B8B3-D1C689A36111}">
+							<ChildrenList>
+								<Action Name="" ID="{4D3093D6-E83B-4770-90B6-854347532B32}" ShortID="539095103">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="HearthLauchAttack" ID="{57DA2BFA-4359-4CE7-BA78-C0F6A4380921}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Hearth_FireAttack" ID="{569AA247-29CB-4AB2-B817-682CD184ED17}">
+							<ChildrenList>
+								<Action Name="" ID="{13C6055C-24A8-46AF-9070-B5B68FAC0735}" ShortID="932648285">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hearth_Fire" ID="{32A0EF70-5823-4752-AF5B-6AAEF43E90BA}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Hearth_Damages" ID="{77F20DAA-7C83-470E-AF9D-3AB4DAE46338}">
 							<ChildrenList>
 								<Action Name="" ID="{78E6B624-B4D7-4E9F-86F5-17C338DB177D}" ShortID="274963573">

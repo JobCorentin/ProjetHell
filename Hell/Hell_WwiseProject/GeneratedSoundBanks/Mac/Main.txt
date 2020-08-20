@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	69452829	Musket_Death			\Default Work Unit\Bad Guys\Musket_Death	
 	789006460	Soldier_Attack			\Default Work Unit\Bad Guys\Soldier_Attack	
+	879101832	Hearth_FireAttack			\Default Work Unit\Bad Guys\Hearth_FireAttack	
 	1184701203	Musket_Idle			\Default Work Unit\Bad Guys\Musket_Idle	
 	1229797707	Player_Take_Damages			\Default Work Unit\Player\Player_Take_Damages	
 	1305133589	Player_Jump			\Default Work Unit\Player\Player_Jump	
@@ -10,6 +11,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2557777556	Main_Theme			\Default Work Unit\Musics\Main_Theme	
 	2975122654	Player_Health_Sounds			\Default Work Unit\Player\Player_Health_Sounds	
 	3275726432	Musket_AIM			\Default Work Unit\Bad Guys\Musket_AIM	
+	3537539166	Hearth_Lauch_Attack			\Default Work Unit\Bad Guys\Hearth_Lauch_Attack	
 	3756653709	Musket_FireAttack			\Default Work Unit\Bad Guys\Musket_FireAttack	
 	4005551194	Hearth_Damages			\Default Work Unit\Bad Guys\Hearth_Damages	
 	4017406829	Player_Parry			\Default Work Unit\Player\Player_Parry	
@@ -57,20 +59,22 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	257111943	MusketDeath_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\MusketDeath_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Musket_Death\MusketDeath_2		536768
 	262896654	SwordMetalSlash_6	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\SwordMetalSlash_6_F1A4802C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_MetalSwing\SwordMetalSlash_6		180812
 	270547711	SwordMetalSlash_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\SwordMetalSlash_2_B5FCCBFF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_MetalSwing\SwordMetalSlash_2		170856
+	321662568	HearthFire_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\HearthFire_1_FCF3F373.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Hearth_Fire\HearthFire_1		308832
 	322264621	JumpClothes_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\JumpClothes_1_0D2EE645.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Clothes\JumpClothes_1		123948
 	328969755	Musket_AIM	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\Musket Cock & Dry Fire 01_E656D3CC.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Musket_AIM		174562
 	333434390	FootstepWater_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepWater_2_2758A451.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Water\FootstepWater_2		77852
 	344298138	FootstepGrass_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepGrass_1_0BC0A086.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Grass\FootstepGrass_1		58848
 	346224109	FootstepWood_4	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepWood_4_CFC58377.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Wood\FootstepWood_4		46908
 	353414289	HearthSquizz_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\HearthSquizz_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Hearth_Squizz\HearthSquizz_1		421156
-	353700281	CentaurIdle_4	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\CentaurIdle_4_85548C3A.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Idle\CentaurIdle_4		585374
+	353700281	CentaurIdle_4	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\CentaurIdle_4_62F35417.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Idle\CentaurIdle_4		585374
 	382664733	SwordMetalSlash_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\SwordMetalSlash_1_95C074CD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_MetalSwing\SwordMetalSlash_1		151140
-	393081860	CentaurIdle_3	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\CentaurIdle_3_853A66B4.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Idle\CentaurIdle_3		579402
+	393081860	CentaurIdle_3	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\CentaurIdle_3_04A9625E.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Idle\CentaurIdle_3		579402
 	404749305	FootstepWater_4	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepWater_4_435582D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Water\FootstepWater_4		56868
 	405455083	JumpClothes_4	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\JumpClothes_4_C71F3D54.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Clothes\JumpClothes_4		148568
 	410598787	HearthSquizz_4	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\HearthSquizz_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Hearth_Squizz\HearthSquizz_4		419188
 	415025672	FootstepWater_5	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepWater_5_6BE879B1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Water\FootstepWater_5		46936
 	422114316	SwordMetalSlash_7	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\SwordMetalSlash_7_78ED1016.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_MetalSwing\SwordMetalSlash_7		167624
+	432523895	HearthLauchAttack	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\HearthLauchAttack_20C8CA22.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\HearthLauchAttack		243088
 	432712411	PlayerVoiceJump_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\PlayerVoiceJump_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Voices\PlayerVoiceJump_1		42986
 	449820504	SwordMetalSlash_4	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\SwordMetalSlash_4_EB95CDAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_MetalSwing\SwordMetalSlash_4		125884
 	451454607	PlayerPain_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\PlayerPain_2_0DE2AD0A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pain\PlayerPain_2		48934
@@ -78,7 +82,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	504815808	SoldierAttackVoice_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\SoldierAttackVoice_1_671C6518.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Soldier_Attack_Voice\SoldierAttackVoice_1		61130
 	511919527	FootstepConcrete_5	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepConcrete_5_A5A3DEEA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Concrete\FootstepConcrete_5		37340
 	512572648	SoldierAttackVoice_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\SoldierAttackVoice_2_3014E03A.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Soldier_Attack_Voice\SoldierAttackVoice_2		46206
-	519137111	CentaurIdle_5	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\CentaurIdle_5_3A60CE5D.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Idle\CentaurIdle_5		466948
+	519137111	CentaurIdle_5	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\CentaurIdle_5_21859735.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Idle\CentaurIdle_5		466948
 	528583243	SwordMetalSlash_5	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\SwordMetalSlash_5_9530B133.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_MetalSwing\SwordMetalSlash_5		198632
 	529911862	JumpClothes_6	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\JumpClothes_6_70A8BD6C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Clothes\JumpClothes_6		146992
 	532153537	FootstepWater_6	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepWater_6_7F4E9220.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Water\FootstepWater_6		55692
@@ -98,13 +102,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	693660259	SoldierAttackVoice_3	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\SoldierAttackVoice_3_F2687855.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Soldier_Attack_Voice\SoldierAttackVoice_3		32444
 	698514762	PlayerPain_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\PlayerPain_1_286B9F3F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pain\PlayerPain_1		59188
 	717449962	SoldierIdle_4	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\SoldierIdle_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Soldier_Idle\SoldierIdle_4		186364
-	723715463	CentaurIdle_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\CentaurIdle_1_A78897D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Idle\CentaurIdle_1		541436
+	723715463	CentaurIdle_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\CentaurIdle_1_3B7DF59F.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Idle\CentaurIdle_1		541436
 	782147939	FootstepConcrete_4	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepConcrete_4_95E5E719.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Concrete\FootstepConcrete_4		35352
 	784835478	FootstepWater_3	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepWater_3_C202C739.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Water\FootstepWater_3		76332
 	794038641	FootstepWood_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepWood_2_01CECBEA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Wood\FootstepWood_2		49304
 	804780276	JumpClothes_8	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\JumpClothes_8_983BDF1E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Clothes\JumpClothes_8		160320
 	825666160	FootstepConcrete_3	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepConcrete_3_1AB1FF95.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Concrete\FootstepConcrete_3		41956
-	857653009	CentaurIdle_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\CentaurIdle_2_44B1B3B5.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Idle\CentaurIdle_2		538706
+	857653009	CentaurIdle_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\CentaurIdle_2_4AD48978.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Idle\CentaurIdle_2		538706
 	880538827	FootstepGrass_4	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepGrass_4_03739558.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Grass\FootstepGrass_4		52720
 	899013627	FootstepConcrete_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepConcrete_1_E2B5CC48.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Concrete\FootstepConcrete_1		45376
 	914218953	JumpClothes_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\JumpClothes_2_E83034EB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Clothes\JumpClothes_2		166660
@@ -116,4 +120,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1041003874	FootstepGrass_5	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepGrass_5_F64F027B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Grass\FootstepGrass_5		49912
 	1041399421	FootstepGrass_3	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepGrass_3_65CECE20.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Grass\FootstepGrass_3		52840
 	1044382645	FootstepWater_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepWater_1_1A84D941.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Water\FootstepWater_1		58720
+	1058675388	HearthFire_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\HearthFire_2_6CC9AE65.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Hearth_Fire\HearthFire_2		402520
 

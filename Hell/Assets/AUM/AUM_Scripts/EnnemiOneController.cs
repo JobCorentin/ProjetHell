@@ -21,6 +21,20 @@ public class EnnemiOneController : EnnemiController
     public bool isTypeB;
     [HideInInspector] public bool isAttacking;
 
+
+
+    [Space(10)]
+    [Header("Sounds")]
+    public AK.Wwise.Event hearthLaunchAttackAudio;
+    public AK.Wwise.Event hearthAttackAudio;
+    public AK.Wwise.Event hearthIdleAudio;
+    public AK.Wwise.Event hearthDamagesAudio;
+    public AK.Wwise.Event hearthDeathAudio;
+    public int hearthIdleAudioTimer;
+    bool isInAudioCoroutine = false;
+    bool canPlayDeathAudio = true;
+
+
     // Start is called before the first frame update
     public override void Start()
     {
@@ -35,6 +49,18 @@ public class EnnemiOneController : EnnemiController
     // Update is called once per frame
     public override void FixedUpdate()
     {
+        if (!isInAudioCoroutine && health > 0)
+        {
+            StartCoroutine(HearthIdleAudioCooldown());
+        }
+        if (health <= 0 && canPlayDeathAudio)
+        {
+            hearthDeathAudio.Post(gameObject);
+            canPlayDeathAudio = false;
+        }
+
+
+
         CheckingIfAlive();
 
         if (hasSpawn == true)
@@ -124,6 +150,7 @@ public class EnnemiOneController : EnnemiController
         Vector2 finalDirectionAttack = baseDirectionAttack;
         animator.SetBool("IsPreparing",true);
         animator.SetTrigger("StartPreparing");
+        hearthLaunchAttackAudio.Post(gameObject);
 
         arrow.SetActive(true);
         arrow2.SetActive(true);
@@ -148,6 +175,9 @@ public class EnnemiOneController : EnnemiController
         }
         animator.SetBool("IsPreparing", false);
         animator.SetTrigger("IsAttacking");
+        hearthAttackAudio.Post(gameObject);
+        hearthLaunchAttackAudio.Stop(gameObject);
+
         
         E1Bullet currentBullet = Instantiate(bulletPrefab).GetComponent<E1Bullet>();
 
@@ -187,6 +217,7 @@ public class EnnemiOneController : EnnemiController
     public void StopLaunchBullet()
     {
         animator.SetBool("IsPreparing", false);
+        hearthLaunchAttackAudio.Stop(gameObject);
         arrow.SetActive(false);
         arrow2.SetActive(false);
         if(lastLaunchBullet != null)
@@ -199,5 +230,19 @@ public class EnnemiOneController : EnnemiController
     {
         BoxCollider2D bc2 = gameObject.GetComponent<BoxCollider2D>();
         bc2.enabled = false;
+
+        hearthDeathAudio.Post(gameObject);
+    }
+
+
+    IEnumerator HearthIdleAudioCooldown()
+    {
+        isInAudioCoroutine = true;
+        yield return new WaitForSeconds(Random.Range(hearthIdleAudioTimer - (hearthIdleAudioTimer / 2), hearthIdleAudioTimer + (hearthIdleAudioTimer / 2)));
+        if (health > 0)
+        {
+            hearthIdleAudio.Post(gameObject);
+        }
+        isInAudioCoroutine = false;
     }
 }

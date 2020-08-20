@@ -15,37 +15,40 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="2115185289" Name="Global_Volume" ObjectPath="\Game Parameters\Default Work Unit\Global_Volume"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="3161908922" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="4239594550" Name="Centaur_Idle" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_Idle" MaxAttenuation="40.000000" DurationType="OneShot" DurationMin="4.863374" DurationMax="6.096986">
+				<Event Id="4239594550" Name="Centaur_Idle" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_Idle" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="4.863374" DurationMax="6.096986">
 					<IncludedMemoryFiles>
 						<File Id="353700281" Language="SFX">
 							<ShortName>CentaurIdle_4.wav</ShortName>
-							<Path>SFX\CentaurIdle_4_85548C3A.wem</Path>
+							<Path>SFX\CentaurIdle_4_62F35417.wem</Path>
 						</File>
 						<File Id="393081860" Language="SFX">
 							<ShortName>CentaurIdle_3.wav</ShortName>
-							<Path>SFX\CentaurIdle_3_853A66B4.wem</Path>
+							<Path>SFX\CentaurIdle_3_04A9625E.wem</Path>
 						</File>
 						<File Id="519137111" Language="SFX">
 							<ShortName>CentaurIdle_5.wav</ShortName>
-							<Path>SFX\CentaurIdle_5_3A60CE5D.wem</Path>
+							<Path>SFX\CentaurIdle_5_21859735.wem</Path>
 						</File>
 						<File Id="723715463" Language="SFX">
 							<ShortName>CentaurIdle_1.wav</ShortName>
-							<Path>SFX\CentaurIdle_1_A78897D9.wem</Path>
+							<Path>SFX\CentaurIdle_1_3B7DF59F.wem</Path>
 						</File>
 						<File Id="857653009" Language="SFX">
 							<ShortName>CentaurIdle_2.wav</ShortName>
-							<Path>SFX\CentaurIdle_2_44B1B3B5.wem</Path>
+							<Path>SFX\CentaurIdle_2_4AD48978.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4005551194" Name="Hearth_Damages" ObjectPath="\Events\Default Work Unit\Bad Guys\Hearth_Damages" MaxAttenuation="40.000000" DurationType="OneShot" DurationMin="1.756712" DurationMax="2.816417">
+				<Event Id="4005551194" Name="Hearth_Damages" ObjectPath="\Events\Default Work Unit\Bad Guys\Hearth_Damages" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.756712" DurationMax="2.816417">
 					<IncludedMemoryFiles>
 						<File Id="73734437" Language="SFX">
 							<ShortName>HearthSquizz_2.wav</ShortName>
@@ -69,11 +72,31 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4018902270" Name="Hearth_Idle" ObjectPath="\Events\Default Work Unit\Bad Guys\Hearth_Idle" MaxAttenuation="40.000000" DurationType="OneShot" DurationMin="0.845374" DurationMax="0.845374">
+				<Event Id="879101832" Name="Hearth_FireAttack" ObjectPath="\Events\Default Work Unit\Bad Guys\Hearth_FireAttack" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.389279" DurationMax="2.560903">
+					<IncludedMemoryFiles>
+						<File Id="321662568" Language="SFX">
+							<ShortName>HearthFire_1.wav</ShortName>
+							<Path>SFX\HearthFire_1_FCF3F373.wem</Path>
+						</File>
+						<File Id="1058675388" Language="SFX">
+							<ShortName>HearthFire_2.wav</ShortName>
+							<Path>SFX\HearthFire_2_6CC9AE65.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4018902270" Name="Hearth_Idle" ObjectPath="\Events\Default Work Unit\Bad Guys\Hearth_Idle" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.845374" DurationMax="0.845374">
 					<IncludedMemoryFiles>
 						<File Id="647560748" Language="SFX">
 							<ShortName>Hearth.wav</ShortName>
 							<Path>SFX\Hearth_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3537539166" Name="Hearth_Lauch_Attack" ObjectPath="\Events\Default Work Unit\Bad Guys\Hearth_Lauch_Attack" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.377677" DurationMax="1.377677">
+					<IncludedMemoryFiles>
+						<File Id="432523895" Language="SFX">
+							<ShortName>HearthLauchAttack.wav</ShortName>
+							<Path>SFX\HearthLauchAttack_20C8CA22.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -85,7 +108,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3275726432" Name="Musket_AIM" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_AIM" MaxAttenuation="40.000000" DurationType="OneShot" DurationMin="1.978430" DurationMax="1.978430">
+				<Event Id="3275726432" Name="Musket_AIM" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_AIM" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.978430" DurationMax="1.978430">
 					<IncludedMemoryFiles>
 						<File Id="328969755" Language="SFX">
 							<ShortName>Musket Cock &amp; Dry Fire 01.wav</ShortName>
@@ -93,7 +116,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="69452829" Name="Musket_Death" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_Death" MaxAttenuation="40.000000" DurationType="OneShot" DurationMin="1.519748" DurationMax="2.268657">
+				<Event Id="69452829" Name="Musket_Death" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_Death" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.519748" DurationMax="2.268657">
 					<IncludedMemoryFiles>
 						<File Id="214022767" Language="SFX">
 							<ShortName>MusketDeath_1.wav</ShortName>
@@ -109,7 +132,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3756653709" Name="Musket_FireAttack" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_FireAttack" MaxAttenuation="40.000000" DurationType="OneShot" DurationMin="3.429350" DurationMax="5.443754">
+				<Event Id="3756653709" Name="Musket_FireAttack" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_FireAttack" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="3.429350" DurationMax="5.443754">
 					<IncludedMemoryFiles>
 						<File Id="1037279960" Language="SFX">
 							<ShortName>GUN Handgun 9MM 2 Far Front Side 7x AT835ST.wav</ShortName>
@@ -117,7 +140,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1184701203" Name="Musket_Idle" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_Idle" MaxAttenuation="40.000000" DurationType="OneShot" DurationMin="1.767070" DurationMax="3.511777">
+				<Event Id="1184701203" Name="Musket_Idle" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_Idle" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.767070" DurationMax="3.511777">
 					<IncludedMemoryFiles>
 						<File Id="29356416" Language="SFX">
 							<ShortName>MusketIdle_4.wav</ShortName>
@@ -397,7 +420,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="789006460" Name="Soldier_Attack" ObjectPath="\Events\Default Work Unit\Bad Guys\Soldier_Attack" MaxAttenuation="40.000000" DurationType="OneShot" DurationMin="0.350494" DurationMax="0.764003">
+				<Event Id="789006460" Name="Soldier_Attack" ObjectPath="\Events\Default Work Unit\Bad Guys\Soldier_Attack" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.350494" DurationMax="0.764003">
 					<IncludedMemoryFiles>
 						<File Id="504815808" Language="SFX">
 							<ShortName>SoldierAttackVoice_1.wav</ShortName>
@@ -417,7 +440,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1896704958" Name="Soldier_Idle" ObjectPath="\Events\Default Work Unit\Bad Guys\Soldier_Idle" MaxAttenuation="40.000000" DurationType="OneShot" DurationMin="1.258264" DurationMax="3.295045">
+				<Event Id="1896704958" Name="Soldier_Idle" ObjectPath="\Events\Default Work Unit\Bad Guys\Soldier_Idle" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.258264" DurationMax="3.295045">
 					<IncludedMemoryFiles>
 						<File Id="213079774" Language="SFX">
 							<ShortName>SoldierIdle_6.wav</ShortName>
