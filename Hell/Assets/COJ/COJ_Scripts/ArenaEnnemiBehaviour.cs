@@ -16,8 +16,8 @@ namespace Cinemachine
         {
             enemiStat = gameObject.GetComponent<EnnemiController>();
             wave = gameObject.GetComponentInParent<EnnemiWave>();
-            enemiStat.animator.SetBool("Spawning",true);
-            StartCoroutine(isSpawning());
+            //enemiStat.animator.SetBool("Spawning",true);
+            //StartCoroutine(isSpawning());
         }
 
         void Update()
@@ -29,7 +29,7 @@ namespace Cinemachine
             }
         }
 
-        IEnumerator isSpawning()
+        public IEnumerator isSpawning()
         {
             //gameObject.GetComponent<BoxCollider2D>().enabled = false;
             died = false;

@@ -59,6 +59,7 @@ namespace Cinemachine
 
                             ennemiController.animator.SetBool("Respawning", true);
                             ennemiController.animator.SetBool("Spawning", true);
+                            
 
                             ennemiController.dead = false;
                         }
@@ -77,6 +78,7 @@ namespace Cinemachine
         {
             waveCount = 0;
             arenaWave[waveCount].SetActive(true);
+            arenaWave[waveCount].GetComponent<EnnemiWave>().SpawnWave();
 
         }
 

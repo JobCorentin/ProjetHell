@@ -38,6 +38,15 @@ namespace Cinemachine
                 arena.NextWave();
             }
         }
+
+        public void SpawnWave()
+        {
+            foreach(GameObject waveEnnem in waveEnnemi)
+            {
+                waveEnnem.GetComponent<Animator>().SetBool("Spawning",true);
+                StartCoroutine(waveEnnem.GetComponent<ArenaEnnemiBehaviour>().isSpawning());
+            }
+        }
     }
 }
 
