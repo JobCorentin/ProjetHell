@@ -17,7 +17,6 @@ public class HealthManager : MonoBehaviour
 
     [HideInInspector] public CheckPoint lastCheckPoint;
 
-    Animator fadeAnimator;
     Animator deathBackgroundAnimator;
 
 
@@ -45,7 +44,7 @@ public class HealthManager : MonoBehaviour
 
         initialLife = life;
 
-        fadeAnimator = GameObject.Find("Fade").GetComponent<Animator>();
+        deathBackgroundAnimator = GameObject.Find("DeathAnimation").GetComponent<Animator>();
     }
 
 
@@ -104,6 +103,7 @@ public class HealthManager : MonoBehaviour
     public IEnumerator Die()
     {
         MovementController.mC.animator.SetTrigger("Die");
+        deathBackgroundAnimator.SetTrigger("Die");
 
         float temp = MovementController.mC.rb.gravityScale;
 
@@ -122,9 +122,8 @@ public class HealthManager : MonoBehaviour
             yield return null;
         }
 
-        fadeAnimator.SetTrigger("FadeIn");
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.5f);
 
         MovementController.mC.transform.position = lastCheckPoint.transform.position;
 
@@ -137,8 +136,6 @@ public class HealthManager : MonoBehaviour
         MovementController.mC.col.enabled = true;
 
         MovementController.mC.rb.gravityScale = temp;
-
-        fadeAnimator.SetTrigger("FadeOut");
 
         yield return new WaitForSeconds(1f);
 

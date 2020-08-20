@@ -12,6 +12,7 @@ public class CheckPoint : MonoBehaviour
         if(collision.tag == "Player")
         {
             HealthManager.hm.lastCheckPoint = this;
+            gameObject.GetComponent<Animator>().SetTrigger("lightUp");
         }
     }
 
