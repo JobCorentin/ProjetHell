@@ -68,6 +68,8 @@ public class EnnemiController : MonoBehaviour
     [HideInInspector] public Vector2 initialPosition;
     [HideInInspector] public int initialHealth;
 
+    [HideInInspector] public bool hasNoHp;
+
     // Start is called before the first frame update
     public virtual void Start()
     {
@@ -195,7 +197,7 @@ public class EnnemiController : MonoBehaviour
 
     public IEnumerator TakeDamage(int amount)
     {
-        if (hasSpawn == true)
+        if (hasSpawn == true && hasNoHp == false)
         {
 
             MovementController.mC.canDoubleJump = true;
@@ -225,10 +227,12 @@ public class EnnemiController : MonoBehaviour
                 yield return new WaitForSeconds(0.05f);
 
                 sr.material = defautlMaterial;
+                hasNoHp = true;
             }
             else if (health <= 0)
             {
                 Die();
+                hasNoHp = true;
             }
 
             /*if (tough == false)

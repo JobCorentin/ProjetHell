@@ -25,10 +25,10 @@ public class BoomController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(touchedEnnemy == true)
+        /*if(touchedEnnemy == true)
         {
             sr.color = Color.blue;
-        }
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
