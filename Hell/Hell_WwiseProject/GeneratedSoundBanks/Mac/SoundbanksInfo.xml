@@ -48,23 +48,31 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4005551194" Name="Hearth_Damages" ObjectPath="\Events\Default Work Unit\Bad Guys\Hearth_Damages" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.756712" DurationMax="2.816417">
+				<Event Id="4005551194" Name="Hearth_Damages" ObjectPath="\Events\Default Work Unit\Bad Guys\Hearth_Damages" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.220805" DurationMax="0.312266">
+					<IncludedMemoryFiles>
+						<File Id="948472799" Language="SFX">
+							<ShortName>Hit.wav</ShortName>
+							<Path>SFX\Hit_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="867542894" Name="Hearth_Death" ObjectPath="\Events\Default Work Unit\Bad Guys\Hearth_Death" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.657349" DurationMax="2.674307">
 					<IncludedMemoryFiles>
 						<File Id="73734437" Language="SFX">
 							<ShortName>HearthSquizz_2.wav</ShortName>
-							<Path>SFX\HearthSquizz_2_10C4C929.wem</Path>
+							<Path>SFX\HearthSquizz_2_7B41FF6A.wem</Path>
 						</File>
 						<File Id="156427360" Language="SFX">
 							<ShortName>HearthSquizz_3.wav</ShortName>
-							<Path>SFX\HearthSquizz_3_10C4C929.wem</Path>
+							<Path>SFX\HearthSquizz_3_8F3EF8F0.wem</Path>
 						</File>
 						<File Id="353414289" Language="SFX">
 							<ShortName>HearthSquizz_1.wav</ShortName>
-							<Path>SFX\HearthSquizz_1_10C4C929.wem</Path>
+							<Path>SFX\HearthSquizz_1_519117F9.wem</Path>
 						</File>
 						<File Id="410598787" Language="SFX">
 							<ShortName>HearthSquizz_4.wav</ShortName>
-							<Path>SFX\HearthSquizz_4_10C4C929.wem</Path>
+							<Path>SFX\HearthSquizz_4_106CA3B4.wem</Path>
 						</File>
 						<File Id="948472799" Language="SFX">
 							<ShortName>Hit.wav</ShortName>
@@ -76,11 +84,11 @@
 					<IncludedMemoryFiles>
 						<File Id="321662568" Language="SFX">
 							<ShortName>HearthFire_1.wav</ShortName>
-							<Path>SFX\HearthFire_1_FCF3F373.wem</Path>
+							<Path>SFX\HearthFire_1_330BF5FD.wem</Path>
 						</File>
 						<File Id="1058675388" Language="SFX">
 							<ShortName>HearthFire_2.wav</ShortName>
-							<Path>SFX\HearthFire_2_6CC9AE65.wem</Path>
+							<Path>SFX\HearthFire_2_8817A2B8.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -96,7 +104,7 @@
 					<IncludedMemoryFiles>
 						<File Id="432523895" Language="SFX">
 							<ShortName>HearthLauchAttack.wav</ShortName>
-							<Path>SFX\HearthLauchAttack_20C8CA22.wem</Path>
+							<Path>SFX\HearthLauchAttack_506E994F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

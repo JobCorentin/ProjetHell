@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID CENTAUR_IDLE = 4239594550U;
         static const AkUniqueID HEARTH_DAMAGES = 4005551194U;
+        static const AkUniqueID HEARTH_DEATH = 867542894U;
         static const AkUniqueID HEARTH_FIREATTACK = 879101832U;
         static const AkUniqueID HEARTH_IDLE = 4018902270U;
         static const AkUniqueID HEARTH_LAUCH_ATTACK = 3537539166U;
