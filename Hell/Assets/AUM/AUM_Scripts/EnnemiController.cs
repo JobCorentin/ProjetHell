@@ -70,6 +70,7 @@ public class EnnemiController : MonoBehaviour
 
     [HideInInspector] public bool hasNoHp;
     public AK.Wwise.Event DamagesAudio;
+    public AK.Wwise.Event DeathAudio;
 
     // Start is called before the first frame update
     public virtual void Start()
@@ -349,6 +350,10 @@ public class EnnemiController : MonoBehaviour
     {
 
         animator.SetTrigger("Dying");
+        if (DeathAudio != null)
+        {
+            DeathAudio.Post(gameObject);
+        }
 
 
         //gameObject.SetActive(false);

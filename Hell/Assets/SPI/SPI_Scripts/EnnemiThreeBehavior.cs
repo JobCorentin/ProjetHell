@@ -27,10 +27,8 @@ public class EnnemiThreeBehavior : EnnemiController
     [Header("Sounds")]
     public AK.Wwise.Event soldierAttackAudio;
     public AK.Wwise.Event soldierIdleAudio;
-    public AK.Wwise.Event soldierDeathAudio;
     public int soldierIdleAudioTimer;
     bool isInAudioCoroutine = false;
-    bool canPlayDeathAudio = true;
 
 
 
@@ -49,11 +47,6 @@ public class EnnemiThreeBehavior : EnnemiController
         if (!isInAudioCoroutine && health > 0)
         {
             StartCoroutine(SoldierIdleAudioCooldown());
-        }
-        if (health <= 0 && canPlayDeathAudio)
-        {
-            soldierDeathAudio.Post(gameObject);
-            canPlayDeathAudio = false;
         }
 
 

@@ -124,6 +124,10 @@ MonoBehaviour:
   reflected: 0
   etb: {fileID: 0}
   isCentaur: 1
+  attackParryAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &1744033078
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +172,7 @@ GameObject:
   - component: {fileID: 6586246800977173014}
   - component: {fileID: 6586246800977173015}
   - component: {fileID: 6586246800977173012}
+  - component: {fileID: 6893592299552188513}
   - component: {fileID: 6586246800977173008}
   - component: {fileID: 6586246800977173098}
   m_Layer: 16
@@ -220,6 +225,7 @@ MonoBehaviour:
   speed: 3500
   type: 3
   sr: {fileID: 6586246800977173009}
+  col: {fileID: 0}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
   numberBetweenGroupAttack: 0
@@ -238,9 +244,22 @@ MonoBehaviour:
   playerWasDetected: 0
   Remains: {fileID: 0}
   hasSpawn: 1
+  dead: 0
+  initialPosition: {x: 0, y: 0}
+  initialHealth: 0
+  hasNoHp: 0
+  DamagesAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  DeathAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   ennemiDetection: {fileID: 5842063382109803147}
   canAttack: 0
   charge: 0
+  katana: 0
   slash: {fileID: 1003175926}
   targetTransform: {fileID: 0}
   lookAt: {x: 0, y: 0}
@@ -253,8 +272,22 @@ MonoBehaviour:
     type: 3}
   katanaForce: 2
   katanaLauncher: {fileID: 1744033078}
-  lastPatternWasCharge: 0
   preparationDuration: 0.8
+  seuilPatternCharge: 0
+  seuilPatternBoth: 0
+  lastPatternNum: 0
+  hasDoneTwice: 0
+  centaurIdleAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8bce1cbd1f1c62e43a44002a67c90a6d,
+      type: 2}
+  centaurChargeAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c486d0e087639c64ca8f5c649ba4f40e,
+      type: 2}
+  centaurIdleAudioTimer: 10
 --- !u!212 &6586246800977173009
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -374,6 +407,23 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!114 &6893592299552188513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6586246800977173096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3057b2e0c9b760e4f9fb8727bfd5985f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerFootstepAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 282bcec2fc288774eafdf811c62121e1,
+      type: 2}
 --- !u!61 &6586246800977173008
 BoxCollider2D:
   m_ObjectHideFlags: 0

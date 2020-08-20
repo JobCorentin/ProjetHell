@@ -24,6 +24,54 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1647725780" Name="Centaur_Charge" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_Charge" MaxAttenuation="50.000000" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="363633816" Language="SFX">
+							<ShortName>centaurChargeVoice_4.wav</ShortName>
+							<Path>SFX\centaurChargeVoice_4_FB4F2D0B.wem</Path>
+						</File>
+						<File Id="395990998" Language="SFX">
+							<ShortName>centaurChargeVoice_2.wav</ShortName>
+							<Path>SFX\centaurChargeVoice_2_9A6CD719.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4255160813" Name="Centaur_Charge_Footstep" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_Charge_Footstep" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.196507" DurationMax="0.334841">
+					<IncludedMemoryFiles>
+						<File Id="105562471" Language="SFX">
+							<ShortName>CentaurFootstep_7.wav</ShortName>
+							<Path>SFX\CentaurFootstep_7_D96B0F42.wem</Path>
+						</File>
+						<File Id="162185338" Language="SFX">
+							<ShortName>CentaurFootstep_2.wav</ShortName>
+							<Path>SFX\CentaurFootstep_2_96E50509.wem</Path>
+						</File>
+						<File Id="620461488" Language="SFX">
+							<ShortName>CentaurFootstep_1.wav</ShortName>
+							<Path>SFX\CentaurFootstep_1_4F8939E9.wem</Path>
+						</File>
+						<File Id="786947925" Language="SFX">
+							<ShortName>CentaurFootstep_6.wav</ShortName>
+							<Path>SFX\CentaurFootstep_6_10B4B79A.wem</Path>
+						</File>
+						<File Id="815826656" Language="SFX">
+							<ShortName>CentaurFootstep_4.wav</ShortName>
+							<Path>SFX\CentaurFootstep_4_20744F43.wem</Path>
+						</File>
+						<File Id="927658985" Language="SFX">
+							<ShortName>CentaurFootstep_3.wav</ShortName>
+							<Path>SFX\CentaurFootstep_3_463A7BB8.wem</Path>
+						</File>
+						<File Id="949055583" Language="SFX">
+							<ShortName>CentaurFootstep_5.wav</ShortName>
+							<Path>SFX\CentaurFootstep_5_90DF0514.wem</Path>
+						</File>
+						<File Id="995193080" Language="SFX">
+							<ShortName>CentaurFootstep_8.wav</ShortName>
+							<Path>SFX\CentaurFootstep_8_C95C103F.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="4239594550" Name="Centaur_Idle" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_Idle" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="4.863374" DurationMax="6.096986">
 					<IncludedMemoryFiles>
 						<File Id="353700281" Language="SFX">
@@ -445,6 +493,22 @@
 						<File Id="693660259" Language="SFX">
 							<ShortName>SoldierAttackVoice_3.wav</ShortName>
 							<Path>SFX\SoldierAttackVoice_3_F2687855.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3583423278" Name="Soldier_Death" ObjectPath="\Events\Default Work Unit\Bad Guys\Soldier_Death" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.519748" DurationMax="2.268657">
+					<IncludedMemoryFiles>
+						<File Id="214022767" Language="SFX">
+							<ShortName>MusketDeath_1.wav</ShortName>
+							<Path>SFX\MusketDeath_1_10C4C929.wem</Path>
+						</File>
+						<File Id="257111943" Language="SFX">
+							<ShortName>MusketDeath_2.wav</ShortName>
+							<Path>SFX\MusketDeath_2_10C4C929.wem</Path>
+						</File>
+						<File Id="948472799" Language="SFX">
+							<ShortName>Hit.wav</ShortName>
+							<Path>SFX\Hit_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

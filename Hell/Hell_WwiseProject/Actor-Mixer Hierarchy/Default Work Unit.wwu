@@ -2366,6 +2366,7 @@
 						<RandomSequenceContainer Name="Musket_Idle" ID="{F8F625FF-D496-4718-8F64-5BA886A2E62D}" ShortID="375872394">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -2562,6 +2563,7 @@
 						</Sound>
 						<RandomSequenceContainer Name="Musket_Death" ID="{63ED2AC9-DFE5-40C6-BEE0-B1DC5FB6F215}" ShortID="578227894">
 							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>500</Value>
@@ -2689,6 +2691,7 @@
 						</Sound>
 						<RandomSequenceContainer Name="Soldier_Idle" ID="{1C500154-8BB7-4D92-A13C-939671214B9E}" ShortID="203490966">
 							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -2895,6 +2898,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Soldier_Attack_Voice" ID="{C156B78B-0F7C-4948-AD3E-72C5D7A5D384}" ShortID="809962969">
 							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -3125,6 +3129,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<RandomSequenceContainer Name="Hearth_Squizz" ID="{CE88F231-361F-41FA-8477-87F7AD3A49AE}" ShortID="1016688309">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
@@ -3145,6 +3152,10 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="HearthSquizz_1" ID="{7A85DA11-511F-4D32-8479-754D1BB4C014}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.130802348336595"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>HearthSquizz_1.wav</AudioFile>
 											<MediaIDList>
@@ -3167,6 +3178,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="HearthSquizz_2" ID="{202734FB-3C87-4F5A-88A9-1B3507F9CCF4}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.142110474326717"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.142110474326717"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>HearthSquizz_2.wav</AudioFile>
 											<MediaIDList>
@@ -3189,6 +3205,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="HearthSquizz_3" ID="{E2D2703B-030F-4764-BE73-1CCCA964345A}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.274710496070574"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0993633709191439"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>HearthSquizz_3.wav</AudioFile>
 											<MediaIDList>
@@ -3211,6 +3232,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="HearthSquizz_4" ID="{6C2D2AE4-989D-4C7D-976F-884CF5D4A366}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0813693970738981"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0813693970738981"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>HearthSquizz_4.wav</AudioFile>
 											<MediaIDList>
@@ -3247,6 +3273,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<RandomSequenceContainer Name="Centaur_Idle" ID="{9855547A-B9A8-4AF7-ABA3-D10227CBF1C4}" ShortID="138972093">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
@@ -3397,6 +3426,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Hearth_Fire" ID="{32A0EF70-5823-4752-AF5B-6AAEF43E90BA}" ShortID="502433867">
 							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -3506,6 +3536,511 @@
 								<ActiveSource Name="HearthLauchAttack" ID="{B2DC62C4-C230-4307-AFDE-54B29759B4DC}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="Centaur_Charge_Voice" ID="{08EBD6E0-87E8-42A2-AD86-B7BA7928355E}" ShortID="35287571">
+							<PropertyList>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="centaurChargeVoice_1" ID="{CF3230D4-6570-447A-9D52-59CA07B0E6AC}" ShortID="812562794">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="centaurChargeVoice_1" ID="{D26D1E83-AD09-4182-A714-6D8BB002D60C}">
+											<Language>SFX</Language>
+											<AudioFile>centaurChargeVoice_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="548776678"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="centaurChargeVoice_1" ID="{D26D1E83-AD09-4182-A714-6D8BB002D60C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="centaurChargeVoice_2" ID="{E56F780E-F27C-4A57-98F9-DAFDDD8D5AF1}" ShortID="300989326">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="centaurChargeVoice_2" ID="{8F679D0C-3B99-49B8-AC31-DA3B699D57CF}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.241182470034247"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>centaurChargeVoice_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="395990998"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="centaurChargeVoice_2" ID="{8F679D0C-3B99-49B8-AC31-DA3B699D57CF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="centaurChargeVoice_3" ID="{8002999D-6BDC-46E0-8165-C2F81B1DAED9}" ShortID="407668195">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="centaurChargeVoice_3" ID="{8C84B85C-613E-4A45-9585-D104204223D7}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>centaurChargeVoice_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="58442610"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="centaurChargeVoice_3" ID="{8C84B85C-613E-4A45-9585-D104204223D7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="centaurChargeVoice_4" ID="{27DB8CC3-507E-417C-BBE1-ABDCD9B937F6}" ShortID="118189752">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="centaurChargeVoice_4" ID="{A0745757-EC46-488C-8AFC-1F7EC898A0DC}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0721890696347032"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>centaurChargeVoice_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="363633816"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="centaurChargeVoice_4" ID="{A0745757-EC46-488C-8AFC-1F7EC898A0DC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="centaurChargeVoice_5" ID="{54FEB198-BD8A-49B3-BD4D-FB9AB8495E71}" ShortID="372092773">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="centaurChargeVoice_5" ID="{9744C522-47CC-4B23-BDCF-3E47FF4B521D}">
+											<Language>SFX</Language>
+											<AudioFile>centaurChargeVoice_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1039323633"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="centaurChargeVoice_5" ID="{9744C522-47CC-4B23-BDCF-3E47FF4B521D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="Centaur_Attack-Whoosh" ID="{FC63166A-B835-4764-818D-E025AAA14A07}" ShortID="635799944">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>1500</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D6A62645-D08F-4039-B5A9-886F1299B6B9}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-500"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Object_Attenuation" ID="{F3C8FD31-77AC-4877-A247-181AF3F6977E}" WorkUnitID="{FA64E6C2-46C1-4AC0-A936-E3E0FED4B7A0}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="SoundSeed Air Woosh" ID="{2934F0A7-FAFD-499C-A74D-B4C07157820D}" ShortID="582064587" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
+									<PropertyList>
+										<Property Name="FrequencyScale" Type="Real32" Value="-4"/>
+										<Property Name="PlaybackRate" Type="Real32" Value="1.5"/>
+										<Property Name="Speed" Type="Real32" Value="-10"/>
+										<Property Name="SpeedAutomate" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<PluginData>
+	<WooshData>
+		<CurveList Version="1">
+			<CurveInfo Name="Speed">
+				<Curve Name="" ID="{10B2926F-4975-4909-A5F9-F90C21F65ABD}">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="1"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>0</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>0.25</XPos>
+							<YPos>100</YPos>
+							<Flags>0</Flags>
+						</Point>
+						<Point>
+							<XPos>0.5</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+		</CurveList>
+		<Path Version="1">
+			<Path2D Name="" ID="{6459ECE0-CC12-4684-A802-2729F68DEACA}">
+				<PropertyList>
+					<Property Name="LinearTime" Type="bool" Value="False"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>0</YPos>
+						<Flags>12</Flags>
+						<Time>0</Time>
+					</Point>
+				</PointList>
+			</Path2D>
+		</Path>
+	</WooshData>
+</PluginData>
+									<PluginInnerObjectList>
+										<List Name="Deflectors">
+											<PluginInnerObject Name="" ID="{4E82309C-C3F4-4E24-8CF6-7813768838F4}" PluginName="Deflector" CompanyID="0" PluginID="122">
+												<PropertyList>
+													<Property Name="Frequency" Type="Real32" Value="289"/>
+												</PropertyList>
+											</PluginInnerObject>
+										</List>
+									</PluginInnerObjectList>
+								</SourcePlugin>
+							</ChildrenList>
+							<PositioningInfo>
+								<Position Name="" ID="{22657510-DC26-41A0-B9C9-7E638200691D}"/>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="SoundSeed Air Woosh" ID="{2934F0A7-FAFD-499C-A74D-B4C07157820D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="Centaur_Footstep" ID="{52DACE3B-40E7-4165-BCA3-ED1FDDEFE2DE}" ShortID="235439300">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{115E34BD-B79B-42CB-ACD0-15A1FB44CF62}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="CentaurFootstep_1" ID="{3BE5CC60-6C83-4191-BFD5-5C671B0F0240}" ShortID="243020319">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurFootstep_1" ID="{593E3E43-E540-47B8-B4A3-22AF7A43995C}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0113385773401827"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0113385773401827"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurFootstep_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="620461488"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurFootstep_1" ID="{593E3E43-E540-47B8-B4A3-22AF7A43995C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurFootstep_2" ID="{058EBB47-620C-4595-9D5A-ABEB6721B663}" ShortID="776122736">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurFootstep_2" ID="{A80F9C7A-9045-4416-B4D1-DC3437064008}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.00706506849315069"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.00706506849315069"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurFootstep_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="162185338"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurFootstep_2" ID="{A80F9C7A-9045-4416-B4D1-DC3437064008}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurFootstep_3" ID="{D6EC2D23-6BF3-458F-82AF-7C5CFDF64577}" ShortID="710223924">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurFootstep_3" ID="{A90612FB-5382-4C42-A6D2-60B6B6A67708}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0267155393835616"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0267155393835616"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurFootstep_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="927658985"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurFootstep_3" ID="{A90612FB-5382-4C42-A6D2-60B6B6A67708}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurFootstep_4" ID="{94A42BEC-6237-4B5D-AAF9-812ABB99D9EE}" ShortID="824786983">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurFootstep_4" ID="{C8626F7C-8923-470B-A398-C64BA8A78737}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0133370790525114"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0133370790525114"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurFootstep_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="815826656"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurFootstep_4" ID="{C8626F7C-8923-470B-A398-C64BA8A78737}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurFootstep_5" ID="{B1F81242-1F37-4A29-B5B5-18F43C8DE31B}" ShortID="312780485">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurFootstep_5" ID="{89C93E50-C636-435A-A48F-7812841C0F19}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0404657534246575"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0404657534246575"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurFootstep_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="949055583"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurFootstep_5" ID="{89C93E50-C636-435A-A48F-7812841C0F19}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurFootstep_6" ID="{5ACF2A64-AA4F-4BCA-ADDC-3AA02EA6C508}" ShortID="360998821">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurFootstep_6" ID="{1EE0AB84-6218-4A5F-8767-F7D6441FFAD4}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.044230522260274"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.044230522260274"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurFootstep_6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="786947925"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurFootstep_6" ID="{1EE0AB84-6218-4A5F-8767-F7D6441FFAD4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurFootstep_7" ID="{5999BF97-A80C-424A-8465-FA2B587128D1}" ShortID="416901455">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurFootstep_7" ID="{DEAF27A6-8D94-4278-9CEB-807F7C9D2C27}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0345675656392694"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0345675656392694"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurFootstep_7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="105562471"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurFootstep_7" ID="{DEAF27A6-8D94-4278-9CEB-807F7C9D2C27}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurFootstep_8" ID="{F04B2386-09E9-4462-9013-CE0AA461C8E7}" ShortID="704012243">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurFootstep_8" ID="{A4D7B8FC-2E7A-4783-A28E-F58B82F143B9}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0232833904109589"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0403578767123288"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurFootstep_8.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="995193080"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurFootstep_8" ID="{A4D7B8FC-2E7A-4783-A28E-F58B82F143B9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 					<PositioningInfo>
 						<Position Name="" ID="{194A086A-407B-4C75-8BE1-39F582570FA9}"/>

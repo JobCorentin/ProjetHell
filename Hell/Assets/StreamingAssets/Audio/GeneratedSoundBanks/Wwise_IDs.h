@@ -13,6 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID CENTAUR_CHARGE = 1647725780U;
+        static const AkUniqueID CENTAUR_CHARGE_FOOTSTEP = 4255160813U;
         static const AkUniqueID CENTAUR_IDLE = 4239594550U;
         static const AkUniqueID HEARTH_DAMAGES = 4005551194U;
         static const AkUniqueID HEARTH_DEATH = 867542894U;
@@ -31,6 +33,7 @@ namespace AK
         static const AkUniqueID PLAYER_SWORD_ATTACK = 2088000327U;
         static const AkUniqueID PLAYER_TAKE_DAMAGES = 1229797707U;
         static const AkUniqueID SOLDIER_ATTACK = 789006460U;
+        static const AkUniqueID SOLDIER_DEATH = 3583423278U;
         static const AkUniqueID SOLDIER_IDLE = 1896704958U;
     } // namespace EVENTS
 
