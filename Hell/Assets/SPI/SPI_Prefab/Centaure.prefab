@@ -46,7 +46,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.0580149, y: 0.4149046}
+  m_Offset: {x: -1.4437076, y: 0.4149046}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9645481, y: 2.2429504}
+  m_Size: {x: 1.1931627, y: 2.2429504}
   m_EdgeRadius: 0
 --- !u!212 &1003175929
 SpriteRenderer:
@@ -252,6 +252,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  DeathAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   ennemiDetection: {fileID: 5842063382109803147}
   canAttack: 0
   charge: 0
@@ -273,6 +277,15 @@ MonoBehaviour:
   seuilPatternBoth: 0
   lastPatternNum: 0
   hasDoneTwice: 0
+  centaurIdleAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  centaurChargeAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  centaurIdleAudioTimer: 0
 --- !u!212 &6586246800977173009
 SpriteRenderer:
   m_ObjectHideFlags: 0
