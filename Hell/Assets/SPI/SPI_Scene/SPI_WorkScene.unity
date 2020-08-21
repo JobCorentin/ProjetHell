@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3965,26 +3965,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1559395529}
     m_Modifications:
-    - target: {fileID: 6586246800977173013, guid: d3eb6cfeb7efeba41aab72cbd02ce3b7,
-        type: 3}
-      propertyPath: Remains
-      value: 
-      objectReference: {fileID: 225068920285659778, guid: 0c9216802ade3854c9bdfd49cc61f781,
-        type: 3}
-    - target: {fileID: 6586246800977173013, guid: d3eb6cfeb7efeba41aab72cbd02ce3b7,
-        type: 3}
-      propertyPath: katanaForce
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 6586246800977173096, guid: d3eb6cfeb7efeba41aab72cbd02ce3b7,
         type: 3}
       propertyPath: m_Name
       value: Centaure
-      objectReference: {fileID: 0}
-    - target: {fileID: 6586246800977173096, guid: d3eb6cfeb7efeba41aab72cbd02ce3b7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6586246800977173099, guid: d3eb6cfeb7efeba41aab72cbd02ce3b7,
         type: 3}
