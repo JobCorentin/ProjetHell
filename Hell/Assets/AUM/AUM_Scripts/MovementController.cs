@@ -168,8 +168,8 @@ public class MovementController : MonoBehaviour
         }
         else
         {
-                psFireHair.loop = false;
-                psFireHair.GetComponent<ParticleSystem>().loop = false;
+            psFireHair.loop = false;
+            psSmallFireHair.loop = false;
         }
 
         if(stuned == false)
