@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ParallaxTrigger : MonoBehaviour
 {
+    public GameObject previousGroup;
     private void Start()
     {
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
@@ -12,7 +13,18 @@ public class ParallaxTrigger : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            for(int i = 0;i < gameObject.transform.childCount; i++)
+            {
+                gameObject.transform.GetChild(i).gameObject.SetActive(true);
+            }
+
+            if(previousGroup != null)
+            {
+                for (int i = 0; i < previousGroup.transform.childCount; i++)
+                {
+                    previousGroup.transform.GetChild(i).gameObject.SetActive(false);
+                }
+            }
         }
     }
 }
