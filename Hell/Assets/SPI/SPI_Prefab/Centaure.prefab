@@ -124,6 +124,10 @@ MonoBehaviour:
   reflected: 0
   etb: {fileID: 0}
   isCentaur: 1
+  attackParryAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &1744033078
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +224,7 @@ MonoBehaviour:
   speed: 3500
   type: 3
   sr: {fileID: 6586246800977173009}
+  col: {fileID: 0}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
   numberBetweenGroupAttack: 0
@@ -236,11 +241,20 @@ MonoBehaviour:
   coolDownTimer: 0
   isFlying: 0
   playerWasDetected: 0
-  Remains: {fileID: 0}
+  Remains: {fileID: 225068920285659778, guid: 0c9216802ade3854c9bdfd49cc61f781, type: 3}
   hasSpawn: 1
+  dead: 0
+  initialPosition: {x: 0, y: 0}
+  initialHealth: 0
+  hasNoHp: 0
+  DamagesAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   ennemiDetection: {fileID: 5842063382109803147}
   canAttack: 0
   charge: 0
+  katana: 0
   slash: {fileID: 1003175926}
   targetTransform: {fileID: 0}
   lookAt: {x: 0, y: 0}
@@ -251,10 +265,13 @@ MonoBehaviour:
   distanceFromWall: 4
   katanaPrefab: {fileID: 1813276328214907302, guid: ee8d1717cf791fa4a9d079a8eda33463,
     type: 3}
-  katanaForce: 2
+  katanaForce: 25
   katanaLauncher: {fileID: 1744033078}
-  lastPatternWasCharge: 0
   preparationDuration: 0.8
+  seuilPatternCharge: 0
+  seuilPatternBoth: 0
+  lastPatternNum: 0
+  hasDoneTwice: 0
 --- !u!212 &6586246800977173009
 SpriteRenderer:
   m_ObjectHideFlags: 0
