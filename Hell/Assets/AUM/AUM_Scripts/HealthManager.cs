@@ -125,6 +125,8 @@ public class HealthManager : MonoBehaviour
 
         yield return new WaitForSeconds(2.5f);
 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
         MovementController.mC.transform.position = lastCheckPoint.transform.position;
 
         life = initialLife;
@@ -143,6 +145,6 @@ public class HealthManager : MonoBehaviour
 
         MovementController.mC.stuned = false;
 
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
 }

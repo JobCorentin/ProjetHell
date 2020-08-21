@@ -242,17 +242,13 @@ MonoBehaviour:
   coolDownTimer: 0
   isFlying: 0
   playerWasDetected: 0
-  Remains: {fileID: 0}
+  Remains: {fileID: 225068920285659778, guid: 0c9216802ade3854c9bdfd49cc61f781, type: 3}
   hasSpawn: 1
   dead: 0
   initialPosition: {x: 0, y: 0}
   initialHealth: 0
   hasNoHp: 0
   DamagesAudio:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  DeathAudio:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
@@ -270,24 +266,13 @@ MonoBehaviour:
   distanceFromWall: 4
   katanaPrefab: {fileID: 1813276328214907302, guid: ee8d1717cf791fa4a9d079a8eda33463,
     type: 3}
-  katanaForce: 2
+  katanaForce: 25
   katanaLauncher: {fileID: 1744033078}
   preparationDuration: 0.8
   seuilPatternCharge: 0
   seuilPatternBoth: 0
   lastPatternNum: 0
   hasDoneTwice: 0
-  centaurIdleAudio:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 8bce1cbd1f1c62e43a44002a67c90a6d,
-      type: 2}
-  centaurChargeAudio:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: c486d0e087639c64ca8f5c649ba4f40e,
-      type: 2}
-  centaurIdleAudioTimer: 10
 --- !u!212 &6586246800977173009
 SpriteRenderer:
   m_ObjectHideFlags: 0
