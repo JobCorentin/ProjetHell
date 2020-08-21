@@ -90,6 +90,7 @@ namespace Cinemachine
             if (waveCount < arenaWave.Count)
             {
                 arenaWave[waveCount].SetActive(true);
+                arenaWave[waveCount].GetComponent<EnnemiWave>().SpawnWave();
             }
 
         }

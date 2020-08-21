@@ -917,7 +917,7 @@ MonoBehaviour:
   boomerangPrefab: {fileID: 7094243265040849470, guid: 85051d8d75821ad4eb18343a007b882f,
     type: 3}
   noSword: 0
-  DashEffect: {fileID: 0}
+  DashEffect: {fileID: 6808790331488156287}
 --- !u!114 &7360886272903129554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1240,6 +1240,12 @@ PrefabInstance:
 --- !u!4 &2221308887131198392 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2221308885339385760, guid: 6dbd788890b2621468f72cdc52ee9884,
+    type: 3}
+  m_PrefabInstance: {fileID: 1993161752}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6808790331488156287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6808790330183911015, guid: 6dbd788890b2621468f72cdc52ee9884,
     type: 3}
   m_PrefabInstance: {fileID: 1993161752}
   m_PrefabAsset: {fileID: 0}
