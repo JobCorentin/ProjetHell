@@ -11,6 +11,8 @@ namespace Cinemachine
         [HideInInspector] public List<EnnemiController> waveEnnemiControllers = new List<EnnemiController>();
         bool ended = false;
 
+        public bool isBossWave;
+
         private void Start()
         {
             foreach(GameObject waveEnnem in waveEnnemi)
@@ -23,19 +25,22 @@ namespace Cinemachine
 
         void Update()
         {
-            int ennemisDead = 0;
-
-            foreach(EnnemiController waveEnnemiController in waveEnnemiControllers)
+            if (isBossWave == false)
             {
-                if (waveEnnemiController.dead == true)
-                    ennemisDead++;
-            }
+                int ennemisDead = 0;
 
-            if (ennemisDead == waveEnnemi.Count && ended == false)
-            {
-                ended = true;
-                gameObject.SetActive(false);
-                arena.NextWave();
+                foreach (EnnemiController waveEnnemiController in waveEnnemiControllers)
+                {
+                    if (waveEnnemiController.dead == true)
+                        ennemisDead++;
+                }
+
+                if (ennemisDead == waveEnnemi.Count && ended == false)
+                {
+                    ended = true;
+                    gameObject.SetActive(false);
+                    arena.NextWave();
+                }
             }
         }
 

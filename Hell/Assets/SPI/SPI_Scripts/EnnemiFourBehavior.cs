@@ -59,73 +59,76 @@ public class EnnemiFourBehavior : EnnemiController
 
     public override void FixedUpdate()
     {
-        if (!isInAudioCoroutine && health > 0)
+        if (dead == false)
         {
-            StartCoroutine(CentaurIdleAudioCooldown());
-        }
-
-
-
-        if (stunned == true)
-        {
-            return;
-        }
-
-
-
-        if (lookAt.x <= 0)
-        {
-            transform.localScale = new Vector3(1f, 1f, 1f);
-        }
-        else
-        {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-        }
-
-        if (playerDetected == false)
-        {
-            Detection();
-        }
-        else
-        {
-
-            /*for (int i = 0; i < ennemiDetection.ennemiControllers.Count; i++)
+            if (!isInAudioCoroutine && health > 0)
             {
-                target += (Vector2)(transform.position - ennemiDetection.ennemiControllers[i].transform.position).normalized * 3f; //distance ennemis entre eux
-            }*/
-
-            if (canAttack)
-            {
-                CalculatePattern();
+                StartCoroutine(CentaurIdleAudioCooldown());
             }
 
-            if (charge)
+
+
+            if (stunned == true)
             {
-                base.FixedUpdate();
+                return;
+            }
 
-                if (Vector2.Distance(target, transform.position) < 1.25f*distanceFromWall)
+
+
+            if (lookAt.x <= 0)
+            {
+                transform.localScale = new Vector3(1f, 1f, 1f);
+            }
+            else
+            {
+                transform.localScale = new Vector3(-1f, 1f, 1f);
+            }
+
+            if (playerDetected == false)
+            {
+                Detection();
+            }
+            else
+            {
+
+                /*for (int i = 0; i < ennemiDetection.ennemiControllers.Count; i++)
                 {
-                    animator.SetBool("IsCharging", false);
+                    target += (Vector2)(transform.position - ennemiDetection.ennemiControllers[i].transform.position).normalized * 3f; //distance ennemis entre eux
+                }*/
 
-                    centaurChargeAudio.Stop(gameObject);
-                    canPlayIdleAudio = true;
+                if (canAttack)
+                {
+                    CalculatePattern();
                 }
 
-                if (Vector2.Distance(target, transform.position) < distanceFromWall)
+                if (charge)
                 {
-                    charge = false;
-                    slash.SetActive(false);
-                    StartCoroutine(BetweenAttack());
+                    base.FixedUpdate();
+
+                    if (Vector2.Distance(target, transform.position) < 1.25f * distanceFromWall)
+                    {
+                        animator.SetBool("IsCharging", false);
+
+                        centaurChargeAudio.Stop(gameObject);
+                        canPlayIdleAudio = true;
+                    }
+
+                    if (Vector2.Distance(target, transform.position) < distanceFromWall)
+                    {
+                        charge = false;
+                        slash.SetActive(false);
+                        StartCoroutine(BetweenAttack());
+                    }
+
+                }
+
+                if (katana)
+                {
+
+                    lookAt = pTransform.position - transform.position;
                 }
 
             }
-
-            if(katana)
-            {
-
-                lookAt = pTransform.position - transform.position;
-            }
-       
         }
     }
 
