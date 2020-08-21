@@ -24,6 +24,18 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2157215894" Name="Centaur_Breath" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_Breath" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.918075" DurationMax="1.166105">
+					<IncludedMemoryFiles>
+						<File Id="88041050" Language="SFX">
+							<ShortName>CentaurBreath_1.wav</ShortName>
+							<Path>SFX\CentaurBreath_1_10C4C929.wem</Path>
+						</File>
+						<File Id="541743132" Language="SFX">
+							<ShortName>CentaurBreath_2.wav</ShortName>
+							<Path>SFX\CentaurBreath_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1647725780" Name="Centaur_Charge" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_Charge" MaxAttenuation="50.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="363633816" Language="SFX">
@@ -140,6 +152,31 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3171685924" Name="Centaur_Katana_Voices" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_Katana_Voices" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.901695" DurationMax="1.641036">
+					<IncludedMemoryFiles>
+						<File Id="51130137" Language="SFX">
+							<ShortName>CentaurAttackVoice_2.wav</ShortName>
+							<Path>SFX\CentaurAttackVoice_2_1CAACFE9.wem</Path>
+						</File>
+						<File Id="469840359" Language="SFX">
+							<ShortName>CentaurAttackVoice_1.wav</ShortName>
+							<Path>SFX\CentaurAttackVoice_1_10C4C929.wem</Path>
+						</File>
+						<File Id="476656456" Language="SFX">
+							<ShortName>CentaurAttackVoice_5.wav</ShortName>
+							<Path>SFX\CentaurAttackVoice_5_3746F13C.wem</Path>
+						</File>
+						<File Id="504148376" Language="SFX">
+							<ShortName>CentaurAttackVoice_3.wav</ShortName>
+							<Path>SFX\CentaurAttackVoice_3_10C4C929.wem</Path>
+						</File>
+						<File Id="1012811083" Language="SFX">
+							<ShortName>CentaurAttackVoice_4.wav</ShortName>
+							<Path>SFX\CentaurAttackVoice_4_B52723CB.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1327286010" Name="Centaur_KatanaThrow" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_KatanaThrow" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.166667" DurationMax="0.249718"/>
 				<Event Id="4005551194" Name="Hearth_Damages" ObjectPath="\Events\Default Work Unit\Bad Guys\Hearth_Damages" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.220805" DurationMax="0.312266">
 					<IncludedMemoryFiles>
 						<File Id="948472799" Language="SFX">

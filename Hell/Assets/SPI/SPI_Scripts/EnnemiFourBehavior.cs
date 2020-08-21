@@ -145,6 +145,7 @@ public class EnnemiFourBehavior : EnnemiController
     IEnumerator PrepareKatana(bool both)
     {
         animator.SetBool("IsPreparingKatana", true);
+        canPlayIdleAudio = false;
         if(lastPatternNum ==0)
             lastLookAt = lookAt;
         katana = true;
@@ -183,8 +184,6 @@ public class EnnemiFourBehavior : EnnemiController
         canAttack = true;
         animator.SetBool("LaunchBoth", false);
         animator.SetBool("LaunchKatana", false);
-
-        centaurKatanaVoiceAudio.Stop(gameObject);
     }
 
     IEnumerator LaunchingKatana()
@@ -214,7 +213,6 @@ public class EnnemiFourBehavior : EnnemiController
         animator.SetBool("IsPreparingCharge", false);
 
         centaurChargeAudio.Stop(gameObject);
-        centaurKatanaVoiceAudio.Stop(gameObject);
 
         canPlayIdleAudio = true;
     }

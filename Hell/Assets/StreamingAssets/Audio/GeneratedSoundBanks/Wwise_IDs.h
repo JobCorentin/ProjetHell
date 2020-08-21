@@ -13,11 +13,14 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID CENTAUR_BREATH = 2157215894U;
         static const AkUniqueID CENTAUR_CHARGE = 1647725780U;
         static const AkUniqueID CENTAUR_CHARGE_FOOTSTEP = 4255160813U;
         static const AkUniqueID CENTAUR_DAMAGES = 3060686034U;
         static const AkUniqueID CENTAUR_DEATH = 730632742U;
         static const AkUniqueID CENTAUR_IDLE = 4239594550U;
+        static const AkUniqueID CENTAUR_KATANA_VOICES = 3171685924U;
+        static const AkUniqueID CENTAUR_KATANATHROW = 1327286010U;
         static const AkUniqueID HEARTH_DAMAGES = 4005551194U;
         static const AkUniqueID HEARTH_DEATH = 867542894U;
         static const AkUniqueID HEARTH_FIREATTACK = 879101832U;
