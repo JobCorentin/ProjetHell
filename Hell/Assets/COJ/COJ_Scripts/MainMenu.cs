@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MainMenu : MonoBehaviour
 {
-    Resolution[] resolutions;
+    public Resolution[] resolutions;
 
     public Dropdown resolutionDropdown;
 
@@ -19,31 +20,33 @@ public class MainMenu : MonoBehaviour
     public float music;
     public AK.Wwise.RTPC musicWwiseVolume;
 
+    public GameObject optionMenu;
+
+    public GameObject MenuFirstButton, optionsFirstButton, optionsClosedButton;
+
 
     private void Start()
     {
+        SetFullscreen(true);
         resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
 
         List<string> options = new List<string>();
-
-        int currentResolutuionIndex = 0;
-        for(int i = 0;i < resolutions.Length; i++)
+        for(int i = 1;i < 3; i++)
         {
-            string option = resolutions[i].width + "x" + resolutions[i].height;
+            string option = resolutions[resolutions.Length - i].width + " x " + resolutions[resolutions.Length - i].height;
             options.Add(option);
 
-            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+            /*if (resolutions[resolutions.Length - i].width == Screen.currentResolution.width && resolutions[resolutions.Length - i].height == Screen.currentResolution.height)
             {
                 currentResolutuionIndex = i;
-            }
+            }*/
         }
 
    
 
         resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolutuionIndex;
         resolutionDropdown.RefreshShownValue();
     }
 
@@ -54,6 +57,20 @@ public class MainMenu : MonoBehaviour
         musicWwiseVolume.SetGlobalValue(music);
     }
 
+    public void OpenOptions()
+    {
+        optionMenu.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(optionsFirstButton);
+    }
+
+    public void CloseOptions()
+    {
+        optionMenu.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(optionsClosedButton);
+    }
 
 
     public void LoadScene(int index)
@@ -97,7 +114,7 @@ public class MainMenu : MonoBehaviour
 
     public void setResolution(int resolutionIndex)
     {
-        Resolution resolution = resolutions[resolutionIndex];
+        Resolution resolution = resolutions[resolutions.Length - resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 }
