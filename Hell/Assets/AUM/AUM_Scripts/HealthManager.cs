@@ -127,7 +127,7 @@ public class HealthManager : MonoBehaviour
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
-        MovementController.mC.transform.position = lastCheckPoint.transform.position;
+        //MovementController.mC.transform.position = lastCheckPoint.transform.position;
 
         life = initialLife;
 

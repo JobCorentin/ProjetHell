@@ -64,7 +64,11 @@ public class MovementController : MonoBehaviour
 
     float isGroundedFor = 0;
 
+    public ParticleSystem psFireHair;
+    public ParticleSystem psSmallFireHair;
+    public ParticleSystem psBurstFireHair;
 
+    bool couldDoubleJump = true;
 
     [Space(5)]
     [Header("Sound")]
@@ -150,6 +154,24 @@ public class MovementController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, ( (-speedWallSlide / (Mathf.Abs(InputListener.iL.horizontalInput))) * 0.5f ) + ( -speedWallSlide * 0.5f), float.MaxValue));
         }
 
+        if(canDoubleJump)
+        {
+            if(couldDoubleJump == false)
+            {
+                psBurstFireHair.Play();
+
+                psFireHair.Play();
+                psSmallFireHair.Play();
+                psFireHair.loop = true;
+                psSmallFireHair.loop = true;
+            }
+        }
+        else
+        {
+                psFireHair.loop = false;
+                psFireHair.GetComponent<ParticleSystem>().loop = false;
+        }
+
         if(stuned == false)
         {
             if (isGrounded)
@@ -199,6 +221,8 @@ public class MovementController : MonoBehaviour
                     {
                         animator.SetTrigger("DoubleJumping");
                         playerJumpAudio.Post(gameObject);
+
+                        FXManager.fxm.fxInstancier(5, groundCheck, 0);
                     }
 
                     rb.velocity = new Vector2(rb.velocity.x, 0);
@@ -253,7 +277,7 @@ public class MovementController : MonoBehaviour
             }
         }
 
-        
+        couldDoubleJump = canDoubleJump;
 
         InputListener.iL.jumpInput = false;
        
