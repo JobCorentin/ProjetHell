@@ -7,7 +7,9 @@ using UnityEngine.EventSystems;
 
 public class MainMenu : MonoBehaviour
 {
-    public Resolution[] resolutions;
+    Resolution res1 = new Resolution();
+    Resolution res2 = new Resolution();
+    Resolution res3 = new Resolution();
 
     public Dropdown resolutionDropdown;
 
@@ -27,26 +29,23 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        SetFullscreen(true);
-        resolutions = Screen.resolutions;
-
-        resolutionDropdown.ClearOptions();
-
+       /* resolutionDropdown.ClearOptions();
         List<string> options = new List<string>();
+
         for(int i = 1;i < 3; i++)
         {
             string option = resolutions[resolutions.Length - i].width + " x " + resolutions[resolutions.Length - i].height;
             options.Add(option);
 
-            /*if (resolutions[resolutions.Length - i].width == Screen.currentResolution.width && resolutions[resolutions.Length - i].height == Screen.currentResolution.height)
+            if (resolutions[resolutions.Length - i].width == Screen.currentResolution.width && resolutions[resolutions.Length - i].height == Screen.currentResolution.height)
             {
                 currentResolutuionIndex = i;
-            }*/
+            }
         }
 
-   
 
-        resolutionDropdown.AddOptions(options);
+
+        resolutionDropdown.AddOptions(options);*/
         resolutionDropdown.RefreshShownValue();
     }
 
@@ -114,7 +113,17 @@ public class MainMenu : MonoBehaviour
 
     public void setResolution(int resolutionIndex)
     {
-        Resolution resolution = resolutions[resolutions.Length - resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        if(resolutionIndex == 0)
+        {
+            Screen.SetResolution(1920, 1080, Screen.fullScreen);
+        }
+        else if (resolutionIndex == 1)
+        {
+            Screen.SetResolution(1600, 900, Screen.fullScreen);
+        }
+        else if (resolutionIndex == 2)
+        {
+            Screen.SetResolution(1440, 720, Screen.fullScreen);
+        }
     }
 }
