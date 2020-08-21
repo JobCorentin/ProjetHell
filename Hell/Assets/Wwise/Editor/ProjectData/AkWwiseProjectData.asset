@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 4284ab4eb2341646a069c5e5531758ca
     GuidInternal: 
-    m_lastTime: -8586037551636075157
+    m_lastTime: -8586035867692793389
     List:
     - name: Main
       guid: 33038aaad1850e4189e17a29e7d73f96
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 14895eb1fb392f4fb3e6729aaa4bce9d
     GuidInternal: 
-    m_lastTime: -8586037555978680256
+    m_lastTime: -8586035867693102543
     List:
     - name: Bad Guys
       guid: 3f5756db27424849b2a3879cd6bf2447
@@ -81,6 +81,20 @@ MonoBehaviour:
       - ElementName: Centaur_Charge
         ObjectType: 3
       Path: Default Work Unit\Bad Guys\Centaur_Charge
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Centaur_Charge_Footstep
+      guid: 0eae5079332df643b68f33fb3e0f07d2
+      id: 4255160813
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Centaur_Charge_Footstep
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Centaur_Charge_Footstep
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -137,6 +151,20 @@ MonoBehaviour:
       - ElementName: Centaur_KatanaThrow
         ObjectType: 3
       Path: Default Work Unit\Bad Guys\Centaur_KatanaThrow
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Checkpoints
+      guid: 5d159becc63fe74788f5090e40030fc1
+      id: 225972798
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: World
+        ObjectType: 4
+      - ElementName: Checkpoints
+        ObjectType: 3
+      Path: Default Work Unit\World\Checkpoints
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -332,6 +360,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Player_Heal
+      guid: 3ddb01130352e845a6369d9bac5bdb45
+      id: 780312891
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: Player_Heal
+        ObjectType: 3
+      Path: Default Work Unit\Player\Player_Heal
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Player_Health_Sounds
       guid: bf3af82e0204ce45b92f83b708f40f55
       id: 2975122654
@@ -416,20 +458,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Player_Wall_Slide
-      guid: eb811dc94f00104e8786d290f13bb671
-      id: 2886157199
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Player
-        ObjectType: 4
-      - ElementName: Player_Wall_Slide
-        ObjectType: 3
-      Path: Default Work Unit\Player\Player_Wall_Slide
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: Soldier_Attack
       guid: 29ef146f578b5f428bc1ffb2fb287422
       id: 789006460
@@ -445,7 +473,7 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Soldier_Death
-      guid: 8e24658f5a05344387b8ab7e3d1035b7
+      guid: 48bcf7397fabc947a73b5831f9c96988
       id: 3583423278
       PathAndIcons:
       - ElementName: Default Work Unit
@@ -469,6 +497,18 @@ MonoBehaviour:
       - ElementName: Soldier_Idle
         ObjectType: 3
       Path: Default Work Unit\Bad Guys\Soldier_Idle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: World
+      guid: 961a9d6733b7fb4b8ef781e372f46ae8
+      id: 2609808943
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: World
+        ObjectType: 4
+      Path: Default Work Unit\World
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1

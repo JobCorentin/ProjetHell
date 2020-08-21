@@ -2350,6 +2350,7 @@
 									<PropertyList>
 										<Property Name="FadeOutDuration" Type="Real64" Value="1.41141552511416"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.105152036406431"/>
 										<Property Name="TrimEnd" Type="Real64" Value="3.84931506849316"/>
 									</PropertyList>
 									<Language>SFX</Language>
@@ -3693,7 +3694,7 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<Sound Name="Centaur_Attack-Whoosh" ID="{FC63166A-B835-4764-818D-E025AAA14A07}" ShortID="635799944">
+						<Sound Name="Centaur_Attack_Whoosh" ID="{FC63166A-B835-4764-818D-E025AAA14A07}" ShortID="635799944">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
@@ -4037,6 +4038,516 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="CentaurFootstep_8" ID="{A4D7B8FC-2E7A-4783-A28E-F58B82F143B9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Centaur_Damages" ID="{405E7866-26DE-44FF-B1F5-900851B50FEB}" ShortID="705956575">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C1047CB1-3B63-47C8-9DC3-6CD1F2D33F89}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="400"/>
+													<Property Name="Min" Type="Real64" Value="-400"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="CentaurDamage_1" ID="{645861B4-1C5D-4756-8337-9BBA3702D136}" ShortID="64996113">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurDamage_1" ID="{143BA988-5454-4627-88AF-E8495DC914AA}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0690105415239726"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.00614945419520548"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.00478290881849315"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurDamage_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="339172972"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurDamage_1" ID="{143BA988-5454-4627-88AF-E8495DC914AA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurDamage_2" ID="{55512FFC-BDD7-4E68-8ADF-DDA15FB26A13}" ShortID="373105301">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurDamage_2" ID="{9CB8A9B0-906B-4E29-BE9B-09649EA76C4D}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.00937628424657535"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.00937628424657535"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurDamage_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="657138420"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurDamage_2" ID="{9CB8A9B0-906B-4E29-BE9B-09649EA76C4D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurDamage_3" ID="{6F253CA7-BF05-4542-BFEB-9AB4B315565B}" ShortID="103826908">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurDamage_3" ID="{62DD5E50-01E8-49A5-99B7-B730ED98B19F}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.203899472031964"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.00648771047374429"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurDamage_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="918486468"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurDamage_3" ID="{62DD5E50-01E8-49A5-99B7-B730ED98B19F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurDamage_4" ID="{C2F437CF-64FB-4182-81B2-CBC8BD44BD2A}" ShortID="265200640">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurDamage_4" ID="{B46B44BE-A3F4-4F92-836C-F5B887C13631}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.00823983304794521"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.00823983304794521"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurDamage_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="403017994"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurDamage_4" ID="{B46B44BE-A3F4-4F92-836C-F5B887C13631}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="BreakBones" ID="{3CCEB6F9-7757-4A12-8019-D037CA25EF31}" ShortID="87682641">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B060C750-7DBC-4EE2-B28A-6CE648FF51BA}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BreakBones" ID="{C9025C42-E364-4329-B5ED-C27AE3F51DBF}">
+									<Language>SFX</Language>
+									<AudioFile>BreakBones.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="74403551"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BreakBones" ID="{C9025C42-E364-4329-B5ED-C27AE3F51DBF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="Centaur_Attack_Voices" ID="{28C4C20B-C33B-4519-B7E0-D39E6FFA32D2}" ShortID="576972815">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{14D0BEA1-20EA-462A-B636-3EA02D1AE200}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="300"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="CentaurAttackVoice_1" ID="{519F6613-1E1A-48D7-89BF-61C19C2B6A9E}" ShortID="1051950547">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurAttackVoice_1" ID="{AA0EC546-77F7-420D-8977-E08446EF1C91}">
+											<Language>SFX</Language>
+											<AudioFile>CentaurAttackVoice_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="469840359"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurAttackVoice_1" ID="{AA0EC546-77F7-420D-8977-E08446EF1C91}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurAttackVoice_2" ID="{3074D24B-4249-43A8-9003-0A144D96C7D0}" ShortID="711180627">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurAttackVoice_2" ID="{50ECDB79-B020-41D1-951A-A49928DEF463}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0924696418378995"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0624794877283105"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurAttackVoice_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="51130137"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurAttackVoice_2" ID="{50ECDB79-B020-41D1-951A-A49928DEF463}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurAttackVoice_3" ID="{36274861-CCB2-4602-97E8-9EC4F62808B1}" ShortID="151772323">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurAttackVoice_3" ID="{42D1F74F-1C00-4312-A04A-77DF199CBD1D}">
+											<Language>SFX</Language>
+											<AudioFile>CentaurAttackVoice_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="504148376"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurAttackVoice_3" ID="{42D1F74F-1C00-4312-A04A-77DF199CBD1D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurAttackVoice_4" ID="{860AA14C-DC93-4869-A820-2195C763B64D}" ShortID="194013649">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurAttackVoice_4" ID="{F784E0B0-699F-4809-91CF-78F762B24314}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0432511415525114"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0297351598173516"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurAttackVoice_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1012811083"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurAttackVoice_4" ID="{F784E0B0-699F-4809-91CF-78F762B24314}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurAttackVoice_5" ID="{B496D316-840D-42D5-9427-75C0C7356014}" ShortID="929803610">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurAttackVoice_5" ID="{60B32439-1632-4148-8289-E21775F988EA}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0377426690924658"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0452912029109589"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CentaurAttackVoice_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="476656456"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurAttackVoice_5" ID="{60B32439-1632-4148-8289-E21775F988EA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="Centaur_Throw_Whoosh" ID="{162C9198-4071-4DA8-85B0-E363684B0B3C}" ShortID="447718653">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>1000</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{289E8427-6441-4313-AEDE-DDD2052857A8}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-500"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Object_Attenuation" ID="{F3C8FD31-77AC-4877-A247-181AF3F6977E}" WorkUnitID="{FA64E6C2-46C1-4AC0-A936-E3E0FED4B7A0}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="SoundSeed Air Woosh" ID="{F6AEB4DE-672B-47D6-99BA-328582769F36}" ShortID="309629958" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
+									<PropertyList>
+										<Property Name="FrequencyScale" Type="Real32" Value="-4"/>
+										<Property Name="PlaybackRate" Type="Real32" Value="1.5"/>
+										<Property Name="Speed" Type="Real32" Value="-10"/>
+										<Property Name="SpeedAutomate" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<PluginData>
+	<WooshData>
+		<CurveList Version="1">
+			<CurveInfo Name="Speed">
+				<Curve Name="" ID="{C7C0A6E0-E938-4D31-A125-818595DF22CC}">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="1"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>0</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>0.25</XPos>
+							<YPos>100</YPos>
+							<Flags>0</Flags>
+						</Point>
+						<Point>
+							<XPos>0.5</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+		</CurveList>
+		<Path Version="1">
+			<Path2D Name="" ID="{06BCF2D0-D21A-42C4-997F-6114BE95093E}">
+				<PropertyList>
+					<Property Name="LinearTime" Type="bool" Value="False"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>0</YPos>
+						<Flags>12</Flags>
+						<Time>0</Time>
+					</Point>
+				</PointList>
+			</Path2D>
+		</Path>
+	</WooshData>
+</PluginData>
+									<PluginInnerObjectList>
+										<List Name="Deflectors">
+											<PluginInnerObject Name="" ID="{4B449142-1100-4A43-A9B8-90D96B3A69ED}" PluginName="Deflector" CompanyID="0" PluginID="122">
+												<PropertyList>
+													<Property Name="Frequency" Type="Real32" Value="289"/>
+												</PropertyList>
+											</PluginInnerObject>
+										</List>
+									</PluginInnerObjectList>
+								</SourcePlugin>
+							</ChildrenList>
+							<PositioningInfo>
+								<Position Name="" ID="{36AF60A9-AE93-4294-A0DE-EE6CDFC0883F}"/>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="SoundSeed Air Woosh" ID="{F6AEB4DE-672B-47D6-99BA-328582769F36}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="Centaur_Breath" ID="{36C1C4A8-1995-4634-A62A-DAD1305E77C6}" ShortID="603957597">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{99CCC1B2-AE5E-4AE8-B105-3E345400201E}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="CentaurBreath_1" ID="{EA0C77DE-0A29-4699-A2A8-DB6B7FDC5E8B}" ShortID="433863413">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurBreath_1" ID="{9BDB3B6D-81C3-4648-BB6C-22C2D658FAD8}">
+											<Language>SFX</Language>
+											<AudioFile>CentaurBreath_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="88041050"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurBreath_1" ID="{9BDB3B6D-81C3-4648-BB6C-22C2D658FAD8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CentaurBreath_2" ID="{6B2A7470-A144-4697-B940-94D7DCF8238A}" ShortID="810616435">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CentaurBreath_2" ID="{26E4593F-7A05-4F34-8259-8DDEBB29E4B4}">
+											<Language>SFX</Language>
+											<AudioFile>CentaurBreath_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="541743132"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CentaurBreath_2" ID="{26E4593F-7A05-4F34-8259-8DDEBB29E4B4}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

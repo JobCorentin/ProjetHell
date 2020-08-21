@@ -43,6 +43,7 @@ public class EnnemiFourBehavior : EnnemiController
     [Header("Sounds")]
     public AK.Wwise.Event centaurIdleAudio;
     public AK.Wwise.Event centaurChargeAudio;
+    public AK.Wwise.Event centaurKatanaVoiceAudio;
     public int centaurIdleAudioTimer;
     bool isInAudioCoroutine = false;
     bool canPlayIdleAudio = true;
@@ -152,11 +153,15 @@ public class EnnemiFourBehavior : EnnemiController
         if(both)
         {
             animator.SetBool("LaunchBoth", true);
+            centaurKatanaVoiceAudio.Post(gameObject);
+
             //StartCoroutine(LaunchingKatana());
         }
         else
         {
             animator.SetBool("LaunchKatana", true);
+            centaurKatanaVoiceAudio.Post(gameObject);
+
             //StartCoroutine(LaunchingKatana());
         }
     }
@@ -178,6 +183,8 @@ public class EnnemiFourBehavior : EnnemiController
         canAttack = true;
         animator.SetBool("LaunchBoth", false);
         animator.SetBool("LaunchKatana", false);
+
+        centaurKatanaVoiceAudio.Stop(gameObject);
     }
 
     IEnumerator LaunchingKatana()
@@ -207,6 +214,7 @@ public class EnnemiFourBehavior : EnnemiController
         animator.SetBool("IsPreparingCharge", false);
 
         centaurChargeAudio.Stop(gameObject);
+        centaurKatanaVoiceAudio.Stop(gameObject);
 
         canPlayIdleAudio = true;
     }

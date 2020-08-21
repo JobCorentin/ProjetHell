@@ -317,15 +317,55 @@
 								<Action Name="" ID="{283575AA-349E-4B29-B6F4-BFC53383CD3B}" ShortID="789028847">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Centaur_Attack-Whoosh" ID="{FC63166A-B835-4764-818D-E025AAA14A07}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+											<ObjectRef Name="Centaur_Attack_Whoosh" ID="{FC63166A-B835-4764-818D-E025AAA14A07}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Centaur_KatanaThrow" ID="{FBEA76FF-B0E3-42BF-87B7-D5CF2722B6D2}"/>
-						<Event Name="Centaur_Damages" ID="{4D6AD6F8-032F-417D-8964-8F5E0A7C115C}"/>
-						<Event Name="Centaur_Death" ID="{DBF07CC6-EFA9-492F-BB6B-7ACACC6268FE}"/>
+						<Event Name="Centaur_KatanaThrow" ID="{FBEA76FF-B0E3-42BF-87B7-D5CF2722B6D2}">
+							<ChildrenList>
+								<Action Name="" ID="{AC34E4B9-7BF5-4E05-A375-BCAB6E26D1A1}" ShortID="1059864593">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Centaur_Throw_Whoosh" ID="{162C9198-4071-4DA8-85B0-E363684B0B3C}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Centaur_Damages" ID="{4D6AD6F8-032F-417D-8964-8F5E0A7C115C}">
+							<ChildrenList>
+								<Action Name="" ID="{214DBBDF-5D96-484B-B1A3-A66BD73E3D18}" ShortID="221916074">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Centaur_Damages" ID="{405E7866-26DE-44FF-B1F5-900851B50FEB}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Centaur_Death" ID="{DBF07CC6-EFA9-492F-BB6B-7ACACC6268FE}">
+							<ChildrenList>
+								<Action Name="" ID="{8CEF3C7E-D8DB-4B28-9560-92FB99AF7C60}" ShortID="798840357">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Centaur_Damages" ID="{405E7866-26DE-44FF-B1F5-900851B50FEB}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9A0F3739-020F-4DD8-B1A4-EBE4B320F736}" ShortID="120774851">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BreakBones" ID="{3CCEB6F9-7757-4A12-8019-D037CA25EF31}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Soldier_Idle" ID="{535019A4-B865-4490-982A-CE4AFACAB507}">
 							<ChildrenList>
 								<Action Name="" ID="{1B601D03-AE00-4B78-A933-869B9AFC9FA8}" ShortID="587202846">
@@ -361,20 +401,10 @@
 						</Event>
 						<Event Name="Soldier_Death" ID="{39F7BC48-AB7F-47C9-A73B-5831F9C96988}">
 							<ChildrenList>
-								<Action Name="" ID="{F1001056-B82C-40B7-AB4F-CFB8BCDB2DC0}" ShortID="703082802">
+								<Action Name="" ID="{C73E67EE-3B7B-4664-A11D-00B8D720FAF1}" ShortID="82881429">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Hit" ID="{3E823EFD-598D-4108-828B-68108DAE707B}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{A40682B0-D563-4D9C-9F28-278A51DD5F29}" ShortID="866775596">
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.05"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Musket_Death" ID="{63ED2AC9-DFE5-40C6-BEE0-B1DC5FB6F215}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+											<ObjectRef Name="Centaur_Damages" ID="{405E7866-26DE-44FF-B1F5-900851B50FEB}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -386,6 +416,28 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Centaur_Footstep" ID="{52DACE3B-40E7-4165-BCA3-ED1FDDEFE2DE}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Centaur_Katana_Voices" ID="{76D6D3E8-DAD5-4C6C-9F2B-08D0E8AFE064}">
+							<ChildrenList>
+								<Action Name="" ID="{0B7C768E-7CEB-4C78-A710-C02E622167C9}" ShortID="435981991">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Centaur_Attack_Voices" ID="{28C4C20B-C33B-4519-B7E0-D39E6FFA32D2}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Centaur_Breath" ID="{EACB9911-DF37-4B33-8551-CEFB8688C4A9}">
+							<ChildrenList>
+								<Action Name="" ID="{6E3A5235-E8FC-4FA0-AFC9-757503DA6B01}" ShortID="297126339">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Centaur_Breath" ID="{36C1C4A8-1995-4634-A62A-DAD1305E77C6}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
