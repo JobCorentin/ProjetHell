@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 4284ab4eb2341646a069c5e5531758ca
     GuidInternal: 
-    m_lastTime: -8586035867692793389
+    m_lastTime: -8586034692443355356
     List:
     - name: Main
       guid: 33038aaad1850e4189e17a29e7d73f96
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 14895eb1fb392f4fb3e6729aaa4bce9d
     GuidInternal: 
-    m_lastTime: -8586035867693102543
+    m_lastTime: -8586034692443475062
     List:
     - name: Bad Guys
       guid: 3f5756db27424849b2a3879cd6bf2447
@@ -67,6 +67,46 @@ MonoBehaviour:
       - ElementName: Bad Guys
         ObjectType: 4
       Path: Default Work Unit\Bad Guys
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Bullet_Impact
+      guid: eff0a51dc95979428a4ff8ed3565b850
+      id: 3921814510
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bullets
+        ObjectType: 4
+      - ElementName: Bullet_Impact
+        ObjectType: 3
+      Path: Default Work Unit\Bullets\Bullet_Impact
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Bullets
+      guid: 2ef4141bfb04fe489c2d66165c16ca2e
+      id: 3008122820
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bullets
+        ObjectType: 4
+      Path: Default Work Unit\Bullets
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Centaur_Breath
+      guid: 1199cbea37df334b8551cefb8688c4a9
+      id: 2157215894
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Centaur_Breath
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Centaur_Breath
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -140,6 +180,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Centaur_Katana_Voices
+      guid: e8d3d676d5da6c4c9f2b08d0e8afe064
+      id: 3171685924
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bad Guys
+        ObjectType: 4
+      - ElementName: Centaur_Katana_Voices
+        ObjectType: 3
+      Path: Default Work Unit\Bad Guys\Centaur_Katana_Voices
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Centaur_KatanaThrow
       guid: ff76eafbe3b0bf4287b7d5cf2722b6d2
       id: 1327286010
@@ -151,6 +205,20 @@ MonoBehaviour:
       - ElementName: Centaur_KatanaThrow
         ObjectType: 3
       Path: Default Work Unit\Bad Guys\Centaur_KatanaThrow
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Centaur_Sword_Sound
+      guid: 92ce284ea7b87c4ba26001da0f81f4bd
+      id: 1104912115
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bullets
+        ObjectType: 4
+      - ElementName: Centaur_Sword_Sound
+        ObjectType: 3
+      Path: Default Work Unit\Bullets\Centaur_Sword_Sound
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -275,6 +343,20 @@ MonoBehaviour:
       - ElementName: Musket_AIM
         ObjectType: 3
       Path: Default Work Unit\Bad Guys\Musket_AIM
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Musket_Bullets
+      guid: f641797deab7b44da446df1f7c17ca0e
+      id: 3068870144
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bullets
+        ObjectType: 4
+      - ElementName: Musket_Bullets
+        ObjectType: 3
+      Path: Default Work Unit\Bullets\Musket_Bullets
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -430,6 +512,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Player_Sword_Sound
+      guid: ac6562fb9bd40742bb8a4fbe16038165
+      id: 334564148
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bullets
+        ObjectType: 4
+      - ElementName: Player_Sword_Sound
+        ObjectType: 3
+      Path: Default Work Unit\Bullets\Player_Sword_Sound
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Player_Sword_Throw
       guid: b1471f3d696f2a428001007540bbaf38
       id: 3631697037
@@ -497,6 +593,20 @@ MonoBehaviour:
       - ElementName: Soldier_Idle
         ObjectType: 3
       Path: Default Work Unit\Bad Guys\Soldier_Idle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Wood_Breakable
+      guid: 4cd11a84f9b2274295d38bbc68ec5991
+      id: 328099278
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: World
+        ObjectType: 4
+      - ElementName: Wood_Breakable
+        ObjectType: 3
+      Path: Default Work Unit\World\Wood_Breakable
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -617,6 +727,6 @@ MonoBehaviour:
   - /Hell_WwiseProject
   - /Hell_WwiseProject/Events
   - /Hell_WwiseProject/Events/Default Work Unit
-  - /Hell_WwiseProject/Events/Default Work Unit/Bad Guys
+  - /Hell_WwiseProject/Events/Default Work Unit/World
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

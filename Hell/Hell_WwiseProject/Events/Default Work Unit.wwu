@@ -447,11 +447,71 @@
 				</Folder>
 				<Folder Name="World" ID="{679D1A96-B733-4BFB-8EF7-81E372F46AE8}" ShortID="721190264">
 					<PropertyList>
-						<Property Name="Color" Type="int16" Value="20"/>
+						<Property Name="Color" Type="int16" Value="26"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
 						<Event Name="Checkpoints" ID="{EC9B155D-3FC6-47E7-88F5-090E40030FC1}"/>
+						<Event Name="Wood_Breakable" ID="{841AD14C-B2F9-4227-95D3-8BBC68EC5991}">
+							<ChildrenList>
+								<Action Name="" ID="{47B31E25-C375-487F-918A-3175655E0739}" ShortID="643032104">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Wood_Break" ID="{40C49FFC-2063-4E4E-8178-D137FECE4426}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Bullets" ID="{1B14F42E-04FB-48FE-9C2D-66165C16CA2E}" ShortID="337910182">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Musket_Bullets" ID="{7D7941F6-B7EA-4DB4-A446-DF1F7C17CA0E}">
+							<ChildrenList>
+								<Action Name="" ID="{F5C2581A-4849-4048-A673-427780C43B58}" ShortID="529181054">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bullet_Sifflement" ID="{2F54283F-90EC-48A3-AE0C-4BB77FCDDA77}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Sword_Sound" ID="{FB6265AC-D49B-4207-BB8A-4FBE16038165}"/>
+						<Event Name="Centaur_Sword_Sound" ID="{4E28CE92-B8A7-4B7C-A260-01DA0F81F4BD}">
+							<ChildrenList>
+								<Action Name="" ID="{60CD8324-494B-4966-9CDB-EF317A89D4C1}" ShortID="969851747">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sword_Throw_Whoosh" ID="{EC7D40DB-7F66-4B51-9338-49FF19BC49C2}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A395FFC2-64F6-43A1-A38E-BF49D10AF086}" ShortID="1061652848">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sword_Throw_Sound" ID="{375BE775-347D-437C-B23C-B0F0717BC805}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Bullet_Impact" ID="{1DA5F0EF-59C9-4279-8A4F-F8ED3565B850}">
+							<ChildrenList>
+								<Action Name="" ID="{9E9FBFEA-051F-495B-9E84-3CC3CA3C01B3}" ShortID="449311661">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bullet_Impact" ID="{2C415D3C-AE66-4B24-8C2F-956C8AC5B4FF}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

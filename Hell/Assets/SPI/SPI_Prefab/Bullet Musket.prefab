@@ -164,6 +164,20 @@ MonoBehaviour:
   rb: {fileID: 2632547540658908445}
   ennemiLauncheFrom: {fileID: 0}
   existenceTime: 5
+  projectilParryAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  bulletImpactAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e89cf22588e41254cb973da79561a0b3,
+      type: 2}
+  bulletIdleAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 81673e56c09e1264db7c04dbe64d3964,
+      type: 2}
   attackDirectionAngle: 0
 --- !u!1 &7514694966024047384
 GameObject:

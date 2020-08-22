@@ -1,9 +1,11 @@
 Event	ID	Name			Wwise Object Path	Notes
 	69452829	Musket_Death			\Default Work Unit\Bad Guys\Musket_Death	
+	328099278	Wood_Breakable			\Default Work Unit\World\Wood_Breakable	
 	730632742	Centaur_Death			\Default Work Unit\Bad Guys\Centaur_Death	
 	789006460	Soldier_Attack			\Default Work Unit\Bad Guys\Soldier_Attack	
 	867542894	Hearth_Death			\Default Work Unit\Bad Guys\Hearth_Death	
 	879101832	Hearth_FireAttack			\Default Work Unit\Bad Guys\Hearth_FireAttack	
+	1104912115	Centaur_Sword_Sound			\Default Work Unit\Bullets\Centaur_Sword_Sound	
 	1184701203	Musket_Idle			\Default Work Unit\Bad Guys\Musket_Idle	
 	1229797707	Player_Take_Damages			\Default Work Unit\Player\Player_Take_Damages	
 	1305133589	Player_Jump			\Default Work Unit\Player\Player_Jump	
@@ -16,11 +18,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	2557777556	Main_Theme			\Default Work Unit\Musics\Main_Theme	
 	2975122654	Player_Health_Sounds			\Default Work Unit\Player\Player_Health_Sounds	
 	3060686034	Centaur_Damages			\Default Work Unit\Bad Guys\Centaur_Damages	
+	3068870144	Musket_Bullets			\Default Work Unit\Bullets\Musket_Bullets	
 	3171685924	Centaur_Katana_Voices			\Default Work Unit\Bad Guys\Centaur_Katana_Voices	
 	3275726432	Musket_AIM			\Default Work Unit\Bad Guys\Musket_AIM	
 	3537539166	Hearth_Lauch_Attack			\Default Work Unit\Bad Guys\Hearth_Lauch_Attack	
 	3583423278	Soldier_Death			\Default Work Unit\Bad Guys\Soldier_Death	
 	3756653709	Musket_FireAttack			\Default Work Unit\Bad Guys\Musket_FireAttack	
+	3921814510	Bullet_Impact			\Default Work Unit\Bullets\Bullet_Impact	
 	4005551194	Hearth_Damages			\Default Work Unit\Bad Guys\Hearth_Damages	
 	4017406829	Player_Parry			\Default Work Unit\Player\Player_Parry	
 	4018902270	Hearth_Idle			\Default Work Unit\Bad Guys\Hearth_Idle	
@@ -43,15 +47,20 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	72771758	SoundSeed Air Woosh	SoundSeed Air Woosh		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_Whoosh\SoundSeed Air Woosh	
+	125560027	SoundSeed Air Wind	SoundSeed Air Wind		\Actor-Mixer Hierarchy\Default Work Unit\Bullets\Bullet_Sifflement\SoundSeed Air Wind	
 	309629958	SoundSeed Air Woosh	SoundSeed Air Woosh		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Throw_Whoosh\SoundSeed Air Woosh	
 	582064587	SoundSeed Air Woosh	SoundSeed Air Woosh		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Attack_Whoosh\SoundSeed Air Woosh	
 	638299290	SoundSeed Air Woosh	SoundSeed Air Woosh		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Soldier_Attack-Whoosh\SoundSeed Air Woosh	
 	855825426	SoundSeed Air Woosh	SoundSeed Air Woosh		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Whoosh\SoundSeed Air Woosh	
+	944682974	SoundSeed Air Woosh	SoundSeed Air Woosh		\Actor-Mixer Hierarchy\Default Work Unit\Bullets\Sword_Throw_Whoosh\SoundSeed Air Woosh	
+	1004862564	SoundSeed Air Wind	SoundSeed Air Wind		\Actor-Mixer Hierarchy\Default Work Unit\Bullets\Sword_Throw_Sound\SoundSeed Air Wind	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1017632	JumpClothes_7	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\JumpClothes_7_4D29A588.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Clothes\JumpClothes_7		157484
+	25246286	BreakWood_3	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\BreakWood_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Wood_Break\BreakWood_3		153240
 	29356416	MusketIdle_4	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\MusketIdle_4_6229FAEF.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Musket_Idle\MusketIdle_4		300412
 	51130137	CentaurAttackVoice_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\CentaurAttackVoice_2_1CAACFE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Attack_Voices\CentaurAttackVoice_2		134180
+	51840431	BreakWood_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\BreakWood_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Wood_Break\BreakWood_2		226612
 	67714508	JumpClothes_5	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\JumpClothes_5_50282B71.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Clothes\JumpClothes_5		180312
 	73734437	HearthSquizz_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\HearthSquizz_2_7B41FF6A.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Hearth_Squizz\HearthSquizz_2		462992
 	74403551	BreakBones	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\BreakBones_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\BreakBones		144948
@@ -117,6 +126,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	623300503	PlayerPain_6	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\PlayerPain_6_8C7E7C05.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pain\PlayerPain_6		59792
 	625302998	SoldierAttackVoice_4	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\SoldierAttackVoice_4_51A1D9D5.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Soldier_Attack_Voice\SoldierAttackVoice_4		48710
 	635803235	SoldierIdle_7	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\SoldierIdle_7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Soldier_Idle\SoldierIdle_7		216380
+	638684267	Bullet_Impact	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\Bullet_Impact_C3AADBDE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bullets\Bullet_Impact		408308
 	647441318	SwordMetalSlash_8	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\SwordMetalSlash_8_5CF56C04.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_MetalSwing\SwordMetalSlash_8		215412
 	647560748	Hearth	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\Hearth_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Hearth		149188
 	653056460	SoldierIdle_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\SoldierIdle_1_B2091926.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Soldier_Idle\SoldierIdle_1		135650
@@ -134,6 +144,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	786947925	CentaurFootstep_6	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\CentaurFootstep_6_73B74BC3.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Footstep\CentaurFootstep_6		58592
 	794038641	FootstepWood_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\FootstepWood_2_01CECBEA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Wood\FootstepWood_2		49304
 	804780276	JumpClothes_8	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\JumpClothes_8_983BDF1E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Clothes\JumpClothes_8		160320
+	807109139	BreakWood_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\BreakWood_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Wood_Break\BreakWood_1		188416
 	815826656	CentaurFootstep_4	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\CentaurFootstep_4_B4189E9B.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Footstep\CentaurFootstep_4		62524
 	825666160	FootstepConcrete_3	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\FootstepConcrete_3_1AB1FF95.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Concrete\FootstepConcrete_3		41956
 	857653009	CentaurIdle_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\CentaurIdle_2_4AD48978.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Idle\CentaurIdle_2		538706

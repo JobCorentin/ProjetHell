@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BULLET_IMPACT = 3921814510U;
         static const AkUniqueID CENTAUR_BREATH = 2157215894U;
         static const AkUniqueID CENTAUR_CHARGE = 1647725780U;
         static const AkUniqueID CENTAUR_CHARGE_FOOTSTEP = 4255160813U;
@@ -21,6 +22,7 @@ namespace AK
         static const AkUniqueID CENTAUR_IDLE = 4239594550U;
         static const AkUniqueID CENTAUR_KATANA_VOICES = 3171685924U;
         static const AkUniqueID CENTAUR_KATANATHROW = 1327286010U;
+        static const AkUniqueID CENTAUR_SWORD_SOUND = 1104912115U;
         static const AkUniqueID HEARTH_DAMAGES = 4005551194U;
         static const AkUniqueID HEARTH_DEATH = 867542894U;
         static const AkUniqueID HEARTH_FIREATTACK = 879101832U;
@@ -28,6 +30,7 @@ namespace AK
         static const AkUniqueID HEARTH_LAUCH_ATTACK = 3537539166U;
         static const AkUniqueID MAIN_THEME = 2557777556U;
         static const AkUniqueID MUSKET_AIM = 3275726432U;
+        static const AkUniqueID MUSKET_BULLETS = 3068870144U;
         static const AkUniqueID MUSKET_DEATH = 69452829U;
         static const AkUniqueID MUSKET_FIREATTACK = 3756653709U;
         static const AkUniqueID MUSKET_IDLE = 1184701203U;
@@ -40,6 +43,7 @@ namespace AK
         static const AkUniqueID SOLDIER_ATTACK = 789006460U;
         static const AkUniqueID SOLDIER_DEATH = 3583423278U;
         static const AkUniqueID SOLDIER_IDLE = 1896704958U;
+        static const AkUniqueID WOOD_BREAKABLE = 328099278U;
     } // namespace EVENTS
 
     namespace SWITCHES

@@ -24,6 +24,14 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3921814510" Name="Bullet_Impact" ObjectPath="\Events\Default Work Unit\Bullets\Bullet_Impact" MaxAttenuation="25.000000" DurationType="OneShot" DurationMin="2.314305" DurationMax="2.314305">
+					<IncludedMemoryFiles>
+						<File Id="638684267" Language="SFX">
+							<ShortName>Bullet_Impact.wav</ShortName>
+							<Path>SFX\Bullet_Impact_C3AADBDE.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2157215894" Name="Centaur_Breath" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_Breath" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.918075" DurationMax="1.166105">
 					<IncludedMemoryFiles>
 						<File Id="88041050" Language="SFX">
@@ -177,6 +185,7 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="1327286010" Name="Centaur_KatanaThrow" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_KatanaThrow" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.166667" DurationMax="0.249718"/>
+				<Event Id="1104912115" Name="Centaur_Sword_Sound" ObjectPath="\Events\Default Work Unit\Bullets\Centaur_Sword_Sound" MaxAttenuation="25.000000" DurationType="Infinite"/>
 				<Event Id="4005551194" Name="Hearth_Damages" ObjectPath="\Events\Default Work Unit\Bad Guys\Hearth_Damages" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.220805" DurationMax="0.312266">
 					<IncludedMemoryFiles>
 						<File Id="948472799" Language="SFX">
@@ -253,6 +262,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3068870144" Name="Musket_Bullets" ObjectPath="\Events\Default Work Unit\Bullets\Musket_Bullets" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="10.000000" DurationMax="10.000000"/>
 				<Event Id="69452829" Name="Musket_Death" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_Death" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.519748" DurationMax="2.268657">
 					<IncludedMemoryFiles>
 						<File Id="214022767" Language="SFX">
@@ -626,6 +636,22 @@
 						<File Id="959353516" Language="SFX">
 							<ShortName>SoldierIdle_2.wav</ShortName>
 							<Path>SFX\SoldierIdle_2_38B4E692.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="328099278" Name="Wood_Breakable" ObjectPath="\Events\Default Work Unit\World\Wood_Breakable" MaxAttenuation="25.000000" DurationType="OneShot" DurationMin="0.773607" DurationMax="1.441562">
+					<IncludedMemoryFiles>
+						<File Id="25246286" Language="SFX">
+							<ShortName>BreakWood_3.wav</ShortName>
+							<Path>SFX\BreakWood_3_10C4C929.wem</Path>
+						</File>
+						<File Id="51840431" Language="SFX">
+							<ShortName>BreakWood_2.wav</ShortName>
+							<Path>SFX\BreakWood_2_10C4C929.wem</Path>
+						</File>
+						<File Id="807109139" Language="SFX">
+							<ShortName>BreakWood_1.wav</ShortName>
+							<Path>SFX\BreakWood_1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

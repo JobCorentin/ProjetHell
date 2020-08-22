@@ -112,6 +112,11 @@ MonoBehaviour:
   fog: {fileID: 6276961999480984658, guid: 59e3cfeeef4a1d14899c93e8807c0b68, type: 3}
   wheel: {fileID: 3981785412997363593, guid: 963d4361bed74e945a1b2151a494e474, type: 3}
   isChar: 1
+  woodBreakAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 25b32bfb015b957429b0e1653e89ee80,
+      type: 2}
 --- !u!61 &215663688117658488
 BoxCollider2D:
   m_ObjectHideFlags: 0
