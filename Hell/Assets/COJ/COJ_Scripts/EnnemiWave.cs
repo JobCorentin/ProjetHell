@@ -12,6 +12,7 @@ namespace Cinemachine
         bool ended = false;
 
         public bool isBossWave;
+        int waveCount;
 
         private void Start()
         {
@@ -20,6 +21,8 @@ namespace Cinemachine
                 waveEnnemiControllers.Add(waveEnnem.GetComponent<EnnemiController>());
             }
 
+            waveCount = waveEnnemi.Count;
+            Debug.Log(waveCount);
             arena = gameObject.GetComponentInParent<ArenaScript>();
         }
 
@@ -32,13 +35,16 @@ namespace Cinemachine
                 foreach (EnnemiController waveEnnemiController in waveEnnemiControllers)
                 {
                     if (waveEnnemiController.dead == true)
+                    {
                         ennemisDead++;
+                        Debug.Log(ennemisDead);
+                    }                       
                 }
 
-                if (ennemisDead == waveEnnemi.Count && ended == false)
+                if (ennemisDead == waveCount && ended == false)
                 {
                     ended = true;
-                    gameObject.SetActive(false);
+                    StartCoroutine(delayBtwWave());
                     arena.NextWave();
                 }
             }
@@ -51,6 +57,12 @@ namespace Cinemachine
                 waveEnnem.GetComponent<Animator>().SetBool("Spawning",true);
                 StartCoroutine(waveEnnem.GetComponent<ArenaEnnemiBehaviour>().isSpawning());
             }
+        }
+
+        public IEnumerator delayBtwWave()
+        {
+            yield return new WaitForSeconds(1.5f);
+            gameObject.SetActive(false);
         }
     }
 }

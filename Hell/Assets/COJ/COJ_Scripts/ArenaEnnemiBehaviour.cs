@@ -10,7 +10,7 @@ namespace Cinemachine
         public EnnemiController enemiStat;
         Animator animator;
 
-        public bool died;
+        [HideInInspector]public bool died;
 
         private void Awake()
         {

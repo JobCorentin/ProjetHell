@@ -409,8 +409,11 @@ public class EnnemiController : MonoBehaviour
 
     public void spawnRemains()
     {
-        GameObject newRemains = Instantiate(Remains, gameObject.transform);
-        newRemains.transform.parent = GameObject.Find("RemainHolder").transform;
+        if(Remains != null)
+        {
+            GameObject newRemains = Instantiate(Remains, gameObject.transform);
+            newRemains.transform.parent = GameObject.Find("RemainHolder").transform;
+        }
         dead = true;
     }
 
