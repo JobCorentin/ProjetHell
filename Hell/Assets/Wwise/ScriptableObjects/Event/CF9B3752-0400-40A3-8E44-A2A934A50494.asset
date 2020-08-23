@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c912fa2057d54ad4ab196834d509cd80, type: 3}
   m_Name: CF9B3752-0400-40A3-8E44-A2A934A50494
   m_EditorClassIdentifier: 
-  objectName: Player_Death
-  id: 3083087645
+  objectName: Player_Death_Slash
+  id: 147161291
   guid: CF9B3752-0400-40A3-8E44-A2A934A50494

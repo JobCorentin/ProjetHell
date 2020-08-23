@@ -35,6 +35,7 @@ namespace AK
         static const AkUniqueID MUSKET_DEATH = 69452829U;
         static const AkUniqueID MUSKET_FIREATTACK = 3756653709U;
         static const AkUniqueID MUSKET_IDLE = 1184701203U;
+        static const AkUniqueID PLAYER_DEATH_SLASH = 147161291U;
         static const AkUniqueID PLAYER_FOOTSTEP = 2453392179U;
         static const AkUniqueID PLAYER_HEALTH_SOUNDS = 2975122654U;
         static const AkUniqueID PLAYER_JUMP = 1305133589U;

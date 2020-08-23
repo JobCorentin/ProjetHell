@@ -127,7 +127,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Player_Death" ID="{CF9B3752-0400-40A3-8E44-A2A934A50494}"/>
+						<Event Name="Player_Death_Slash" ID="{CF9B3752-0400-40A3-8E44-A2A934A50494}">
+							<ChildrenList>
+								<Action Name="" ID="{6F244FE5-83CA-44D9-A0C0-B0F459A3508D}" ShortID="624445018">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DeathSlash" ID="{1886FC1F-B2C2-4D97-9F53-612DEA3D7B9A}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Player_Health_Sounds" ID="{2EF83ABF-0402-45CE-B92F-83B708F40F55}">
 							<ChildrenList>
 								<Action Name="" ID="{05A281B9-7F20-492A-90B3-D68B1B776CFA}" ShortID="614635082">

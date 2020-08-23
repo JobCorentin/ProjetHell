@@ -6,6 +6,7 @@
 				<SoundBank Name="Main" ID="{AA8A0333-85D1-410E-89E1-7A29E7D73F96}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Musket_FireAttack" ID="{47025977-3E62-400C-94B1-4636FF3C951D}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Death_Slash" ID="{CF9B3752-0400-40A3-8E44-A2A934A50494}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hearth_Death" ID="{E3CD6671-3A1E-4116-907C-88D4790AF0D6}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Musket_AIM" ID="{DD8F28CE-ADDB-4131-BBE6-F3EB0A78AB33}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Centaur_Damages" ID="{4D6AD6F8-032F-417D-8964-8F5E0A7C115C}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>

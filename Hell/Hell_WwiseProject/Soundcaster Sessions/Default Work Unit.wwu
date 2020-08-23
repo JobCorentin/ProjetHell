@@ -6,7 +6,7 @@
 				<SoundcasterSession Name="Player" ID="{5087CBB5-653F-4397-B226-88B86D252F70}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Player_Death" ID="{CF9B3752-0400-40A3-8E44-A2A934A50494}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
+							<ObjectRef Name="Player_Death_Slash" ID="{CF9B3752-0400-40A3-8E44-A2A934A50494}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>

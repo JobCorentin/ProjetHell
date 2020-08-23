@@ -319,6 +319,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="147161291" Name="Player_Death_Slash" ObjectPath="\Events\Default Work Unit\Player\Player_Death_Slash" DurationType="OneShot" DurationMin="3.643560" DurationMax="3.643560">
+					<IncludedMemoryFiles>
+						<File Id="108687792" Language="SFX">
+							<ShortName>DeathSlash.wav</ShortName>
+							<Path>SFX\DeathSlash_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2453392179" Name="Player_Footstep" ObjectPath="\Events\Default Work Unit\Player\Player_Footstep" DurationType="OneShot" DurationMin="0.163735" DurationMax="0.454751">
 					<IncludedMemoryFiles>
 						<File Id="130640124" Language="SFX">

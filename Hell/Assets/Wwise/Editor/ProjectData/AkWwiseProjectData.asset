@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 4284ab4eb2341646a069c5e5531758ca
     GuidInternal: 
-    m_lastTime: -8586034602968702309
+    m_lastTime: -8586034089044552948
     List:
     - name: Main
       guid: 33038aaad1850e4189e17a29e7d73f96
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 14895eb1fb392f4fb3e6729aaa4bce9d
     GuidInternal: 
-    m_lastTime: -8586034602963882347
+    m_lastTime: -8586034089046370962
     List:
     - name: Bad Guys
       guid: 3f5756db27424849b2a3879cd6bf2447
@@ -428,17 +428,17 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Player_Death
+    - name: Player_Death_Slash
       guid: 52379bcf0004a3408e44a2a934a50494
-      id: 3083087645
+      id: 147161291
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Player
         ObjectType: 4
-      - ElementName: Player_Death
+      - ElementName: Player_Death_Slash
         ObjectType: 3
-      Path: Default Work Unit\Player\Player_Death
+      Path: Default Work Unit\Player\Player_Death_Slash
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -737,10 +737,6 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8586049880700832740
     List: []
-  ExpandedItems:
-  - /Hell_WwiseProject
-  - /Hell_WwiseProject/Events
-  - /Hell_WwiseProject/Events/Default Work Unit
-  - /Hell_WwiseProject/Events/Default Work Unit/Musics
+  ExpandedItems: []
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
