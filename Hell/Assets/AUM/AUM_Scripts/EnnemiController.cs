@@ -355,6 +355,11 @@ public class EnnemiController : MonoBehaviour
             DeathAudio.Post(gameObject);
         }
 
+        if (SoundManager.instance.haveKillAnEnnemi == false)
+        {
+            SoundManager.instance.haveKillAnEnnemi = true;
+        }
+
 
         //gameObject.SetActive(false);
     }

@@ -899,6 +899,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8591959588141081569}
   - component: {fileID: 8591959588141081582}
+  - component: {fileID: 8823602198031489322}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -945,6 +946,24 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
+--- !u!114 &8823602198031489322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8591959588141081581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eadc5a3003c954247ba03bfc264ba185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelTheme:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8e073e954ad6547448b6ac9cff09ded8,
+      type: 2}
+  haveKillAnEnnemi: 0
 --- !u!1 &9060133060191265890
 GameObject:
   m_ObjectHideFlags: 0

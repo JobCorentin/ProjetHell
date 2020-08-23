@@ -167,6 +167,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Level_Theme" ID="{9BAD7059-1F1A-432D-A9DB-744976FA291A}">
+							<ChildrenList>
+								<Action Name="" ID="{8254570A-D21F-48D1-8FE7-4E36EA7480AC}" ShortID="407225644">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Test" ID="{EA1132D6-25D7-4011-871F-66387DCBD1D4}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Bad Guys" ID="{DB56573F-4227-4948-B2A3-879CD6BF2447}" ShortID="881729752">

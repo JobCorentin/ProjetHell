@@ -28,6 +28,7 @@ namespace AK
         static const AkUniqueID HEARTH_FIREATTACK = 879101832U;
         static const AkUniqueID HEARTH_IDLE = 4018902270U;
         static const AkUniqueID HEARTH_LAUCH_ATTACK = 3537539166U;
+        static const AkUniqueID LEVEL_THEME = 103577031U;
         static const AkUniqueID MAIN_THEME = 2557777556U;
         static const AkUniqueID MUSKET_AIM = 3275726432U;
         static const AkUniqueID MUSKET_BULLETS = 3068870144U;

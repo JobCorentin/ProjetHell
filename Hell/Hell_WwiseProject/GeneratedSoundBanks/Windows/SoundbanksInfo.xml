@@ -28,7 +28,7 @@
 					<IncludedMemoryFiles>
 						<File Id="638684267" Language="SFX">
 							<ShortName>Bullet_Impact.wav</ShortName>
-							<Path>SFX\Bullet_Impact_C3AADBDE.wem</Path>
+							<Path>SFX\Bullet_Impact_771F34F4.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -243,6 +243,14 @@
 						<File Id="432523895" Language="SFX">
 							<ShortName>HearthLauchAttack.wav</ShortName>
 							<Path>SFX\HearthLauchAttack_506E994F.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="103577031" Name="Level_Theme" ObjectPath="\Events\Default Work Unit\Musics\Level_Theme" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="593774242" Language="SFX">
+							<ShortName>Test.wav</ShortName>
+							<Path>SFX\Test_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

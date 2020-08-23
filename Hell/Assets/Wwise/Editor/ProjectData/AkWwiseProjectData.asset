@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 4284ab4eb2341646a069c5e5531758ca
     GuidInternal: 
-    m_lastTime: -8586034692443355356
+    m_lastTime: -8586034602968702309
     List:
     - name: Main
       guid: 33038aaad1850e4189e17a29e7d73f96
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 14895eb1fb392f4fb3e6729aaa4bce9d
     GuidInternal: 
-    m_lastTime: -8586034692443475062
+    m_lastTime: -8586034602963882347
     List:
     - name: Bad Guys
       guid: 3f5756db27424849b2a3879cd6bf2447
@@ -303,6 +303,20 @@ MonoBehaviour:
       - ElementName: Hearth_Lauch_Attack
         ObjectType: 3
       Path: Default Work Unit\Bad Guys\Hearth_Lauch_Attack
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Level_Theme
+      guid: 5970ad9b1a1f2d43a9db744976fa291a
+      id: 103577031
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Musics
+        ObjectType: 4
+      - ElementName: Level_Theme
+        ObjectType: 3
+      Path: Default Work Unit\Musics\Level_Theme
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -727,6 +741,6 @@ MonoBehaviour:
   - /Hell_WwiseProject
   - /Hell_WwiseProject/Events
   - /Hell_WwiseProject/Events/Default Work Unit
-  - /Hell_WwiseProject/Events/Default Work Unit/World
+  - /Hell_WwiseProject/Events/Default Work Unit/Musics
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
