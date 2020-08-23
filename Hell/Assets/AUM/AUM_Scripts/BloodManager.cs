@@ -12,22 +12,17 @@ public class BloodManager : MonoBehaviour
     public float speedMultiplier1;
     public float speedMultiplier2;
 
-    public TMPro.TextMeshProUGUI text;
-
     // Start is called before the first frame update
     void Start()
     {
         bloodNumb = 0;
 
         bm = this;
-        text = GameObject.Find("BloodText").GetComponent<TMPro.TextMeshProUGUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        text.text = "Blood : " + bloodNumb + " / " + bloodNumbMax;
-
         
         /*if (bloodNumb == bloodNumbMax)
         {

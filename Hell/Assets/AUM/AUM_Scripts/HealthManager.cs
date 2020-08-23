@@ -13,8 +13,6 @@ public class HealthManager : MonoBehaviour
     public float invicibiltyTime;
     float invicibilityTimer;
 
-    TMPro.TextMeshProUGUI text;
-
     [HideInInspector] public CheckPoint lastCheckPoint;
 
     Animator deathBackgroundAnimator;
@@ -40,8 +38,6 @@ public class HealthManager : MonoBehaviour
 
         hm = this;
 
-        text = GameObject.Find("LifeText").GetComponent<TMPro.TextMeshProUGUI>();
-
         initialLife = life;
 
         deathBackgroundAnimator = GameObject.Find("DeathAnimation").GetComponent<Animator>();
@@ -61,8 +57,6 @@ public class HealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        text.text = "Life : " + life;
 
         if(invicibilityTimer < invicibiltyTime)
         {
