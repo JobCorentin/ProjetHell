@@ -70,6 +70,8 @@ public class MovementController : MonoBehaviour
 
     bool couldDoubleJump = true;
 
+    float existenceTimer = 0;
+
     [Space(5)]
     [Header("Sound")]
     public AK.Wwise.Event playerJumpAudio;
@@ -174,6 +176,15 @@ public class MovementController : MonoBehaviour
 
         if(stuned == false)
         {
+            if(Mathf.Abs(Mathf.Round(InputListener.iL.horizontalInput)) == 1)
+            {
+                animator.SetFloat("HorizontalInput", Mathf.Abs(InputListener.iL.horizontalInput));
+            }
+            else
+            {
+                animator.SetFloat("HorizontalInput", 0);
+            }
+
             if (isGrounded)
                 rb.velocity = new Vector2(Mathf.Round(InputListener.iL.horizontalInput) * speed * speedMultiplier * Time.fixedDeltaTime / 7, 0);
             else
@@ -242,22 +253,27 @@ public class MovementController : MonoBehaviour
 
         }
 
-        animator.SetFloat("HorizontalInput", Mathf.Abs(InputListener.iL.horizontalInput));
         animator.SetFloat("VerticalInput", InputListener.iL.verticalInput);
 
         animator.SetBool("IsGrounded", isGrounded);
 
+        existenceTimer += Time.fixedDeltaTime;
 
         if (wasGrounded != isGrounded)
         {
-            if(isGrounded == true)
+            if (existenceTimer >= 0.5f)
             {
-                animator.SetTrigger("AirToGround");
-                FXManager.fxm.fxInstancier(1, groundCheck,0);
-            }
-            else
-            {
-                animator.SetTrigger("GroundToAir");
+                if (isGrounded == true)
+                {
+                        animator.SetTrigger("AirToGround");
+                        FXManager.fxm.fxInstancier(1, groundCheck, 0);
+                    
+
+                }
+                else
+                {
+                    animator.SetTrigger("GroundToAir");
+                }
             }
         }
         else if(isGroundedFor > 0.5f)

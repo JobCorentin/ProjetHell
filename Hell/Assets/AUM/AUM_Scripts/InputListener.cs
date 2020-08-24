@@ -21,7 +21,7 @@ public class InputListener : MonoBehaviour
     [HideInInspector] public bool bloodModeInput;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         iL = this;
     }

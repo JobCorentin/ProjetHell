@@ -27,7 +27,12 @@ public class HealthManager : MonoBehaviour
     int lowPassTimer;
 
 
-    
+    private void Awake()
+    {
+        hm = this;
+
+        initialLife = 5;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -37,10 +42,6 @@ public class HealthManager : MonoBehaviour
         lowPassTimer = 0;
         playerHealthConstantAudio.Stop(gameObject);
         playerHealthConstantAudio.Post(gameObject);
-
-        hm = this;
-
-        initialLife = life;
 
         deathBackgroundAnimator = GameObject.Find("DeathAnimation").GetComponent<Animator>();
     }

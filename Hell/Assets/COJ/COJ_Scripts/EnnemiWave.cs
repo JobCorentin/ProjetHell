@@ -22,7 +22,6 @@ namespace Cinemachine
             }
 
             waveCount = waveEnnemi.Count;
-            Debug.Log(waveCount);
             arena = gameObject.GetComponentInParent<ArenaScript>();
         }
 
