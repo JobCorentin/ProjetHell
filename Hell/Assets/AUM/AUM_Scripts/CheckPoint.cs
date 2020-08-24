@@ -14,6 +14,7 @@ public class CheckPoint : MonoBehaviour
             HealthManager.hm.lastCheckPoint = this;
             PlayerData.pd.changePosition = true;
             PlayerData.pd.position = transform.position;
+            if(gameObject.GetComponentInChildren<Animator>() != null)
             gameObject.GetComponentInChildren<Animator>().SetTrigger("lightUp");
         }
     }
