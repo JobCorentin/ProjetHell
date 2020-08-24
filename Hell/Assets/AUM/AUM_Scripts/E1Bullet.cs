@@ -16,6 +16,8 @@ public class E1Bullet : MonoBehaviour
     [Space(10)]
     [Header("Sounds")]
     public AK.Wwise.Event projectilParryAudio;
+    public AK.Wwise.Event bulletImpactAudio;
+    public AK.Wwise.Event bulletIdleAudio;
 
 
 
@@ -25,7 +27,7 @@ public class E1Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        bulletIdleAudio.Post(gameObject);
     }
 
     // Update is called once per frame
@@ -45,17 +47,23 @@ public class E1Bullet : MonoBehaviour
         if(collision.gameObject.layer == 8)
         {
             Destroy(gameObject);
+            bulletImpactAudio.Post(gameObject);
+            bulletIdleAudio.Stop(gameObject);
         }
 
         //Collision avec le layer Wall
         if (collision.gameObject.layer == 14)
         {
             Destroy(gameObject);
+            bulletImpactAudio.Post(gameObject);
+            bulletIdleAudio.Stop(gameObject);
         }
 
         //Collision avec le layer Player
         if (collision.gameObject.layer == 11)
         {
+            bulletIdleAudio.Stop(gameObject);
+
             HealthManager.hm.StartCoroutine(HealthManager.hm.TakeDamage(1));
             Vector2 v = new Vector2(1,1);
             Vector2 v2 = new Vector2(-1,1);

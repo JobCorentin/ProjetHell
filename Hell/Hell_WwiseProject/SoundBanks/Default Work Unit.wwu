@@ -6,14 +6,20 @@
 				<SoundBank Name="Main" ID="{AA8A0333-85D1-410E-89E1-7A29E7D73F96}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Musket_FireAttack" ID="{47025977-3E62-400C-94B1-4636FF3C951D}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Death_Slash" ID="{CF9B3752-0400-40A3-8E44-A2A934A50494}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hearth_Death" ID="{E3CD6671-3A1E-4116-907C-88D4790AF0D6}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Musket_AIM" ID="{DD8F28CE-ADDB-4131-BBE6-F3EB0A78AB33}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Centaur_Damages" ID="{4D6AD6F8-032F-417D-8964-8F5E0A7C115C}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Centaur_Idle" ID="{FC8DF085-170C-4195-93EE-60DC1BE04825}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Jump" ID="{CC132177-5A64-41C6-8EC2-CA6956B754F0}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Wood_Breakable" ID="{841AD14C-B2F9-4227-95D3-8BBC68EC5991}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hearth_Idle" ID="{F5BD7C72-D7A9-4250-B4C5-8224A4D4C356}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Soldier_Attack" ID="{6F14EF29-8B57-425F-8BC1-FFB2FB287422}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Musket_Death" ID="{76EEEBB4-683E-4278-9700-3BB22D8E6DAA}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Bullet_Impact" ID="{1DA5F0EF-59C9-4279-8A4F-F8ED3565B850}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Centaur_KatanaThrow" ID="{FBEA76FF-B0E3-42BF-87B7-D5CF2722B6D2}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hearth_Lauch_Attack" ID="{4AA491D8-3460-430B-B8B3-D1C689A36111}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Level_Theme" ID="{9BAD7059-1F1A-432D-A9DB-744976FA291A}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Centaur_Charge_Footstep" ID="{7950AE0E-2D33-43F6-B68F-33FB3E0F07D2}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Soldier_Idle" ID="{535019A4-B865-4490-982A-CE4AFACAB507}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Take_Damages" ID="{DC9C5BCB-BE59-4525-92A8-7F99EB66DE8F}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
@@ -24,7 +30,12 @@
 						<ObjectRef Name="Musket_Idle" ID="{EA1984AC-0CAE-475C-9C69-C4FAB29E84DB}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Soldier_Death" ID="{39F7BC48-AB7F-47C9-A73B-5831F9C96988}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Sword_Attack" ID="{F01386F1-92F5-4875-8596-FFE5AFCC1D38}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Centaur_Death" ID="{DBF07CC6-EFA9-492F-BB6B-7ACACC6268FE}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hearth_FireAttack" ID="{569AA247-29CB-4AB2-B817-682CD184ED17}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Centaur_Breath" ID="{EACB9911-DF37-4B33-8551-CEFB8688C4A9}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Centaur_Sword_Sound" ID="{4E28CE92-B8A7-4B7C-A260-01DA0F81F4BD}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Centaur_Katana_Voices" ID="{76D6D3E8-DAD5-4C6C-9F2B-08D0E8AFE064}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Musket_Bullets" ID="{7D7941F6-B7EA-4DB4-A446-DF1F7C17CA0E}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Main_Theme" ID="{521C487F-D9F2-4E6A-99FD-C0CFC410EACB}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Footstep" ID="{13E57215-767E-4FDD-A3A8-74615301574A}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

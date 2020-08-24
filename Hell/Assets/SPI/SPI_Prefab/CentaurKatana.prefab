@@ -156,3 +156,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4304050384563430189}
   existenceTime: 5
+  katanaIdleAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 815a58ebf3dc6fa4aae106643494d7f8,
+      type: 2}
+  katanaImpactAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e89cf22588e41254cb973da79561a0b3,
+      type: 2}

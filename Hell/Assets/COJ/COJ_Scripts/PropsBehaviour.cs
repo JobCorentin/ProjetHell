@@ -18,6 +18,13 @@ public class PropsBehaviour : MonoBehaviour
     bool IsHeal;
     public bool isChar;
 
+
+
+    [Space(10)]
+    [Header("Sounds")]
+    public AK.Wwise.Event woodBreakAudio;
+
+
     private void Awake()
     {
         animator = gameObject.GetComponent<Animator>();
@@ -59,6 +66,9 @@ public class PropsBehaviour : MonoBehaviour
 
     void Destroyed()
     {
+        woodBreakAudio.Post(gameObject);
+
+
         if(isChar== true)
         {
             SpawnWheel();

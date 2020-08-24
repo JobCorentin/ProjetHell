@@ -10,6 +10,19 @@ public class E2Bullet : MonoBehaviour
 
     public float existenceTime;
     float existenceTimer;
+
+
+    [Space(10)]
+    [Header("Sounds")]
+    public AK.Wwise.Event katanaIdleAudio;
+    public AK.Wwise.Event katanaImpactAudio;
+
+
+    private void Start()
+    {
+        katanaIdleAudio.Post(gameObject);
+    }
+
     void Update()
     {
         existenceTimer += Time.deltaTime;
@@ -17,6 +30,7 @@ public class E2Bullet : MonoBehaviour
         if (existenceTimer >= existenceTime)
         {
             Destroy(gameObject);
+            katanaIdleAudio.Stop(gameObject);
         }
     }
 
@@ -26,12 +40,16 @@ public class E2Bullet : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
             Destroy(gameObject);
+            katanaIdleAudio.Stop(gameObject);
+            katanaImpactAudio.Post(gameObject);
         }
 
         //Collision avec le layer Wall
         if (collision.gameObject.layer == 14)
         {
             Destroy(gameObject);
+            katanaIdleAudio.Stop(gameObject);
+            katanaImpactAudio.Post(gameObject);
         }
 
         if (collision.gameObject.layer == 11)
@@ -48,6 +66,7 @@ public class E2Bullet : MonoBehaviour
 
 
             Destroy(gameObject);
+            katanaIdleAudio.Stop(gameObject);
 
 
         }
@@ -55,6 +74,8 @@ public class E2Bullet : MonoBehaviour
         //Collision avec le layer Parry
         if (collision.gameObject.layer == 13)
         {
+            katanaIdleAudio.Stop(gameObject);
+
             FXManager.fxm.fxInstancier(4, gameObject.transform, BaseSlashInstancier.bsi.attackDirectionAngle + Random.Range(-10, 10));
 
             //Parry.p.StopParry();

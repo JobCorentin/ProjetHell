@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c912fa2057d54ad4ab196834d509cd80, type: 3}
+  m_Name: FBEA76FF-B0E3-42BF-87B7-D5CF2722B6D2
+  m_EditorClassIdentifier: 
+  objectName: Centaur_KatanaThrow
+  id: 1327286010
+  guid: FBEA76FF-B0E3-42BF-87B7-D5CF2722B6D2

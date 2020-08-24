@@ -24,15 +24,35 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3921814510" Name="Bullet_Impact" ObjectPath="\Events\Default Work Unit\Bullets\Bullet_Impact" MaxAttenuation="25.000000" DurationType="OneShot" DurationMin="2.314305" DurationMax="2.314305">
+					<IncludedMemoryFiles>
+						<File Id="638684267" Language="SFX">
+							<ShortName>Bullet_Impact.wav</ShortName>
+							<Path>SFX\Bullet_Impact_771F34F4.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2157215894" Name="Centaur_Breath" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_Breath" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.918075" DurationMax="1.166105">
+					<IncludedMemoryFiles>
+						<File Id="88041050" Language="SFX">
+							<ShortName>CentaurBreath_1.wav</ShortName>
+							<Path>SFX\CentaurBreath_1_10C4C929.wem</Path>
+						</File>
+						<File Id="541743132" Language="SFX">
+							<ShortName>CentaurBreath_2.wav</ShortName>
+							<Path>SFX\CentaurBreath_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1647725780" Name="Centaur_Charge" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_Charge" MaxAttenuation="50.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="363633816" Language="SFX">
 							<ShortName>centaurChargeVoice_4.wav</ShortName>
-							<Path>SFX\centaurChargeVoice_4_FB4F2D0B.wem</Path>
+							<Path>SFX\centaurChargeVoice_4_338F13A9.wem</Path>
 						</File>
 						<File Id="395990998" Language="SFX">
 							<ShortName>centaurChargeVoice_2.wav</ShortName>
-							<Path>SFX\centaurChargeVoice_2_9A6CD719.wem</Path>
+							<Path>SFX\centaurChargeVoice_2_DCBC2F56.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -40,35 +60,79 @@
 					<IncludedMemoryFiles>
 						<File Id="105562471" Language="SFX">
 							<ShortName>CentaurFootstep_7.wav</ShortName>
-							<Path>SFX\CentaurFootstep_7_D96B0F42.wem</Path>
+							<Path>SFX\CentaurFootstep_7_FCA81818.wem</Path>
 						</File>
 						<File Id="162185338" Language="SFX">
 							<ShortName>CentaurFootstep_2.wav</ShortName>
-							<Path>SFX\CentaurFootstep_2_96E50509.wem</Path>
+							<Path>SFX\CentaurFootstep_2_6CA1A122.wem</Path>
 						</File>
 						<File Id="620461488" Language="SFX">
 							<ShortName>CentaurFootstep_1.wav</ShortName>
-							<Path>SFX\CentaurFootstep_1_4F8939E9.wem</Path>
+							<Path>SFX\CentaurFootstep_1_173C5235.wem</Path>
 						</File>
 						<File Id="786947925" Language="SFX">
 							<ShortName>CentaurFootstep_6.wav</ShortName>
-							<Path>SFX\CentaurFootstep_6_10B4B79A.wem</Path>
+							<Path>SFX\CentaurFootstep_6_73B74BC3.wem</Path>
 						</File>
 						<File Id="815826656" Language="SFX">
 							<ShortName>CentaurFootstep_4.wav</ShortName>
-							<Path>SFX\CentaurFootstep_4_20744F43.wem</Path>
+							<Path>SFX\CentaurFootstep_4_B4189E9B.wem</Path>
 						</File>
 						<File Id="927658985" Language="SFX">
 							<ShortName>CentaurFootstep_3.wav</ShortName>
-							<Path>SFX\CentaurFootstep_3_463A7BB8.wem</Path>
+							<Path>SFX\CentaurFootstep_3_1CDE4F99.wem</Path>
 						</File>
 						<File Id="949055583" Language="SFX">
 							<ShortName>CentaurFootstep_5.wav</ShortName>
-							<Path>SFX\CentaurFootstep_5_90DF0514.wem</Path>
+							<Path>SFX\CentaurFootstep_5_7BEB27C8.wem</Path>
 						</File>
 						<File Id="995193080" Language="SFX">
 							<ShortName>CentaurFootstep_8.wav</ShortName>
-							<Path>SFX\CentaurFootstep_8_C95C103F.wem</Path>
+							<Path>SFX\CentaurFootstep_8_8822CDC6.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3060686034" Name="Centaur_Damages" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_Damages" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.312915" DurationMax="1.000088">
+					<IncludedMemoryFiles>
+						<File Id="339172972" Language="SFX">
+							<ShortName>CentaurDamage_1.wav</ShortName>
+							<Path>SFX\CentaurDamage_1_CA8D55F9.wem</Path>
+						</File>
+						<File Id="403017994" Language="SFX">
+							<ShortName>CentaurDamage_4.wav</ShortName>
+							<Path>SFX\CentaurDamage_4_E5648564.wem</Path>
+						</File>
+						<File Id="657138420" Language="SFX">
+							<ShortName>CentaurDamage_2.wav</ShortName>
+							<Path>SFX\CentaurDamage_2_7E32C17E.wem</Path>
+						</File>
+						<File Id="918486468" Language="SFX">
+							<ShortName>CentaurDamage_3.wav</ShortName>
+							<Path>SFX\CentaurDamage_3_9586C7E2.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="730632742" Name="Centaur_Death" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_Death" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.772276" DurationMax="1.000088">
+					<IncludedMemoryFiles>
+						<File Id="74403551" Language="SFX">
+							<ShortName>BreakBones.wav</ShortName>
+							<Path>SFX\BreakBones_10C4C929.wem</Path>
+						</File>
+						<File Id="339172972" Language="SFX">
+							<ShortName>CentaurDamage_1.wav</ShortName>
+							<Path>SFX\CentaurDamage_1_CA8D55F9.wem</Path>
+						</File>
+						<File Id="403017994" Language="SFX">
+							<ShortName>CentaurDamage_4.wav</ShortName>
+							<Path>SFX\CentaurDamage_4_E5648564.wem</Path>
+						</File>
+						<File Id="657138420" Language="SFX">
+							<ShortName>CentaurDamage_2.wav</ShortName>
+							<Path>SFX\CentaurDamage_2_7E32C17E.wem</Path>
+						</File>
+						<File Id="918486468" Language="SFX">
+							<ShortName>CentaurDamage_3.wav</ShortName>
+							<Path>SFX\CentaurDamage_3_9586C7E2.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -96,6 +160,32 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3171685924" Name="Centaur_Katana_Voices" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_Katana_Voices" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.901695" DurationMax="1.641036">
+					<IncludedMemoryFiles>
+						<File Id="51130137" Language="SFX">
+							<ShortName>CentaurAttackVoice_2.wav</ShortName>
+							<Path>SFX\CentaurAttackVoice_2_1CAACFE9.wem</Path>
+						</File>
+						<File Id="469840359" Language="SFX">
+							<ShortName>CentaurAttackVoice_1.wav</ShortName>
+							<Path>SFX\CentaurAttackVoice_1_10C4C929.wem</Path>
+						</File>
+						<File Id="476656456" Language="SFX">
+							<ShortName>CentaurAttackVoice_5.wav</ShortName>
+							<Path>SFX\CentaurAttackVoice_5_3746F13C.wem</Path>
+						</File>
+						<File Id="504148376" Language="SFX">
+							<ShortName>CentaurAttackVoice_3.wav</ShortName>
+							<Path>SFX\CentaurAttackVoice_3_10C4C929.wem</Path>
+						</File>
+						<File Id="1012811083" Language="SFX">
+							<ShortName>CentaurAttackVoice_4.wav</ShortName>
+							<Path>SFX\CentaurAttackVoice_4_B52723CB.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1327286010" Name="Centaur_KatanaThrow" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_KatanaThrow" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.166667" DurationMax="0.249718"/>
+				<Event Id="1104912115" Name="Centaur_Sword_Sound" ObjectPath="\Events\Default Work Unit\Bullets\Centaur_Sword_Sound" MaxAttenuation="25.000000" DurationType="Infinite"/>
 				<Event Id="4005551194" Name="Hearth_Damages" ObjectPath="\Events\Default Work Unit\Bad Guys\Hearth_Damages" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.220805" DurationMax="0.312266">
 					<IncludedMemoryFiles>
 						<File Id="948472799" Language="SFX">
@@ -112,15 +202,15 @@
 						</File>
 						<File Id="156427360" Language="SFX">
 							<ShortName>HearthSquizz_3.wav</ShortName>
-							<Path>SFX\HearthSquizz_3_8F3EF8F0.wem</Path>
+							<Path>SFX\HearthSquizz_3_AF607DCB.wem</Path>
 						</File>
 						<File Id="353414289" Language="SFX">
 							<ShortName>HearthSquizz_1.wav</ShortName>
-							<Path>SFX\HearthSquizz_1_519117F9.wem</Path>
+							<Path>SFX\HearthSquizz_1_E6F173DE.wem</Path>
 						</File>
 						<File Id="410598787" Language="SFX">
 							<ShortName>HearthSquizz_4.wav</ShortName>
-							<Path>SFX\HearthSquizz_4_106CA3B4.wem</Path>
+							<Path>SFX\HearthSquizz_4_D2F77695.wem</Path>
 						</File>
 						<File Id="948472799" Language="SFX">
 							<ShortName>Hit.wav</ShortName>
@@ -156,6 +246,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="103577031" Name="Level_Theme" ObjectPath="\Events\Default Work Unit\Musics\Level_Theme" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="593774242" Language="SFX">
+							<ShortName>Test.wav</ShortName>
+							<Path>SFX\Test_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2557777556" Name="Main_Theme" ObjectPath="\Events\Default Work Unit\Musics\Main_Theme" DurationType="OneShot" DurationMin="150.206741" DurationMax="150.206741">
 					<IncludedMemoryFiles>
 						<File Id="917200825" Language="SFX">
@@ -172,6 +270,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3068870144" Name="Musket_Bullets" ObjectPath="\Events\Default Work Unit\Bullets\Musket_Bullets" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="10.000000" DurationMax="10.000000"/>
 				<Event Id="69452829" Name="Musket_Death" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_Death" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.519748" DurationMax="2.268657">
 					<IncludedMemoryFiles>
 						<File Id="214022767" Language="SFX">
@@ -188,11 +287,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3756653709" Name="Musket_FireAttack" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_FireAttack" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="3.429350" DurationMax="5.443754">
+				<Event Id="3756653709" Name="Musket_FireAttack" ObjectPath="\Events\Default Work Unit\Bad Guys\Musket_FireAttack" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="3.335670" DurationMax="5.295046">
 					<IncludedMemoryFiles>
 						<File Id="1037279960" Language="SFX">
 							<ShortName>GUN Handgun 9MM 2 Far Front Side 7x AT835ST.wav</ShortName>
-							<Path>SFX\GUN Handgun 9MM 2 Far Front Side 7x AT835ST_CE2207E8.wem</Path>
+							<Path>SFX\GUN Handgun 9MM 2 Far Front Side 7x AT835ST_248A8C6A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -217,6 +316,14 @@
 						<File Id="196097453" Language="SFX">
 							<ShortName>MusketIdle_5.wav</ShortName>
 							<Path>SFX\MusketIdle_5_1BED86D1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="147161291" Name="Player_Death_Slash" ObjectPath="\Events\Default Work Unit\Player\Player_Death_Slash" DurationType="OneShot" DurationMin="3.643560" DurationMax="3.643560">
+					<IncludedMemoryFiles>
+						<File Id="108687792" Language="SFX">
+							<ShortName>DeathSlash.wav</ShortName>
+							<Path>SFX\DeathSlash_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -496,19 +603,23 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3583423278" Name="Soldier_Death" ObjectPath="\Events\Default Work Unit\Bad Guys\Soldier_Death" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.519748" DurationMax="2.268657">
+				<Event Id="3583423278" Name="Soldier_Death" ObjectPath="\Events\Default Work Unit\Bad Guys\Soldier_Death" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.312915" DurationMax="1.000088">
 					<IncludedMemoryFiles>
-						<File Id="214022767" Language="SFX">
-							<ShortName>MusketDeath_1.wav</ShortName>
-							<Path>SFX\MusketDeath_1_10C4C929.wem</Path>
+						<File Id="339172972" Language="SFX">
+							<ShortName>CentaurDamage_1.wav</ShortName>
+							<Path>SFX\CentaurDamage_1_CA8D55F9.wem</Path>
 						</File>
-						<File Id="257111943" Language="SFX">
-							<ShortName>MusketDeath_2.wav</ShortName>
-							<Path>SFX\MusketDeath_2_10C4C929.wem</Path>
+						<File Id="403017994" Language="SFX">
+							<ShortName>CentaurDamage_4.wav</ShortName>
+							<Path>SFX\CentaurDamage_4_E5648564.wem</Path>
 						</File>
-						<File Id="948472799" Language="SFX">
-							<ShortName>Hit.wav</ShortName>
-							<Path>SFX\Hit_10C4C929.wem</Path>
+						<File Id="657138420" Language="SFX">
+							<ShortName>CentaurDamage_2.wav</ShortName>
+							<Path>SFX\CentaurDamage_2_7E32C17E.wem</Path>
+						</File>
+						<File Id="918486468" Language="SFX">
+							<ShortName>CentaurDamage_3.wav</ShortName>
+							<Path>SFX\CentaurDamage_3_9586C7E2.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -541,6 +652,22 @@
 						<File Id="959353516" Language="SFX">
 							<ShortName>SoldierIdle_2.wav</ShortName>
 							<Path>SFX\SoldierIdle_2_38B4E692.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="328099278" Name="Wood_Breakable" ObjectPath="\Events\Default Work Unit\World\Wood_Breakable" MaxAttenuation="25.000000" DurationType="OneShot" DurationMin="0.773607" DurationMax="1.441562">
+					<IncludedMemoryFiles>
+						<File Id="25246286" Language="SFX">
+							<ShortName>BreakWood_3.wav</ShortName>
+							<Path>SFX\BreakWood_3_10C4C929.wem</Path>
+						</File>
+						<File Id="51840431" Language="SFX">
+							<ShortName>BreakWood_2.wav</ShortName>
+							<Path>SFX\BreakWood_2_10C4C929.wem</Path>
+						</File>
+						<File Id="807109139" Language="SFX">
+							<ShortName>BreakWood_1.wav</ShortName>
+							<Path>SFX\BreakWood_1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
