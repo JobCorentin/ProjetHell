@@ -33,7 +33,7 @@ public class PositionInitiator : MonoBehaviour
 
         MovementController.mC.animator.SetTrigger("GetUp");
 
-        for(int i = 0; i <= HealthManager.hm.initialLife; i++)
+        for(int i = 0; i < HealthManager.hm.initialLife; i++)
         {
             yield return new WaitForSeconds(0.1f);
 
