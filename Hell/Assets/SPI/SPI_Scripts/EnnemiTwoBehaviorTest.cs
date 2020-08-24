@@ -288,7 +288,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     public void StopMusket()
     {
         animator.SetBool("IsAiming", false);
-
+        coolDownTimer = 0;
         arrow.SetActive(false);
         arrow2.SetActive(false);
 

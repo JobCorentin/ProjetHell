@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -57623,6 +57623,11 @@ PrefabInstance:
       propertyPath: m_FollowOffset.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3677879853012626413, guid: ab559afc00aac454c8392e3a0828149f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4236664721058740416, guid: ab559afc00aac454c8392e3a0828149f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -58057,6 +58062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0757a0d57c3888644958a71d09c6b7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousGroup: {fileID: 0}
 --- !u!4 &1382642612
 Transform:
   m_ObjectHideFlags: 0
@@ -60674,6 +60680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0757a0d57c3888644958a71d09c6b7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousGroup: {fileID: 0}
 --- !u!61 &1804057080
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -65622,7 +65629,7 @@ PrefabInstance:
     - target: {fileID: 4824275339058065371, guid: 09de01d8c3162a7459204a9d36d162f1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4824275339058065371, guid: 09de01d8c3162a7459204a9d36d162f1,
         type: 3}
