@@ -233,6 +233,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &26000918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2410295539244355996, guid: ea4fbcf548516ec488a57015c4fed083,
+    type: 3}
+  m_PrefabInstance: {fileID: 2410295539908844890}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &72090999
 GameObject:
   m_ObjectHideFlags: 0
@@ -13171,6 +13177,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1015622911 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2410295538377371044, guid: ea4fbcf548516ec488a57015c4fed083,
+    type: 3}
+  m_PrefabInstance: {fileID: 2410295539908844890}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1043970229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14794,6 +14812,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2410295539549179358, guid: ea4fbcf548516ec488a57015c4fed083,
+        type: 3}
+      propertyPath: resumeButton
+      value: 
+      objectReference: {fileID: 26000918}
+    - target: {fileID: 2410295539549179358, guid: ea4fbcf548516ec488a57015c4fed083,
+        type: 3}
+      propertyPath: pauseEvent
+      value: 
+      objectReference: {fileID: 1015622911}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea4fbcf548516ec488a57015c4fed083, type: 3}
 --- !u!1001 &2874154717242508646
