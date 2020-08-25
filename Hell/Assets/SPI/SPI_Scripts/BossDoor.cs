@@ -24,6 +24,7 @@ public class BossDoor : MonoBehaviour
             if (statuesToDestroy == statues.Count)
             {
                 openDoor = true;
+                gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             }
             else
             {

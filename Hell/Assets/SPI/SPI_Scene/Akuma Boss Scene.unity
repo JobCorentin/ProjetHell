@@ -1945,6 +1945,37 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 454469010}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &457136759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1427223970}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 457136760}
+  m_Layer: 0
+  m_Name: "Props_Barri\xE8re2 Variant (Missing Prefab)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &457136760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1427223970}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457136759}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1427223971}
+  m_Father: {fileID: 1878425980}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &472381485
 GameObject:
   m_ObjectHideFlags: 0
@@ -4265,6 +4296,22 @@ Transform:
   m_Father: {fileID: 763972708}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1144578405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1427223970}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1427223971}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1165589181
 GameObject:
   m_ObjectHideFlags: 0
@@ -14341,6 +14388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0757a0d57c3888644958a71d09c6b7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousGroup: {fileID: 0}
 --- !u!4 &1382642612
 Transform:
   m_ObjectHideFlags: 0
@@ -14587,12 +14635,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4666af0d12756c74481b7a672c22bf38, type: 3}
---- !u!4 &1427223971 stripped
+--- !u!4 &1427223971
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 7886127285524121372, guid: 4666af0d12756c74481b7a672c22bf38,
     type: 3}
   m_PrefabInstance: {fileID: 1427223970}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144578405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 457136760}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1441673109
 GameObject:
   m_ObjectHideFlags: 0
@@ -16772,6 +16829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0757a0d57c3888644958a71d09c6b7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousGroup: {fileID: 0}
 --- !u!61 &1804057080
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16960,6 +17018,7 @@ MonoBehaviour:
   - {fileID: 203493581}
   - {fileID: 1599538914}
   waveEnnemiControllers: []
+  isBossWave: 0
 --- !u!1 &1833414101
 GameObject:
   m_ObjectHideFlags: 0
@@ -17319,7 +17378,7 @@ Transform:
   - {fileID: 1323178000}
   - {fileID: 1214177195}
   - {fileID: 1786289785}
-  - {fileID: 1427223971}
+  - {fileID: 457136760}
   - {fileID: 1110305979}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -18268,7 +18327,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 25
-      m_TileSpriteIndex: 25
+      m_TileSpriteIndex: 43
       m_TileMatrixIndex: 1
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -18277,7 +18336,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 24
-      m_TileSpriteIndex: 24
+      m_TileSpriteIndex: 25
       m_TileMatrixIndex: 1
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -18286,7 +18345,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 23
-      m_TileSpriteIndex: 23
+      m_TileSpriteIndex: 24
       m_TileMatrixIndex: 1
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -18295,7 +18354,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 22
-      m_TileSpriteIndex: 22
+      m_TileSpriteIndex: 23
       m_TileMatrixIndex: 1
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -18588,6 +18647,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -1979992183520391546, guid: d7b8e091afb13574299eca8efbc5f923,
       type: 3}
@@ -18596,9 +18657,6 @@ Tilemap:
       type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -8228898020327459382, guid: d7b8e091afb13574299eca8efbc5f923,
-      type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -4252763502982184608, guid: d7b8e091afb13574299eca8efbc5f923,
       type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 6105159855413239661, guid: d7b8e091afb13574299eca8efbc5f923,
@@ -18650,8 +18708,9 @@ Tilemap:
       type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 60521120978911223, guid: d7b8e091afb13574299eca8efbc5f923, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -4252763502982184608, guid: d7b8e091afb13574299eca8efbc5f923,
+      type: 3}
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
@@ -19092,6 +19151,7 @@ MonoBehaviour:
   - {fileID: 188507356}
   - {fileID: 1974153697}
   waveEnnemiControllers: []
+  isBossWave: 0
 --- !u!1 &2064057279
 GameObject:
   m_ObjectHideFlags: 0
@@ -19861,6 +19921,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FollowOffset.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677879853012626413, guid: ab559afc00aac454c8392e3a0828149f,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677879853012626413, guid: ab559afc00aac454c8392e3a0828149f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4236664721058740416, guid: ab559afc00aac454c8392e3a0828149f,
         type: 3}
