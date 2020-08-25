@@ -36,7 +36,6 @@ namespace Cinemachine
                     if (waveEnnemiController.dead == true)
                     {
                         ennemisDead++;
-                        Debug.Log(ennemisDead);
                     }                       
                 }
 

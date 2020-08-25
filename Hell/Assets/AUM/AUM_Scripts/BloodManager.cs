@@ -7,7 +7,7 @@ public class BloodManager : MonoBehaviour
     public static BloodManager bm;
 
     public int bloodNumbMax;
-    [HideInInspector] public int bloodNumb;
+    public int bloodNumb;
 
     public float speedMultiplier1;
     public float speedMultiplier2;

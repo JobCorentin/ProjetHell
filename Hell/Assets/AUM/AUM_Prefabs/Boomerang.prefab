@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7839354391550736552}
-  - component: {fileID: 8646680403445571088}
+  - component: {fileID: 5014843934298157230}
   m_Layer: 18
   m_Name: ColWithWalAndSol
   m_TagString: Untagged
@@ -31,8 +31,8 @@ Transform:
   m_Father: {fileID: 6474789519386594321}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &8646680403445571088
-BoxCollider2D:
+--- !u!58 &5014843934298157230
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -44,19 +44,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.26192546, y: -0.26192623}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8, y: 4}
-    newSize: {x: 8, y: 4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -0.25899863, y: -0.17746711}
   serializedVersion: 2
-  m_Size: {x: 0.55217505, y: 0.65189457}
-  m_EdgeRadius: 0
+  m_Radius: 0.5670979
 --- !u!1 &7094243265040849470
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,6 +166,7 @@ MonoBehaviour:
   rb: {fileID: 9019725140978479160}
   sr: {fileID: 3350581841144312309}
   col: {fileID: 3534094479107745600}
+  physicCol: {fileID: 5014843934298157230}
   touchedEnnemy: 0
 --- !u!50 &9019725140978479160
 Rigidbody2D:
