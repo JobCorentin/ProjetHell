@@ -81,7 +81,7 @@ public class E2Bullet : MonoBehaviour
             //Parry.p.StopParry();
 
 
-            FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.2f, 5f));
+            FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.1f, 0.25f));
 
             Vector2 v = new Vector2(1, 0.5f);
             Vector2 v2 = new Vector2(-1, 0.5f);

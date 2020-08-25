@@ -448,6 +448,7 @@ MonoBehaviour:
   speed: 2250
   type: 0
   sr: {fileID: 9061584625763710337}
+  col: {fileID: 0}
   shaderMaterial1: {fileID: 2100000, guid: d0aa6e663fada22418f5700efcea6862, type: 2}
   shaderMaterial2: {fileID: 2100000, guid: b228b8ac953cc8c498f01cfdfeb40c38, type: 2}
   numberBetweenGroupAttack: 1
@@ -457,7 +458,7 @@ MonoBehaviour:
   numbWhoHasAttacked: 0
   pTransform: {fileID: 0}
   target: {x: 0, y: 0}
-  range: 6
+  range: 7
   nextWayPointDistance: 3
   ennemy_Controllers: []
   coolDown: 1.5
@@ -466,6 +467,18 @@ MonoBehaviour:
   playerWasDetected: 0
   Remains: {fileID: 0}
   hasSpawn: 1
+  dead: 0
+  initialPosition: {x: 0, y: 0}
+  initialHealth: 0
+  hasNoHp: 0
+  DamagesAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  DeathAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   bulletPrefab: {fileID: 2170661006474195064, guid: 7e676ea44aa7cec4dbdef162236466f7,
     type: 3}
   arrow: {fileID: 3972673011885713921}
@@ -474,6 +487,28 @@ MonoBehaviour:
   preparationDuration: 0.6
   ennemiDetection: {fileID: 1311175769}
   isTypeB: 0
+  isAttacking: 0
+  hearthLaunchAttackAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  hearthAttackAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  hearthIdleAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  hearthDamagesAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  hearthDeathAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  hearthIdleAudioTimer: 0
 --- !u!114 &2070220071
 MonoBehaviour:
   m_ObjectHideFlags: 0

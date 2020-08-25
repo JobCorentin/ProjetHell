@@ -210,21 +210,23 @@ public class EnnemiOneController : EnnemiController
 
     public void StopLaunchBullet()
     {
+        if (lastLaunchBullet != null)
+            StopCoroutine(lastLaunchBullet);
         animator.SetBool("IsPreparing", false);
+        if(health > 0)
+            animator.SetTrigger("IsTakingDamage");
         hearthLaunchAttackAudio.Stop(gameObject);
         arrow.SetActive(false);
         arrow2.SetActive(false);
-        if(lastLaunchBullet != null)
-            StopCoroutine(lastLaunchBullet);
 
-        isAttacking = true;
+        isAttacking = false;
     }
 
     public void dieHeart()
     {
         BoxCollider2D bc2 = gameObject.GetComponent<BoxCollider2D>();
         bc2.enabled = false;
-
+        isAttacking = true;
         hearthDeathAudio.Post(gameObject);
     }
 

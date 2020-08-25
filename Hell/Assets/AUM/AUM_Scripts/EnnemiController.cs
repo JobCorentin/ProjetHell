@@ -420,6 +420,7 @@ public class EnnemiController : MonoBehaviour
             newRemains.transform.parent = GameObject.Find("RemainHolder").transform;
         }
         dead = true;
+        sr.enabled = false;
     }
 
     public void deactivate()
