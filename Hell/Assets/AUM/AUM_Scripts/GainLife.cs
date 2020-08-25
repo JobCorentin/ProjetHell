@@ -27,7 +27,9 @@ public class GainLife : MonoBehaviour
     bool wasPressed;
 
     BoomController currentBoomerang;
-    public GameObject DashEffect; 
+    public GameObject DashEffect;
+
+    public LayerMask wallAndSolLayer;
 
     // Start is called before the first frame update
     void Start()
@@ -44,11 +46,11 @@ public class GainLife : MonoBehaviour
             cooldownTimer += Time.fixedDeltaTime;
         }
 
-        if (inputPressedFor >= 0.5f && MovementController.mC.isGrounded && gainingLife == false)
+        /*if (inputPressedFor >= 0.5f && MovementController.mC.isGrounded && gainingLife == false)
         {
             if (BloodManager.bm.bloodNumb >= 3)
                 StartCoroutine(UseBlood());
-        }
+        }*/
 
         if (inputPressedFor < 0.5f && wasPressed == true && InputListener.iL.parryInput == false && noSword == true)
         {
@@ -128,29 +130,50 @@ public class GainLife : MonoBehaviour
 
         currentBoomerang.speed = attackSpeed;
 
-        StartCoroutine(currentBoomerang.GoToTargetThenPlayer());
+        currentBoomerang.lastCoroutine = StartCoroutine(currentBoomerang.GoToTargetThenPlayer());
     }
 
     IEnumerator DashToBoomerang()
     {
-        MovementController.mC.col.enabled = false;
         StartCoroutine(dashFx(0.2f, 0.3f));
-        while (Vector2.Distance(transform.position, currentBoomerang.transform.position) > 3f)
+
+        Vector2 target = currentBoomerang.transform.position;
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, currentBoomerang.transform.position - transform.position, Vector2.Distance(currentBoomerang.transform.position, transform.position), wallAndSolLayer);
+
+        if (hit == true)
         {
-            MovementController.mC.rb.velocity = (currentBoomerang.transform.position - transform.position).normalized * 60f;
+            target = hit.point;
+        }
+
+        StartCoroutine(BoomerangToPlayer());
+
+        while (Vector2.Distance(transform.position, target) > 3f)
+        {
+            MovementController.mC.rb.velocity = (target - (Vector2)transform.position).normalized * 60f;
 
             yield return null;
         }
 
-        MovementController.mC.rb.AddForce((currentBoomerang.transform.position - transform.position).normalized, ForceMode2D.Impulse);
+        MovementController.mC.rb.AddForce((target - (Vector2)transform.position).normalized, ForceMode2D.Impulse);
+    }
 
-        currentBoomerang.StopAllCoroutines();
+    IEnumerator BoomerangToPlayer()
+    {
+        currentBoomerang.StopCoroutine(currentBoomerang.lastCoroutine);
+
+        currentBoomerang.physicCol.enabled = false;
+
+        while (Vector2.Distance(currentBoomerang.transform.position, MovementController.mC.transform.position) > 1f)
+        {
+            currentBoomerang.rb.velocity = (MovementController.mC.transform.position - currentBoomerang.transform.position).normalized * currentBoomerang.speed;
+
+            yield return null;
+        }
+
+        noSword = false;
 
         Destroy(currentBoomerang.gameObject);
-        noSword = false;
-        MovementController.mC.col.enabled = true;
-
-       
     }
 
     IEnumerator ChangeSpeedMultiplierFor(float valueBonus, float time)

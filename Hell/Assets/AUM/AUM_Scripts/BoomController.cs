@@ -13,6 +13,9 @@ public class BoomController : MonoBehaviour
     public SpriteRenderer sr;
 
     public Collider2D col;
+    public Collider2D physicCol;
+
+    [HideInInspector] public Coroutine lastCoroutine;
 
     [HideInInspector] public bool touchedEnnemy = false;
 
@@ -75,9 +78,13 @@ public class BoomController : MonoBehaviour
     {
         GainLife.gl.noSword = true;
 
-        while(Vector2.Distance(transform.position, target) > 10f)
+        float temp = 0;
+
+        while(Vector2.Distance(transform.position, target) > 10f && temp < 0.5f)
         {
             rb.velocity = (target -(Vector2)transform.position).normalized * speed;
+
+            temp += Time.deltaTime;
 
             yield return null;
         }
@@ -90,6 +97,8 @@ public class BoomController : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.5f);
+
+        physicCol.enabled = false;
 
         col.enabled = false;
 
@@ -109,14 +118,6 @@ public class BoomController : MonoBehaviour
             rb.velocity = (MovementController.mC.transform.position - transform.position).normalized * speed;
 
             yield return null;
-        }
-
-        if(touchedEnnemy == true)
-        {
-            if(HealthManager.hm.life < HealthManager.hm.initialLife)
-            {
-                //HealthManager.hm.life++;
-            }
         }
 
         GainLife.gl.noSword = false;
