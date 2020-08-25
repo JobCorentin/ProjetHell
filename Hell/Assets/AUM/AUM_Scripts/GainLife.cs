@@ -164,6 +164,12 @@ public class GainLife : MonoBehaviour
 
         currentBoomerang.physicCol.enabled = false;
 
+        currentBoomerang.col.enabled = false;
+
+        yield return null;
+
+        currentBoomerang.col.enabled = true;
+
         while (Vector2.Distance(currentBoomerang.transform.position, MovementController.mC.transform.position) > 1f)
         {
             currentBoomerang.rb.velocity = (MovementController.mC.transform.position - currentBoomerang.transform.position).normalized * currentBoomerang.speed;

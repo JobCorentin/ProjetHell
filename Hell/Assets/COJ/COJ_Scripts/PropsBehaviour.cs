@@ -53,7 +53,6 @@ public class PropsBehaviour : MonoBehaviour
             FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.045f, 0f));
             animator.SetTrigger("isHit");
             CameraShake.cs.WeakShake();
-            Debug.Log(health + "Hp remaining");
         }
 
         yield return new WaitForSeconds(timeBtweenDamage);

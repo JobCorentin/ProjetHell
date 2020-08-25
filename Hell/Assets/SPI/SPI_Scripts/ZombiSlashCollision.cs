@@ -25,7 +25,7 @@ public class ZombiSlashCollision : MonoBehaviour
 
             reflected = true;
 
-            FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.5f, 0.25f));
+            FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.09f, 0f));
 
             if(isCentaur==false)
                 etb.PushedBack();

@@ -38,10 +38,14 @@ public class BoomController : MonoBehaviour
     {
         if (collision.transform.tag == "Ennemi")
         {
+            EnnemiController ec = collision.GetComponent<EnnemiController>();
+
+            if (ec.dead == true || ec.hasSpawn == false)
+                return;
+
             FXManager.fxm.fxInstancier(2, collision.transform, BaseSlashInstancier.bsi.attackDirectionAngle + Random.Range(-10, 10));
             FXManager.fxm.fxInstancier(4, collision.transform, 0);
-
-            EnnemiController ec = collision.GetComponent<EnnemiController>();
+            
             CameraShake.cs.WeakShake();
 
             MovementController.mC.StartCoroutine(BaseSlashCollision.bsc.AttackMiniDash((rb.velocity).normalized, ec, 500f));

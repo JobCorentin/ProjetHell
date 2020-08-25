@@ -128,24 +128,5 @@ public class HealthManager : MonoBehaviour
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
-        //MovementController.mC.transform.position = lastCheckPoint.transform.position;
-
-        life = initialLife;
-
-        lastCheckPoint.respawning = true;
-
-        MovementController.mC.animator.SetTrigger("Respawn");
-
-        MovementController.mC.col.enabled = true;
-
-        MovementController.mC.rb.gravityScale = temp;
-
-        yield return new WaitForSeconds(1f);
-
-        lastCheckPoint.respawning = false;
-
-        MovementController.mC.stuned = false;
-
-        
     }
 }

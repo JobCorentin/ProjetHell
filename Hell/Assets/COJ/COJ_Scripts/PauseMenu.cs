@@ -45,6 +45,24 @@ public class PauseMenu : MonoBehaviour
 
     }
 
+    public void Restart()
+    {
+        pauseMenuUI.SetActive(false);
+        GameIsPaused = false;
+        Time.timeScale = 1f;
+
+        StartCoroutine(RestartDelay());
+    }
+
+    IEnumerator RestartDelay()
+    {
+        HealthManager.hm.life = 0;
+
+        yield return new WaitForSeconds(0.5f);
+
+        StartCoroutine(HealthManager.hm.Die());
+    }
+
     public void LoadMenu(int index)
     {
         Time.timeScale = 1f;
