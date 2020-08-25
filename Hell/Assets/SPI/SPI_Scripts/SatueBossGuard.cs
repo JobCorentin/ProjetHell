@@ -5,4 +5,9 @@ using UnityEngine;
 public class SatueBossGuard : MonoBehaviour
 {
     public bool destroyed;
+
+    void Destroyed()
+    {
+        destroyed = true;
+    }
 }

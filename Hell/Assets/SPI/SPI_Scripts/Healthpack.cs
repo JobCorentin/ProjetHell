@@ -24,7 +24,7 @@ public class Healthpack : PropsBehaviour
 
     public void HealPlayer()
     {
-        if (canHeal)
+        if (canHeal && player.life < player.initialLife)
         {
             canHeal = false;
             player.life += heal;
