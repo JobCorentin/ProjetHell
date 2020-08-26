@@ -107,6 +107,11 @@ public class MainMenu : MonoBehaviour
         Screen.fullScreen = isFullScreen;
     }
 
+    public void SetShake(bool isShaking)
+    {
+        OptionData.od.shaking = isShaking;
+    }
+
     public void setResolution(int resolutionIndex)
     {
         if(resolutionIndex == 0)
