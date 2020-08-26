@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2632547540658908445}
   ennemiLauncheFrom: {fileID: 0}
-  existenceTime: 5
+  existenceTime: 9
   projectilParryAudio:
     idInternal: 0
     valueGuidInternal: 

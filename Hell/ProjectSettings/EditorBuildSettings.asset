@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/__FinalScenes/MenuPrincipal.unity
     guid: d121d638f94a4af469f3685a4b89713d
   - enabled: 1
+    path: Assets/COJ/COJ_Scenes/ArenaTest/Skatepark.unity
+    guid: ac5f47a7b4b126d46892d2cb8f3576dd
+  - enabled: 1
     path: Assets/COJ/COJ_Scenes/LD Akuma.unity
     guid: 0c316e0bff161fc43ab24cb559ad3c89
   m_configObjects: {}
