@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 332335865157954543}
   - component: {fileID: 2437588919222837643}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MusketRemain
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -72,11 +72,6 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                 target = MovementController.mC.transform.position + ((transform.position - MovementController.mC.transform.position).normalized * range);
 
 
-                if (Vector2.Distance(target, transform.position) >= 0.5f)
-                {
-                    base.FixedUpdate();
-                }
-
                 if (MovementController.mC.transform.position.x - transform.position.x < 0)
                 {
                     transform.localScale = new Vector3(1f, 1f, 1f);
@@ -155,7 +150,6 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                     animator.SetBool("CanUp", true);
                     animator.SetBool("CanDown", false);
                     currentstade++;
-                    /*StartCoroutine(CooldownAim());*/
                     canAim = false;
                 }
                 else if (currentstade > stade)
@@ -163,7 +157,6 @@ public class EnnemiTwoBehaviorTest : EnnemiController
                     animator.SetBool("CanDown", true);
                     animator.SetBool("CanUp", false);
                     currentstade--;
-                    /*StartCoroutine(CooldownAim());*/
                     canAim = false;
                 }
             }
