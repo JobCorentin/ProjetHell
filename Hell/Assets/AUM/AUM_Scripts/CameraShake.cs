@@ -35,7 +35,9 @@ public class CameraShake : MonoBehaviour
         cmVcamNoise.m_AmplitudeGain = force;
         cmVcamNoise.m_FrequencyGain = frequency;
 
-        GamePad.SetVibration(0, gamePadForce / 10, gamePadForce / 10);
+        if (OptionData.od != null)
+            if (OptionData.od.shaking == true)
+                GamePad.SetVibration(0, gamePadForce / 10, gamePadForce / 10);
 
         yield return new WaitForSeconds(time);
 

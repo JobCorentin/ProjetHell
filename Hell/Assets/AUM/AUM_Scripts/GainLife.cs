@@ -135,6 +135,8 @@ public class GainLife : MonoBehaviour
 
     IEnumerator DashToBoomerang()
     {
+        MovementController.mC.stuned = true;
+
         StartCoroutine(dashFx(0.2f, 0.3f));
 
         Vector2 target = currentBoomerang.transform.position;
@@ -156,6 +158,8 @@ public class GainLife : MonoBehaviour
         }
 
         MovementController.mC.rb.AddForce((target - (Vector2)transform.position).normalized, ForceMode2D.Impulse);
+
+        MovementController.mC.stuned = false;
     }
 
     IEnumerator BoomerangToPlayer()
