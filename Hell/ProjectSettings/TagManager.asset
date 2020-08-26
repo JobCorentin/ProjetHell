@@ -8,6 +8,7 @@ TagManager:
   - Props
   - Parallax
   - Fade
+  - BossTP
   layers:
   - Default
   - TransparentFX

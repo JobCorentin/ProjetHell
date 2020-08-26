@@ -7,9 +7,6 @@ using UnityEngine.EventSystems;
 
 public class MainMenu : MonoBehaviour
 {
-    Resolution res1 = new Resolution();
-    Resolution res2 = new Resolution();
-    Resolution res3 = new Resolution();
 
     public Dropdown resolutionDropdown;
 
