@@ -120,7 +120,7 @@ public class GainLife : MonoBehaviour
     {
         MovementController.mC.animator.SetTrigger("Throwing");
 
-        BloodManager.bm.bloodNumb -= 3;
+        BloodManager.bm.bloodNumb -= 4;
 
         currentBoomerang = Instantiate(boomerangPrefab).GetComponent<BoomController>();
 
