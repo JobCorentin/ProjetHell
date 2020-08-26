@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Electricity
-  m_Shader: {fileID: -6465566751694194690, guid: 3a8e807afbd8a0c49b9c3d2d45973047,
+  m_Name: Laser
+  m_Shader: {fileID: -6465566751694194690, guid: e69e0fb068e350b48a1accdcbd9d63a2,
     type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,10 +20,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Main_Text:
-        m_Texture: {fileID: 2800000, guid: 0641c80be56ac21468b8d2fdebeec8e0, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _AlphaTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -41,18 +37,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Electricity_Amount: 6.8
-    - Electricity_Intensity: 0.9
-    - Electricity_MaskGrowth: 0.9
-    - Electricity_MaskIntensity: 0.89
-    - Electricity_Scale: 30
-    - Vector1_1AE3DA9A: 6
-    - Vector1_8B155D3E: 0.12
+    - Vector1_6F430D82: 10
+    - Vector1_C2CDBA49: 30
+    - Voronoi_Scale: 10
     - _EnableExternalAlpha: 0
     m_Colors:
-    - Color_109FF09F: {r: 2.2918077, g: 1.3541107, b: 28.737257, a: 1}
-    - Electricity_Secondary_Speed: {r: 0.1, g: 0.1, b: 0, a: 0}
-    - Electricity_Speed: {r: 0, g: -0.5, b: 0, a: 0}
+    - Laser_Speed: {r: -0.5, g: 0, b: 0, a: 0}
+    - Main_Color: {r: 4.781307, g: 1.5532347, b: 7.6578083, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
