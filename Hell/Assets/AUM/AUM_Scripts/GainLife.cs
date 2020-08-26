@@ -59,7 +59,7 @@ public class GainLife : MonoBehaviour
 
         if (inputPressedFor < 0.5f && wasPressed == true && InputListener.iL.parryInput == false && noSword == false)
         {
-            if (BloodManager.bm.bloodNumb >= 3)
+            if (BloodManager.bm.bloodNumb >= 4)
                 LaunchBoomerang();
         }
 
