@@ -8,6 +8,8 @@ public class LifeBarManager : MonoBehaviour
 
     public UnityEngine.UI.Slider bloodBarSlider;
 
+    public Animator fillSliderAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,15 @@ public class LifeBarManager : MonoBehaviour
     void Update()
     {
         bloodBarSlider.value = (float)BloodManager.bm.bloodNumb / (float)BloodManager.bm.bloodNumbMax;
+
+        if( (float)BloodManager.bm.bloodNumb < (float)BloodManager.bm.bloodNumbMax / 3f )
+        {
+            fillSliderAnimator.SetBool("Allumed", false);
+        }
+        else
+        {
+            fillSliderAnimator.SetBool("Allumed", true);
+        }
 
         for(int i = 1; i <= heartAnimators.Count; i++)
         {

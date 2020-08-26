@@ -14,12 +14,12 @@ public class Healthpack : PropsBehaviour
         if (collision.gameObject.layer == 9)
         {
             player = collision.GetComponentInParent<HealthManager>();
+            HealPlayer();
         }
     }
     private void Update()
     {
-        if (isDestroyed)
-            HealPlayer();
+        
     }
 
     public void HealPlayer()

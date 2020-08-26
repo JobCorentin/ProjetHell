@@ -424,6 +424,7 @@ GameObject:
   - component: {fileID: 3677879853012626413}
   - component: {fileID: 4280472965790374384}
   - component: {fileID: 2653243338409069814}
+  - component: {fileID: 3005900974280680182}
   m_Layer: 5
   m_Name: Background (1)
   m_TagString: Untagged
@@ -487,6 +488,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &3005900974280680182
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5810731073099058355}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b03dc3138631b9f4db6ad15c030a2554, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6132909687123392488
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,6 +990,7 @@ MonoBehaviour:
   - {fileID: 3234187228482665686}
   - {fileID: 4044951038230587261}
   bloodBarSlider: {fileID: 3244062225947468949}
+  fillSliderAnimator: {fileID: 3005900974280680182}
 --- !u!1 &9060133060191265890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,15 +1266,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3dbe7197e420a249ad25f555f54f2b8, type: 3}
---- !u!224 &8746443226572838002 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5883911460333113983, guid: f3dbe7197e420a249ad25f555f54f2b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 2938107870501111309}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &7795141787589114670 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4966249576143191331, guid: f3dbe7197e420a249ad25f555f54f2b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2938107870501111309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &8746443226572838002 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5883911460333113983, guid: f3dbe7197e420a249ad25f555f54f2b8,
     type: 3}
   m_PrefabInstance: {fileID: 2938107870501111309}
   m_PrefabAsset: {fileID: 0}
