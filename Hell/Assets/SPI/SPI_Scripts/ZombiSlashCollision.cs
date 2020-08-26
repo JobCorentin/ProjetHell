@@ -43,7 +43,7 @@ public class ZombiSlashCollision : MonoBehaviour
         }
 
         //Collision avec le layer Player
-        if (collision.gameObject.layer == 11 && reflected == false)
+        if (collision.gameObject.layer == 11 /*&& reflected == false*/)
         {
             HealthManager.hm.StartCoroutine(HealthManager.hm.TakeDamage(1));
             Vector2 v = new Vector2(1, 0.5f);

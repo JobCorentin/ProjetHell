@@ -140,6 +140,7 @@ public class EnnemiFourBehavior : EnnemiController
         canPlayIdleAudio = false;
         yield return new WaitForSeconds(preparationDuration);
         slash.SetActive(true);
+        //slash.GetComponent<ZombiSlashCollision>().reflected = false;
         charge = true;
         animator.SetBool("IsPreparingCharge", false);
         animator.SetBool("IsCharging", true);
