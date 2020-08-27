@@ -53,6 +53,8 @@ public class PropsBehaviour : MonoBehaviour
                 if (HealthManager.hm.life != HealthManager.hm.initialLife)
                 {
                     Destroyed();
+
+                    hp.HealPlayer();
                 }
             }
             else

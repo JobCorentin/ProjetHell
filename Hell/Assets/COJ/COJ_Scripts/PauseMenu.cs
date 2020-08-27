@@ -40,7 +40,7 @@ public class PauseMenu : MonoBehaviour
 
     IEnumerator ResumeDelay()
     {
-        yield return new WaitForSecondsRealtime(2f);
+        yield return null;
 
         pauseMenuUI.SetActive(false);
         GameIsPaused = false;

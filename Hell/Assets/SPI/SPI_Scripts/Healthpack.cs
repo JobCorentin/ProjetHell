@@ -7,33 +7,12 @@ public class Healthpack : PropsBehaviour
     public int heal;
     bool canHeal =true;
 
-    [HideInInspector] public HealthManager player;
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 9)
-        {
-                player = collision.GetComponentInParent<HealthManager>();
-                HealPlayer();
-            
-        }
-    }
-    private void Update()
-    {
-        
-    }
-
     public void HealPlayer()
     {
-        if (canHeal && player.life < player.initialLife)
+        if (canHeal && HealthManager.hm.life < HealthManager.hm.initialLife)
         {
-            if(player.life < player.initialLife)
-            {
                 canHeal = false;
-                player.life += heal;
-            }
-                
-            
+                HealthManager.hm.life += heal;
         }
     }
 }

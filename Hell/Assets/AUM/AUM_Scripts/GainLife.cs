@@ -130,7 +130,7 @@ public class GainLife : MonoBehaviour
 
         currentBoomerang.speed = attackSpeed;
 
-        currentBoomerang.lastCoroutine = StartCoroutine(currentBoomerang.GoToTargetThenPlayer());
+        currentBoomerang.lastCoroutine = currentBoomerang.StartCoroutine(currentBoomerang.GoToTargetThenPlayer());
     }
 
     IEnumerator DashToBoomerang()
