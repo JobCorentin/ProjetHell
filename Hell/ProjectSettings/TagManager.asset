@@ -9,6 +9,7 @@ TagManager:
   - Parallax
   - Fade
   - BossTP
+  - Boomerang
   layers:
   - Default
   - TransparentFX

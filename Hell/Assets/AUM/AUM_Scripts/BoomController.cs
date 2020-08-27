@@ -75,6 +75,14 @@ public class BoomController : MonoBehaviour
                 erc.StopAttack();
             }
 
+
+        }
+
+        if (collision.transform.tag == "Props")
+        {
+            PropsBehaviour pb = collision.GetComponent<PropsBehaviour>();
+
+            pb.StartCoroutine(pb.TakeDamage(1));
         }
     }
 
