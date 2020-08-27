@@ -76,6 +76,7 @@ namespace Cinemachine
 
         public void StartWave()
         {
+            CameraShake.cs.cmArenaNoise = arenaCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
             waveCount = 0;
             arenaWave[waveCount].SetActive(true);
             arenaWave[waveCount].GetComponent<EnnemiWave>().SpawnWave();

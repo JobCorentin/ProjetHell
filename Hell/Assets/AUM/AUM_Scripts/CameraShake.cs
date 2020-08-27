@@ -10,6 +10,8 @@ public class CameraShake : MonoBehaviour
 
     public CinemachineVirtualCamera cmVcam;
 
+    public CinemachineBasicMultiChannelPerlin cmArenaNoise;
+
     private CinemachineBasicMultiChannelPerlin cmVcamNoise;
 
     [HideInInspector] public Coroutine lastCameraShake;
@@ -35,6 +37,12 @@ public class CameraShake : MonoBehaviour
         cmVcamNoise.m_AmplitudeGain = force;
         cmVcamNoise.m_FrequencyGain = frequency;
 
+        if(cmArenaNoise != null)
+        {
+            cmArenaNoise.m_AmplitudeGain = force;
+            cmArenaNoise.m_FrequencyGain = frequency;
+        }
+
         if (OptionData.od != null)
             if (OptionData.od.shaking == true)
                 GamePad.SetVibration(0, gamePadForce / 10, gamePadForce / 10);
@@ -43,6 +51,12 @@ public class CameraShake : MonoBehaviour
 
         cmVcamNoise.m_AmplitudeGain = 0;
         cmVcamNoise.m_FrequencyGain = 0;
+
+        if (cmArenaNoise != null)
+        {
+            cmArenaNoise.m_AmplitudeGain = 0;
+            cmArenaNoise.m_FrequencyGain = 0;
+        }
 
         yield return new WaitForSeconds(secondTime);
 
