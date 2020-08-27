@@ -13,8 +13,9 @@ public class Healthpack : PropsBehaviour
     {
         if (collision.gameObject.layer == 9)
         {
-            player = collision.GetComponentInParent<HealthManager>();
-            HealPlayer();
+                player = collision.GetComponentInParent<HealthManager>();
+                HealPlayer();
+            
         }
     }
     private void Update()
@@ -26,9 +27,12 @@ public class Healthpack : PropsBehaviour
     {
         if (canHeal && player.life < player.initialLife)
         {
-            canHeal = false;
             if(player.life < player.initialLife)
+            {
+                canHeal = false;
                 player.life += heal;
+            }
+                
             
         }
     }

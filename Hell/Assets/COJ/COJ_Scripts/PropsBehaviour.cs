@@ -45,7 +45,20 @@ public class PropsBehaviour : MonoBehaviour
             FXManager.fxm.fxInstancier(3, originalTransform, BaseSlashInstancier.bsi.attackDirectionAngle + Random.Range(-10, 10));
             FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.045f, 0f));
             CameraShake.cs.WeakShake();
-            Destroyed();
+
+            Healthpack hp = GetComponent<Healthpack>();
+
+            if (hp != null)
+            {
+                if (HealthManager.hm.life != HealthManager.hm.initialLife)
+                {
+                    Destroyed();
+                }
+            }
+            else
+            {
+                Destroyed();
+            }
         }
         else if (health > 0)
         {
