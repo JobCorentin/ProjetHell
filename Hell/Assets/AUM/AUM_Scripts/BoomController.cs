@@ -93,14 +93,24 @@ public class BoomController : MonoBehaviour
             yield return null;
         }
 
-        for(float i = 0.2f; i > 0; i -= Time.deltaTime)
+        
+
+        for (float i = 0.2f; i > 0; i -= Time.deltaTime)
         {
             rb.velocity = (target - (Vector2)transform.position).normalized * speed * (i * 5f);
 
             yield return null;
         }
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
+
+        col.enabled = false;
+
+        yield return null;
+
+        col.enabled = true;
+
+        yield return new WaitForSeconds(0.25f);
 
         physicCol.enabled = false;
 

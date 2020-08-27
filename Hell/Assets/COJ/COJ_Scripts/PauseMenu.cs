@@ -34,10 +34,17 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        StartCoroutine(ResumeDelay());
+
+    }
+
+    IEnumerator ResumeDelay()
+    {
+        yield return new WaitForSecondsRealtime(2f);
+
         pauseMenuUI.SetActive(false);
         GameIsPaused = false;
         Time.timeScale = 1f;
-
     }
 
     void Pause()
