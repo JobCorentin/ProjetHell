@@ -20,7 +20,7 @@ public class SpikeBehaviour : MonoBehaviour
             //Renvoyer vers la gauche
             else if(collision.transform.position.x - transform.position.x < 0)
                 MovementController.mC.StartCoroutine(MovementController.mC.MiniDash(diagonaleGauche, MovementController.mC.rb, 0.3f, 3300, 0.1f));
-
+            MovementController.mC.canDoubleJump = true;
         }
     }
 }
