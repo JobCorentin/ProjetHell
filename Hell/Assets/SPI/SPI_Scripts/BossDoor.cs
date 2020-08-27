@@ -18,7 +18,7 @@ public class BossDoor : MonoBehaviour
     {
         bd = this;
         transitionFade = GameObject.FindGameObjectWithTag("Fade");
-        TpBossPose = GameObject.FindGameObjectWithTag("BossTP");
+        //TpBossPose = GameObject.FindGameObjectWithTag("BossTP");
     }
     private void Update()
     {
