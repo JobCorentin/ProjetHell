@@ -59,6 +59,14 @@ public class E1Bullet : MonoBehaviour
             bulletIdleAudio.Stop(gameObject);
         }
 
+        if (collision.attachedRigidbody != null)
+        if (collision.attachedRigidbody.tag == "Boomerang")
+        {
+            Destroy(gameObject);
+            bulletImpactAudio.Post(gameObject);
+            bulletIdleAudio.Stop(gameObject);
+        }
+
         //Collision avec le layer Player
         if (collision.gameObject.layer == 11)
         {
