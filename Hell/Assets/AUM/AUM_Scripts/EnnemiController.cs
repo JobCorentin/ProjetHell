@@ -91,7 +91,7 @@ public class EnnemiController : MonoBehaviour
         }
 
         pTransform = MovementController.mC.transform;
-        defautlMaterial = gameObject.GetComponent<SpriteRenderer>().material;
+        defautlMaterial = sr.material;
 
         InvokeRepeating("GetEnnemies", 1f, 1f);
     }

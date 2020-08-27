@@ -161,7 +161,7 @@ public class EnnemiOneController : EnnemiController
             }
 
             arrow.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle);
-            arrow2.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle);
+            //arrow2.transform.rotation = Quaternion.Euler(0, 0, finalDirectionAttackAngle);
 
             arrow2.transform.localScale = new Vector2(i / preparationDuration, arrow2.transform.localScale.y);
 

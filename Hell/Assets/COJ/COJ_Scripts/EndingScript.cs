@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class EndingScript : MonoBehaviour
 {
-    EnnemiController en;
+    public EnnemiController en;
     bool hasAct;
 
     void Start()
     {
-        en = gameObject.GetComponentInParent<EnnemiController>();
+        
     }
 
     void Update()

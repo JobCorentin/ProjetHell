@@ -23,6 +23,11 @@ public class EnnemiFourBehavior : EnnemiController
     public float katanaForce;
     public GameObject katanaLauncher;
 
+    public GameObject arrow;
+    public GameObject arrow2;
+
+    public GameObject arrowMask;
+
     /*
     public Vector2 dashImpulsion;
     [HideInInspector] public Vector2 currentDash;
@@ -56,6 +61,9 @@ public class EnnemiFourBehavior : EnnemiController
         canAttack = true;
         coolDownTimer = coolDown - 0.3f;
         //currentDash = dashImpulsion;
+
+        arrow.SetActive(false);
+        arrow2.SetActive(false);
     }
 
     public override void FixedUpdate()
@@ -138,7 +146,9 @@ public class EnnemiFourBehavior : EnnemiController
     {
         animator.SetBool("IsPreparingCharge", true);
         canPlayIdleAudio = false;
+
         yield return new WaitForSeconds(preparationDuration);
+
         slash.SetActive(true);
         //slash.GetComponent<ZombiSlashCollision>().reflected = false;
         charge = true;
@@ -146,6 +156,7 @@ public class EnnemiFourBehavior : EnnemiController
         animator.SetBool("IsCharging", true);
         centaurChargeAudio.Post(gameObject);
     }
+
     IEnumerator PrepareKatana(bool both)
     {
         animator.SetBool("IsPreparingKatana", true);
@@ -153,7 +164,34 @@ public class EnnemiFourBehavior : EnnemiController
         if(lastPatternNum ==0)
             lastLookAt = lookAt;
         katana = true;
-        yield return new WaitForSeconds(preparationDuration);
+
+        arrow.SetActive(true);
+        arrow2.SetActive(true);
+
+        Vector2 attackDirection = (pTransform.position - katanaLauncher.transform.position).normalized;
+
+        for (float i = preparationDuration; i > 0; i -= Time.deltaTime)
+        {
+            attackDirection = (pTransform.position - katanaLauncher.transform.position).normalized;
+
+            float attackDirectionAngle = Vector2.Angle(transform.right, attackDirection);
+
+            if (attackDirection.y < 0)
+            {
+                attackDirectionAngle = -attackDirectionAngle;
+            }
+
+            arrow.transform.rotation = Quaternion.Euler(0, 0, attackDirectionAngle);
+            //arrow2.transform.rotation = Quaternion.Euler(0, 0, attackDirectionAngle);
+
+            //arrowMask.transform.localScale = new Vector2(arrowMask.transform.localScale.y, 1.6f * (i / preparationDuration));
+
+            yield return null;
+        }
+
+        arrow.SetActive(false);
+        arrow2.SetActive(false);
+
         animator.SetBool("IsPreparingKatana", false);
         if(both)
         {
