@@ -6,8 +6,6 @@ public class BossDoor : MonoBehaviour
 {
     public static BossDoor bd;
     public List<SatueBossGuard> statues;
-    public GameObject TpBossPose;
-    public GameObject transitionFade;
     GameObject player;
 
     [HideInInspector] public int statuesToDestroy;
@@ -17,8 +15,6 @@ public class BossDoor : MonoBehaviour
     public void Start()
     {
         bd = this;
-        transitionFade = GameObject.FindGameObjectWithTag("Fade");
-        //TpBossPose = GameObject.FindGameObjectWithTag("BossTP");
     }
     private void Update()
     {
@@ -58,9 +54,9 @@ public class BossDoor : MonoBehaviour
 
     IEnumerator transitionDoor()
     {
-        transitionFade.GetComponent<Animator>().SetTrigger("FadeIn");
+        GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>().SetTrigger("FadeIn");
         yield return new WaitForSeconds(1.2f);
-        transitionFade.GetComponent<Animator>().SetTrigger("FadeOut");
-        player.transform.position = TpBossPose.transform.position;
+        GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>().SetTrigger("FadeOut");
+        player.transform.position = GameObject.FindGameObjectWithTag("BossTP").transform.position;
     }
 }

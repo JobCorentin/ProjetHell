@@ -166,16 +166,16 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     {
         StartCoroutine(HasAttackedFor(timeBetweenGroupAttack));
 
-        Vector2 baseDirectionAttack = pTransform.position - musket.transform.position;
+        //Vector2 baseDirectionAttack = pTransform.position - musket.transform.position;
 
-        Vector2 finalDirectionAttack = baseDirectionAttack;
+        Vector2 finalDirectionAttack = pTransform.position - musket.transform.position;
 
         animator.SetBool("IsAiming", true);
         musketAimAudio.Post(gameObject);
 
         for (float i = preparationDuration; i > 0; i -= Time.deltaTime)
         {
-            finalDirectionAttack = (baseDirectionAttack + ((Vector2)(pTransform.position - musket.transform.position) * 10)).normalized;
+            finalDirectionAttack = (((Vector2)(pTransform.position - musket.transform.position))).normalized;
 
             float finalDirectionAttackAngle = Vector2.Angle(musket.transform.right, finalDirectionAttack);
 
@@ -192,7 +192,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
             }
             while ((finalDirectionAttackAngle < 100 && finalDirectionAttackAngle > 80) || (finalDirectionAttackAngle < -80 && finalDirectionAttackAngle > -100))
             {
-                finalDirectionAttack = (baseDirectionAttack + ((Vector2)(pTransform.position - musket.transform.position) * 10)).normalized;
+                finalDirectionAttack = (((Vector2)(pTransform.position - musket.transform.position))).normalized;
                 finalDirectionAttackAngle = Vector2.Angle(musket.transform.right, finalDirectionAttack);
 
                 arrow.SetActive(false);
