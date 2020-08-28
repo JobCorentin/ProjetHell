@@ -176,15 +176,23 @@ public class EnnemiFourBehavior : EnnemiController
 
             float attackDirectionAngle = Vector2.Angle(transform.right, attackDirection);
 
+            if(attackDirection.x > 0)
+            {
+                attackDirection = -attackDirection;
+
+                attackDirectionAngle = Vector2.Angle(transform.right, attackDirection);
+            }
+
             if (attackDirection.y < 0)
             {
                 attackDirectionAngle = -attackDirectionAngle;
             }
 
+            
             arrow.transform.rotation = Quaternion.Euler(0, 0, attackDirectionAngle);
             //arrow2.transform.rotation = Quaternion.Euler(0, 0, attackDirectionAngle);
 
-            //arrowMask.transform.localScale = new Vector2(arrowMask.transform.localScale.y, 1.6f * (i / preparationDuration));
+            arrowMask.transform.localScale = new Vector2(arrowMask.transform.localScale.x, Mathf.Max(0, 1.6f * (i - Time.deltaTime / preparationDuration)));
 
             yield return null;
         }
