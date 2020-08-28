@@ -8,13 +8,23 @@ public class EndingScript : MonoBehaviour
     public EnnemiController en;
     bool hasAct;
 
+    UnityEngine.UI.Slider barBossSlider;
+
     void Start()
     {
-        
+        barBossSlider = GameObject.Find("BossSlider").GetComponent<UnityEngine.UI.Slider>();
+
+        barBossSlider.transform.parent.gameObject.SetActive(false);
     }
 
     void Update()
     {
+        if(en.playerDetected == true)
+        {
+            barBossSlider.transform.parent.gameObject.SetActive(true);
+            barBossSlider.value = (float)en.health / (float)en.initialHealth;
+        }
+
         if(en.health <= 0 && hasAct == false)
         {
             hasAct = true;
