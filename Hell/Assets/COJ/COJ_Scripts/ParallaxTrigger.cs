@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ParallaxTrigger : MonoBehaviour
 {
-    public GameObject previousGroup;
+    public List<GameObject> previousGroup;
     public bool isON = false;
     public ParallaxTrigger pt;
     private void Start()
@@ -23,11 +23,14 @@ public class ParallaxTrigger : MonoBehaviour
                     gameObject.transform.GetChild(i).gameObject.SetActive(true);
                 }
 
-                if (previousGroup != null)
+                if(previousGroup.Count > 0)
                 {
-                    for (int i = 0; i < previousGroup.transform.childCount; i++)
+                    foreach (GameObject pGroup in previousGroup)
                     {
-                        previousGroup.transform.GetChild(i).gameObject.SetActive(false);
+                        for (int i = 0; i < pGroup.transform.childCount; i++)
+                        {
+                            pGroup.transform.GetChild(i).gameObject.SetActive(false);
+                        }
                     }
                 }
             }     
@@ -40,11 +43,14 @@ public class ParallaxTrigger : MonoBehaviour
                 gameObject.transform.GetChild(i).gameObject.SetActive(true);
             }
 
-            if (previousGroup != null)
+            if(previousGroup.Count > 0)
             {
-                for (int i = 0; i < previousGroup.transform.childCount; i++)
+                foreach (GameObject pGroup in previousGroup)
                 {
-                    previousGroup.transform.GetChild(i).gameObject.SetActive(false);
+                    for (int i = 0; i < pGroup.transform.childCount; i++)
+                    {
+                        pGroup.transform.GetChild(i).gameObject.SetActive(false);
+                    }
                 }
             }
         }

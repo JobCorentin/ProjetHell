@@ -77,12 +77,12 @@ public class CameraShake : MonoBehaviour
 
     public void WeakShake()
     {
-        StartCoroutine(CameraShakeFor(0.2f, 0.1f, 3, 2, 2));
+        StartCoroutine(CameraShakeFor(0.2f, 0.1f, 2, 1, 2));
     }
 
     public void StrongShake()
     {
-        StartCoroutine(CameraShakeFor(0.2f, 0.2f, 5, 3, 3));
+        StartCoroutine(CameraShakeFor(0.2f, 0.2f, 2, 1, 3));
     }
 
     public void PropShake()
