@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 98384084440219246}
   - component: {fileID: 4716303418809437689}
   - component: {fileID: 7077205740111039029}
+  - component: {fileID: 1120397804952593278}
   m_Layer: 0
   m_Name: Boss Door
   m_TagString: Untagged
@@ -28,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6362459032678487024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.856, y: 0.708, z: 0}
-  m_LocalScale: {x: 2.7126899, y: 2.4151278, z: 1}
+  m_LocalPosition: {x: 0.856, y: 1.16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9120798038734035855}
   - {fileID: 8653632108886340399}
@@ -52,7 +53,6 @@ MonoBehaviour:
   statues:
   - {fileID: 0}
   - {fileID: 0}
-  TpBossPose: {fileID: 9215121463366265888}
   statuesToDestroy: 0
   openDoor: 0
 --- !u!212 &98384084440219246
@@ -94,7 +94,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 410629d224df381478e6354eba018e96, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09085e16d6314424184348fef3c9e448, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,18 +118,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.22692811, y: 2.700051}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 7.5333333, y: 5.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.0727499, y: 5.333986}
   m_EdgeRadius: 0
 --- !u!114 &7077205740111039029
 MonoBehaviour:
@@ -143,6 +143,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa5c061052f6d84083cde0fb90c81c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1120397804952593278
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6362459032678487024}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f8498d8621558504da7ddb86cfabd957, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &9152724577522919607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,12 +288,12 @@ PrefabInstance:
     - target: {fileID: 6444819297726092068, guid: e4d079c557d4d754f83f2630948a748c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.333
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6444819297726092068, guid: e4d079c557d4d754f83f2630948a748c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.333
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4d079c557d4d754f83f2630948a748c, type: 3}
@@ -360,12 +379,12 @@ PrefabInstance:
     - target: {fileID: 6444819297726092068, guid: e4d079c557d4d754f83f2630948a748c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.333
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6444819297726092068, guid: e4d079c557d4d754f83f2630948a748c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.33
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4d079c557d4d754f83f2630948a748c, type: 3}

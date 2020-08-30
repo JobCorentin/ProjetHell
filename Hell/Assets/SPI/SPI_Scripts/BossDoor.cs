@@ -25,12 +25,13 @@ public class BossDoor : MonoBehaviour
                 if (stat.destroyed == true)
                 {
                     statuesToDestroy++;
+                    gameObject.GetComponent<Animator>().SetTrigger("SemiOpen");
                 }
             }
             if (statuesToDestroy == statues.Count)
             {
                 openDoor = true;
-                gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                gameObject.GetComponent<Animator>().SetTrigger("Open");
             }
             else
             {
