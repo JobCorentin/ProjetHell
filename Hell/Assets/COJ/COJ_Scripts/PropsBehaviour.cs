@@ -52,14 +52,14 @@ public class PropsBehaviour : MonoBehaviour
             {
                 if (HealthManager.hm.life != HealthManager.hm.initialLife)
                 {
-                    Destroyed();
+                    PropsDestroyed();
 
                     hp.HealPlayer();
                 }
             }
             else
             {
-                Destroyed();
+                PropsDestroyed();
             }
         }
         else if (health > 0)
@@ -78,7 +78,7 @@ public class PropsBehaviour : MonoBehaviour
         CameraShake.cs.WeakShake();
     }
 
-    void Destroyed()
+    void PropsDestroyed()
     {
         woodBreakAudio.Post(gameObject);
 
