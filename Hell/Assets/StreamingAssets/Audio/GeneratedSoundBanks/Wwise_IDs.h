@@ -23,6 +23,11 @@ namespace AK
         static const AkUniqueID CENTAUR_KATANA_VOICES = 3171685924U;
         static const AkUniqueID CENTAUR_KATANATHROW = 1327286010U;
         static const AkUniqueID CENTAUR_SWORD_SOUND = 1104912115U;
+        static const AkUniqueID CHECKPOINT_SLASH = 1141980505U;
+        static const AkUniqueID CHECKPOINTS_FLAME = 886027494U;
+        static const AkUniqueID FLESH_BREAKABLE = 3725008693U;
+        static const AkUniqueID GOLDEN_BREAKABLE = 275329914U;
+        static const AkUniqueID HEAL_BREAKABLE = 1524495727U;
         static const AkUniqueID HEARTH_DAMAGES = 4005551194U;
         static const AkUniqueID HEARTH_DEATH = 867542894U;
         static const AkUniqueID HEARTH_FIREATTACK = 879101832U;
@@ -40,6 +45,7 @@ namespace AK
         static const AkUniqueID PLAYER_HEALTH_SOUNDS = 2975122654U;
         static const AkUniqueID PLAYER_JUMP = 1305133589U;
         static const AkUniqueID PLAYER_PARRY = 4017406829U;
+        static const AkUniqueID PLAYER_SPAWN = 1028635762U;
         static const AkUniqueID PLAYER_SWORD_ATTACK = 2088000327U;
         static const AkUniqueID PLAYER_TAKE_DAMAGES = 1229797707U;
         static const AkUniqueID SOLDIER_ATTACK = 789006460U;

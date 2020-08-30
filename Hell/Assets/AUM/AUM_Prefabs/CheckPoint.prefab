@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4189400941099349604}
   - component: {fileID: 7912537934117244190}
   - component: {fileID: 411886562289241249}
+  - component: {fileID: 2779428189436027790}
+  - component: {fileID: 6196585229589215205}
   m_Layer: 0
   m_Name: CPGraph
   m_TagString: Untagged
@@ -101,6 +103,40 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2779428189436027790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768031127233338949}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3057b2e0c9b760e4f9fb8727bfd5985f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerFootstepAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 35d0933df0c0f3048bf306caee3eecdf,
+      type: 2}
+--- !u!114 &6196585229589215205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768031127233338949}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24ca9e43eed6e540aa0953081f070af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathSlashAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d4b2600a9dec074468d4437d11cb3874,
+      type: 2}
 --- !u!1 &3461465493506494041
 GameObject:
   m_ObjectHideFlags: 0

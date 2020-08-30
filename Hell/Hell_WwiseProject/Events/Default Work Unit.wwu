@@ -157,7 +157,17 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Player_Sword_Throw" ID="{3D1F47B1-6F69-422A-8001-007540BBAF38}"/>
-						<Event Name="Player_Heal" ID="{1301DB3D-5203-45E8-A636-9D9BAC5BDB45}"/>
+						<Event Name="Player_Spawn" ID="{B0094B74-6F96-4B57-B427-5CF644387ABE}">
+							<ChildrenList>
+								<Action Name="" ID="{D672A05F-FA45-4796-B34B-8B711888E233}" ShortID="445091805">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="FlameUp" ID="{905A1113-087A-4154-997D-CF576E500978}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Musics" ID="{8E9131FF-7E57-4B7F-903B-8416253DAFC6}" ShortID="811126068">
@@ -472,13 +482,84 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="Checkpoints" ID="{EC9B155D-3FC6-47E7-88F5-090E40030FC1}"/>
+						<Event Name="Checkpoints_Flame" ID="{EC9B155D-3FC6-47E7-88F5-090E40030FC1}">
+							<ChildrenList>
+								<Action Name="" ID="{8DB4E014-2C46-4203-8585-11956E5C4EA0}" ShortID="545595732">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="FlameUp" ID="{F50713FD-47CE-40EB-8A21-70700C5FE11E}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Wood_Breakable" ID="{841AD14C-B2F9-4227-95D3-8BBC68EC5991}">
 							<ChildrenList>
 								<Action Name="" ID="{47B31E25-C375-487F-918A-3175655E0739}" ShortID="643032104">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Wood_Break" ID="{40C49FFC-2063-4E4E-8178-D137FECE4426}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Flesh_Breakable" ID="{7D5057E5-47E9-44F1-BBD5-CEBE8E6BD5CC}">
+							<ChildrenList>
+								<Action Name="" ID="{B6B9DD57-131A-454B-A30E-0320CB039C54}" ShortID="201191227">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Flesh_Hit" ID="{E71A1318-D0CF-4AB7-87D2-4F4F156C7937}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{091334BD-6A0F-4F5C-B145-53F6683B86DE}" ShortID="995824286">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Flesh_Squizz" ID="{CC615CB3-6286-4D29-9CB1-F016A6F47AA1}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Heal_Breakable" ID="{64BE95E7-48DB-40FB-B342-98806F8BA21E}">
+							<ChildrenList>
+								<Action Name="" ID="{2F3FD1D1-628E-4161-8C49-D14465B14559}" ShortID="836250668">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="FlameUp" ID="{F50713FD-47CE-40EB-8A21-70700C5FE11E}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B921446A-4291-4E49-A035-4755900E9B44}" ShortID="655486426">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Breakable_Pots" ID="{880E7211-F013-4401-A4DC-053CAA7E72CF}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Golden_Breakable" ID="{372B118C-3D48-4296-99D4-7874E506B18E}">
+							<ChildrenList>
+								<Action Name="" ID="{C8AAA5A7-508A-4040-81EF-9C9FA12972B2}" ShortID="628405374">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Stone_Breakable" ID="{D0628227-AED7-49F7-AA0B-C034B265B555}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Checkpoint_Slash" ID="{C518AED4-36BB-4DFF-B909-E9A06AD5134D}">
+							<ChildrenList>
+								<Action Name="" ID="{DD1886C3-79D3-48B6-94E8-DAA1DFFDF803}" ShortID="371674404">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CheckpointSlash" ID="{86576556-F309-4E3E-B548-F7DF25757F7B}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

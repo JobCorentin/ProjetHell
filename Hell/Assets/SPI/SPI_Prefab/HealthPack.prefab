@@ -312,10 +312,15 @@ MonoBehaviour:
   woodBreakAudio:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 25b32bfb015b957429b0e1653e89ee80,
+    WwiseObjectReference: {fileID: 11400000, guid: f6f19940384080f4b8fc87f3936e683c,
       type: 2}
   heal: 1
   fxHolder: {fileID: 1191333984}
+  fireIdleAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 31236441782b15b4bb2c33ffc7787750,
+      type: 2}
 --- !u!61 &5479405240419418144
 BoxCollider2D:
   m_ObjectHideFlags: 0

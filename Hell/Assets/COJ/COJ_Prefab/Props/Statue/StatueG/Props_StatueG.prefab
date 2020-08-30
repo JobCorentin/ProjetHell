@@ -187,6 +187,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3190383027053464745, guid: 8a5f1c582221dab4e912350d1ad720a4,
         type: 3}
+    - target: {fileID: 3483971326343714870, guid: 5d7e3f2d42d4a6549b390d1fb1904883,
+        type: 3}
+      propertyPath: woodBreakAudio.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 354b556facfefdc41967cd3cab2bc1ec,
+        type: 2}
     - target: {fileID: 3483971326343714871, guid: 5d7e3f2d42d4a6549b390d1fb1904883,
         type: 3}
       propertyPath: m_Offset.x

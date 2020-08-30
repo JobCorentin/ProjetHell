@@ -141,6 +141,11 @@ MonoBehaviour:
   fog: {fileID: 1284714894293159749, guid: 131b0570c7a968e4dad01cdaeb1e10b7, type: 3}
   wheel: {fileID: 0}
   isChar: 0
+  woodBreakAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: cbdac267271dda141a4718e266b9cf03,
+      type: 2}
 --- !u!95 &8893647296930769863
 Animator:
   serializedVersion: 3

@@ -9,6 +9,7 @@ public class Healthpack : PropsBehaviour
 
     public GameObject fxHolder;
 
+
     public void HealPlayer()
     {
         if (canHeal && HealthManager.hm.life < HealthManager.hm.initialLife)

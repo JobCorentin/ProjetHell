@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 4284ab4eb2341646a069c5e5531758ca
     GuidInternal: 
-    m_lastTime: -8586034089044552948
+    m_lastTime: -8586027985259527138
     List:
     - name: Main
       guid: 33038aaad1850e4189e17a29e7d73f96
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 14895eb1fb392f4fb3e6729aaa4bce9d
     GuidInternal: 
-    m_lastTime: -8586034089046370962
+    m_lastTime: -8586027985259397462
     List:
     - name: Bad Guys
       guid: 3f5756db27424849b2a3879cd6bf2447
@@ -222,17 +222,73 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Checkpoints
-      guid: 5d159becc63fe74788f5090e40030fc1
-      id: 225972798
+    - name: Checkpoint_Slash
+      guid: d4ae18c5bb36ff4db909e9a06ad5134d
+      id: 1141980505
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: World
         ObjectType: 4
-      - ElementName: Checkpoints
+      - ElementName: Checkpoint_Slash
         ObjectType: 3
-      Path: Default Work Unit\World\Checkpoints
+      Path: Default Work Unit\World\Checkpoint_Slash
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Checkpoints_Flame
+      guid: 5d159becc63fe74788f5090e40030fc1
+      id: 886027494
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: World
+        ObjectType: 4
+      - ElementName: Checkpoints_Flame
+        ObjectType: 3
+      Path: Default Work Unit\World\Checkpoints_Flame
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Flesh_Breakable
+      guid: e557507de947f144bbd5cebe8e6bd5cc
+      id: 3725008693
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: World
+        ObjectType: 4
+      - ElementName: Flesh_Breakable
+        ObjectType: 3
+      Path: Default Work Unit\World\Flesh_Breakable
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Golden_Breakable
+      guid: 8c112b37483d964299d47874e506b18e
+      id: 275329914
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: World
+        ObjectType: 4
+      - ElementName: Golden_Breakable
+        ObjectType: 3
+      Path: Default Work Unit\World\Golden_Breakable
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Heal_Breakable
+      guid: e795be64db48fb40b34298806f8ba21e
+      id: 1524495727
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: World
+        ObjectType: 4
+      - ElementName: Heal_Breakable
+        ObjectType: 3
+      Path: Default Work Unit\World\Heal_Breakable
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -456,20 +512,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Player_Heal
-      guid: 3ddb01130352e845a6369d9bac5bdb45
-      id: 780312891
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Player
-        ObjectType: 4
-      - ElementName: Player_Heal
-        ObjectType: 3
-      Path: Default Work Unit\Player\Player_Heal
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: Player_Health_Sounds
       guid: bf3af82e0204ce45b92f83b708f40f55
       id: 2975122654
@@ -509,6 +551,20 @@ MonoBehaviour:
       - ElementName: Player_Parry
         ObjectType: 3
       Path: Default Work Unit\Player\Player_Parry
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_Spawn
+      guid: 744b09b0966f574bb4275cf644387abe
+      id: 1028635762
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: Player_Spawn
+        ObjectType: 3
+      Path: Default Work Unit\Player\Player_Spawn
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -737,6 +793,8 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8586049880700832740
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /Hell_WwiseProject
+  - /Hell_WwiseProject/Events
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
