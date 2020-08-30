@@ -40,6 +40,7 @@ public class HealthManager : MonoBehaviour
         MovementController.mC.animator.SetTrigger("Respawn");
 
         lowPassTimer = 0;
+        lowPassDurationGameSync.SetGlobalValue(0);
         playerHealthConstantAudio.Stop(gameObject);
         playerHealthConstantAudio.Post(gameObject);
 
@@ -102,9 +103,15 @@ public class HealthManager : MonoBehaviour
         MovementController.mC.animator.SetTrigger("Die");
         deathBackgroundAnimator.SetTrigger("Die");
 
+        lowPassTimer = 0;
+        lowPassDurationGameSync.SetGlobalValue(0);
+
+
         SoundManager.instance.haveKillAnEnnemi = false;
         SoundManager.instance.havePlayLevelTheme = false;
         SoundManager.instance.levelTheme.Stop(SoundManager.instance.gameObject);
+        playerHealthConstantAudio.Stop(gameObject);
+
 
         float temp = MovementController.mC.rb.gravityScale;
 

@@ -186,6 +186,62 @@
 				</Event>
 				<Event Id="1327286010" Name="Centaur_KatanaThrow" ObjectPath="\Events\Default Work Unit\Bad Guys\Centaur_KatanaThrow" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.166667" DurationMax="0.249718"/>
 				<Event Id="1104912115" Name="Centaur_Sword_Sound" ObjectPath="\Events\Default Work Unit\Bullets\Centaur_Sword_Sound" MaxAttenuation="25.000000" DurationType="Infinite"/>
+				<Event Id="1141980505" Name="Checkpoint_Slash" ObjectPath="\Events\Default Work Unit\World\Checkpoint_Slash" MaxAttenuation="25.000000" DurationType="OneShot" DurationMin="1.531928" DurationMax="1.531928">
+					<IncludedMemoryFiles>
+						<File Id="108687792" Language="SFX">
+							<ShortName>DeathSlash.wav</ShortName>
+							<Path>SFX\DeathSlash_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="886027494" Name="Checkpoints_Flame" ObjectPath="\Events\Default Work Unit\World\Checkpoints_Flame" MaxAttenuation="25.000000" DurationType="OneShot" DurationMin="1.470998" DurationMax="1.470998">
+					<IncludedMemoryFiles>
+						<File Id="361141803" Language="SFX">
+							<ShortName>FlameUp.wav</ShortName>
+							<Path>SFX\FlameUp_941E404A.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3725008693" Name="Flesh_Breakable" ObjectPath="\Events\Default Work Unit\World\Flesh_Breakable" MaxAttenuation="25.000000" DurationType="OneShot" DurationMin="0.756349" DurationMax="0.887032">
+					<IncludedMemoryFiles>
+						<File Id="452436359" Language="SFX">
+							<ShortName>HearthSquizz_3.wav</ShortName>
+							<Path>SFX\HearthSquizz_3_6C17879C.wem</Path>
+						</File>
+						<File Id="654516014" Language="SFX">
+							<ShortName>HearthSquizz_1.wav</ShortName>
+							<Path>SFX\HearthSquizz_1_A3AF211D.wem</Path>
+						</File>
+						<File Id="891289980" Language="SFX">
+							<ShortName>Flesh_Hit.wav</ShortName>
+							<Path>SFX\Flesh_Hit_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="275329914" Name="Golden_Breakable" ObjectPath="\Events\Default Work Unit\World\Golden_Breakable" MaxAttenuation="25.000000" DurationType="OneShot" DurationMin="1.292404" DurationMax="1.292404">
+					<IncludedMemoryFiles>
+						<File Id="998269139" Language="SFX">
+							<ShortName>Stone Cracking Sound Effect.wav</ShortName>
+							<Path>SFX\Stone Cracking Sound Effect_6BAC3113.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1524495727" Name="Heal_Breakable" ObjectPath="\Events\Default Work Unit\World\Heal_Breakable" MaxAttenuation="25.000000" DurationType="OneShot" DurationMin="1.470998" DurationMax="1.470998">
+					<IncludedMemoryFiles>
+						<File Id="121123336" Language="SFX">
+							<ShortName>Break Pots 1.wav</ShortName>
+							<Path>SFX\Break Pots 1_10C4C929.wem</Path>
+						</File>
+						<File Id="361141803" Language="SFX">
+							<ShortName>FlameUp.wav</ShortName>
+							<Path>SFX\FlameUp_941E404A.wem</Path>
+						</File>
+						<File Id="904769502" Language="SFX">
+							<ShortName>Break Pots 3.wav</ShortName>
+							<Path>SFX\Break Pots 3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="4005551194" Name="Hearth_Damages" ObjectPath="\Events\Default Work Unit\Bad Guys\Hearth_Damages" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.220805" DurationMax="0.312266">
 					<IncludedMemoryFiles>
 						<File Id="948472799" Language="SFX">
@@ -327,11 +383,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2453392179" Name="Player_Footstep" ObjectPath="\Events\Default Work Unit\Player\Player_Footstep" DurationType="OneShot" DurationMin="0.163735" DurationMax="0.454751">
+				<Event Id="2453392179" Name="Player_Footstep" ObjectPath="\Events\Default Work Unit\Player\Player_Footstep" DurationType="OneShot" DurationMin="0.217151" DurationMax="0.454751">
 					<IncludedMemoryFiles>
 						<File Id="130640124" Language="SFX">
 							<ShortName>FootstepConcrete_6.wav</ShortName>
-							<Path>SFX\FootstepConcrete_6_AB3469A4.wem</Path>
+							<Path>SFX\FootstepConcrete_6_237F8547.wem</Path>
 						</File>
 						<File Id="333434390" Language="SFX">
 							<ShortName>FootstepWater_2.wav</ShortName>
@@ -359,7 +415,7 @@
 						</File>
 						<File Id="511919527" Language="SFX">
 							<ShortName>FootstepConcrete_5.wav</ShortName>
-							<Path>SFX\FootstepConcrete_5_A5A3DEEA.wem</Path>
+							<Path>SFX\FootstepConcrete_5_F956F207.wem</Path>
 						</File>
 						<File Id="532153537" Language="SFX">
 							<ShortName>FootstepWater_6.wav</ShortName>
@@ -371,11 +427,11 @@
 						</File>
 						<File Id="689541487" Language="SFX">
 							<ShortName>FootstepConcrete_2.wav</ShortName>
-							<Path>SFX\FootstepConcrete_2_8370ED62.wem</Path>
+							<Path>SFX\FootstepConcrete_2_6DBD021C.wem</Path>
 						</File>
 						<File Id="782147939" Language="SFX">
 							<ShortName>FootstepConcrete_4.wav</ShortName>
-							<Path>SFX\FootstepConcrete_4_95E5E719.wem</Path>
+							<Path>SFX\FootstepConcrete_4_0B801E50.wem</Path>
 						</File>
 						<File Id="784835478" Language="SFX">
 							<ShortName>FootstepWater_3.wav</ShortName>
@@ -387,7 +443,7 @@
 						</File>
 						<File Id="825666160" Language="SFX">
 							<ShortName>FootstepConcrete_3.wav</ShortName>
-							<Path>SFX\FootstepConcrete_3_1AB1FF95.wem</Path>
+							<Path>SFX\FootstepConcrete_3_9C758C92.wem</Path>
 						</File>
 						<File Id="880538827" Language="SFX">
 							<ShortName>FootstepGrass_4.wav</ShortName>
@@ -395,7 +451,7 @@
 						</File>
 						<File Id="899013627" Language="SFX">
 							<ShortName>FootstepConcrete_1.wav</ShortName>
-							<Path>SFX\FootstepConcrete_1_E2B5CC48.wem</Path>
+							<Path>SFX\FootstepConcrete_1_36D8B124.wem</Path>
 						</File>
 						<File Id="1012787112" Language="SFX">
 							<ShortName>FootstepWood_1.wav</ShortName>
@@ -516,6 +572,14 @@
 						<File Id="206956865" Language="SFX">
 							<ShortName>Sword_Impact.wav</ShortName>
 							<Path>SFX\Sword_Impact_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1028635762" Name="Player_Spawn" ObjectPath="\Events\Default Work Unit\Player\Player_Spawn" DurationType="OneShot" DurationMin="1.198964" DurationMax="1.198964">
+					<IncludedMemoryFiles>
+						<File Id="711725058" Language="SFX">
+							<ShortName>FlameUp.wav</ShortName>
+							<Path>SFX\FlameUp_333EB7D9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

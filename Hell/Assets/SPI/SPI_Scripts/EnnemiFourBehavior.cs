@@ -154,6 +154,13 @@ public class EnnemiFourBehavior : EnnemiController
         charge = true;
         animator.SetBool("IsPreparingCharge", false);
         animator.SetBool("IsCharging", true);
+
+        if (SoundManager.instance.haveKillAnEnnemi == false)
+        {
+            SoundManager.instance.haveKillAnEnnemi = true;
+        }
+
+
         centaurChargeAudio.Post(gameObject);
     }
 

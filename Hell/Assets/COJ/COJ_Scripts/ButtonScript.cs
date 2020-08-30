@@ -27,13 +27,13 @@ public class ButtonScript : MonoBehaviour
     {
         if (Input.GetKey("b"))
         {
-            LoadScene(0);
             mainMenuMusic.Stop(gameObject);
+            LoadScene(0);
         }
     }
     public void LoadScene(int index)
     {
-        SceneManager.LoadScene(index);
         mainMenuMusic.Stop(gameObject);
+        SceneManager.LoadScene(index);
     }
 }
