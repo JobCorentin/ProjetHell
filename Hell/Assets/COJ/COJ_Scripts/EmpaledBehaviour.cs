@@ -6,6 +6,7 @@ public class EmpaledBehaviour : MonoBehaviour
 {
 
     Animator animator;
+    public bool isCharger;
 
     private void Awake()
     {
@@ -29,7 +30,12 @@ public class EmpaledBehaviour : MonoBehaviour
 
                 BaseSlashCollision.bsc.lastBounce = MovementController.mC.StartCoroutine(BaseSlashCollision.bsc.Bounce());
             }
-
+            if (isCharger)
+            {
+                FXManager.fxm.fxInstancier(2, collision.transform, BaseSlashInstancier.bsi.attackDirectionAngle);
+                if (BloodManager.bm.bloodNumb < BloodManager.bm.bloodNumbMax)
+                    BloodManager.bm.bloodNumb += 1;
+            }
             animator.SetTrigger("hit");
         }
     }
