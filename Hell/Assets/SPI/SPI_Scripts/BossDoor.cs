@@ -7,6 +7,7 @@ public class BossDoor : MonoBehaviour
     public static BossDoor bd;
     public List<SatueBossGuard> statues;
     GameObject player;
+    public bool passed;
 
     [HideInInspector] public int statuesToDestroy;
 
@@ -45,8 +46,9 @@ public class BossDoor : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (openDoor == true)
+            if (openDoor == true && passed ==false)
             {
+                passed = true;
                 player = collision.gameObject;
                 StartCoroutine(transitionDoor());
             }

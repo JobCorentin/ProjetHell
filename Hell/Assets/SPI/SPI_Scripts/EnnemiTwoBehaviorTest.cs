@@ -281,6 +281,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
     public void StopMusket()
     {
         animator.SetBool("IsAiming", false);
+        musketAimAudio.Stop(gameObject);
         coolDownTimer = 0;
         arrow.SetActive(false);
         arrow2.SetActive(false);
@@ -288,6 +289,7 @@ public class EnnemiTwoBehaviorTest : EnnemiController
         if (lastLaunchBullet != null)
             StopCoroutine(lastLaunchBullet);
         StopCoroutine(CooldownAim());
+        StopCoroutine(MusketIdleAudioCooldown());
     }
     IEnumerator MusketIdleAudioCooldown()
     {
