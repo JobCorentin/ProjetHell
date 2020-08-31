@@ -2,65 +2,97 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossDoor : MonoBehaviour
+namespace Cinemachine
 {
-    public static BossDoor bd;
-    public List<SatueBossGuard> statues;
-    GameObject player;
-    public bool passed;
-
-    [HideInInspector] public int statuesToDestroy;
-
-    public bool openDoor;
-
-    public void Start()
+    public class BossDoor : MonoBehaviour
     {
-        bd = this;
-    }
-    private void Update()
-    {
-        if(openDoor == false)
+       
+        public static BossDoor bd;
+        public GameObject bossDoorCam;
+        public List<SatueBossGuard> statues;
+        GameObject player;
+        public bool passed;
+        bool key1 = true, key2 = true;
+
+        [HideInInspector] public int statuesToDestroy;
+
+        public bool openDoor;
+
+        public void Start()
         {
-            foreach (SatueBossGuard stat in statues)
+            bd = this;
+            bossDoorCam.SetActive(false);
+        }
+        private void Update()
+        {
+            if (openDoor == false)
             {
-                if (stat.destroyed == true)
+                foreach (SatueBossGuard stat in statues)
                 {
-                    statuesToDestroy++;
-                    gameObject.GetComponent<Animator>().SetTrigger("SemiOpen");
+                    if (stat.destroyed == true)
+                    {
+                        statuesToDestroy++;
+                        gameObject.GetComponent<Animator>().SetTrigger("SemiOpen");
+                        if(key1 == true)
+                        {
+                            key1 = false;
+                            StartCoroutine(CamTransition());
+                        }
+
+                        
+
+                    }
+                }
+                if (statuesToDestroy == statues.Count)
+                {
+                    openDoor = true;
+                    gameObject.GetComponent<Animator>().SetTrigger("Open");
+                    if (key2 == true)
+                    {
+                        key2 = false;
+                        StartCoroutine(CamTransition());
+                    }
+
+                }
+                else
+                {
+                    openDoor = false;
+                    statuesToDestroy = 0;
                 }
             }
-            if (statuesToDestroy == statues.Count)
-            {
-                openDoor = true;
-                gameObject.GetComponent<Animator>().SetTrigger("Open");
-            }
-            else
-            {
-                openDoor = false;
-                statuesToDestroy = 0;
-            }
         }
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (openDoor == true && passed ==false)
+            if (collision.CompareTag("Player"))
             {
-                passed = true;
-                player = collision.gameObject;
-                StartCoroutine(transitionDoor());
+                if (openDoor == true && passed == false)
+                {
+                    passed = true;
+                    player = collision.gameObject;
+                    StartCoroutine(transitionDoor());
+                }
             }
         }
-    }
 
-    IEnumerator transitionDoor()
-    {
-        GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>().SetTrigger("FadeIn");
-        SoundManager.instance.levelTheme.Stop(SoundManager.instance.gameObject);
-        yield return new WaitForSeconds(1.2f);
-        GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>().SetTrigger("FadeOut");
-        player.transform.position = GameObject.FindGameObjectWithTag("BossTP").transform.position;
+        IEnumerator transitionDoor()
+        {
+            GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>().SetTrigger("FadeIn");
+            SoundManager.instance.levelTheme.Stop(SoundManager.instance.gameObject);
+            yield return new WaitForSeconds(1.2f);
+            GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>().SetTrigger("FadeOut");
+            player.transform.position = GameObject.FindGameObjectWithTag("BossTP").transform.position;
+        }
+
+        IEnumerator CamTransition()
+        {
+            MovementController.mC.stuned = true;
+            bossDoorCam.SetActive(true);
+            yield return new WaitForSeconds(3f);
+            MovementController.mC.stuned = false;
+            bossDoorCam.SetActive(false);
+
+        }
     }
 }
+
