@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
@@ -80,6 +81,10 @@ public class HealthManager : MonoBehaviour
         life -= amount;
         FreezTimeManager.ftm.StartCoroutine(FreezTimeManager.ftm.FreezeTimeFor(0.1f, 0));
         invicibilityTimer = 0;
+        if(life > 0)
+        {
+            PostProcessBehaviour.ppb.DamageProfile();
+        }
 
         //BloodManager.bm.bloodNumb = 0;
 
@@ -94,6 +99,7 @@ public class HealthManager : MonoBehaviour
 
         if (life <= 0)
         {
+            PostProcessBehaviour.ppb.NullProfile();
             StartCoroutine(Die());
         }
     }

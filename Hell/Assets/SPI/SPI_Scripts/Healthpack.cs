@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Healthpack : PropsBehaviour
 {
@@ -14,6 +15,7 @@ public class Healthpack : PropsBehaviour
         {
                 canHeal = false;
                 HealthManager.hm.life += heal;
+                PostProcessBehaviour.ppb.HealProfile();
         }
     }
 }
