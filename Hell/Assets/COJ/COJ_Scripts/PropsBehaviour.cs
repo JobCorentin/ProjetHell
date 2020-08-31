@@ -10,6 +10,7 @@ public class PropsBehaviour : MonoBehaviour
     public List<GameObject> fragList;
     public GameObject fog;
     public GameObject wheel;
+    public GameObject fxHolder;
     Transform t;
     Transform originalTransform;
 
@@ -89,6 +90,10 @@ public class PropsBehaviour : MonoBehaviour
         }
         SpawnFrag();
         SpawnFog();
+        if (fxHolder != null)
+        {
+            fxHolder.SetActive(false);
+        }
         isDestroyed = true;
         animator.SetBool("isDestroyed", true);
     }

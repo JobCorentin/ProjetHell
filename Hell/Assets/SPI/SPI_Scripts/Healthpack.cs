@@ -7,8 +7,6 @@ public class Healthpack : PropsBehaviour
     public int heal;
     bool canHeal =true;
 
-    public GameObject fxHolder;
-
 
     public void HealPlayer()
     {
@@ -16,11 +14,6 @@ public class Healthpack : PropsBehaviour
         {
                 canHeal = false;
                 HealthManager.hm.life += heal;
-        }
-
-        if(health <= 0)
-        {
-            fxHolder.SetActive(false);
         }
     }
 }
