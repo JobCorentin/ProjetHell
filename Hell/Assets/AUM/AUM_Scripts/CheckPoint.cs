@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class CheckPoint : MonoBehaviour
 {
@@ -46,6 +47,7 @@ public class CheckPoint : MonoBehaviour
 
         MovementController.mC.animator.SetTrigger("GetUp");*/
 
+        PostProcessBehaviour.ppb.HealProfile();
         for (int i = HealthManager.hm.life; i < HealthManager.hm.initialLife; i++)
         {
             yield return new WaitForSeconds(0.2f);
