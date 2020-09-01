@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Color: {r: 0.9622642, g: 0.06808472, b: 0.06808472, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 000000005b3dee22
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -141,12 +141,12 @@ PrefabInstance:
     - target: {fileID: 3483971326343714824, guid: 5d7e3f2d42d4a6549b390d1fb1904883,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.19
+      value: -452.61
       objectReference: {fileID: 0}
     - target: {fileID: 3483971326343714824, guid: 5d7e3f2d42d4a6549b390d1fb1904883,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.66
+      value: 42.5
       objectReference: {fileID: 0}
     - target: {fileID: 3483971326343714824, guid: 5d7e3f2d42d4a6549b390d1fb1904883,
         type: 3}
@@ -297,6 +297,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4285370561205259817, guid: eb47c02f6960af044b1b95ab4027e0e0,
         type: 3}
+    - target: {fileID: 3483971326343714870, guid: 5d7e3f2d42d4a6549b390d1fb1904883,
+        type: 3}
+      propertyPath: fxHolder
+      value: 
+      objectReference: {fileID: 722798985}
     - target: {fileID: 3483971326343714871, guid: 5d7e3f2d42d4a6549b390d1fb1904883,
         type: 3}
       propertyPath: m_Offset.y
