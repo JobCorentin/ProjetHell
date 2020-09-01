@@ -26,12 +26,8 @@ public class EndingScript : MonoBehaviour
         }
     }
 
-    public IEnumerator Load()
+    public void Load()
     {
-        GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>().SetTrigger("FadeIn");
-
-        yield return new WaitForSeconds(1.5f);
-
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 }

@@ -58,6 +58,8 @@ public class EnnemiFourBehavior : EnnemiController
 
     public override void Start()
     {
+        cmvcam = GameObject.Find("CM vcam1").GetComponent<Cinemachine.CinemachineVirtualCamera>();
+
         lookAt = Vector2.left;
         base.Start();
         canAttack = true;
