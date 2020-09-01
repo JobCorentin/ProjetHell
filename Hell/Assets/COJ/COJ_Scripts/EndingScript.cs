@@ -24,17 +24,14 @@ public class EndingScript : MonoBehaviour
             barBossSlider.transform.parent.gameObject.SetActive(true);
             barBossSlider.value = (float)en.health / (float)en.initialHealth;
         }
-
-        if(en.health <= 0 && hasAct == false)
-        {
-            hasAct = true;
-            SceneManager.LoadScene(2);
-        }
     }
 
-    IEnumerator Load()
+    public IEnumerator Load()
     {
+        GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>().SetTrigger("FadeIn");
+
         yield return new WaitForSeconds(1.5f);
+
         SceneManager.LoadScene(2);
     }
 }

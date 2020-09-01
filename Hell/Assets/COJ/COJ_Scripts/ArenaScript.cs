@@ -9,7 +9,7 @@ namespace Cinemachine
         public CinemachineVirtualCamera arenaCamera;
         public GameObject arena;
         public List<GameObject> arenaWave;
-        List<EnnemiWave> arenaWaveControllers = new List<EnnemiWave>();
+        [HideInInspector] public List<EnnemiWave> arenaWaveControllers = new List<EnnemiWave>();
         int waveCount;
 
         bool hasActivated = false;

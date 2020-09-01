@@ -43,6 +43,8 @@ public class EnnemiFourBehavior : EnnemiController
     [HideInInspector] public int lastPatternNum;
     [HideInInspector] public bool hasDoneTwice=false;
 
+    public Material deathMaterial;
+    public Cinemachine.CinemachineVirtualCamera cmvcam;
 
     [Space(10)]
     [Header("Sounds")]
@@ -64,6 +66,8 @@ public class EnnemiFourBehavior : EnnemiController
 
         arrow.SetActive(false);
         arrow2.SetActive(false);
+
+        type = 4;
     }
 
     public override void FixedUpdate()
@@ -436,5 +440,41 @@ public class EnnemiFourBehavior : EnnemiController
             centaurIdleAudio.Post(gameObject);
         }
         isInAudioCoroutine = false;
+    }
+
+    public IEnumerator ChangeCamera()
+    {
+        dead = true;
+        stunned = true;
+
+        MovementController.mC.stuned = true;
+
+        cmvcam.Follow = transform;
+
+        float sizeMultiplicator = 0.5f;
+
+        float endSize = cmvcam.m_Lens.OrthographicSize * sizeMultiplicator;
+
+        float timer = 0f;
+
+        while (!Mathf.Approximately(cmvcam.m_Lens.OrthographicSize, endSize) && timer <= 1.5f)
+        {
+            MovementController.mC.stuned = true;
+
+            cmvcam.m_Lens.OrthographicSize = Mathf.SmoothStep(cmvcam.m_Lens.OrthographicSize, endSize, 3f * Time.deltaTime);
+
+            timer += Time.deltaTime;
+
+            yield return null;
+        }
+    }
+
+    public void ActivateDeathBackground()
+    {
+        HealthManager.hm.deathBackgroundAnimator.SetTrigger("Die");
+
+        sr.sortingOrder = 401;
+
+        sr.material = deathMaterial;
     }
 }

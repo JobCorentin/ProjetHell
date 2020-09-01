@@ -25,6 +25,12 @@ namespace Cinemachine
                 arena.GetComponent<ArenaScript>().NextWave();
                 waveNum--;
             }
+
+            if(boss.health <= 0)
+            {
+                Destroy(gameObject);
+
+            }
         }
     }
 }

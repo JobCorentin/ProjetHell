@@ -16,7 +16,7 @@ public class HealthManager : MonoBehaviour
 
     [HideInInspector] public CheckPoint lastCheckPoint;
 
-    Animator deathBackgroundAnimator;
+    [HideInInspector] public Animator deathBackgroundAnimator;
 
 
     [Space(10)]
@@ -38,6 +38,7 @@ public class HealthManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         MovementController.mC.animator.SetTrigger("Respawn");
 
         lowPassTimer = 0;

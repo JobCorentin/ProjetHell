@@ -348,8 +348,8 @@ public class EnnemiController : MonoBehaviour
 
     public void Die()
     {
-
         animator.SetTrigger("Dying");
+
         if (DeathAudio != null)
         {
             DeathAudio.Post(gameObject);
@@ -362,7 +362,13 @@ public class EnnemiController : MonoBehaviour
 
 
         //gameObject.SetActive(false);
+
+
+
+
     }
+
+
 
     public IEnumerator HasAttackedFor(float time)
     {
