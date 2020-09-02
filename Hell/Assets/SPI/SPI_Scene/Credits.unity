@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1188,6 +1188,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 52623819}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &57742870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 57742871}
+  - component: {fileID: 57742873}
+  - component: {fileID: 57742872}
+  m_Layer: 5
+  m_Name: Titre (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &57742871
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57742870}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1025327382}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -5.2, y: -1630.1}
+  m_SizeDelta: {x: 389.9437, y: 66.12578}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &57742872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57742870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: ff6fbeda632d87040a461fbd12992517, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 48
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Thank you for playing !
+--- !u!222 &57742873
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57742870}
+  m_CullTransparentMesh: 0
 --- !u!1001 &59718765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68998,6 +69076,7 @@ RectTransform:
   - {fileID: 241836330}
   - {fileID: 1600190185}
   - {fileID: 1199618566}
+  - {fileID: 57742871}
   m_Father: {fileID: 359272524}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -71937,7 +72016,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Special Tanks
+  m_Text: Special Thanks
 --- !u!222 &1199618568
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -82181,7 +82260,7 @@ MonoBehaviour:
     Picardat\n\n\n\n\n-\nKilian Marion--Miraca  -  Lead\nIn\xE8s Pouille\nSamuel
     Lauro\nYanis Habib\n\n\n\n\n-\nAur\xE9lien Mary  -  Lead\nCorentin Job\nSimon
     Picardat\n\n\n\n\n-\nMatis Duperray\n\n\n\n\n-\nCassandre Harington\n\n\n\n\n-\nTheophile
-    Loaec\nPaul Paret\nThibaut Le Doare\nCome Richetta"
+    Loaec\nPaul Paret\nThibaut Le Doare\nC\xF4me Richetta"
 --- !u!222 &1950241350
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -83135,8 +83214,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 587, y: 1}
-  m_SizeDelta: {x: -795.1438, y: 736.85925}
+  m_AnchoredPosition: {x: 520.8, y: -113.6}
+  m_SizeDelta: {x: -795.1438, y: 1001.5337}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1996363964
 MonoBehaviour:
