@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/COJ/COJ_Scenes/LD Akuma.unity
     guid: 0c316e0bff161fc43ab24cb559ad3c89
   - enabled: 1
+    path: Assets/SPI/SPI_Scene/Credits.unity
+    guid: 58978ba43f9a5c04c92649d4da1e7b37
+  - enabled: 1
     path: Assets/COJ/COJ_Scenes/EndScene.unity
     guid: 1f25d7e0430af11439fb2fcf0a382a18
   m_configObjects: {}
