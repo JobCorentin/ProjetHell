@@ -1,0 +1,37 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class endCredits : MonoBehaviour
+{
+    public Animator animator;
+    public Animator fade;
+    public GameObject cache;
+    public GameObject player;
+    public GameObject refPlayer;
+
+    private void Start()
+    {
+        player.transform.position = refPlayer.transform.position;
+    }
+    public void GetUp()
+    {
+        animator.SetTrigger("GetUp");
+    }
+    public void OutCred()
+    {
+        fade.SetTrigger("FadeOut");
+    }
+    public void InCred()
+    {
+        fade.SetTrigger("FadeIn");
+    }
+
+    public IEnumerator endTheGame()
+    {
+        cache.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(1);
+    }
+}
