@@ -6,6 +6,7 @@ public class PlacePlayerForEnding : MonoBehaviour
 {
     public Transform TForEnding;
     GameObject Player;
+
     // Start is called before the first frame update
     void Start()
     {

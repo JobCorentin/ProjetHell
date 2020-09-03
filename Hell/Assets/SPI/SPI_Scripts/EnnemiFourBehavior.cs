@@ -448,6 +448,7 @@ public class EnnemiFourBehavior : EnnemiController
     {
         dead = true;
         stunned = true;
+        SoundManager.instance.levelTheme.Stop(SoundManager.instance.gameObject);
 
         MovementController.mC.stuned = true;
 
