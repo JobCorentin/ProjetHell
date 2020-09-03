@@ -24,8 +24,17 @@ public class MainMenu : MonoBehaviour
     public GameObject MenuFirstButton, optionsFirstButton, optionsClosedButton;
 
 
+    [Space(10)]
+    [Header("Sounds")]
+    public AK.Wwise.Event mainThemeMusic;
+
+
+
     private void Start()
     {
+        mainThemeMusic.Post(gameObject);
+
+
        /* resolutionDropdown.ClearOptions();
         List<string> options = new List<string>();
 
@@ -71,16 +80,19 @@ public class MainMenu : MonoBehaviour
 
     public void LoadScene(int index)
     {
+        mainThemeMusic.Stop(gameObject);
         SceneManager.LoadScene(index);
     }
 
     public void LoadLevel()
     {
+        mainThemeMusic.Stop(gameObject);
         SceneManager.LoadScene(2);
     }
 
     public void LoadCredit()
     {
+        mainThemeMusic.Stop(gameObject);
         SceneManager.LoadScene(3);
     }
 

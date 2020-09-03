@@ -198,7 +198,7 @@
 					<IncludedMemoryFiles>
 						<File Id="361141803" Language="SFX">
 							<ShortName>FlameUp.wav</ShortName>
-							<Path>SFX\FlameUp_941E404A.wem</Path>
+							<Path>SFX\FlameUp_3C51B570.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -206,11 +206,11 @@
 					<IncludedMemoryFiles>
 						<File Id="452436359" Language="SFX">
 							<ShortName>HearthSquizz_3.wav</ShortName>
-							<Path>SFX\HearthSquizz_3_6C17879C.wem</Path>
+							<Path>SFX\HearthSquizz_3_42B69B16.wem</Path>
 						</File>
 						<File Id="654516014" Language="SFX">
 							<ShortName>HearthSquizz_1.wav</ShortName>
-							<Path>SFX\HearthSquizz_1_A3AF211D.wem</Path>
+							<Path>SFX\HearthSquizz_1_44AD2821.wem</Path>
 						</File>
 						<File Id="891289980" Language="SFX">
 							<ShortName>Flesh_Hit.wav</ShortName>
@@ -218,11 +218,15 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="275329914" Name="Golden_Breakable" ObjectPath="\Events\Default Work Unit\World\Golden_Breakable" MaxAttenuation="25.000000" DurationType="OneShot" DurationMin="1.292404" DurationMax="1.292404">
+				<Event Id="3975760975" Name="Gold_Breakable" ObjectPath="\Events\Default Work Unit\World\Gold_Breakable" DurationType="OneShot" DurationMin="2.899104" DurationMax="2.899104">
 					<IncludedMemoryFiles>
+						<File Id="61201396" Language="SFX">
+							<ShortName>StatueRoar.wav</ShortName>
+							<Path>SFX\StatueRoar_31C20843.wem</Path>
+						</File>
 						<File Id="998269139" Language="SFX">
 							<ShortName>Stone Cracking Sound Effect.wav</ShortName>
-							<Path>SFX\Stone Cracking Sound Effect_6BAC3113.wem</Path>
+							<Path>SFX\Stone Cracking Sound Effect_E9BBD5F4.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -234,7 +238,7 @@
 						</File>
 						<File Id="361141803" Language="SFX">
 							<ShortName>FlameUp.wav</ShortName>
-							<Path>SFX\FlameUp_941E404A.wem</Path>
+							<Path>SFX\FlameUp_3C51B570.wem</Path>
 						</File>
 						<File Id="904769502" Language="SFX">
 							<ShortName>Break Pots 3.wav</ShortName>
@@ -387,7 +391,7 @@
 					<IncludedMemoryFiles>
 						<File Id="130640124" Language="SFX">
 							<ShortName>FootstepConcrete_6.wav</ShortName>
-							<Path>SFX\FootstepConcrete_6_237F8547.wem</Path>
+							<Path>SFX\FootstepConcrete_6_471D6E91.wem</Path>
 						</File>
 						<File Id="333434390" Language="SFX">
 							<ShortName>FootstepWater_2.wav</ShortName>
@@ -415,7 +419,7 @@
 						</File>
 						<File Id="511919527" Language="SFX">
 							<ShortName>FootstepConcrete_5.wav</ShortName>
-							<Path>SFX\FootstepConcrete_5_F956F207.wem</Path>
+							<Path>SFX\FootstepConcrete_5_C7BFEC62.wem</Path>
 						</File>
 						<File Id="532153537" Language="SFX">
 							<ShortName>FootstepWater_6.wav</ShortName>
@@ -427,11 +431,11 @@
 						</File>
 						<File Id="689541487" Language="SFX">
 							<ShortName>FootstepConcrete_2.wav</ShortName>
-							<Path>SFX\FootstepConcrete_2_6DBD021C.wem</Path>
+							<Path>SFX\FootstepConcrete_2_AAB60B77.wem</Path>
 						</File>
 						<File Id="782147939" Language="SFX">
 							<ShortName>FootstepConcrete_4.wav</ShortName>
-							<Path>SFX\FootstepConcrete_4_0B801E50.wem</Path>
+							<Path>SFX\FootstepConcrete_4_3FB734A2.wem</Path>
 						</File>
 						<File Id="784835478" Language="SFX">
 							<ShortName>FootstepWater_3.wav</ShortName>
@@ -443,7 +447,7 @@
 						</File>
 						<File Id="825666160" Language="SFX">
 							<ShortName>FootstepConcrete_3.wav</ShortName>
-							<Path>SFX\FootstepConcrete_3_9C758C92.wem</Path>
+							<Path>SFX\FootstepConcrete_3_B865F66D.wem</Path>
 						</File>
 						<File Id="880538827" Language="SFX">
 							<ShortName>FootstepGrass_4.wav</ShortName>
@@ -451,7 +455,7 @@
 						</File>
 						<File Id="899013627" Language="SFX">
 							<ShortName>FootstepConcrete_1.wav</ShortName>
-							<Path>SFX\FootstepConcrete_1_36D8B124.wem</Path>
+							<Path>SFX\FootstepConcrete_1_1766358B.wem</Path>
 						</File>
 						<File Id="1012787112" Language="SFX">
 							<ShortName>FootstepWood_1.wav</ShortName>
@@ -579,7 +583,7 @@
 					<IncludedMemoryFiles>
 						<File Id="711725058" Language="SFX">
 							<ShortName>FlameUp.wav</ShortName>
-							<Path>SFX\FlameUp_333EB7D9.wem</Path>
+							<Path>SFX\FlameUp_A3181C75.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -716,6 +720,14 @@
 						<File Id="959353516" Language="SFX">
 							<ShortName>SoldierIdle_2.wav</ShortName>
 							<Path>SFX\SoldierIdle_2_38B4E692.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="137763460" Name="Stone_Breakable" ObjectPath="\Events\Default Work Unit\World\Stone_Breakable" MaxAttenuation="25.000000" DurationType="OneShot" DurationMin="1.292404" DurationMax="1.292404">
+					<IncludedMemoryFiles>
+						<File Id="998269139" Language="SFX">
+							<ShortName>Stone Cracking Sound Effect.wav</ShortName>
+							<Path>SFX\Stone Cracking Sound Effect_E9BBD5F4.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
