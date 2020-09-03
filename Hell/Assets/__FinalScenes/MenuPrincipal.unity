@@ -1162,6 +1162,11 @@ MonoBehaviour:
   MenuFirstButton: {fileID: 954584080}
   optionsFirstButton: {fileID: 1227765727}
   optionsClosedButton: {fileID: 954584080}
+  mainThemeMusic:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6cd71f041bb56164bb51370414af2540,
+      type: 2}
 --- !u!114 &499289028
 MonoBehaviour:
   m_ObjectHideFlags: 0

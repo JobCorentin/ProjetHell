@@ -5333,6 +5333,9 @@
 							</PositioningInfo>
 						</RandomSequenceContainer>
 						<Sound Name="Flesh_Hit" ID="{E71A1318-D0CF-4AB7-87D2-4F4F156C7937}" ShortID="924614840">
+							<PropertyList>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
@@ -5542,6 +5545,38 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="DeathSlash" ID="{3F6E635A-A2A1-4827-A9AC-EE60815C3488}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="StatueRoar" ID="{7D10B746-D03A-4EE1-BE5E-44C9FE292866}" ShortID="764481837">
+							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+									<ObjectRef Name="New_Wwise_Delay" ID="{FEF19FB9-0A3E-4391-BBBF-D8DB2FEFA539}" WorkUnitID="{D19D2F3F-F8A7-41D9-994C-02E3DAD871FC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="StatueRoar" ID="{917BD8FA-0A81-43F8-9511-DC948E628C76}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.848876926369863"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>StatueRoar.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="61201396"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="StatueRoar" ID="{917BD8FA-0A81-43F8-9511-DC948E628C76}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

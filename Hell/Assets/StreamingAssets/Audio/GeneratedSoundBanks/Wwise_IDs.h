@@ -26,7 +26,7 @@ namespace AK
         static const AkUniqueID CHECKPOINT_SLASH = 1141980505U;
         static const AkUniqueID CHECKPOINTS_FLAME = 886027494U;
         static const AkUniqueID FLESH_BREAKABLE = 3725008693U;
-        static const AkUniqueID GOLDEN_BREAKABLE = 275329914U;
+        static const AkUniqueID GOLD_BREAKABLE = 3975760975U;
         static const AkUniqueID HEAL_BREAKABLE = 1524495727U;
         static const AkUniqueID HEARTH_DAMAGES = 4005551194U;
         static const AkUniqueID HEARTH_DEATH = 867542894U;
@@ -51,6 +51,7 @@ namespace AK
         static const AkUniqueID SOLDIER_ATTACK = 789006460U;
         static const AkUniqueID SOLDIER_DEATH = 3583423278U;
         static const AkUniqueID SOLDIER_IDLE = 1896704958U;
+        static const AkUniqueID STONE_BREAKABLE = 137763460U;
         static const AkUniqueID WOOD_BREAKABLE = 328099278U;
     } // namespace EVENTS
 

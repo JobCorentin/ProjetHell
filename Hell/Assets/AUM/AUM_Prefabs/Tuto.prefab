@@ -595,11 +595,12 @@ MonoBehaviour:
   - {fileID: 7471771325609196739, guid: d938dbb0a6a8a2a40aa3bcb71df3deb3, type: 3}
   fog: {fileID: 1284714894293159749, guid: 131b0570c7a968e4dad01cdaeb1e10b7, type: 3}
   wheel: {fileID: 0}
+  fxHolder: {fileID: 0}
   isChar: 0
   woodBreakAudio:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 25b32bfb015b957429b0e1653e89ee80,
+    WwiseObjectReference: {fileID: 11400000, guid: 354b556facfefdc41967cd3cab2bc1ec,
       type: 2}
 --- !u!95 &4575032444689797923
 Animator:

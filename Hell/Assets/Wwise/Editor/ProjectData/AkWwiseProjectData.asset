@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 4284ab4eb2341646a069c5e5531758ca
     GuidInternal: 
-    m_lastTime: -8586027985259527138
+    m_lastTime: -8586024485090547486
     List:
     - name: Main
       guid: 33038aaad1850e4189e17a29e7d73f96
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 14895eb1fb392f4fb3e6729aaa4bce9d
     GuidInternal: 
-    m_lastTime: -8586027985259397462
+    m_lastTime: -8586024493510467476
     List:
     - name: Bad Guys
       guid: 3f5756db27424849b2a3879cd6bf2447
@@ -264,17 +264,17 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Golden_Breakable
-      guid: 8c112b37483d964299d47874e506b18e
-      id: 275329914
+    - name: Gold_Breakable
+      guid: fab01d16ade38d4fa741cfa7351ea36a
+      id: 3975760975
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: World
         ObjectType: 4
-      - ElementName: Golden_Breakable
+      - ElementName: Gold_Breakable
         ObjectType: 3
-      Path: Default Work Unit\World\Golden_Breakable
+      Path: Default Work Unit\World\Gold_Breakable
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -666,6 +666,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Stone_Breakable
+      guid: 8c112b37483d964299d47874e506b18e
+      id: 137763460
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: World
+        ObjectType: 4
+      - ElementName: Stone_Breakable
+        ObjectType: 3
+      Path: Default Work Unit\World\Stone_Breakable
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Wood_Breakable
       guid: 4cd11a84f9b2274295d38bbc68ec5991
       id: 328099278
@@ -796,5 +810,7 @@ MonoBehaviour:
   ExpandedItems:
   - /Hell_WwiseProject
   - /Hell_WwiseProject/Events
+  - /Hell_WwiseProject/Events/Default Work Unit
+  - /Hell_WwiseProject/Events/Default Work Unit/World
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

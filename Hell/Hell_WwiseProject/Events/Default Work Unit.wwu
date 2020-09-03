@@ -543,7 +543,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Golden_Breakable" ID="{372B118C-3D48-4296-99D4-7874E506B18E}">
+						<Event Name="Stone_Breakable" ID="{372B118C-3D48-4296-99D4-7874E506B18E}">
 							<ChildrenList>
 								<Action Name="" ID="{C8AAA5A7-508A-4040-81EF-9C9FA12972B2}" ShortID="628405374">
 									<ReferenceList>
@@ -560,6 +560,27 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="CheckpointSlash" ID="{86576556-F309-4E3E-B548-F7DF25757F7B}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Gold_Breakable" ID="{161DB0FA-E3AD-4F8D-A741-CFA7351EA36A}">
+							<ChildrenList>
+								<Action Name="" ID="{394E87DD-5D10-436A-9151-3A9699D66113}" ShortID="894336661">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Stone_Breakable" ID="{D0628227-AED7-49F7-AA0B-C034B265B555}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{849B8D24-0EBF-4DB1-9FF0-8B8E923DEA71}" ShortID="779233163">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="StatueRoar" ID="{7D10B746-D03A-4EE1-BE5E-44C9FE292866}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
