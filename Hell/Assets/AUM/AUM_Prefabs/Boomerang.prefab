@@ -168,6 +168,11 @@ MonoBehaviour:
   col: {fileID: 3534094479107745600}
   physicCol: {fileID: 5014843934298157230}
   touchedEnnemy: 0
+  swordIdleAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 346595665c08ca4408d5b496c8ad156b,
+      type: 2}
 --- !u!50 &9019725140978479160
 Rigidbody2D:
   serializedVersion: 4

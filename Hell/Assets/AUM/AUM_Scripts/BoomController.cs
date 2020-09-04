@@ -19,10 +19,17 @@ public class BoomController : MonoBehaviour
 
     [HideInInspector] public bool touchedEnnemy = false;
 
+
+    [Space(10)]
+    [Header("Sounds")]
+    public AK.Wwise.Event swordIdleAudio;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        swordIdleAudio.Post(gameObject);
     }
 
     // Update is called once per frame
@@ -144,6 +151,7 @@ public class BoomController : MonoBehaviour
 
         GainLife.gl.noSword = false;
 
+        swordIdleAudio.Stop(gameObject);
         Destroy(gameObject);
     }
 }

@@ -31,6 +31,14 @@ public class GainLife : MonoBehaviour
 
     public LayerMask wallAndSolLayer;
 
+
+    [Space(10)]
+    [Header("Sounds")]
+    public AK.Wwise.Event playerSwordThrowAudio;
+    public AK.Wwise.Event swordToPlayerAudio;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -119,6 +127,7 @@ public class GainLife : MonoBehaviour
     void LaunchBoomerang()
     {
         MovementController.mC.animator.SetTrigger("Throwing");
+        playerSwordThrowAudio.Post(gameObject);
 
         BloodManager.bm.bloodNumb -= 4;
 
@@ -183,6 +192,8 @@ public class GainLife : MonoBehaviour
 
         noSword = false;
 
+        swordToPlayerAudio.Post(gameObject);
+        currentBoomerang.swordIdleAudio.Stop(currentBoomerang.gameObject);
         Destroy(currentBoomerang.gameObject);
     }
 

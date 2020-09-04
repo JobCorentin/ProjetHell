@@ -156,13 +156,51 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Player_Sword_Throw" ID="{3D1F47B1-6F69-422A-8001-007540BBAF38}"/>
+						<Event Name="Player_Sword_Throw" ID="{3D1F47B1-6F69-422A-8001-007540BBAF38}">
+							<ChildrenList>
+								<Action Name="" ID="{DDEE148E-ADFD-4483-9337-9FDCEDE59221}" ShortID="246427274">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sword_MetalSwing" ID="{C3EB2335-944F-4DBE-BF16-BB46A4312F3E}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{660E8759-B620-40F5-9759-3922952FEB96}" ShortID="358641402">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jump_Voices" ID="{FF2B2FA0-4963-45AE-A4B3-495F86F2C3CC}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Player_Spawn" ID="{B0094B74-6F96-4B57-B427-5CF644387ABE}">
 							<ChildrenList>
 								<Action Name="" ID="{D672A05F-FA45-4796-B34B-8B711888E233}" ShortID="445091805">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="FlameUp" ID="{905A1113-087A-4154-997D-CF576E500978}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Sword_Received" ID="{3FFF104E-9CA3-47CB-9F89-5929DC56A2AC}">
+							<ChildrenList>
+								<Action Name="" ID="{204915AD-4589-42A4-8F2E-6152D5943D06}" ShortID="503379528">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sword_MetalSwing" ID="{C3EB2335-944F-4DBE-BF16-BB46A4312F3E}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8A8FB68B-BBDB-4758-B4C1-2578420ED656}" ShortID="230966588">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hit" ID="{3E823EFD-598D-4108-828B-68108DAE707B}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -605,7 +643,24 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Player_Sword_Sound" ID="{FB6265AC-D49B-4207-BB8A-4FBE16038165}"/>
+						<Event Name="Player_Sword_Sound" ID="{FB6265AC-D49B-4207-BB8A-4FBE16038165}">
+							<ChildrenList>
+								<Action Name="" ID="{1565E5E4-B82A-4153-8046-E3FEC071D432}" ShortID="623300219">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Sword_Throw_Whoosh" ID="{93EE5436-B7DB-49F9-842C-E1C79458743E}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{25A6F649-B2DA-42BD-8323-FFEC782B2BD2}" ShortID="550731781">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sword_Throw_Sound" ID="{375BE775-347D-437C-B23C-B0F0717BC805}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Centaur_Sword_Sound" ID="{4E28CE92-B8A7-4B7C-A260-01DA0F81F4BD}">
 							<ChildrenList>
 								<Action Name="" ID="{60CD8324-494B-4966-9CDB-EF317A89D4C1}" ShortID="969851747">
