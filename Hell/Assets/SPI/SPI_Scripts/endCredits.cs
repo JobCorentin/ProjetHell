@@ -12,10 +12,13 @@ public class endCredits : MonoBehaviour
     public GameObject refPlayer;
     public AK.Wwise.Event mainThemeMusic;
 
+    public AK.Wwise.Event creditsTheme;
+
     private void Start()
     {
         mainThemeMusic.Post(gameObject);
         player.transform.position = refPlayer.transform.position;
+        creditsTheme.Post(gameObject);
     }
     public void GetUp()
     {
@@ -34,7 +37,7 @@ public class endCredits : MonoBehaviour
     {
         cache.SetActive(true);
         yield return new WaitForSeconds(2f);
-        mainThemeMusic.Stop(gameObject);
+        creditsTheme.Stop(gameObject);
         SceneManager.LoadScene(1);
     }
 }

@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BOSS_THEME = 2166191340U;
         static const AkUniqueID BULLET_IMPACT = 3921814510U;
         static const AkUniqueID CENTAUR_BREATH = 2157215894U;
         static const AkUniqueID CENTAUR_CHARGE = 1647725780U;
@@ -25,6 +26,7 @@ namespace AK
         static const AkUniqueID CENTAUR_SWORD_SOUND = 1104912115U;
         static const AkUniqueID CHECKPOINT_SLASH = 1141980505U;
         static const AkUniqueID CHECKPOINTS_FLAME = 886027494U;
+        static const AkUniqueID CREDITS_THEME = 3734914463U;
         static const AkUniqueID FLESH_BREAKABLE = 3725008693U;
         static const AkUniqueID GOLD_BREAKABLE = 3975760975U;
         static const AkUniqueID HEAL_BREAKABLE = 1524495727U;

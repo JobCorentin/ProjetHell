@@ -116,7 +116,10 @@ public class HealthManager : MonoBehaviour
 
         SoundManager.instance.haveKillAnEnnemi = false;
         SoundManager.instance.havePlayLevelTheme = false;
+        SoundManager.instance.havePlayedBossTheme = false;
+        SoundManager.instance.isBossFight = false;
         SoundManager.instance.levelTheme.Stop(SoundManager.instance.gameObject);
+        SoundManager.instance.bossTheme.Stop(SoundManager.instance.gameObject);
         playerHealthConstantAudio.Stop(gameObject);
 
 

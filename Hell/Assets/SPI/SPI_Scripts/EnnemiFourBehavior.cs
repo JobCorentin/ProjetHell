@@ -161,9 +161,10 @@ public class EnnemiFourBehavior : EnnemiController
         animator.SetBool("IsPreparingCharge", false);
         animator.SetBool("IsCharging", true);
 
-        if (SoundManager.instance.haveKillAnEnnemi == false)
+        if (SoundManager.instance.havePlayedBossTheme == false && SoundManager.instance.isBossFight)
         {
-            SoundManager.instance.haveKillAnEnnemi = true;
+            SoundManager.instance.bossTheme.Post(SoundManager.instance.gameObject);
+            SoundManager.instance.havePlayedBossTheme = true;
         }
 
 
@@ -218,6 +219,12 @@ public class EnnemiFourBehavior : EnnemiController
         {
             animator.SetBool("LaunchBoth", true);
             centaurKatanaVoiceAudio.Post(gameObject);
+
+            if (SoundManager.instance.havePlayedBossTheme == false && SoundManager.instance.isBossFight)
+            {
+                SoundManager.instance.bossTheme.Post(SoundManager.instance.gameObject);
+                SoundManager.instance.havePlayedBossTheme = true;
+            }
 
             //StartCoroutine(LaunchingKatana());
         }
@@ -475,6 +482,7 @@ public class EnnemiFourBehavior : EnnemiController
     public void ActivateDeathBackground()
     {
         HealthManager.hm.deathBackgroundAnimator.SetTrigger("Die");
+        SoundManager.instance.bossTheme.Stop(SoundManager.instance.gameObject);
 
         sr.sortingOrder = 401;
 
