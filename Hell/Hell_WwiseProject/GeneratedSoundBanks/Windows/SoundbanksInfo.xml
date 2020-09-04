@@ -210,6 +210,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3734914463" Name="Credits_Theme" ObjectPath="\Events\Default Work Unit\Musics\Credits_Theme" DurationType="OneShot" DurationMin="66.701927" DurationMax="66.701927">
+					<IncludedMemoryFiles>
+						<File Id="367469308" Language="SFX">
+							<ShortName>Akuma_Credits.wav</ShortName>
+							<Path>SFX\Akuma_Credits_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3725008693" Name="Flesh_Breakable" ObjectPath="\Events\Default Work Unit\World\Flesh_Breakable" MaxAttenuation="25.000000" DurationType="OneShot" DurationMin="0.756349" DurationMax="0.887032">
 					<IncludedMemoryFiles>
 						<File Id="452436359" Language="SFX">

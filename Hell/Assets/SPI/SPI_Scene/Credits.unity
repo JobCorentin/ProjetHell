@@ -4685,6 +4685,11 @@ MonoBehaviour:
   cache: {fileID: 542698707}
   player: {fileID: 881529578}
   refPlayer: {fileID: 621282751}
+  creditsTheme:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: abcb11755eb8da043acd5377b27ef039,
+      type: 2}
 --- !u!1001 &360279416
 PrefabInstance:
   m_ObjectHideFlags: 0

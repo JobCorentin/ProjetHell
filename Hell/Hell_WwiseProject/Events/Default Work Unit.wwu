@@ -247,6 +247,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Credits_Theme" ID="{7994D012-E62E-414F-9845-8B7B11FE55C2}">
+							<ChildrenList>
+								<Action Name="" ID="{5CCFCEAE-9440-4F3C-AED7-A966C33BC0B9}" ShortID="318719541">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Akuma_Credits" ID="{B51008FC-B4B4-4BB1-A82A-E2808DF07D2C}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Bad Guys" ID="{DB56573F-4227-4948-B2A3-879CD6BF2447}" ShortID="881729752">

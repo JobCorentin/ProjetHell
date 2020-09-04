@@ -35,6 +35,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3583423278	Soldier_Death			\Default Work Unit\Bad Guys\Soldier_Death	
 	3631697037	Player_Sword_Throw			\Default Work Unit\Player\Player_Sword_Throw	
 	3725008693	Flesh_Breakable			\Default Work Unit\World\Flesh_Breakable	
+	3734914463	Credits_Theme			\Default Work Unit\Musics\Credits_Theme	
 	3756653709	Musket_FireAttack			\Default Work Unit\Bad Guys\Musket_FireAttack	
 	3921814510	Bullet_Impact			\Default Work Unit\Bullets\Bullet_Impact	
 	3975760975	Gold_Breakable			\Default Work Unit\World\Gold_Breakable	
@@ -115,6 +116,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	353700281	CentaurIdle_4	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\CentaurIdle_4_62F35417.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Idle\CentaurIdle_4		585374
 	361141803	FlameUp	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\FlameUp_3C51B570.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\FlameUp		259548
 	363633816	centaurChargeVoice_4	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\centaurChargeVoice_4_338F13A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Charge_Voice\centaurChargeVoice_4		499034
+	367469308	Akuma_Credits	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\Akuma_Credits_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Musics\Akuma_Credits		11766348
 	382664733	SwordMetalSlash_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\SwordMetalSlash_1_95C074CD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_MetalSwing\SwordMetalSlash_1		151140
 	393081860	CentaurIdle_3	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\CentaurIdle_3_04A9625E.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Idle\CentaurIdle_3		579402
 	395990998	centaurChargeVoice_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\centaurChargeVoice_2_DCBC2F56.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Charge_Voice\centaurChargeVoice_2		564808
