@@ -47,6 +47,8 @@ namespace AK
         static const AkUniqueID PLAYER_PARRY = 4017406829U;
         static const AkUniqueID PLAYER_SPAWN = 1028635762U;
         static const AkUniqueID PLAYER_SWORD_ATTACK = 2088000327U;
+        static const AkUniqueID PLAYER_SWORD_SOUND = 334564148U;
+        static const AkUniqueID PLAYER_SWORD_THROW = 3631697037U;
         static const AkUniqueID PLAYER_TAKE_DAMAGES = 1229797707U;
         static const AkUniqueID SOLDIER_ATTACK = 789006460U;
         static const AkUniqueID SOLDIER_DEATH = 3583423278U;

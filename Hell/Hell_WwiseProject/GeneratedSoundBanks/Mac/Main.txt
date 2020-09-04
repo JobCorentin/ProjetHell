@@ -4,6 +4,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	137763460	Stone_Breakable			\Default Work Unit\World\Stone_Breakable	
 	147161291	Player_Death_Slash			\Default Work Unit\Player\Player_Death_Slash	
 	328099278	Wood_Breakable			\Default Work Unit\World\Wood_Breakable	
+	334564148	Player_Sword_Sound			\Default Work Unit\Bullets\Player_Sword_Sound	
 	730632742	Centaur_Death			\Default Work Unit\Bad Guys\Centaur_Death	
 	789006460	Soldier_Attack			\Default Work Unit\Bad Guys\Soldier_Attack	
 	867542894	Hearth_Death			\Default Work Unit\Bad Guys\Hearth_Death	
@@ -30,6 +31,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3275726432	Musket_AIM			\Default Work Unit\Bad Guys\Musket_AIM	
 	3537539166	Hearth_Lauch_Attack			\Default Work Unit\Bad Guys\Hearth_Lauch_Attack	
 	3583423278	Soldier_Death			\Default Work Unit\Bad Guys\Soldier_Death	
+	3631697037	Player_Sword_Throw			\Default Work Unit\Player\Player_Sword_Throw	
 	3725008693	Flesh_Breakable			\Default Work Unit\World\Flesh_Breakable	
 	3756653709	Musket_FireAttack			\Default Work Unit\Bad Guys\Musket_FireAttack	
 	3921814510	Bullet_Impact			\Default Work Unit\Bullets\Bullet_Impact	
@@ -61,6 +63,7 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	72771758	SoundSeed Air Woosh	SoundSeed Air Woosh		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_Whoosh\SoundSeed Air Woosh	
 	125560027	SoundSeed Air Wind	SoundSeed Air Wind		\Actor-Mixer Hierarchy\Default Work Unit\Bullets\Bullet_Sifflement\SoundSeed Air Wind	
 	309629958	SoundSeed Air Woosh	SoundSeed Air Woosh		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Throw_Whoosh\SoundSeed Air Woosh	
+	316433660	SoundSeed Air Woosh	SoundSeed Air Woosh		\Actor-Mixer Hierarchy\Default Work Unit\Bullets\Player_Sword_Throw_Whoosh\SoundSeed Air Woosh	
 	582064587	SoundSeed Air Woosh	SoundSeed Air Woosh		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Attack_Whoosh\SoundSeed Air Woosh	
 	638299290	SoundSeed Air Woosh	SoundSeed Air Woosh		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Soldier_Attack-Whoosh\SoundSeed Air Woosh	
 	855825426	SoundSeed Air Woosh	SoundSeed Air Woosh		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Whoosh\SoundSeed Air Woosh	
@@ -153,7 +156,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	662840401	Player_Hearth	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\Player_Hearth_81E28FE0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Hearth		406068
 	683137341	SwordMetalSlash_10	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\SwordMetalSlash_10_A5429B5A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_MetalSwing\SwordMetalSlash_10		125764
 	689541487	FootstepConcrete_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FootstepConcrete_2_AAB60B77.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Concrete\FootstepConcrete_2		36724
-	690019946	PlayerVoiceJump_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\PlayerVoiceJump_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Voices\PlayerVoiceJump_2		48986
+	690019946	PlayerVoiceJump_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\PlayerVoiceJump_2_BA9C5E82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Voices\PlayerVoiceJump_2		43876
 	693660259	SoldierAttackVoice_3	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\SoldierAttackVoice_3_F2687855.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Soldier_Attack_Voice\SoldierAttackVoice_3		32444
 	698514762	PlayerPain_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\PlayerPain_1_286B9F3F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pain\PlayerPain_1		59188
 	711725058	FlameUp	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Mac\SFX\FlameUp_A3181C75.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FlameUp		211560
