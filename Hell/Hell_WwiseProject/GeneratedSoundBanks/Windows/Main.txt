@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	103577031	Level_Theme			\Default Work Unit\Musics\Level_Theme	
 	137763460	Stone_Breakable			\Default Work Unit\World\Stone_Breakable	
 	147161291	Player_Death_Slash			\Default Work Unit\Player\Player_Death_Slash	
+	194836382	Player_Sword_Received			\Default Work Unit\Player\Player_Sword_Received	
 	328099278	Wood_Breakable			\Default Work Unit\World\Wood_Breakable	
 	334564148	Player_Sword_Sound			\Default Work Unit\Bullets\Player_Sword_Sound	
 	730632742	Centaur_Death			\Default Work Unit\Bad Guys\Centaur_Death	

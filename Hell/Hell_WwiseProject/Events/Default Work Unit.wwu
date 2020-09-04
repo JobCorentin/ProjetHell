@@ -185,6 +185,27 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Player_Sword_Received" ID="{3FFF104E-9CA3-47CB-9F89-5929DC56A2AC}">
+							<ChildrenList>
+								<Action Name="" ID="{204915AD-4589-42A4-8F2E-6152D5943D06}" ShortID="503379528">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sword_MetalSwing" ID="{C3EB2335-944F-4DBE-BF16-BB46A4312F3E}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8A8FB68B-BBDB-4758-B4C1-2578420ED656}" ShortID="230966588">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hit" ID="{3E823EFD-598D-4108-828B-68108DAE707B}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Musics" ID="{8E9131FF-7E57-4B7F-903B-8416253DAFC6}" ShortID="811126068">

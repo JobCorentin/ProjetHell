@@ -5724,6 +5724,16 @@ MonoBehaviour:
   wallAndSolLayer:
     serializedVersion: 2
     m_Bits: 16640
+  playerSwordThrowAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0f46b78f107227d40aae97015d5e71de,
+      type: 2}
+  swordToPlayerAudio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0dd703fa8ff43cd41b63f7af4f76953c,
+      type: 2}
 --- !u!114 &7360886272903129554
 MonoBehaviour:
   m_ObjectHideFlags: 0

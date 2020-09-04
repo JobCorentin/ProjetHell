@@ -13,7 +13,9 @@
 						<ObjectRef Name="Centaur_Damages" ID="{4D6AD6F8-032F-417D-8964-8F5E0A7C115C}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Centaur_Idle" ID="{FC8DF085-170C-4195-93EE-60DC1BE04825}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Jump" ID="{CC132177-5A64-41C6-8EC2-CA6956B754F0}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Sword_Sound" ID="{FB6265AC-D49B-4207-BB8A-4FBE16038165}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Wood_Breakable" ID="{841AD14C-B2F9-4227-95D3-8BBC68EC5991}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Sword_Throw" ID="{3D1F47B1-6F69-422A-8001-007540BBAF38}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hearth_Idle" ID="{F5BD7C72-D7A9-4250-B4C5-8224A4D4C356}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Soldier_Attack" ID="{6F14EF29-8B57-425F-8BC1-FFB2FB287422}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Musket_Death" ID="{76EEEBB4-683E-4278-9700-3BB22D8E6DAA}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
@@ -32,6 +34,7 @@
 						<ObjectRef Name="Hearth_Damages" ID="{77F20DAA-7C83-470E-AF9D-3AB4DAE46338}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Musket_Idle" ID="{EA1984AC-0CAE-475C-9C69-C4FAB29E84DB}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Soldier_Death" ID="{39F7BC48-AB7F-47C9-A73B-5831F9C96988}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Sword_Received" ID="{3FFF104E-9CA3-47CB-9F89-5929DC56A2AC}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Checkpoints_Flame" ID="{EC9B155D-3FC6-47E7-88F5-090E40030FC1}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Sword_Attack" ID="{F01386F1-92F5-4875-8596-FFE5AFCC1D38}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Centaur_Death" ID="{DBF07CC6-EFA9-492F-BB6B-7ACACC6268FE}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
