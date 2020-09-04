@@ -10,13 +10,11 @@ public class endCredits : MonoBehaviour
     public GameObject cache;
     public GameObject player;
     public GameObject refPlayer;
-    public AK.Wwise.Event mainThemeMusic;
 
     public AK.Wwise.Event creditsTheme;
 
     private void Start()
     {
-        mainThemeMusic.Post(gameObject);
         player.transform.position = refPlayer.transform.position;
         creditsTheme.Post(gameObject);
     }
