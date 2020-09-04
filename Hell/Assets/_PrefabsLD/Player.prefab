@@ -149,7 +149,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25406832}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3057b2e0c9b760e4f9fb8727bfd5985f, type: 3}
   m_Name: 
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25406832}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e24ca9e43eed6e540aa0953081f070af, type: 3}
   m_Name: 
@@ -5685,6 +5685,7 @@ MonoBehaviour:
   initialLife: 0
   invicibiltyTime: 0.5
   lastCheckPoint: {fileID: 0}
+  deathBackgroundAnimator: {fileID: 0}
   lowPassDurationGameSync:
     idInternal: 0
     valueGuidInternal: 

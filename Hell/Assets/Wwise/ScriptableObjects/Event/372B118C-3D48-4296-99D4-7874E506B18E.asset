@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c912fa2057d54ad4ab196834d509cd80, type: 3}
   m_Name: 372B118C-3D48-4296-99D4-7874E506B18E
   m_EditorClassIdentifier: 
-  objectName: Golden_Breakable
-  id: 275329914
+  objectName: Stone_Breakable
+  id: 137763460
   guid: 372B118C-3D48-4296-99D4-7874E506B18E

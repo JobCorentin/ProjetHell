@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{D19D2F3F-F8A7-41D9-994C-02E3DAD871FC}" SchemaVersion="97">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{D19D2F3F-F8A7-41D9-994C-02E3DAD871FC}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{D19D2F3F-F8A7-41D9-994C-02E3DAD871FC}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="New_Wwise_Delay" ID="{FEF19FB9-0A3E-4391-BBBF-D8DB2FEFA539}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+					<PropertyList>
+						<Property Name="Feedback" Type="Real32" Value="30"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Wwise_Expander" ID="{3205668C-FD3C-4570-85B9-9D313D95D4DC}" PluginName="Wwise Expander" CompanyID="0" PluginID="109" PluginType="3">
+					<PropertyList>
+						<Property Name="AttackTime" Type="Real32" Value="2"/>
+						<Property Name="OutputGain" Type="Real32" Value="-0.3"/>
+						<Property Name="Ratio" Type="Real32" Value="50"/>
+						<Property Name="ReleaseTime" Type="Real32" Value="0.85"/>
+						<Property Name="Threshold" Type="Real32" Value="-96.3"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

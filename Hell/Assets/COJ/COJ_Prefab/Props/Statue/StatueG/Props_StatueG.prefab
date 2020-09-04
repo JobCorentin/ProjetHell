@@ -191,7 +191,7 @@ PrefabInstance:
         type: 3}
       propertyPath: woodBreakAudio.WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: 354b556facfefdc41967cd3cab2bc1ec,
+      objectReference: {fileID: 11400000, guid: 174c4c160ed6b56479ba2e00384175b3,
         type: 2}
     - target: {fileID: 3483971326343714871, guid: 5d7e3f2d42d4a6549b390d1fb1904883,
         type: 3}

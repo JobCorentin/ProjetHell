@@ -18,7 +18,7 @@
 						<ObjectRef Name="Soldier_Attack" ID="{6F14EF29-8B57-425F-8BC1-FFB2FB287422}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Musket_Death" ID="{76EEEBB4-683E-4278-9700-3BB22D8E6DAA}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Bullet_Impact" ID="{1DA5F0EF-59C9-4279-8A4F-F8ED3565B850}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Golden_Breakable" ID="{372B118C-3D48-4296-99D4-7874E506B18E}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stone_Breakable" ID="{372B118C-3D48-4296-99D4-7874E506B18E}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Centaur_KatanaThrow" ID="{FBEA76FF-B0E3-42BF-87B7-D5CF2722B6D2}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hearth_Lauch_Attack" ID="{4AA491D8-3460-430B-B8B3-D1C689A36111}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Level_Theme" ID="{9BAD7059-1F1A-432D-A9DB-744976FA291A}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
@@ -43,6 +43,7 @@
 						<ObjectRef Name="Musket_Bullets" ID="{7D7941F6-B7EA-4DB4-A446-DF1F7C17CA0E}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Checkpoint_Slash" ID="{C518AED4-36BB-4DFF-B909-E9A06AD5134D}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Main_Theme" ID="{521C487F-D9F2-4E6A-99FD-C0CFC410EACB}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Gold_Breakable" ID="{161DB0FA-E3AD-4F8D-A741-CFA7351EA36A}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Footstep" ID="{13E57215-767E-4FDD-A3A8-74615301574A}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
