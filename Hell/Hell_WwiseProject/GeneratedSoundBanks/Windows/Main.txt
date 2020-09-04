@@ -23,6 +23,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1896704958	Soldier_Idle			\Default Work Unit\Bad Guys\Soldier_Idle	
 	2088000327	Player_Sword_Attack			\Default Work Unit\Player\Player_Sword_Attack	
 	2157215894	Centaur_Breath			\Default Work Unit\Bad Guys\Centaur_Breath	
+	2166191340	Boss_Theme			\Default Work Unit\Musics\Boss_Theme	
 	2453392179	Player_Footstep			\Default Work Unit\Player\Player_Footstep	
 	2557777556	Main_Theme			\Default Work Unit\Musics\Main_Theme	
 	2975122654	Player_Health_Sounds			\Default Work Unit\Player\Player_Health_Sounds	
@@ -135,6 +136,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	504815808	SoldierAttackVoice_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\SoldierAttackVoice_1_671C6518.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Soldier_Attack_Voice\SoldierAttackVoice_1		61130
 	511919527	FootstepConcrete_5	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\FootstepConcrete_5_C7BFEC62.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Concrete\FootstepConcrete_5		44664
 	512572648	SoldierAttackVoice_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\SoldierAttackVoice_2_3014E03A.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Soldier_Attack_Voice\SoldierAttackVoice_2		46206
+	519102460	Hell_BossBattle	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\Hell_BossBattle_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Musics\Hell_BossBattle		10421296
 	519137111	CentaurIdle_5	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\CentaurIdle_5_21859735.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Centaur_Idle\CentaurIdle_5		466948
 	528583243	SwordMetalSlash_5	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\SwordMetalSlash_5_9530B133.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_MetalSwing\SwordMetalSlash_5		198632
 	529911862	JumpClothes_6	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\JumpClothes_6_70A8BD6C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Clothes\JumpClothes_6		146992
@@ -157,7 +159,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	662840401	Player_Hearth	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\Player_Hearth_81E28FE0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Hearth		406068
 	683137341	SwordMetalSlash_10	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\SwordMetalSlash_10_A5429B5A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_MetalSwing\SwordMetalSlash_10		125764
 	689541487	FootstepConcrete_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\FootstepConcrete_2_AAB60B77.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep\Footstep_Concrete\FootstepConcrete_2		36724
-	690019946	PlayerVoiceJump_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\PlayerVoiceJump_2_BA9C5E82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Voices\PlayerVoiceJump_2		43876
+	690019946	PlayerVoiceJump_2	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\PlayerVoiceJump_2_74EE7134.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Voices\PlayerVoiceJump_2		43876
 	693660259	SoldierAttackVoice_3	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\SoldierAttackVoice_3_F2687855.wem		\Actor-Mixer Hierarchy\Default Work Unit\BadGuys\Soldier_Attack_Voice\SoldierAttackVoice_3		32444
 	698514762	PlayerPain_1	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\PlayerPain_1_286B9F3F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pain\PlayerPain_1		59188
 	711725058	FlameUp	D:\UnityProjects\ProjectHell\ProjetHell\Hell\Hell_WwiseProject\.cache\Windows\SFX\FlameUp_A3181C75.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FlameUp		211560

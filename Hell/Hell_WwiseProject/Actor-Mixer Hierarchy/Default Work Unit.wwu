@@ -2350,6 +2350,35 @@
 								<ActiveSource Name="Test" ID="{F8B8A8A6-0047-4678-9035-ED12341E2073}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Hell_BossBattle" ID="{AD1123A6-557B-4BA7-AB6D-7C2C351E735D}" ShortID="976082564">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E91B300-3769-4031-A7D3-ED0C2AE85D87}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C2703DB-1817-47C0-9A63-39A62413169B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Hell_BossBattle" ID="{1F8CA74B-0C77-408C-939C-B1F98786F079}">
+									<Language>SFX</Language>
+									<AudioFile>Hell_BossBattle.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="519102460"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Hell_BossBattle" ID="{1F8CA74B-0C77-408C-939C-B1F98786F079}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="BadGuys" ID="{288F3447-D873-4087-B546-D8F18EDAD6F2}" ShortID="485014274">

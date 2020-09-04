@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BOSS_THEME = 2166191340U;
         static const AkUniqueID BULLET_IMPACT = 3921814510U;
         static const AkUniqueID CENTAUR_BREATH = 2157215894U;
         static const AkUniqueID CENTAUR_CHARGE = 1647725780U;

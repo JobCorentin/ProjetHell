@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 4284ab4eb2341646a069c5e5531758ca
     GuidInternal: 
-    m_lastTime: -8586024485090547486
+    m_lastTime: -8586023701331906637
     List:
     - name: Main
       guid: 33038aaad1850e4189e17a29e7d73f96
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 14895eb1fb392f4fb3e6729aaa4bce9d
     GuidInternal: 
-    m_lastTime: -8586023789754092342
+    m_lastTime: -8586023701330971520
     List:
     - name: Bad Guys
       guid: 3f5756db27424849b2a3879cd6bf2447
@@ -67,6 +67,20 @@ MonoBehaviour:
       - ElementName: Bad Guys
         ObjectType: 4
       Path: Default Work Unit\Bad Guys
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Boss_Theme
+      guid: 60a536a26bea0b449a93f2a255998c3f
+      id: 2166191340
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Musics
+        ObjectType: 4
+      - ElementName: Boss_Theme
+        ObjectType: 3
+      Path: Default Work Unit\Musics\Boss_Theme
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -582,6 +596,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Player_Sword_Received
+      guid: 4e10ff3fa39ccb479f895929dc56a2ac
+      id: 194836382
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: Player_Sword_Received
+        ObjectType: 3
+      Path: Default Work Unit\Player\Player_Sword_Received
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Player_Sword_Sound
       guid: ac6562fb9bd40742bb8a4fbe16038165
       id: 334564148
@@ -809,8 +837,5 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Hell_WwiseProject
-  - /Hell_WwiseProject/Events
-  - /Hell_WwiseProject/Events/Default Work Unit
-  - /Hell_WwiseProject/Events/Default Work Unit/Player
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

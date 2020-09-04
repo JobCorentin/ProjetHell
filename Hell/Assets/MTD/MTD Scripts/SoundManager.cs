@@ -8,8 +8,11 @@ public class SoundManager : MonoBehaviour
 
 
     public AK.Wwise.Event levelTheme;
+    public AK.Wwise.Event bossTheme;
     public bool havePlayLevelTheme = false;
     public bool haveKillAnEnnemi = false;
+    public bool havePlayedBossTheme = false;
+    public bool isBossFight = false;
 
     public void Awake()
     {
@@ -18,12 +21,15 @@ public class SoundManager : MonoBehaviour
 
     public void Update()
     {
-        if (havePlayLevelTheme == false)
+        if (!isBossFight)
         {
-            if (haveKillAnEnnemi)
+            if (havePlayLevelTheme == false)
             {
-                levelTheme.Post(gameObject);
-                havePlayLevelTheme = true;
+                if (haveKillAnEnnemi)
+                {
+                    levelTheme.Post(gameObject);
+                    havePlayLevelTheme = true;
+                }
             }
         }
     }

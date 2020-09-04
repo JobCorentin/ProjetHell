@@ -25,6 +25,7 @@
 						<ObjectRef Name="Hearth_Lauch_Attack" ID="{4AA491D8-3460-430B-B8B3-D1C689A36111}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Level_Theme" ID="{9BAD7059-1F1A-432D-A9DB-744976FA291A}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Centaur_Charge_Footstep" ID="{7950AE0E-2D33-43F6-B68F-33FB3E0F07D2}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Boss_Theme" ID="{A236A560-EA6B-440B-9A93-F2A255998C3F}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Soldier_Idle" ID="{535019A4-B865-4490-982A-CE4AFACAB507}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Flesh_Breakable" ID="{7D5057E5-47E9-44F1-BBD5-CEBE8E6BD5CC}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Take_Damages" ID="{DC9C5BCB-BE59-4525-92A8-7F99EB66DE8F}" WorkUnitID="{B15E8914-39FB-4F2F-B3E6-729AAA4BCE9D}" Origin="Manual" Filter="7"/>

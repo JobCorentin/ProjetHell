@@ -48,5 +48,12 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 8e073e954ad6547448b6ac9cff09ded8,
       type: 2}
+  bossTheme:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bb79ed168bc877f4c802b84e688def0a,
+      type: 2}
   havePlayLevelTheme: 0
   haveKillAnEnnemi: 0
+  havePlayedBossTheme: 0
+  isBossFight: 0

@@ -236,6 +236,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Boss_Theme" ID="{A236A560-EA6B-440B-9A93-F2A255998C3F}">
+							<ChildrenList>
+								<Action Name="" ID="{1C49BDAA-1342-4FDA-915A-22B964D641AB}" ShortID="644204087">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hell_BossBattle" ID="{AD1123A6-557B-4BA7-AB6D-7C2C351E735D}" WorkUnitID="{F5116C16-750D-4CBA-982E-AE6B8689C727}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Bad Guys" ID="{DB56573F-4227-4948-B2A3-879CD6BF2447}" ShortID="881729752">

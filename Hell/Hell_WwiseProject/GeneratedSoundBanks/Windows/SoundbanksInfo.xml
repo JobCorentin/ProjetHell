@@ -24,6 +24,14 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2166191340" Name="Boss_Theme" ObjectPath="\Events\Default Work Unit\Musics\Boss_Theme" DurationType="OneShot" DurationMin="59.076916" DurationMax="59.076916">
+					<IncludedMemoryFiles>
+						<File Id="519102460" Language="SFX">
+							<ShortName>Hell_BossBattle.wav</ShortName>
+							<Path>SFX\Hell_BossBattle_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3921814510" Name="Bullet_Impact" ObjectPath="\Events\Default Work Unit\Bullets\Bullet_Impact" MaxAttenuation="25.000000" DurationType="OneShot" DurationMin="2.314305" DurationMax="2.314305">
 					<IncludedMemoryFiles>
 						<File Id="638684267" Language="SFX">
@@ -559,7 +567,7 @@
 						</File>
 						<File Id="690019946" Language="SFX">
 							<ShortName>PlayerVoiceJump_2.wav</ShortName>
-							<Path>SFX\PlayerVoiceJump_2_BA9C5E82.wem</Path>
+							<Path>SFX\PlayerVoiceJump_2_74EE7134.wem</Path>
 						</File>
 						<File Id="804780276" Language="SFX">
 							<ShortName>JumpClothes_8.wav</ShortName>
@@ -728,7 +736,7 @@
 						</File>
 						<File Id="690019946" Language="SFX">
 							<ShortName>PlayerVoiceJump_2.wav</ShortName>
-							<Path>SFX\PlayerVoiceJump_2_BA9C5E82.wem</Path>
+							<Path>SFX\PlayerVoiceJump_2_74EE7134.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
