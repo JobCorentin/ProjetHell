@@ -82471,10 +82471,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "-\nSimon Picardat\n\n\n\n\n-\nCorentin Job  -  Lead\nAur\xE9lien Mary\nSimon
-    Picardat\n\n\n\n\n-\nKilian Marion--Miraca  -  Lead\nIn\xE8s Pouille\nSamuel
-    Lauro\nYanis Habib\n\n\n\n\n-\nAur\xE9lien Mary  -  Lead\nCorentin Job\nSimon
-    Picardat\n\n\n\n\n-\nMatis Duperray\n\n\n\n\n-\nCassandre Harington\n\n\n\n\n-\nTheophile
-    Loaec\nPaul Paret\nThibaut Le Doare\nC\xF4me Richetta"
+    Picardat\n\n\n\n\n-\nKilian Marion-Miraca  -  Lead\nIn\xE8s Pouille\nSamuel Lauro\nYanis
+    Habib\n\n\n\n\n-\nAur\xE9lien Mary  -  Lead\nCorentin Job\nSimon Picardat\n\n\n\n\n-\nMatis
+    Duperray\n\n\n\n\n-\nCassandre Harington\n\n\n\n\n-\nTheophile Loaec\nPaul Paret\nThibaut
+    Le Doare\nC\xF4me Richetta"
 --- !u!222 &1950241350
 CanvasRenderer:
   m_ObjectHideFlags: 0

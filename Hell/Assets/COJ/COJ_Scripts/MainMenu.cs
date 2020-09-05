@@ -146,7 +146,7 @@ public class MainMenu : MonoBehaviour
         }
         else if (resolutionIndex == 2)
         {
-            Screen.SetResolution(1440, 720, Screen.fullScreen);
+            Screen.SetResolution(1440, 900, Screen.fullScreen);
         }
     }
 }
