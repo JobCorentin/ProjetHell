@@ -20,6 +20,8 @@ public class InputListener : MonoBehaviour
 
     [HideInInspector] public bool bloodModeInput;
 
+    bool xBoxController;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -29,6 +31,22 @@ public class InputListener : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        xBoxController = true;
+
+        string[] names = Input.GetJoystickNames();
+        for (int x = 0; x < names.Length; x++)
+        {
+            print(names[x].Length);
+            if (names[x].Length == 19)
+            {
+                xBoxController = false;
+            }
+            if (names[x].Length == 33)
+            {
+                xBoxController = true;
+            }
+        }
+        
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
@@ -39,13 +57,28 @@ public class InputListener : MonoBehaviour
             directionVector = inputVector;
         }
 
-        if (!jumpInput)
-            jumpInput = Input.GetButtonDown("Jump");
+        if(xBoxController == true)
+        {
+            if (!jumpInput)
+                jumpInput = Input.GetButtonDown("Jump");
 
-        if (!attackInput)
-            attackInput = Input.GetButtonDown("Attack");
+            if (!attackInput)
+                attackInput = Input.GetButtonDown("Attack");
 
             parryInput = Input.GetButton("Parry");
+        }
+        else
+        {
+            if (!jumpInput)
+                jumpInput = Input.GetButtonDown("Jump");
+
+            if (!attackInput)
+                attackInput = Input.GetButtonDown("Parry");
+
+            parryInput = Input.GetButton("Attack");
+        }
+
+        
 
         /*if (!bloodModeInput)
             bloodModeInput = Input.GetButtonDown("BloodMode");*/
